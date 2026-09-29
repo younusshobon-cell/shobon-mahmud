@@ -67,7 +67,7 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
       </label>
       <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted">I&apos;ll review your message and get back to you as soon as possible.{fallbackEmail ? <> Or email <a className="underline" href={`mailto:${fallbackEmail}`}>{fallbackEmail}</a> directly.</> : null}</p>
-        <button type="submit" disabled={status.state === "sending"} className="inline-flex h-12 items-center justify-center rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-link active:translate-y-px disabled:opacity-60">
+        <button type="submit" disabled={status.state === "sending"} className="inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-link active:translate-y-px disabled:opacity-60">
           {status.state === "sending" ? "Checking…" : "Send message"}
         </button>
       </div>
