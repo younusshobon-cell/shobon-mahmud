@@ -19,6 +19,7 @@ const next = [
   "I reply with initial thoughts and any questions.",
   "If it looks like a fit, we set up a call to go deeper.",
 ];
+const contactEmail = siteConfig.email || "younusshobon@gmail.com";
 
 export default function ContactPage() {
   return (
@@ -30,7 +31,7 @@ export default function ContactPage() {
           <p className="t-lead mt-6 max-w-xl text-muted">
             Tell me what you&apos;re trying to grow, where search is getting stuck, and what you&apos;ve already tried. The more specific, the more useful my reply.
           </p>
-          <div className="mt-12"><ContactForm fallbackEmail={siteConfig.email || undefined} /></div>
+          <div className="mt-12"><ContactForm fallbackEmail={contactEmail} /></div>
         </div>
         <aside className="space-y-10 lg:pt-4">
           <div className="flex items-center gap-4">
@@ -53,7 +54,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-sm font-medium text-ink">Elsewhere</h2>
             <SocialLinks className="mt-3 flex-col gap-y-2" />
-            {!siteConfig.email && <p className="mt-3 text-sm text-muted">Prefer email? Use the form and I&apos;ll reply directly.</p>}
+            <p className="mt-3 text-sm text-muted">Prefer email? <a className="underline underline-offset-2" href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
           </div>
         </aside>
       </div>
