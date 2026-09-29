@@ -22,7 +22,7 @@ export function PageHero({
 }) {
   const dark = tone === "dark";
   return (
-    <section className={cn(dark && "on-night bg-night")}>
+    <section className={cn("relative overflow-hidden", dark ? "on-night bg-night" : "bg-[radial-gradient(circle_at_88%_14%,rgba(207,216,234,0.32),transparent_33%),linear-gradient(180deg,#fff_0%,#fafaf7_100%)]")}>
       <Container className="pt-10 pb-16 sm:pt-14 lg:pb-24">
         <Breadcrumbs items={crumbs} tone={tone} />
         <div className={cn("grid gap-10", aside && "lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16")}>

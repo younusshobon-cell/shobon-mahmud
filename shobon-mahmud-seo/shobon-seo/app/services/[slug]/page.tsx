@@ -11,7 +11,7 @@ import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
 import { FAQ } from "@/components/content/FAQ";
-import { expandFaqs } from "@/lib/content/faqs";
+import { serviceSearchFaqs } from "@/lib/content/service-search-faqs";
 import { ContextCta } from "@/components/content/ContextCta";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
@@ -52,6 +52,11 @@ export default async function ServicePage({ params }: Props) {
         <ButtonLink href="/portfolio" variant="secondary">See related work</ButtonLink>
       </PageHero>
 
+      <div className="hero-grid-band border-y border-line">
+        <div className="mx-auto grid max-w-7xl gap-3 px-5 py-5 sm:grid-cols-3 sm:px-8">
+          {["Understand demand", "Improve discovery", "Measure business growth"].map((label, index) => <div key={label} className="rounded-xl border border-line bg-white px-5 py-4 text-sm font-semibold text-ink"><span className="mr-4 text-link">0{index + 1}</span>{label}</div>)}
+        </div>
+      </div>
       <Section tone="muted" labelledBy="problem">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <h2 id="problem" className="t-h2 text-ink">The problem</h2>
@@ -130,7 +135,7 @@ export default async function ServicePage({ params }: Props) {
       </Section>
 
       {studies.length > 0 && <Section><RelatedCaseStudies items={studies} /></Section>}
-      <Section className={studies.length ? "pt-0 sm:pt-0 lg:pt-0" : ""}><FAQ faqs={expandFaqs(service.faqs, service.name, "service")} /></Section>
+      <Section className={studies.length ? "pt-0 sm:pt-0 lg:pt-0" : ""}><FAQ faqs={[...service.faqs, ...(serviceSearchFaqs[service.slug] ?? [])].slice(0, 10)} /></Section>
       {articles.length > 0 && <Section tone="muted"><RelatedArticles items={articles} /></Section>}
       <Section><RelatedServices items={others} title="Other services" /></Section>
       <FinalCta title={service.ctaLine} body="Tell me about your site and what you're trying to grow. I'll reply with how I'd approach it." />

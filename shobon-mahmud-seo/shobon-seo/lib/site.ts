@@ -14,15 +14,15 @@ function resolveSiteUrl(): string {
 export const siteConfig = {
   name: "Shobon Mahmud",
   jobTitle: "SEO Specialist",
-  shortTagline: "SEO Specialist helping businesses grow through search.",
+  shortTagline: "Dubai-based SEO specialist for organic growth, Google visibility and AI discovery.",
   description:
-    "Shobon Mahmud is an SEO specialist who helps SaaS, technology, health tech, legal tech, logistics, design, e-commerce and local businesses turn search visibility into qualified traffic, leads and revenue.",
+    "Based in Dubai, Shobon Mahmud helps SaaS, technology, health tech, legal tech, logistics, e-commerce and local businesses grow through Google rankings, organic search and AI discovery.",
   url: resolveSiteUrl(),
   locale: "en_US",
   /** Public email. Set NEXT_PUBLIC_CONTACT_EMAIL in .env.local / Vercel. Hidden when empty. */
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "younusshobon@gmail.com",
   /** Where you're based. Shown on About/Contact. Leave "" to hide. */
-  baseLocation: "",
+  baseLocation: "Dubai, UAE",
   /** Social profiles are rendered in the footer and added to Person schema `sameAs`. */
   socials: {
     facebook: "https://www.facebook.com/shobon.mahmud.official",

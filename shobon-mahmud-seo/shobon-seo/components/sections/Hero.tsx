@@ -13,12 +13,11 @@ export function Hero() {
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-white py-1.5 pr-4 pl-3 text-sm text-ink-2 shadow-[0_1px_0_rgba(15,26,43,0.04)]">
             <Search aria-hidden className="size-3.5 text-link" strokeWidth={2.25} />
-            SEO specialist
+            Based in Dubai · Working across markets
           </p>
-          <h1 className="t-display mt-7 max-w-[15ch] text-ink">SEO that turns search visibility into business growth.</h1>
+          <h1 className="t-display mt-7 max-w-[15ch] text-ink">Grow on Google. Get discovered in AI. Turn visibility into business.</h1>
           <p className="t-lead mt-7 max-w-[58ch] text-muted">
-            I help businesses across SaaS, technology, healthcare, legal tech, logistics, design, e-commerce, and local markets build
-            stronger search visibility through technical SEO, content, authority, and conversion-focused strategies.
+            I&apos;m based in Dubai and work with businesses across the Gulf, US and UK. Together we build useful pages, stronger organic visibility and clearer paths from discovery to enquiries and sales.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <ButtonLink href="/contact">Work With Me</ButtonLink>

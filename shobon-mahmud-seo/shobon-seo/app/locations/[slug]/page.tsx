@@ -11,11 +11,12 @@ import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
 import { FAQ } from "@/components/content/FAQ";
-import { expandFaqs } from "@/lib/content/faqs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
 import { LocalMap } from "@/components/maps/LocalMap";
 import { RelatedCaseStudies, RelatedIndustryLinks, RelatedServices } from "@/components/related/Related";
+import { LocationVisual } from "@/components/content/LocationVisual";
+import { locationExtras } from "@/lib/content/location-extras";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -37,19 +38,26 @@ export default async function LocationPage({ params }: Props) {
   const path = `/locations/${loc.slug}`;
   const studies = caseStudies.filter((c) => loc.industries.includes(c.industry)).slice(0, 3);
   const localSeo = getService("local-seo");
+  const extra = locationExtras[loc.slug];
 
   return (
     <>
       <PageHero
         crumbs={[{ name: "Locations", href: "/locations" }, { name: loc.city, href: path }]}
-        kicker={`${loc.city}, ${loc.country === "United States" ? loc.region : loc.country}`}
+        kicker={loc.city === loc.country ? loc.region : `${loc.city}, ${loc.country === "United States" ? loc.region : loc.country}`}
         title={loc.heroTitle}
         intro={loc.intro}
+        aside={<LocationVisual slug={loc.slug} city={loc.city} />}
       >
         <ButtonLink href="/contact">Talk about your {loc.city} business</ButtonLink>
       </PageHero>
 
-      <Section className="pt-0 sm:pt-0 lg:pt-0">
+      <div className="hero-grid-band border-y border-line">
+        <div className="mx-auto grid max-w-7xl gap-3 px-5 py-5 sm:grid-cols-3 sm:px-8">
+          {["Google visibility", "AI discovery", "Qualified growth"].map((label, index) => <div key={label} className="rounded-xl border border-line bg-white px-5 py-4 text-sm font-semibold text-ink"><span className="mr-4 text-link">0{index + 1}</span>{label} in {loc.city}</div>)}
+        </div>
+      </div>
+      <Section className="pt-10 sm:pt-10 lg:pt-10">
         <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
       </Section>
 
@@ -68,18 +76,27 @@ export default async function LocationPage({ params }: Props) {
       </Section>
 
       <Section labelledBy="problems">
-        <div id="problems"><SectionHeading title={`Common SEO problems for ${loc.city} businesses`} /></div>
+        <div id="problems"><SectionHeading title={`What holds back organic growth for ${loc.city} businesses`} /></div>
         <div className="mt-12"><PointGrid points={loc.problems} columns={2} /></div>
       </Section>
 
       <Section tone="muted" labelledBy="opps">
-        <div id="opps"><SectionHeading title={`Search opportunities in ${loc.city}`} /></div>
+        <div id="opps"><SectionHeading title={`Where growth can start in ${loc.city}`} /></div>
         <div className="mt-12"><PointGrid points={loc.opportunities} /></div>
       </Section>
 
+      <Section labelledBy="sectors">
+        <div id="sectors"><SectionHeading title={`Priority sectors to watch through 2030 in ${loc.city}`} intro="These are market and policy themes to research, not predictions or a guarantee of demand. The right plan depends on your actual product and customers." /></div>
+        <div className="mt-12"><PointGrid points={extra.sectors} /></div>
+        <p className="mt-10 text-sm text-muted">Market context: <a className="link" href={extra.source.href} target="_blank" rel="noopener noreferrer">{extra.source.label}</a></p>
+      </Section>
+      <Section tone="muted" labelledBy="growth-path">
+        <div id="growth-path"><SectionHeading title={`From discovery to customers in ${loc.city}`} intro="A focused search journey joins useful pages, credible information and a measurable next step." /></div>
+        <div className="mt-12"><PointGrid points={extra.searchPaths} numbered /></div>
+      </Section>
       <Section><RelatedServices items={getServices(loc.relatedServices)} title={`Services for ${loc.city} businesses`} /></Section>
       {studies.length > 0 && <Section tone="muted"><RelatedCaseStudies items={studies} /></Section>}
-      <Section><FAQ faqs={expandFaqs(loc.faqs, loc.city, "location")} title={`SEO in ${loc.city}: FAQs`} /></Section>
+      <Section><FAQ faqs={extra.faqs} title={`Organic growth in ${loc.city}: FAQs`} /></Section>
       <FinalCta title={`Growing a business in ${loc.city}?`} body="Tell me about your market, your competitors and what you've tried. I'll share how I'd approach it." />
       {localSeo && <JsonLd data={serviceSchema(localSeo, path, loc.city)} />}
     </>

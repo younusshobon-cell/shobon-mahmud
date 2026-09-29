@@ -156,3 +156,20 @@
 @layer components {
   .prose-article > section:first-child h2 { margin-top: 0; }
 }
+
+/* Market-specific editorial illustrations and a quiet grid beneath page intros. */
+.market-visual { position:relative; isolation:isolate; display:flex; min-height:320px; flex-direction:column; overflow:hidden; padding:1.5rem; border-radius:1.5rem; box-shadow:0 24px 60px -28px rgba(15,26,43,.38); background:#14283f; color:#d4e8e9; }
+.market-visual::before { content:""; position:absolute; inset:0; opacity:.22; background-image:linear-gradient(to right,currentColor 1px,transparent 1px),linear-gradient(to bottom,currentColor 1px,transparent 1px); background-size:38px 38px; mask-image:linear-gradient(to top,black,transparent 85%); }
+.market-visual__orb { position:absolute; top:-28px; right:22px; height:190px; width:190px; border-radius:50%; background:#d6b276; filter:blur(1px); opacity:.65; }
+.market-pacific { background:linear-gradient(140deg,#124952,#152c46); color:#c7e9e1; }
+.market-pacific .market-visual__orb { background:#eda779; }
+.market-newyork { background:linear-gradient(140deg,#202c43,#4e3a37); color:#f0e3d2; }
+.market-newyork .market-visual__orb { background:#e79569; }
+.market-austin { background:linear-gradient(140deg,#45363b,#925b42); color:#fbe5ca; }
+.market-austin .market-visual__orb { background:#f3be79; }
+.market-dubai { background:linear-gradient(140deg,#193b51,#987351); color:#f5ead7; }
+.market-saudi { background:linear-gradient(140deg,#0b443d,#3e6654); color:#f2e8c8; }
+.market-london { background:linear-gradient(140deg,#182e4b,#516577); color:#e3e8e9; }
+.market-london .market-visual__orb { background:#e9bc94; }
+.hero-grid-band { background-color:var(--color-paper-2); background-image:linear-gradient(to right,rgba(15,26,43,.035) 1px,transparent 1px); background-size:24px 24px; }
+.hero-grid-band > * { box-shadow:0 12px 30px -20px rgba(15,26,43,.26); }
