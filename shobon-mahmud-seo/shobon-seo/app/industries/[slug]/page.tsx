@@ -10,6 +10,7 @@ import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
 import { FAQ } from "@/components/content/FAQ";
+import { expandFaqs } from "@/lib/content/faqs";
 import { ContextCta } from "@/components/content/ContextCta";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
@@ -110,7 +111,7 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mt-14"><ContextCta line={`Working on ${industry.name} SEO?`} action="Let's discuss it" /></div>
       </Section>
       {studies.length > 0 && <Section tone="muted"><RelatedCaseStudies items={studies} title={`${industry.name} work`} /></Section>}
-      <Section><FAQ faqs={industry.faqs} /></Section>
+      <Section><FAQ faqs={expandFaqs(industry.faqs, industry.name, "industry")} /></Section>
       {articles.length > 0 && <Section tone="muted"><RelatedArticles items={articles} /></Section>}
       <FinalCta />
     </>

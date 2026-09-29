@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({ title: "Terms of Use", descrip
 // TODO: review with a qualified professional for your jurisdiction before launch.
 export default function TermsPage() {
   return (
-    <LegalPage title="Terms of Use" path="/terms" updated="[ADD DATE]">
+    <LegalPage title="Terms of Use" path="/terms" updated="29 September 2026">
       <p>By using this website you agree to these terms.</p>
       <h2>Content</h2>
       <p>Articles and resources on this site are general information, not advice for your specific situation. Search engines change frequently, and results from any SEO work cannot be guaranteed.</p>

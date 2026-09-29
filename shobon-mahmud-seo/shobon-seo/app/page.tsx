@@ -9,6 +9,10 @@ import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { GrowthSystem } from "@/components/sections/GrowthSystem";
 import { BlogPreview } from "@/components/sections/BlogPreview";
+import { HomeDepth } from "@/components/sections/HomeDepth";
+import { FAQ } from "@/components/content/FAQ";
+import { Section } from "@/components/content/Section";
+import { homeFaqs } from "@/lib/content/faqs";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = buildMetadata({
@@ -28,7 +32,9 @@ export default function HomePage() {
       <IndustriesGrid />
       <FeaturedWork />
       <GrowthSystem />
+      <HomeDepth />
       <BlogPreview />
+      <Section><FAQ faqs={homeFaqs} title="SEO questions, answered plainly" /></Section>
       <FinalCta />
     </>
   );

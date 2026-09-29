@@ -15,6 +15,7 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { TableOfContents } from "@/components/blog/TableOfContents";
 import { ArticleBody } from "@/components/blog/ArticleBody";
+import { articleFaqs } from "@/lib/content/faqs";
 import { FAQ } from "@/components/content/FAQ";
 import { ContextCta } from "@/components/content/ContextCta";
 import { Section } from "@/components/content/Section";
@@ -106,7 +107,7 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </Container>
 
-      {post.faqs && post.faqs.length > 0 && <Section tone="muted"><FAQ faqs={post.faqs} /></Section>}
+      <Section tone="muted"><FAQ faqs={articleFaqs(post.faqs, post.title)} /></Section>
       <Section><RelatedArticles items={related} title="Keep reading" /></Section>
       <JsonLd data={articleSchema(post, path)} />
     </article>

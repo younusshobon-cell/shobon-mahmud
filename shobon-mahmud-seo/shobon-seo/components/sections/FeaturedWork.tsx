@@ -12,9 +12,9 @@ export function FeaturedWork() {
   return (
     <Section tone="muted" labelledBy="work-heading">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" id="work-heading">
-        <SectionHeading kicker="Selected work" title="Search problems, and how they were solved." />
+        <SectionHeading kicker="SEO approaches" title="Search problems, and a plan to solve them." />
         <Link href="/portfolio" className="group inline-flex shrink-0 items-center gap-1.5 font-medium text-link">
-          All case studies <Arrow />
+          All example strategies <Arrow />
         </Link>
       </div>
       <div className="mt-12 grid gap-5">

@@ -1,4 +1,6 @@
 import { Container } from "@/components/ui/Container";
+import { FAQ } from "./FAQ";
+import { privacyFaqs, termsFaqs } from "@/lib/content/faqs";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
 export function LegalPage({ title, path, updated, children }: { title: string; path: string; updated: string; children: React.ReactNode }) {
@@ -10,6 +12,7 @@ export function LegalPage({ title, path, updated, children }: { title: string; p
         <p className="mt-4 text-sm text-muted">Last updated {updated}</p>
         <div className="prose-article mt-10">{children}</div>
       </div>
+      <div className="mt-16 border-t border-line pt-12"><FAQ faqs={path === "/privacy" ? privacyFaqs : termsFaqs} title={`${title}: common questions`} /></div>
     </Container>
   );
 }

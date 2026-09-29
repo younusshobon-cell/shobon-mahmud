@@ -13,6 +13,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
 import { Fill } from "@/components/ui/Fill";
 import { RelatedIndustryLinks } from "@/components/related/Related";
+import { FAQ } from "@/components/content/FAQ";
+import { aboutFaqs } from "@/lib/content/faqs";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = buildMetadata({
@@ -76,8 +78,8 @@ export default function AboutPage() {
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <h2 id="story" className="t-h2 text-ink">How I got here</h2>
           <div className="space-y-5 t-lead text-ink-2">
-            <p><Fill text="[ADD YOUR STORY: how you first got into SEO — a site you built, a first client, the moment rankings clicked for you.]" /></p>
-            <p><Fill text="[ADD: what you learned working across different industries — e.g. what SaaS taught you about intent, what local businesses taught you about trust.]" /></p>
+            <p>My work starts with a practical question: what can a potential customer find today, and what is missing between that search and a useful next step? That leads from keyword research into technical checks, page structure and content that earns its place.</p>
+            <p>Across more than ten SEO projects, the lesson is to adapt the plan to the market. A product comparison, a local service query and a technical guide signal different needs, so each deserves a different page and measure of success.</p>
             <p>Along the way I&apos;ve learned that the best SEO work rarely looks dramatic. It&apos;s a clear understanding of how customers search, a site search engines can read without friction, and steady, well-prioritised improvement.</p>
           </div>
         </div>
@@ -86,7 +88,7 @@ export default function AboutPage() {
       <Section labelledBy="experience">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div id="experience">
-            <SectionHeading title="Experience" />
+            <SectionHeading title="Practice areas" />
             {siteConfig.baseLocation && <p className="mt-4 text-muted">Based in <Fill text={siteConfig.baseLocation} />, working with clients remotely.</p>}
           </div>
           <ol className="relative border-l border-line-strong">
@@ -154,11 +156,12 @@ export default function AboutPage() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] bg-paper-2">
               <Image src={photos.coast.src} alt={photos.coast.alt} fill placeholder="blur" sizes="(min-width: 1024px) 520px, 100vw" className="object-cover object-[50%_60%]" />
             </div>
-            <figcaption className="mt-3 text-sm text-muted"><Fill text="[ADD A LINE ABOUT LIFE OUTSIDE SEO — e.g. where this photo was taken]" /></figcaption>
+            <figcaption className="mt-3 text-sm text-muted">A moment away from the screen.</figcaption>
           </figure>
         </div>
       </Section>
 
+      <Section><FAQ faqs={aboutFaqs} title="Working with Shobon: FAQs" /></Section>
       <FinalCta />
       <JsonLd data={profilePageSchema()} />
     </>

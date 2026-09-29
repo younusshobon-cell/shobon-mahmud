@@ -1,8 +1,7 @@
 /**
  * ============================================================
  *  SITE CONFIG — the single place to edit personal details.
- *  Anything in [SQUARE BRACKETS] is a placeholder: replace it
- *  with real information or remove it. Never invent numbers.
+ *  Public details and claims live here. Do not add unverified performance metrics.
  * ============================================================
  */
 
@@ -21,9 +20,9 @@ export const siteConfig = {
   url: resolveSiteUrl(),
   locale: "en_US",
   /** Public email. Set NEXT_PUBLIC_CONTACT_EMAIL in .env.local / Vercel. Hidden when empty. */
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "younusshobon@gmail.com",
   /** Where you're based. Shown on About/Contact. Leave "" to hide. */
-  baseLocation: "[ADD YOUR CITY, COUNTRY]",
+  baseLocation: "",
   /** Social profiles are rendered in the footer and added to Person schema `sameAs`. */
   socials: {
     facebook: "https://www.facebook.com/shobon.mahmud.official",
@@ -48,21 +47,17 @@ export function activeSocials() {
     .map(([key, href]) => ({ key, href, label: socialLabels[key] ?? key }));
 }
 
-/**
- * Homepage trust metrics.
- * Replace each [XX] with a real, defensible number. Keep `note` honest
- * (e.g. "across 2023–2025 client work, GSC data").
- */
+/** Homepage at-a-glance facts; only the project count is supplied by Shobon. */
 export type Metric = { value: string; label: string; note?: string };
 
 export const trustMetrics: Metric[] = [
-  { value: "[XX]+", label: "SEO projects supported", note: "[ADD SOURCE / PERIOD]" },
-  { value: "[XX]%", label: "Median organic traffic growth", note: "[ADD SOURCE / PERIOD]" },
-  { value: "[XX]+", label: "Keywords moved to page one", note: "[ADD SOURCE / PERIOD]" },
-  { value: "8", label: "Industries worked across", note: "SaaS, legal tech, health tech, logistics, design, e-commerce, tech, local" },
+  { value: "10+", label: "SEO projects completed", note: "Project count provided by Shobon Mahmud" },
+  { value: "3", label: "Growth priorities", note: "Technical health, search intent, and conversion" },
+  { value: "7", label: "Core SEO services", note: "Technical, on-page, content, off-page, local, e-commerce, international" },
+  { value: "8", label: "Sectors explored", note: "SaaS, legal tech, health tech, logistics, design, e-commerce, tech, local" },
 ];
 
-/** Tools — TODO: delete any you don't actually use day to day. */
+/** Common tools in an SEO workflow, listed as capabilities rather than certifications. */
 export const tools: { name: string; use: string }[] = [
   { name: "Google Search Console", use: "Indexing, queries, performance" },
   { name: "Google Analytics 4", use: "Organic conversions and journeys" },
@@ -77,25 +72,25 @@ export const tools: { name: string; use: string }[] = [
   { name: "Figma", use: "Wireframes for SEO page templates" },
 ];
 
-/** Career timeline for /about. Replace placeholders with real roles. */
+/** Practice areas rather than unverified employment history. */
 export const experience: { period: string; role: string; org: string; summary: string }[] = [
   {
-    period: "[YEAR] – Present",
-    role: "SEO Specialist",
-    org: "[COMPANY OR 'Independent']",
-    summary: "[ADD: what you own now — e.g. technical SEO and content strategy for SaaS and health tech clients.]",
+    period: "Today",
+    role: "SEO strategy and delivery",
+    org: "Independent practice",
+    summary: "Connecting technical audits, keyword research, content planning and conversion goals into a prioritised search roadmap.",
   },
   {
-    period: "[YEAR] – [YEAR]",
-    role: "[ROLE]",
-    org: "[COMPANY]",
-    summary: "[ADD: scope, industries, the kind of problems you solved.]",
+    period: "Project work",
+    role: "Cross-industry SEO",
+    org: "10+ projects",
+    summary: "Applying the same research-first process to different search journeys, from product discovery to location-specific enquiries.",
   },
   {
-    period: "[YEAR]",
-    role: "Started in SEO",
-    org: "[WHERE / HOW]",
-    summary: "[ADD: how you got into SEO — a first site, a first client, a first ranking.]",
+    period: "Foundation",
+    role: "Search fundamentals",
+    org: "Ongoing learning",
+    summary: "Building a practical approach around crawlability, helpful pages, internal links and measurement that can be checked against real search data.",
   },
 ];
 

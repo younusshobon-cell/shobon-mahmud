@@ -11,6 +11,7 @@ import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
 import { FAQ } from "@/components/content/FAQ";
+import { expandFaqs } from "@/lib/content/faqs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
 import { LocalMap } from "@/components/maps/LocalMap";
@@ -78,7 +79,7 @@ export default async function LocationPage({ params }: Props) {
 
       <Section><RelatedServices items={getServices(loc.relatedServices)} title={`Services for ${loc.city} businesses`} /></Section>
       {studies.length > 0 && <Section tone="muted"><RelatedCaseStudies items={studies} /></Section>}
-      <Section><FAQ faqs={loc.faqs} title={`SEO in ${loc.city}: FAQs`} /></Section>
+      <Section><FAQ faqs={expandFaqs(loc.faqs, loc.city, "location")} title={`SEO in ${loc.city}: FAQs`} /></Section>
       <FinalCta title={`Growing a business in ${loc.city}?`} body="Tell me about your market, your competitors and what you've tried. I'll share how I'd approach it." />
       {localSeo && <JsonLd data={serviceSchema(localSeo, path, loc.city)} />}
     </>

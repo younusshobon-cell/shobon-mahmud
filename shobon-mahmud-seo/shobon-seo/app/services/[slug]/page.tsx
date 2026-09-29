@@ -11,6 +11,7 @@ import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
 import { FAQ } from "@/components/content/FAQ";
+import { expandFaqs } from "@/lib/content/faqs";
 import { ContextCta } from "@/components/content/ContextCta";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
@@ -129,7 +130,7 @@ export default async function ServicePage({ params }: Props) {
       </Section>
 
       {studies.length > 0 && <Section><RelatedCaseStudies items={studies} /></Section>}
-      <Section className={studies.length ? "pt-0 sm:pt-0 lg:pt-0" : ""}><FAQ faqs={service.faqs} /></Section>
+      <Section className={studies.length ? "pt-0 sm:pt-0 lg:pt-0" : ""}><FAQ faqs={expandFaqs(service.faqs, service.name, "service")} /></Section>
       {articles.length > 0 && <Section tone="muted"><RelatedArticles items={articles} /></Section>}
       <Section><RelatedServices items={others} title="Other services" /></Section>
       <FinalCta title={service.ctaLine} body="Tell me about your site and what you're trying to grow. I'll reply with how I'd approach it." />

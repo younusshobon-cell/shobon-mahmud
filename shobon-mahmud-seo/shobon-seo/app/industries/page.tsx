@@ -4,6 +4,9 @@ import { industries } from "@/lib/content/industries";
 import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { IndustryCard } from "@/components/cards/IndustryCard";
+import { FAQ } from "@/components/content/FAQ";
+import { SeoBrief } from "@/components/content/SeoBrief";
+import { industryHubFaqs } from "@/lib/content/faqs";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = buildMetadata({
@@ -27,6 +30,8 @@ export default function IndustriesPage() {
           {industries.map((i) => <IndustryCard key={i.slug} industry={i} />)}
         </div>
       </Section>
+      <SeoBrief title="An industry SEO plan starts with the buyer" intro="The same keyword can mean different things in different markets. Research the decisions buyers need to make before writing pages." points={[{ title: "Map the journey", body: "Separate educational searches from product, provider and service comparisons so each page has a clear job." }, { title: "Show relevant expertise", body: "Use specific processes, examples, product details and subject review where accuracy or trust is essential." }, { title: "Measure commercial intent", body: "Track qualified enquiries, signups and sales by landing page, not just total industry keyword rankings." }]} />
+      <Section><FAQ faqs={industryHubFaqs} /></Section>
       <FinalCta title="Working in a market that isn't listed?" body="The principles carry over. Tell me about your industry and how your customers find you." />
     </>
   );

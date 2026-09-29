@@ -8,10 +8,10 @@ export const metadata: Metadata = buildMetadata({ title: "Privacy Policy", descr
 // TODO: review with a qualified professional for your jurisdiction before launch.
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Privacy Policy" path="/privacy" updated="[ADD DATE]">
+    <LegalPage title="Privacy Policy" path="/privacy" updated="29 September 2026">
       <p>This policy explains what information this website collects and how it is used.</p>
       <h2>Information you send</h2>
-      <p>When you use the contact form, the details you enter (such as your name, email, company, website and message) are sent to me by email so I can reply. They are not sold or shared for marketing.</p>
+      <p>When you use the contact form, the details you enter (such as your name, email, company, website and message) are sent through FormSubmit, a third-party form service, to younusshobon@gmail.com so I can reply. You can email me directly instead. They are not sold or shared for marketing.</p>
       <h2>Analytics</h2>
       <p>This site may use Google Analytics and Microsoft Clarity to understand how visitors use it. These services may set cookies and collect usage data such as pages viewed, device type and approximate location.</p>
       <h2>Embedded maps</h2>

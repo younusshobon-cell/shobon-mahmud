@@ -7,9 +7,10 @@ import { getIndustry } from "@/lib/content/industries";
 import { getServices } from "@/lib/content/services";
 import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
-import { ResultsChart } from "@/components/content/ResultsChart";
+import { FAQ } from "@/components/content/FAQ";
+import { portfolioFaqs } from "@/lib/content/faqs";
 import { Fill } from "@/components/ui/Fill";
-import { DraftBadge } from "@/components/cards/CaseStudyCard";
+
 import { RelatedCaseStudies } from "@/components/related/Related";
 import { FinalCta } from "@/components/sections/FinalCta";
 import Link from "next/link";
@@ -24,7 +25,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = getCaseStudy((await params).slug);
   if (!c) return {};
-  // Drafts are noindexed until real data is added.
+  // These completed pages clearly identify scenarios as illustrative, not measured client results.
   return buildMetadata({ title: c.title, description: c.summary, path: `/portfolio/${c.slug}`, noindex: c.draft });
 }
 
@@ -50,11 +51,11 @@ export default async function CaseStudyPage({ params }: Props) {
       <PageHero
         tone="dark"
         crumbs={[{ name: "Work", href: "/portfolio" }, { name: study.title, href: path }]}
-        kicker={`${industry?.name ?? ""} case study`}
+        kicker={`${industry?.name ?? ""} SEO example strategy`}
         title={study.title}
         aside={
           <dl className="grid grid-cols-2 gap-x-6 gap-y-5 rounded-[var(--radius-panel)] border border-night-line p-6 text-sm">
-            <div className="col-span-2"><dt className="text-on-night-muted">Client</dt><dd className="mt-1 text-on-night"><Fill text={study.client} /></dd></div>
+            <div className="col-span-2"><dt className="text-on-night-muted">Scenario</dt><dd className="mt-1 text-on-night"><Fill text={study.client} /></dd></div>
             <div><dt className="text-on-night-muted">Industry</dt><dd className="mt-1"><Link href={`/industries/${study.industry}`} className="text-link-night hover:underline">{industry?.name}</Link></dd></div>
             <div><dt className="text-on-night-muted">Timeline</dt><dd className="mt-1 text-on-night"><Fill text={study.timeline} /></dd></div>
             <div className="col-span-2">
@@ -69,13 +70,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <p className="t-lead text-on-night"><Fill text={study.outcome} /></p>
       </PageHero>
 
-      {study.draft && (
-        <div className="border-b border-line bg-paper-2">
-          <div className="mx-auto flex max-w-[1240px] flex-wrap items-center gap-3 px-5 py-3 text-sm text-muted sm:px-8 lg:px-10">
-            <DraftBadge /> This case study is a template. Replace the bracketed text in <code className="text-ink-2">lib/content/case-studies.ts</code> and set <code className="text-ink-2">draft: false</code>.
-          </div>
-        </div>
-      )}
+      <div className="border-b border-line bg-paper-2"><div className="mx-auto max-w-[1240px] px-5 py-4 text-sm text-ink-2 sm:px-8 lg:px-10">Illustrative strategy: this page explains a possible SEO approach, not a named client engagement or verified performance result.</div></div>
 
       {study.image && (
         <Section className="pb-0 sm:pb-0 lg:pb-0">
@@ -86,7 +81,7 @@ export default async function CaseStudyPage({ params }: Props) {
       )}
 
       <Section className="py-10 sm:py-12 lg:py-16">
-        <Block id="situation" title="The situation"><p><Fill text={study.situation} /></p></Block>
+        <Block id="situation" title="The scenario"><p><Fill text={study.situation} /></p></Block>
         <Block id="challenge" title="The challenge"><p><Fill text={study.challenge} /></p></Block>
         <Block id="research" title="Research">
           <dl className="grid gap-6 sm:grid-cols-2">
@@ -101,26 +96,27 @@ export default async function CaseStudyPage({ params }: Props) {
         <Block id="strategy" title="Strategy">
           <ul className="space-y-3">{study.strategy.map((s, i) => <li key={i} className="flex gap-3"><span aria-hidden className="mt-2.5 size-1.5 shrink-0 rounded-full bg-link" /><span><Fill text={s} /></span></li>)}</ul>
         </Block>
-        <Block id="execution" title="Execution">
+        <Block id="execution" title="Implementation plan">
           <ol className="space-y-3">{study.execution.map((s, i) => <li key={i} className="grid grid-cols-[2rem_1fr]"><span className="tabular-nums text-link">{String(i + 1).padStart(2, "0")}</span><span><Fill text={s} /></span></li>)}</ol>
         </Block>
-        <Block id="results" title="Results">
+        <Block id="results" title="Success measures">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-8">
             {study.results.map((r) => (
               <div key={r.label}>
-                <dd className="text-3xl font-semibold tracking-tight tabular-nums text-ink"><Fill text={r.value} /></dd>
+                <dd className="text-lg font-semibold leading-snug tracking-tight text-ink"><Fill text={r.value} /></dd>
                 <dt className="mt-1 text-sm text-muted">{r.label}</dt>
               </div>
             ))}
           </dl>
-          <div className="mt-10"><ResultsChart data={study.chart} label={study.chartLabel} /></div>
+          <p className="mt-8 text-sm text-muted">These are metrics to establish and review with actual Search Console and analytics data. No measured result is implied.</p>
         </Block>
         <Block id="takeaway" title="Key takeaway">
           <p className="border-l-2 border-link pl-5 text-xl leading-snug tracking-tight text-ink"><Fill text={study.takeaway} /></p>
         </Block>
       </Section>
 
-      <Section tone="muted"><RelatedCaseStudies items={related} title="More work" /></Section>
+      <Section><FAQ faqs={portfolioFaqs} title="About these SEO examples" /></Section>
+      <Section tone="muted"><RelatedCaseStudies items={related} title="More SEO approaches" /></Section>
       <FinalCta title="Want to solve a similar SEO problem?" body="Tell me where search is getting stuck for you. I'll reply with how I'd approach it." />
     </>
   );

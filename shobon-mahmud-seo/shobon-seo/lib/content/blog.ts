@@ -9,15 +9,12 @@ export const blogCategories: BlogCategory[] = [
   { slug: "content-seo", name: "Content SEO", description: "Keyword research, topical authority, briefs and content strategy." },
   { slug: "off-page-seo", name: "Off-Page SEO", description: "Links, digital PR and building authority." },
   { slug: "ai-and-search", name: "AI & Search", description: "AI Overviews, AI assistants and how search visibility is changing." },
-  { slug: "case-studies", name: "Case Studies", description: "Breakdowns of real SEO projects and experiments." },
+  { slug: "case-studies", name: "Case Studies", description: "SEO strategy examples, measurement frameworks and experiments." },
 ];
 
 export const getCategory = (slug: string) => blogCategories.find((c) => c.slug === slug);
 
-/**
- * Starter articles — written as useful first drafts.
- * Review, add your own examples and experience, then publish under your name.
- */
+/** Practical articles and guides. */
 const rawPosts: Post[] = [
   {
     slug: "technical-seo-audit",

@@ -6,6 +6,8 @@ import { BlogCard } from "@/components/cards/BlogCard";
 import { PostCover } from "@/components/cards/PostCover";
 import { BlogSearch } from "./BlogSearch";
 import { formatDate, cn } from "@/lib/utils";
+import { FAQ } from "@/components/content/FAQ";
+import { blogFaqs } from "@/lib/content/faqs";
 import type { Crumb } from "@/lib/schema";
 
 export function BlogIndex({
@@ -100,6 +102,7 @@ export function BlogIndex({
           ))}
         </nav>
       )}
+      <div className="mt-20 border-t border-line pt-16"><FAQ faqs={blogFaqs} title="SEO learning FAQs" /></div>
     </Container>
   );
 }

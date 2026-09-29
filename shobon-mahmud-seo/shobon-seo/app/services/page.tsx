@@ -6,6 +6,9 @@ import { Section } from "@/components/content/Section";
 import { ServiceCard } from "@/components/cards/ServiceCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
+import { FAQ } from "@/components/content/FAQ";
+import { SeoBrief } from "@/components/content/SeoBrief";
+import { serviceHubFaqs } from "@/lib/content/faqs";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { processSteps } from "@/lib/content/process";
 
@@ -49,6 +52,8 @@ export default function ServicesPage() {
         </ol>
       </Section>
 
+      <SeoBrief title="Choose the right SEO starting point" intro="A practical plan matches the service to the problem your site actually has." points={[{ title: "Pages are missing from search", body: "Start with a technical SEO audit covering crawlability, indexation, redirects and canonical signals." }, { title: "Visitors are researching but not finding you", body: "Use keyword research and content SEO to map buyer questions to specific service, comparison and resource pages." }, { title: "Traffic comes in but enquiries do not", body: "Review page intent, calls to action and analytics events before investing in more visits." }]} />
+      <Section><FAQ faqs={serviceHubFaqs} /></Section>
       <FinalCta title="Not sure which service you need?" body="Most people aren't. Tell me what you're seeing in search and I'll tell you where I'd start." />
     </>
   );

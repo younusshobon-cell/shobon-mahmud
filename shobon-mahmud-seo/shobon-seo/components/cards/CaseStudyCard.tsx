@@ -16,7 +16,7 @@ export function DraftBadge({ className }: { className?: string }) {
 function Cta() {
   return (
     <span className="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-medium text-link lg:pt-6">
-      View case study <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+      Explore strategy <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
     </span>
   );
 }
@@ -43,15 +43,15 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
       </div>
       <dl className={cn("grid content-start gap-5 border-t border-line pt-6 text-[0.9375rem]", variant === "wide" && "lg:border-t-0 lg:pt-0")}>
         <div>
-          <dt className="text-sm text-muted">Challenge</dt>
+          <dt className="text-sm text-muted">Scenario</dt>
           <dd className="mt-1 text-ink-2">{study.summary}</dd>
         </div>
         <div>
-          <dt className="text-sm text-muted">Work</dt>
+          <dt className="text-sm text-muted">Focus areas</dt>
           <dd className="mt-1 text-ink-2">{services.map((s) => s.name).join(" + ")}</dd>
         </div>
         <div>
-          <dt className="text-sm text-muted">Result</dt>
+          <dt className="text-sm text-muted">Suggested direction</dt>
           <dd className="mt-1 font-medium text-ink"><Fill text={study.outcome} /></dd>
         </div>
       </dl>

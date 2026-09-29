@@ -6,6 +6,9 @@ import { photos } from "@/lib/images";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { Section } from "@/components/content/Section";
+import { FAQ } from "@/components/content/FAQ";
+import { contactFaqs } from "@/lib/content/faqs";
 import { SocialLinks } from "@/components/layout/SocialLinks";
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +26,7 @@ const contactEmail = siteConfig.email || "younusshobon@gmail.com";
 
 export default function ContactPage() {
   return (
+    <>
     <Container className="pt-10 pb-20 sm:pt-14 lg:pb-28">
       <Breadcrumbs items={[{ name: "Contact", href: "/contact" }]} />
       <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-20">
@@ -59,5 +63,7 @@ export default function ContactPage() {
         </aside>
       </div>
     </Container>
+    <Section tone="muted"><FAQ faqs={contactFaqs} title="Before you get in touch" /></Section>
+    </>
   );
 }
