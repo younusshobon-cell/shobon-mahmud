@@ -46,7 +46,7 @@ export function Footer() {
             <div className="mt-6 grid gap-2.5">
               <a href="https://wa.me/8801309580863" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl border border-night-line px-4 py-3 text-sm text-on-night transition-colors hover:border-on-night focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-night" aria-label="Chat on WhatsApp at +880 1309 580863">
                 <MessageCircle className="size-5 shrink-0" aria-hidden />
-                <span><span className="block font-medium">WhatsApp chat</span><span className="block text-on-night-muted">+880 1309 580863 · 01309580863</span></span>
+                <span><span className="block font-medium">WhatsApp chat</span><span className="block text-on-night-muted">+880 1309 580863</span></span>
               </a>
               <a href="mailto:younusshobon@gmail.com" className="flex items-center gap-3 rounded-xl border border-night-line px-4 py-3 text-sm text-on-night transition-colors hover:border-on-night focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-night">
                 <Mail className="size-5 shrink-0" aria-hidden />
