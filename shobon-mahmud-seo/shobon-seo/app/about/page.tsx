@@ -54,7 +54,7 @@ export default function AboutPage() {
             <h1 className="t-h1 text-ink">I&apos;m Shobon — an SEO specialist focused on turning search into sustainable growth.</h1>
             <div className="t-lead mt-7 max-w-2xl space-y-5 text-muted">
               <p>
-                I work with businesses across SaaS, legal tech, health tech, logistics, design, e-commerce, technology and local
+                My SEO approach covers SaaS, legal tech, health tech, logistics, design, e-commerce, technology and local
                 markets. The industries are different; the question underneath is always the same: how does search turn into customers
                 for this business?
               </p>
@@ -111,7 +111,7 @@ export default function AboutPage() {
             <ul className="mt-8 flex flex-wrap gap-2">
               {skills.map((s) => <li key={s} className="rounded-full border border-line-strong bg-paper px-4 py-2 text-sm text-ink-2">{s}</li>)}
             </ul>
-            <div className="mt-10"><RelatedIndustryLinks items={industries} title="Industries I've worked across" /></div>
+            <div className="mt-10"><RelatedIndustryLinks items={industries} title="Industries covered on this site" /></div>
           </div>
           <div>
             <h2 className="t-h2 text-ink">Tools I use</h2>

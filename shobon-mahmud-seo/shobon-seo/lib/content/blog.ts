@@ -5,11 +5,8 @@ export const blogCategories: BlogCategory[] = [
   { slug: "seo-strategy", name: "SEO Strategy", description: "Planning, prioritising and measuring SEO as a growth channel." },
   { slug: "technical-seo", name: "Technical SEO", description: "Crawling, indexing, rendering, speed and site architecture." },
   { slug: "local-seo", name: "Local SEO", description: "Map pack visibility, Business Profiles, reviews and location pages." },
-  { slug: "ecommerce-seo", name: "E-commerce SEO", description: "Categories, products, faceted navigation and store platforms." },
   { slug: "content-seo", name: "Content SEO", description: "Keyword research, topical authority, briefs and content strategy." },
-  { slug: "off-page-seo", name: "Off-Page SEO", description: "Links, digital PR and building authority." },
   { slug: "ai-and-search", name: "AI & Search", description: "AI Overviews, AI assistants and how search visibility is changing." },
-  { slug: "case-studies", name: "Case Studies", description: "SEO strategy examples, measurement frameworks and experiments." },
 ];
 
 export const getCategory = (slug: string) => blogCategories.find((c) => c.slug === slug);

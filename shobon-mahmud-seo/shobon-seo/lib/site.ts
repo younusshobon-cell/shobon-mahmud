@@ -77,7 +77,7 @@ export const experience: { period: string; role: string; org: string; summary: s
   {
     period: "Today",
     role: "SEO strategy and delivery",
-    org: "Independent practice",
+    org: "Project-led SEO work",
     summary: "Connecting technical audits, keyword research, content planning and conversion goals into a prioritised search roadmap.",
   },
   {
