@@ -1,0 +1,175 @@
+import type { Location } from "./types";
+
+/**
+ * Location pages describe how Shobon works WITH businesses in each market (remotely).
+ * They must never imply a physical office that doesn't exist — which is why
+ * no LocalBusiness schema is used on these pages.
+ */
+export const locations: Location[] = [
+  {
+    slug: "san-francisco",
+    city: "San Francisco",
+    region: "California",
+    country: "United States",
+    seoTitle: "SEO Consultant for San Francisco Businesses",
+    heroTitle: "SEO consultant for San Francisco startups and tech companies.",
+    intro: "San Francisco has one of the most competitive search markets in the world for SaaS, AI and B2B technology. I work remotely with Bay Area teams on the SEO that matters most here: technical foundations for fast-moving product sites, and content that reaches technical buyers.",
+    coords: { lat: 37.7749, lng: -122.4194 },
+    context: [
+      "Many San Francisco companies compete nationally or globally rather than locally, so their search competition is other well-funded startups publishing at scale — not neighbouring businesses.",
+      "Marketing sites here are often built on Next.js, React or headless CMS setups. That's great for speed of shipping, and a common source of rendering, indexing and internal-linking problems.",
+      "Where local search does matter — clinics, professional services, restaurants, trades — the city's neighbourhood structure (SoMa, the Mission, the Marina, Financial District) shapes how people search.",
+    ],
+    industries: ["saas", "technology", "health-tech", "legal-tech"],
+    problems: [
+      { title: "Crowded category SERPs", body: "Well-funded competitors and review platforms dominate head terms for SaaS and AI categories." },
+      { title: "Framework-driven marketing sites", body: "JavaScript rendering, client-side routing and preview deployments that leak into the index." },
+      { title: "Content velocity without direction", body: "Teams publishing often, without a topical map that builds authority." },
+      { title: "Neighbourhood-level local search", body: "Local businesses competing block by block in dense districts." },
+    ],
+    opportunities: [
+      { title: "Bottom-of-funnel pages", body: "Comparison, alternative and integration pages that convert technical buyers." },
+      { title: "Technical SEO for modern stacks", body: "Rendering, metadata and sitemaps configured correctly in Next.js and headless setups." },
+      { title: "Neighbourhood landing pages", body: "For local businesses, genuinely local pages for the districts they serve." },
+    ],
+    relatedServices: ["technical-seo", "content-seo", "competitor-research", "local-seo"],
+    faqs: [
+      { q: "Do you work on-site in San Francisco?", a: "I work remotely with San Francisco teams, with calls scheduled across time zones. Most SEO work — audits, strategy, implementation reviews — happens asynchronously anyway." },
+      { q: "Do you work with early-stage startups?", a: "Yes. Early-stage work usually focuses on foundations: site architecture, technical setup and the first set of high-intent pages." },
+      { q: "What kind of San Francisco businesses do you help?", a: "Mostly SaaS, technology, health tech and legal tech companies, plus local service businesses that depend on neighbourhood search." },
+    ],
+  },
+  {
+    slug: "new-york",
+    city: "New York",
+    region: "New York",
+    country: "United States",
+    seoTitle: "SEO Consultant for New York Businesses",
+    heroTitle: "SEO consultant for New York businesses in competitive markets.",
+    intro: "New York search results are some of the most contested anywhere — for professional services, e-commerce, fintech and health. I work remotely with New York businesses to find the searches they can realistically win and build the pages and authority to win them.",
+    coords: { lat: 40.7128, lng: -74.006 },
+    context: [
+      "Local search in New York works at borough and neighbourhood level. Someone searching in Brooklyn sees different map results from someone in Midtown, even for the same query.",
+      "Legal, financial, health and real estate services dominate commercial search here, and they fall into categories where Google looks hard at expertise and trust.",
+      "The city is also a base for many e-commerce and DTC brands competing nationally, where category structure and product content decide rankings.",
+    ],
+    industries: ["legal-tech", "ecommerce", "health-tech", "local-services"],
+    problems: [
+      { title: "Borough-level local competition", body: "Map pack visibility that drops off a few blocks from the office." },
+      { title: "High-trust categories", body: "Legal, medical and financial services need strong expertise signals." },
+      { title: "Expensive head terms", body: "Paid search costs push businesses to depend on organic for margin." },
+      { title: "DTC competition", body: "National brands competing with marketplaces for category terms." },
+    ],
+    opportunities: [
+      { title: "Borough and neighbourhood pages", body: "Distinct pages for the areas you actually serve, with local detail." },
+      { title: "Expertise-led content", body: "Authored, reviewed content that stands up in YMYL categories." },
+      { title: "Long-tail commercial searches", body: "Specific service and product searches with lower competition." },
+    ],
+    relatedServices: ["local-seo", "on-page-seo", "ecommerce-seo", "off-page-seo"],
+    faqs: [
+      { q: "How do I rank across multiple boroughs?", a: "Proximity limits map pack reach, so combine a strong Business Profile with genuinely useful area pages, local links and reviews that mention those areas." },
+      { q: "Do you work with New York law firms and legal tech companies?", a: "Yes. Legal SEO in New York rewards precision and trust — clear authorship, practice-area depth and accurate jurisdictional information." },
+      { q: "Do you work remotely with New York clients?", a: "Yes. I work remotely and schedule calls to overlap with Eastern Time." },
+    ],
+  },
+  {
+    slug: "austin",
+    city: "Austin",
+    region: "Texas",
+    country: "United States",
+    seoTitle: "SEO Consultant for Austin Businesses",
+    heroTitle: "SEO consultant for Austin's growing tech and service businesses.",
+    intro: "Austin combines a fast-growing technology scene with a booming local service economy. I work remotely with Austin companies on both: building search visibility for SaaS and tech firms, and local SEO for businesses serving a quickly expanding metro area.",
+    coords: { lat: 30.2672, lng: -97.7431 },
+    context: [
+      "Austin's metro area has grown rapidly, which means new neighbourhoods, new suburbs and new competitors appearing in local search every year — Round Rock, Cedar Park, Pflugerville and beyond.",
+      "The city has a strong base of SaaS, hardware and technology companies, many at the stage where SEO shifts from 'nice to have' to a core acquisition channel.",
+      "Home services, healthcare and professional services are highly competitive locally as population growth drives demand.",
+    ],
+    industries: ["saas", "technology", "local-services", "ecommerce"],
+    problems: [
+      { title: "Metro sprawl", body: "Ranking across a widening service area with suburbs that each behave like separate markets." },
+      { title: "Scaling SaaS content", body: "Moving from a few landing pages to a real content engine." },
+      { title: "New local competitors", body: "Fresh entrants investing heavily in reviews and Business Profiles." },
+    ],
+    opportunities: [
+      { title: "Suburb-level local SEO", body: "Service-area strategies that extend beyond central Austin." },
+      { title: "SaaS foundations", body: "Architecture, technical setup and high-intent pages for scaling startups." },
+      { title: "Review velocity", body: "Systems that keep reviews steady as competition grows." },
+    ],
+    relatedServices: ["local-seo", "technical-seo", "keyword-research", "content-seo"],
+    faqs: [
+      { q: "Can I rank in Austin suburbs without an office there?", a: "Service-area businesses can build visibility in surrounding suburbs, though proximity still matters for the map pack. Area pages, local links and reviews help extend reach." },
+      { q: "Do you work with Austin SaaS startups?", a: "Yes — especially at the stage where organic search needs to become a reliable acquisition channel." },
+      { q: "Is your work remote?", a: "Yes. I work remotely with Austin teams and overlap with Central Time for calls." },
+    ],
+  },
+  {
+    slug: "dubai",
+    city: "Dubai",
+    region: "Dubai",
+    country: "United Arab Emirates",
+    seoTitle: "SEO Consultant for Dubai Businesses",
+    heroTitle: "SEO consultant for Dubai businesses serving the UAE and the wider Gulf.",
+    intro: "Dubai businesses often serve several audiences at once: UAE residents, the wider GCC, and international customers — in English and Arabic. I help Dubai companies build search visibility that works across those languages and markets.",
+    coords: { lat: 25.2048, lng: 55.2708 },
+    context: [
+      "Search in the UAE is bilingual. Many users search in English, many in Arabic, and some mix both. Content strategy needs to reflect how each audience actually searches rather than translating one version into the other.",
+      "Businesses frequently target multiple Gulf countries, which makes international SEO — structure, hreflang and market-specific pages — a practical need, not an advanced extra.",
+      "Local search in Dubai is organised around districts and free zones (Business Bay, JLT, Dubai Marina, DIFC, Deira), and people often search with those names.",
+    ],
+    industries: ["logistics", "ecommerce", "health-tech", "local-services"],
+    problems: [
+      { title: "Bilingual content gaps", body: "English-only sites missing Arabic search demand, or poorly localised Arabic versions." },
+      { title: "Multi-country targeting", body: "The wrong country version ranking across GCC markets." },
+      { title: "District-level local search", body: "Competing within specific business districts and free zones." },
+      { title: "Logistics and trade competition", body: "A dense market of freight, trading and warehousing companies." },
+    ],
+    opportunities: [
+      { title: "Arabic + English strategy", body: "Separate keyword research and localised content for each language." },
+      { title: "GCC international SEO", body: "Correct structure and hreflang for the UAE, Saudi Arabia and neighbouring markets." },
+      { title: "District landing pages", body: "Local pages for the areas and free zones you serve." },
+    ],
+    relatedServices: ["international-seo", "local-seo", "keyword-research", "technical-seo"],
+    faqs: [
+      { q: "Do I need an Arabic version of my website?", a: "If your customers search in Arabic, yes. An Arabic version should be localised with its own keyword research, not machine-translated from English." },
+      { q: "How do I target Saudi Arabia and the UAE from one site?", a: "Usually with country or language subfolders and correct hreflang, so each market sees the right version with relevant pricing and information." },
+      { q: "Do you work with Dubai businesses remotely?", a: "Yes. Time zones between South Asia and the Gulf overlap well for calls." },
+    ],
+  },
+  {
+    slug: "london",
+    city: "London",
+    region: "England",
+    country: "United Kingdom",
+    seoTitle: "SEO Consultant for London Businesses",
+    heroTitle: "SEO consultant for London businesses competing locally and internationally.",
+    intro: "London businesses often compete in two directions: locally across a huge, borough-based city, and internationally as a base for UK, European and global customers. I work remotely with London teams on both.",
+    coords: { lat: 51.5074, lng: -0.1278 },
+    context: [
+      "Search behaviour in the UK differs from the US in spelling, vocabulary and intent — 'solicitor' not 'attorney', 'optimisation' not 'optimization', '£' pricing. Pages built for US audiences frequently underperform here.",
+      "Local search in London works by borough, postcode area and neighbourhood (Shoreditch, Canary Wharf, Camden, Clapham), and proximity limits map pack reach in such a dense city.",
+      "Many London companies serve international customers, making en-GB vs en-US targeting and hreflang a frequent issue.",
+    ],
+    industries: ["saas", "legal-tech", "design", "ecommerce"],
+    problems: [
+      { title: "US-first content", body: "Spelling, terminology and pricing that don't match UK searchers." },
+      { title: "Borough-level competition", body: "Visibility limited to a small radius in a dense city." },
+      { title: "en-GB vs en-US confusion", body: "The wrong English version ranking in the UK." },
+      { title: "Crowded agency market", body: "Design, marketing and professional services competing hard for the same terms." },
+    ],
+    opportunities: [
+      { title: "UK localisation", body: "Keyword research and copy built for UK search behaviour." },
+      { title: "Borough and area pages", body: "Distinct local pages where you genuinely serve an area." },
+      { title: "International structure", body: "Clean targeting for UK, EU and US audiences." },
+    ],
+    relatedServices: ["international-seo", "local-seo", "on-page-seo", "content-seo"],
+    faqs: [
+      { q: "Does UK spelling affect SEO?", a: "Yes, for relevance and user trust. Google understands variants, but pages matching local language and conventions tend to perform and convert better." },
+      { q: "Should a London company use .co.uk or .com?", a: "If the UK is your main market, .co.uk sends a clear signal. If you serve multiple countries, a .com with country subfolders is usually easier to scale." },
+      { q: "Do you work remotely with London teams?", a: "Yes. I work remotely and schedule calls within UK working hours." },
+    ],
+  },
+];
+
+export const getLocation = (slug: string) => locations.find((l) => l.slug === slug);
