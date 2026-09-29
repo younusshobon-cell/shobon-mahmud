@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const industries = ["SaaS", "Legal Tech", "Health Tech", "Logistics", "Design & Creative", "E-commerce", "Technology", "Local Services", "Other"];
@@ -11,7 +10,7 @@ const budgets = ["Under $1,000 / month", "$1,000 – $3,000 / month", "$3,000 �
 const field = "mt-2 block w-full rounded-xl border border-line-strong bg-white px-4 py-3 text-[0.9375rem] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-ink";
 const label = "text-sm font-medium text-ink";
 
-type Status = { state: "idle" | "sending" | "sent" | "error"; message?: string };
+type Status = { state: "idle" | "sending" | "error"; message?: string };
 
 export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
   const [status, setStatus] = useState<Status>({ state: "idle" });
@@ -21,39 +20,37 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
     const form = e.currentTarget;
     setStatus({ state: "sending" });
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/contact?validate=1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(Object.fromEntries(new FormData(form))),
       });
-      const data = (await res.json().catch(() => ({}))) as { error?: string };
-      if (!res.ok) throw new Error(data.error || "The message couldn't be sent.");
-      form.reset();
-      setStatus({ state: "sent" });
+      const data = (await res.json().catch(() => ({}))) as { error?: string; blocked?: boolean };
+      if (!res.ok) throw new Error(data.error || "Please check the form and try again.");
+      if (data.blocked) {
+        form.reset();
+        setStatus({ state: "idle" });
+        return;
+      }
+      // Native submission lets FormSubmit present its CAPTCHA when needed.
+      form.submit();
     } catch (err) {
-      const msg = err instanceof Error ? err.message : "The message couldn't be sent.";
-      setStatus({ state: "error", message: fallbackEmail ? `${msg} You can email ${fallbackEmail} directly.` : msg });
+      const message = err instanceof Error ? err.message : "Please try again.";
+      setStatus({ state: "error", message });
     }
   }
 
-  if (status.state === "sent") {
-    return (
-      <div role="status" className="rounded-[var(--radius-panel)] border border-line bg-paper-2 p-8">
-        <span className="grid size-10 place-items-center rounded-full bg-ink text-paper"><Check className="size-5" aria-hidden /></span>
-        <h2 className="mt-5 text-2xl font-semibold tracking-tight text-ink">Message sent.</h2>
-        <p className="mt-2 leading-relaxed text-muted">I&apos;ll review your message and get back to you as soon as possible.</p>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={onSubmit} className="grid gap-5 sm:grid-cols-2" noValidate={false}>
+    <form action="https://formsubmit.co/younusshobon@gmail.com" method="POST" onSubmit={onSubmit} className="grid gap-5 sm:grid-cols-2">
+      <input type="hidden" name="_subject" value="New enquiry from Shobon Mahmud website" />
+      <input type="hidden" name="_template" value="table" />
       {/* Honeypot: hidden from people, filled by bots */}
       <div aria-hidden className="absolute -left-[9999px]">
-        <label>Leave this empty<input type="text" name="company_url" tabIndex={-1} autoComplete="off" /></label>
+        <label>Leave this empty<input type="text" name="_honey" tabIndex={-1} autoComplete="off" /></label>
+        <input type="text" name="company_url" tabIndex={-1} autoComplete="off" />
       </div>
-      <label className="block"><span className={label}>Name</span><input required name="name" autoComplete="name" className={field} /></label>
-      <label className="block"><span className={label}>Email</span><input required type="email" name="email" autoComplete="email" className={field} /></label>
+      <label className="block"><span className={label}>Name</span><input required maxLength={120} name="name" autoComplete="name" className={field} /></label>
+      <label className="block"><span className={label}>Email</span><input required maxLength={200} type="email" name="email" autoComplete="email" className={field} /></label>
       <label className="block"><span className={label}>Company <span className="font-normal text-muted">(optional)</span></span><input name="company" autoComplete="organization" className={field} /></label>
       <label className="block"><span className={label}>Website</span><input name="website" type="text" inputMode="url" placeholder="yourcompany.com" autoComplete="url" className={field} /></label>
       <label className="block"><span className={label}>Industry</span>
@@ -66,12 +63,12 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
         <select required name="goal" defaultValue="" className={field}><option value="" disabled>Select one</option>{goals.map((g) => <option key={g}>{g}</option>)}</select>
       </label>
       <label className="block sm:col-span-2"><span className={label}>Message</span>
-        <textarea required name="message" rows={6} placeholder="Where is search getting stuck, and what have you already tried?" className={cn(field, "resize-y")} />
+        <textarea required maxLength={5000} name="message" rows={6} placeholder="Where is search getting stuck, and what have you already tried?" className={cn(field, "resize-y")} />
       </label>
       <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-muted">I&apos;ll review your message and get back to you as soon as possible.</p>
+        <p className="text-sm text-muted">I&apos;ll review your message and get back to you as soon as possible.{fallbackEmail ? <> Or email <a className="underline" href={`mailto:${fallbackEmail}`}>{fallbackEmail}</a> directly.</> : null}</p>
         <button type="submit" disabled={status.state === "sending"} className="inline-flex h-12 items-center justify-center rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-link active:translate-y-px disabled:opacity-60">
-          {status.state === "sending" ? "Sending…" : "Send message"}
+          {status.state === "sending" ? "Checking…" : "Send message"}
         </button>
       </div>
       {status.state === "error" && <p role="alert" className="text-sm text-red-700 sm:col-span-2">{status.message}</p>}

@@ -5,11 +5,12 @@ import { NextResponse } from "next/server";
  * CONTACT_TO_EMAIL are set (server-only env vars — never exposed to the browser).
  */
 const MAX = { name: 120, email: 200, company: 160, website: 300, industry: 80, budget: 80, goal: 120, message: 5000 };
-type Payload = Partial<Record<keyof typeof MAX | "company_url", string>>;
+type Payload = Partial<Record<keyof typeof MAX | "company_url" | "_honey", string>>;
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
 export async function POST(req: Request) {
+  const validateOnly = new URL(req.url).searchParams.get("validate") === "1";
   let body: Payload;
   try {
     body = (await req.json()) as Payload;
@@ -18,13 +19,16 @@ export async function POST(req: Request) {
   }
 
   // Honeypot: pretend success to bots
-  if (body.company_url) return NextResponse.json({ ok: true });
+  if (body.company_url || body._honey) return NextResponse.json({ ok: true, blocked: true });
 
   const clean: Record<string, string> = {};
   for (const [k, max] of Object.entries(MAX)) clean[k] = String(body[k as keyof Payload] ?? "").trim().slice(0, max);
 
   if (!clean.name || !clean.message || !clean.goal) return NextResponse.json({ error: "Please fill in your name, goal and message." }, { status: 400 });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean.email)) return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
+
+  // The browser submits valid forms to FormSubmit, which presents its CAPTCHA.
+  if (validateOnly) return NextResponse.json({ ok: true });
 
   const key = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
