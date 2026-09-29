@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { HowIWork } from "@/components/sections/HowIWork";
+import { NinetyDayPlan } from "@/components/sections/NinetyDayPlan";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { GrowthSystem } from "@/components/sections/GrowthSystem";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <TrustStrip />
       <Capabilities />
       <HowIWork />
+      <NinetyDayPlan />
       <IndustriesGrid />
       <FeaturedWork />
       <GrowthSystem />
