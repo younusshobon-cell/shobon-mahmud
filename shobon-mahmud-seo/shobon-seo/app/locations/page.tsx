@@ -16,6 +16,13 @@ export const metadata: Metadata = buildMetadata({
   path: "/locations",
 });
 
+const featuredOrder = ["dubai", "san-francisco", "saudi-arabia", "new-york", "austin", "london"];
+const rank = (slug: string) => {
+  const index = featuredOrder.indexOf(slug);
+  return index === -1 ? featuredOrder.length : index;
+};
+const orderedLocations = [...locations].sort((a, b) => rank(a.slug) - rank(b.slug));
+
 export default function LocationsPage() {
   return (
     <>
@@ -28,7 +35,7 @@ export default function LocationsPage() {
       <Section className="pt-0 sm:pt-0 lg:pt-0">
         <h2 className="sr-only">Cities</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {locations.map((l) => <LocationCard key={l.slug} location={l} />)}
+          {orderedLocations.map((l) => <LocationCard key={l.slug} location={l} />)}
         </div>
         <div className="mt-14">
           <ContextCta line="Need local SEO where you are?" action="Explore local SEO" href="/services/local-seo" />

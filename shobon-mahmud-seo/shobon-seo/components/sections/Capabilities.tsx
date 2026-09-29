@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Section } from "@/components/content/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ContextCta } from "@/components/content/ContextCta";
 import { Arrow } from "@/components/ui/Arrow";
 
 const capabilities = [
@@ -41,7 +40,22 @@ export function Capabilities() {
         </ul>
       </div>
       <div className="mt-14">
-        <ContextCta line="Have technical issues blocking growth?" />
+        <Link
+          href="/contact"
+          className="group relative block overflow-hidden rounded-[var(--radius-panel)] border border-line-strong bg-[linear-gradient(115deg,#e8ecfd_0%,#f7f8fb_55%,#e9f1ec_100%)] px-7 py-8 shadow-[0_22px_55px_-35px_rgba(15,26,43,0.46)] transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-link hover:shadow-[0_28px_65px_-32px_rgba(15,26,43,0.38)] sm:px-10 sm:py-10"
+        >
+          <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,rgba(31,63,209,.08)_1px,transparent_1px)] [background-size:26px_26px]" aria-hidden="true" />
+          <div className="relative grid gap-7 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-12">
+            <div className="max-w-2xl">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-link">Your next growth step</span>
+              <h3 className="mt-3 text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl">Is your website losing customers before they find you?</h3>
+              <p className="mt-3 text-base leading-relaxed text-ink-2">Indexing gaps, slow pages and unclear content can limit Google visibility and enquiries. Share your website and goals, and we&apos;ll identify where to start.</p>
+            </div>
+            <span className="inline-flex min-h-12 w-fit items-center justify-center gap-3 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors group-hover:bg-link sm:text-base">
+              Find my growth blockers <Arrow className="text-white" />
+            </span>
+          </div>
+        </Link>
       </div>
     </Section>
   );
