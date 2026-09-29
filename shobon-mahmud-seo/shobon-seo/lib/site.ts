@@ -24,23 +24,22 @@ export const siteConfig = {
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   /** Where you're based. Shown on About/Contact. Leave "" to hide. */
   baseLocation: "[ADD YOUR CITY, COUNTRY]",
-  /**
-   * Social profiles. Only non-empty URLs are rendered and added to Person schema `sameAs`.
-   * TODO: add your real profile URLs.
-   */
+  /** Social profiles are rendered in the footer and added to Person schema `sameAs`. */
   socials: {
-    linkedin: "",
-    x: "",
-    github: "",
-    medium: "",
+    facebook: "https://www.facebook.com/shobon.mahmud.official",
+    youtube: "https://www.youtube.com/@shobonmahmud",
+    linkedin: "https://www.linkedin.com/in/shobonmahmud/",
+    x: "https://x.com/ShobonMahmud",
+    instagram: "https://www.instagram.com/shobonmahmud/",
   } as Record<string, string>,
 } as const;
 
 export const socialLabels: Record<string, string> = {
+  facebook: "Facebook",
+  youtube: "YouTube",
   linkedin: "LinkedIn",
   x: "X (Twitter)",
-  github: "GitHub",
-  medium: "Medium",
+  instagram: "Instagram",
 };
 
 export function activeSocials() {
