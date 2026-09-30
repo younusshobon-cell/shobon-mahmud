@@ -12,7 +12,7 @@ const silhouettes: Record<string, React.ReactNode> = {
 export function LocationVisual({ slug, city }: { slug: string; city: string }) {
   const detail = locationExtras[slug];
   if (!detail) return null;
-  return <div className={`market-visual market-${detail.palette}`} aria-label={`Stylised skyline inspired by ${city}`} role="img">
+  return <div className={`market-visual lg:self-center market-${detail.palette}`} aria-label={`Stylised skyline inspired by ${city}`} role="img">
     <div className="market-visual__orb" />
     <p className="relative z-10 text-xs font-semibold uppercase tracking-[0.22em] opacity-75">Market notes / 01</p>
     <svg viewBox="0 0 500 220" className="relative z-10 mt-auto w-full" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{silhouettes[detail.palette]}</svg>
