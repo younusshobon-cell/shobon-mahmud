@@ -230,9 +230,12 @@
   --hero-grid-color: rgba(147, 91, 59, .08);
 }
 .hero-surface[data-hero-theme="dubai"] {
-  --hero-start: #f5e8cf; --hero-end: #dceef0;
+  --hero-start: #e8f0fb; --hero-end: #b7c6fd;
   --hero-grid-x: 40px; --hero-grid-y: 64px;
-  --hero-grid-color: rgba(155, 118, 55, .085);
+  --hero-grid-color: rgba(72, 103, 180, .045);
+  background-color: #c1d0ff;
+  background-image: linear-gradient(180deg, #e8f0fb 0%, #d2ddfd 20%, #b7c6fd 55%, #c1d0ff 100%);
+  background-size: 100% 100%;
 }
 .hero-surface[data-hero-theme="saudi-arabia"] {
   --hero-start: #dcece2; --hero-end: #f2e7cd;
