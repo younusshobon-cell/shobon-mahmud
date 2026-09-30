@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const l = getLocation((await params).slug);
   if (!l) return {};
   if (l.slug === "dhaka") {
-    const metadata = buildMetadata({ title: l.seoTitle, description: l.intro, path: "/locations/dhaka" });
-    return { ...metadata, openGraph: { ...metadata.openGraph, locale: "bn_BD" } };
+    const metadata = buildMetadata({ title: l.seoTitle, description: l.intro, path: "/locations/dhaka", absoluteTitle: true });
+    return { ...metadata, openGraph: { ...metadata.openGraph, locale: "en_BD" } };
   }
   return buildMetadata({ title: l.seoTitle, description: l.intro.slice(0, 158), path: `/locations/${l.slug}` });
 }
