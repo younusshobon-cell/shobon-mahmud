@@ -43,6 +43,7 @@ export default async function LocationPage({ params }: Props) {
   return (
     <>
       <PageHero
+        theme={loc.slug}
         crumbs={[{ name: "Locations", href: "/locations" }, { name: loc.city, href: path }]}
         kicker={loc.city === loc.country ? loc.region : `${loc.city}, ${loc.country === "United States" ? loc.region : loc.country}`}
         title={loc.heroTitle}

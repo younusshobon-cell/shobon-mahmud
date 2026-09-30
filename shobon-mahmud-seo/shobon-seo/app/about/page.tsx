@@ -1,3 +1,4 @@
+import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/seo";
@@ -46,33 +47,35 @@ const workingStyle = [
 export default function AboutPage() {
   return (
     <>
-      <Container className="pt-10 sm:pt-14">
-        <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
-        <div className="grid gap-12 pb-16 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-16 lg:pb-24">
-          <div>
-            <p className="mb-5 text-sm font-medium text-link">About</p>
-            <h1 className="t-h1 text-ink">I&apos;m Shobon — an SEO specialist focused on turning search into sustainable growth.</h1>
-            <div className="t-lead mt-7 max-w-2xl space-y-5 text-muted">
-              <p>
-                My SEO approach covers SaaS, legal tech, health tech, logistics, design, e-commerce, technology and local
-                markets. The industries are different; the question underneath is always the same: how does search turn into customers
-                for this business?
-              </p>
-              <p>
-                That question is why I work across the whole SEO stack — technical foundations, content, authority, local and
-                international search — rather than treating any one of them as the answer.
-              </p>
+      <section className="hero-surface" style={heroTheme("/about")}>
+        <Container className="pt-10 sm:pt-14">
+          <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
+          <div className="grid gap-12 pb-16 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-16 lg:pb-24">
+            <div>
+              <p className="mb-5 text-sm font-medium text-link">About</p>
+              <h1 className="t-h1 text-ink">I&apos;m Shobon — an SEO specialist focused on turning search into sustainable growth.</h1>
+              <div className="t-lead mt-7 max-w-2xl space-y-5 text-muted">
+                <p>
+                  My SEO approach covers SaaS, legal tech, health tech, logistics, design, e-commerce, technology and local
+                  markets. The industries are different; the question underneath is always the same: how does search turn into customers
+                  for this business?
+                </p>
+                <p>
+                  That question is why I work across the whole SEO stack — technical foundations, content, authority, local and
+                  international search — rather than treating any one of them as the answer.
+                </p>
+              </div>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <ButtonLink href="/contact">Work With Me</ButtonLink>
+                <ButtonLink href="/portfolio" variant="secondary">View My Work</ButtonLink>
+              </div>
             </div>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <ButtonLink href="/contact">Work With Me</ButtonLink>
-              <ButtonLink href="/portfolio" variant="secondary">View My Work</ButtonLink>
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[28px] bg-paper-2">
+              <Image src={photos.outdoor.src} alt={photos.outdoor.alt} fill priority placeholder="blur" sizes="(min-width: 1024px) 440px, 100vw" className="object-cover object-[50%_25%]" />
             </div>
           </div>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[28px] bg-paper-2">
-            <Image src={photos.outdoor.src} alt={photos.outdoor.alt} fill priority placeholder="blur" sizes="(min-width: 1024px) 440px, 100vw" className="object-cover object-[50%_25%]" />
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </section>
 
       <Section tone="muted" labelledBy="story">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">

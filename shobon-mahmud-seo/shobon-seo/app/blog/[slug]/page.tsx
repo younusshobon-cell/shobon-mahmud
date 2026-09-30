@@ -1,3 +1,4 @@
+import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -53,23 +54,25 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <article>
-      <Container className="pt-10 sm:pt-14">
-        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, ...(cat ? [{ name: cat.name, href: `/blog/category/${cat.slug}` }] : []), { name: post.title, href: path }]} />
-        <header className="max-w-3xl">
-          {cat && <Link href={`/blog/category/${cat.slug}`} className="text-sm font-medium text-link hover:underline">{cat.name}</Link>}
-          <h1 className="t-h1 mt-4 text-ink">{post.title}</h1>
-          <p className="t-lead mt-6 text-muted">{post.description}</p>
-          <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
-            <Link href="/about" className="flex items-center gap-2.5 text-ink hover:underline">
-              <Image src={photos.smile.src} alt="" width={36} height={36} className="size-9 rounded-full object-cover" />
-              {post.author}
-            </Link>
-            <span>Published <time dateTime={post.date}>{formatDate(post.date)}</time></span>
-            {post.updated && <span>Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time></span>}
-            <span>{post.readingTime} min read</span>
-          </div>
-        </header>
-      </Container>
+      <section className="hero-surface" style={heroTheme(path)}>
+        <Container className="pt-10 pb-12 sm:pt-14 lg:pb-16">
+          <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, ...(cat ? [{ name: cat.name, href: `/blog/category/${cat.slug}` }] : []), { name: post.title, href: path }]} />
+          <header className="max-w-3xl">
+            {cat && <Link href={`/blog/category/${cat.slug}`} className="text-sm font-medium text-link hover:underline">{cat.name}</Link>}
+            <h1 className="t-h1 mt-4 text-ink">{post.title}</h1>
+            <p className="t-lead mt-6 text-muted">{post.description}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
+              <Link href="/about" className="flex items-center gap-2.5 text-ink hover:underline">
+                <Image src={photos.smile.src} alt="" width={36} height={36} className="size-9 rounded-full object-cover" />
+                {post.author}
+              </Link>
+              <span>Published <time dateTime={post.date}>{formatDate(post.date)}</time></span>
+              {post.updated && <span>Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time></span>}
+              <span>{post.readingTime} min read</span>
+            </div>
+          </header>
+        </Container>
+      </section>
 
       <Container className="pt-12 pb-16 lg:pt-16">
         <div className="grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[240px_minmax(0,720px)_1fr]">

@@ -1,3 +1,4 @@
+import { heroTheme } from "@/lib/hero-theme";
 import Link from "next/link";
 import { blogCategories, getCategory, posts, type PostWithMeta } from "@/lib/content/blog";
 import { Container } from "@/components/ui/Container";
@@ -36,31 +37,36 @@ export function BlogIndex({
   const index = posts.map((p) => ({ slug: p.slug, title: p.title, description: p.description, category: getCategory(p.category)?.name ?? "" }));
 
   return (
-    <Container className="pt-10 pb-20 sm:pt-14 lg:pb-28">
-      <Breadcrumbs items={crumbs} />
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-        <div className="max-w-2xl">
-          <h1 className="t-h1 text-ink">{title}</h1>
-          <p className="t-lead mt-5 text-muted">{intro}</p>
-        </div>
-        <BlogSearch index={index} />
-      </div>
+    <>
+      <section className="hero-surface" style={heroTheme(basePath)}>
+        <Container className="pt-10 pb-10 sm:pt-14 lg:pb-14">
+          <Breadcrumbs items={crumbs} />
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <h1 className="t-h1 text-ink">{title}</h1>
+              <p className="t-lead mt-5 text-muted">{intro}</p>
+            </div>
+            <BlogSearch index={index} />
+          </div>
 
-      <nav aria-label="Blog categories" className="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
-        <ul className="flex gap-2 pb-1">
-          <li>
-            <Link href="/blog" aria-current={!activeCategory ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", !activeCategory ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>All</Link>
-          </li>
-          {blogCategories.map((c) => (
-            <li key={c.slug}>
-              <Link href={`/blog/category/${c.slug}`} aria-current={activeCategory === c.slug ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", activeCategory === c.slug ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>
-                {c.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+          <nav aria-label="Blog categories" className="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+            <ul className="flex gap-2 pb-1">
+              <li>
+                <Link href="/blog" aria-current={!activeCategory ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", !activeCategory ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>All</Link>
+              </li>
+              {blogCategories.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/blog/category/${c.slug}`} aria-current={activeCategory === c.slug ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", activeCategory === c.slug ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
+        </Container>
+      </section>
+    <Container className="pb-20 lg:pb-28">
       {featured && (
         <article className="group relative mt-12 grid gap-8 rounded-[var(--radius-panel)] border border-line p-5 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12">
           <PostCover category={getCategory(featured.category)?.name ?? ""} image={featured.image} className="aspect-[16/10]" priority />
@@ -104,5 +110,6 @@ export function BlogIndex({
       )}
       <div className="mt-20 border-t border-line pt-16"><FAQ faqs={blogFaqs} title="SEO learning FAQs" /></div>
     </Container>
+    </>
   );
 }

@@ -8,7 +8,7 @@ import { SerpSnippet } from "./SerpSnippet";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="hero-surface" data-hero-theme="international">
       <Container className="grid gap-12 pt-10 pb-16 sm:pt-16 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:gap-16 lg:pt-20 lg:pb-28">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-white py-1.5 pr-4 pl-3 text-sm text-ink-2 shadow-[0_1px_0_rgba(15,26,43,0.04)]">
