@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getLocation, locations } from "@/lib/content/locations";
@@ -48,7 +49,19 @@ export default async function LocationPage({ params }: Props) {
         kicker={loc.city === loc.country ? loc.region : `${loc.city}, ${loc.country === "United States" ? loc.region : loc.country}`}
         title={loc.heroTitle}
         intro={loc.intro}
-        aside={<LocationVisual slug={loc.slug} city={loc.city} />}
+        aside={loc.slug === "dubai" ? (
+          <div className="overflow-hidden rounded-[28px] lg:self-center lg:-translate-y-8">
+            <Image
+              src="/images/dubai-hero.webp"
+              alt="Dubai skyline with Burj Khalifa and an upward growth chart"
+              width={1600}
+              height={1369}
+              priority
+              sizes="(min-width: 1024px) 560px, (min-width: 640px) 600px, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
+        ) : <LocationVisual slug={loc.slug} city={loc.city} />}
       >
         <ButtonLink href="/contact">Talk about your {loc.city} business</ButtonLink>
       </PageHero>
