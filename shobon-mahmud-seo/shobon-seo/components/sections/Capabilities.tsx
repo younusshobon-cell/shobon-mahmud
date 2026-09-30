@@ -52,7 +52,7 @@ export function Capabilities() {
               <p className="mt-3 text-base leading-relaxed text-ink-2">Indexing gaps, slow pages and unclear content can limit Google visibility and enquiries. Share your website and goals, and we&apos;ll identify where to start.</p>
             </div>
             <span className="inline-flex min-h-12 w-fit items-center justify-center gap-3 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors group-hover:bg-link sm:text-base">
-              Find my growth blockers <Arrow className="text-white" />
+              Find Your Growth Blockers <Arrow className="text-white" />
             </span>
           </div>
         </Link>
