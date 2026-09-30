@@ -7,6 +7,23 @@ import type { Location } from "./types";
  */
 export const locations: Location[] = [
   {
+    slug: "dhaka",
+    city: "Dhaka",
+    region: "Dhaka",
+    country: "Bangladesh",
+    seoTitle: "Dhaka SEO & Digital Marketing | Website ৳১৫,০০০",
+    heroTitle: "ঢাকার ব্যবসার জন্য SEO, digital marketing ও website",
+    intro: "ঢাকার dental clinic, diagnostic centre, দোকান ও local business-এর জন্য SEO, Facebook marketing, paid ও organic campaign। নির্ধারিত scope-এর business website মাত্র ৳১৫,০০০।",
+    coords: { lat: 23.8103, lng: 90.4125 },
+    context: [],
+    industries: ["health-tech", "local-services", "ecommerce"],
+    problems: [],
+    opportunities: [],
+    relatedServices: ["local-seo", "on-page-seo", "technical-seo"],
+    faqs: [],
+  },
+
+  {
     slug: "san-francisco",
     city: "San Francisco",
     region: "California",

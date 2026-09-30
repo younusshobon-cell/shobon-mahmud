@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DhakaLanding } from "@/components/sections/DhakaLanding";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
@@ -30,12 +31,17 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const l = getLocation((await params).slug);
   if (!l) return {};
+  if (l.slug === "dhaka") {
+    const metadata = buildMetadata({ title: l.seoTitle, description: l.intro, path: "/locations/dhaka" });
+    return { ...metadata, openGraph: { ...metadata.openGraph, locale: "bn_BD" } };
+  }
   return buildMetadata({ title: l.seoTitle, description: l.intro.slice(0, 158), path: `/locations/${l.slug}` });
 }
 
 export default async function LocationPage({ params }: Props) {
   const loc = getLocation((await params).slug);
   if (!loc) notFound();
+  if (loc.slug === "dhaka") return <DhakaLanding />;
   const path = `/locations/${loc.slug}`;
   const studies = caseStudies.filter((c) => loc.industries.includes(c.industry)).slice(0, 3);
   const localSeo = getService("local-seo");

@@ -11,12 +11,12 @@ import { locationHubFaqs } from "@/lib/content/faqs";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Locations — SEO for Businesses in Dubai, Saudi Arabia, US and UK",
-  description: "SEO for businesses in Dubai, Saudi Arabia, San Francisco, New York, Austin and London — how search works in each market and where the opportunities are.",
+  title: "Locations — SEO for Businesses in Dubai, Saudi Arabia, Dhaka, US and UK",
+  description: "SEO for businesses in Dubai, Saudi Arabia, Dhaka, San Francisco, New York, Austin and London — how search works in each market and where the opportunities are.",
   path: "/locations",
 });
 
-const featuredOrder = ["dubai", "san-francisco", "saudi-arabia", "new-york", "austin", "london"];
+const featuredOrder = ["dubai", "dhaka", "san-francisco", "saudi-arabia", "new-york", "austin", "london"];
 const rank = (slug: string) => {
   const index = featuredOrder.indexOf(slug);
   return index === -1 ? featuredOrder.length : index;
@@ -30,7 +30,7 @@ export default function LocationsPage() {
         crumbs={[{ name: "Locations", href: "/locations" }]}
         kicker="Locations"
         title="Based in Dubai. Built for the way each market discovers businesses."
-        intro="From Dubai and Saudi Arabia to US cities and London, I help businesses grow through Google search and AI discovery. Explore local language, buyer behaviour and practical opportunities in each market."
+        intro="From Dubai, Dhaka and Saudi Arabia to US cities and London, I help businesses grow through Google search and AI discovery. Explore local language, buyer behaviour and practical opportunities in each market."
       />
       <Section className="pt-0 sm:pt-0 lg:pt-0">
         <h2 className="sr-only">Cities</h2>
