@@ -3,6 +3,7 @@ import { caseStudies } from "@/lib/content/case-studies";
 import { Section } from "@/components/content/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CaseStudyCard } from "@/components/cards/CaseStudyCard";
+import { ContextCta } from "@/components/content/ContextCta";
 import { Arrow } from "@/components/ui/Arrow";
 
 export function FeaturedWork() {
@@ -22,6 +23,9 @@ export function FeaturedWork() {
         <div className="grid gap-5 md:grid-cols-2">
           {rest.map((c) => <CaseStudyCard key={c.slug} study={c} />)}
         </div>
+      </div>
+      <div className="mt-10">
+        <ContextCta line="Want a strategy shaped around your website?" action="Discuss my SEO goals" />
       </div>
     </Section>
   );

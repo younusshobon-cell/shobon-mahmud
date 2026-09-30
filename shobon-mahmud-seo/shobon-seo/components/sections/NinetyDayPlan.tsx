@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/content/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -73,7 +73,7 @@ export function NinetyDayPlan() {
       </ol>
       <div className="mt-8 flex flex-col gap-4 rounded-[var(--radius-card)] bg-paper-2 p-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:p-8">
         <p className="max-w-2xl text-sm leading-relaxed text-ink-2"><strong className="text-ink">The path:</strong> relevant search → useful page → qualified enquiry or checkout → sale. SEO can improve each step, but rankings and revenue are not guaranteed within 90 days.</p>
-        <Link href="/contact" className="shrink-0 font-medium text-link hover:underline">Discuss your 90-day plan →</Link>
+        <ButtonLink href="/contact" variant="secondary" className="shrink-0">Discuss My 90-Day Plan</ButtonLink>
       </div>
     </Section>
   );

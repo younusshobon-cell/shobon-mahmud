@@ -19,10 +19,11 @@ export function Hero() {
           <p className="t-lead mt-7 max-w-[58ch] text-muted">
             I&apos;m based in Dubai and work with businesses across the Gulf, US and UK. Together we build useful pages, stronger organic visibility and clearer paths from discovery to enquiries and sales.
           </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <ButtonLink href="/contact">Work With Me</ButtonLink>
-            <ButtonLink href="/portfolio" variant="secondary">View My Work</ButtonLink>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <ButtonLink href="/contact">Discuss My SEO Goals</ButtonLink>
+            <ButtonLink href="/portfolio" variant="secondary">Explore SEO Strategies</ButtonLink>
           </div>
+          <p className="mt-4 text-sm leading-relaxed text-muted">Share your website and goals. I&apos;ll review them and suggest where to start.</p>
         </div>
 
         <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">

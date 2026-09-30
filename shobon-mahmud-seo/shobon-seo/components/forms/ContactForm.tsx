@@ -52,11 +52,11 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
       <label className="block"><span className={label}>Name</span><input required maxLength={120} name="name" autoComplete="name" className={field} /></label>
       <label className="block"><span className={label}>Email</span><input required maxLength={200} type="email" name="email" autoComplete="email" className={field} /></label>
       <label className="block"><span className={label}>Company <span className="font-normal text-muted">(optional)</span></span><input name="company" autoComplete="organization" className={field} /></label>
-      <label className="block"><span className={label}>Website</span><input name="website" type="text" inputMode="url" placeholder="yourcompany.com" autoComplete="url" className={field} /></label>
-      <label className="block"><span className={label}>Industry</span>
+      <label className="block"><span className={label}>Website <span className="font-normal text-muted">(optional)</span></span><input name="website" type="text" inputMode="url" placeholder="yourcompany.com" autoComplete="url" className={field} /></label>
+      <label className="block"><span className={label}>Industry <span className="font-normal text-muted">(optional)</span></span>
         <select name="industry" defaultValue="" className={field}><option value="" disabled>Select one</option>{industries.map((i) => <option key={i}>{i}</option>)}</select>
       </label>
-      <label className="block"><span className={label}>Budget range</span>
+      <label className="block"><span className={label}>Budget range <span className="font-normal text-muted">(optional)</span></span>
         <select name="budget" defaultValue="" className={field}><option value="" disabled>Select one</option>{budgets.map((b) => <option key={b}>{b}</option>)}</select>
       </label>
       <label className="block sm:col-span-2"><span className={label}>What are you trying to improve?</span>
@@ -68,7 +68,7 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
       <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted">I&apos;ll review your message and get back to you as soon as possible.{fallbackEmail ? <> Or email <a className="underline" href={`mailto:${fallbackEmail}`}>{fallbackEmail}</a> directly.</> : null}</p>
         <button type="submit" disabled={status.state === "sending"} className="inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-link active:translate-y-px disabled:opacity-60">
-          {status.state === "sending" ? "Checking…" : "Send message"}
+          {status.state === "sending" ? "Checking…" : "Send SEO Enquiry"}
         </button>
       </div>
       {status.state === "error" && <p role="alert" className="text-sm text-red-700 sm:col-span-2">{status.message}</p>}

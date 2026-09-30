@@ -40,7 +40,7 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-[1240px] items-center justify-between px-5 sm:px-8 lg:h-[4.5rem] lg:px-10">
-        <Logo />
+        <Logo className="max-[380px]:[&>span]:hidden" />
 
         <nav aria-label="Main" className="hidden lg:block">
           <ul className="flex items-center gap-1">
@@ -67,9 +67,9 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Link
             href="/contact"
-            className="hidden h-10 items-center rounded-full bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-link active:translate-y-px sm:inline-flex"
+            className="inline-flex min-h-11 items-center rounded-full bg-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-link active:translate-y-px sm:px-5"
           >
-            Let&apos;s Talk
+            Discuss SEO
           </Link>
           <button
             type="button"
@@ -114,7 +114,7 @@ export function Navbar() {
                 ))}
               </ul>
               <Link href="/contact" className="mt-8 flex h-12 items-center justify-center rounded-full bg-ink text-paper font-medium">
-                Let&apos;s Talk
+                Discuss SEO
               </Link>
             </nav>
           </motion.div>
