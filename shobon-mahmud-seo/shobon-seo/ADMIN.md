@@ -6,7 +6,7 @@ Open `/admin` to manage the website. Public routes retain their existing URLs an
 
 Set these **server-only encrypted environment variables** for the `shobon-mahmud` project:
 
-- `ADMIN_PASSWORD`: a unique password, at least 16 characters, no more than 256.
+- `ADMIN_PASSWORD`: a unique password, at least 11 characters (a longer unique password is recommended), no more than 256.
 - `ADMIN_SESSION_SECRET`: a separate cryptographically random secret, at least 32 characters. For example, generate one with `openssl rand -hex 32`.
 - `ADMIN_GITHUB_TOKEN`: a fine-grained GitHub personal access token restricted to `younusshobon-cell/shobon-mahmud`, with **Contents: Read and write**. The token remains on the server and is never returned to the browser. Configure a suitable expiry and rotate it before expiration.
 

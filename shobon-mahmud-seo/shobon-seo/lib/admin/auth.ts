@@ -7,7 +7,8 @@ export const COOKIE = "shobon_admin";
 const derive = promisify(scrypt);
 export function authConfigured() {
   return (
-    (process.env.ADMIN_PASSWORD?.length ?? 0) >= 16 &&
+    (process.env.ADMIN_PASSWORD?.length ?? 0) >= 11 &&
+    (process.env.ADMIN_PASSWORD?.length ?? 0) <= 256 &&
     (process.env.ADMIN_SESSION_SECRET?.length ?? 0) >= 32
   );
 }
@@ -100,7 +101,7 @@ export const cookieOptions = {
   path: "/",
   maxAge: 8 * 60 * 60,
 };
-// Per-instance throttling; the strong password and HMAC session remain mandatory.
+// Per-instance throttling; password verification and HMAC sessions remain mandatory.
 const attempts = new Map<string, { count: number; expires: number }>();
 export function allowLogin(request: Request) {
   const key =

@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Admin login needs ADMIN_PASSWORD (16+ characters) and ADMIN_SESSION_SECRET (32+ characters) in Vercel.",
+          "Admin login needs ADMIN_PASSWORD (11+ characters) and ADMIN_SESSION_SECRET (32+ characters) in Vercel.",
       },
       { status: 503 },
     );

@@ -44,6 +44,13 @@ function load(file, stub = {}) {
     },
   });
   assert.equal(auth.authConfigured(), true);
+  const previousPassword = process.env.ADMIN_PASSWORD;
+  process.env.ADMIN_PASSWORD = "dummy-pass1";
+  assert.equal(auth.authConfigured(), true);
+  assert.equal(await auth.verifyPassword("dummy-pass1"), true);
+  process.env.ADMIN_PASSWORD = "dummy-pass";
+  assert.equal(auth.authConfigured(), false);
+  process.env.ADMIN_PASSWORD = previousPassword;
   assert.equal(await auth.verifyPassword("wrong"), false);
   assert.equal(await auth.verifyPassword(process.env.ADMIN_PASSWORD), true);
   const session = auth.issueSession();
