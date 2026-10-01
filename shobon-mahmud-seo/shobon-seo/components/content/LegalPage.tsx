@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-content-LegalPage.json";
 import { heroTheme } from "@/lib/hero-theme";
 import { Container } from "@/components/ui/Container";
 import { FAQ } from "./FAQ";
@@ -12,7 +14,7 @@ export function LegalPage({ title, path, updated, children }: { title: string; p
       <Breadcrumbs items={[{ name: title, href: path }]} />
       <div className="max-w-2xl">
         <h1 className="t-h1 text-ink">{title}</h1>
-        <p className="mt-4 text-sm text-muted">Last updated {updated}</p>
+        <p className="mt-4 text-sm text-muted">{pageCopy.text_001}{updated}</p>
       </div>
       </Container>
     </section>

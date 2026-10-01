@@ -1,0 +1,26 @@
+[
+  {
+    "href": "/portfolio",
+    "label": "Work"
+  },
+  {
+    "href": "/services",
+    "label": "Services"
+  },
+  {
+    "href": "/industries",
+    "label": "Industries"
+  },
+  {
+    "href": "/locations",
+    "label": "Locations"
+  },
+  {
+    "href": "/blog",
+    "label": "Blog"
+  },
+  {
+    "href": "/about",
+    "label": "About"
+  }
+]

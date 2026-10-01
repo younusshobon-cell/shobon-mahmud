@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-related-Related.json";
 import Link from "next/link";
 import type { CaseStudy, Industry, Service } from "@/lib/content/types";
 import type { PostWithMeta } from "@/lib/content/blog";
@@ -19,11 +21,11 @@ function Head({ title, href, linkLabel }: { title: string; href?: string; linkLa
   );
 }
 
-export function RelatedCaseStudies({ items, title = "Related work" }: { items: CaseStudy[]; title?: string }) {
+export function RelatedCaseStudies({ items, title = pageCopy.text_001 }: { items: CaseStudy[]; title?: string }) {
   if (!items.length) return null;
   return (
     <div>
-      <Head title={title} href="/portfolio" linkLabel="All work" />
+      <Head title={title} href={pageCopy.text_002} linkLabel="All work" />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {items.map((c) => <CaseStudyCard key={c.slug} study={c} />)}
       </div>
@@ -31,11 +33,11 @@ export function RelatedCaseStudies({ items, title = "Related work" }: { items: C
   );
 }
 
-export function RelatedArticles({ items, title = "Related reading" }: { items: PostWithMeta[]; title?: string }) {
+export function RelatedArticles({ items, title = pageCopy.text_003 }: { items: PostWithMeta[]; title?: string }) {
   if (!items.length) return null;
   return (
     <div>
-      <Head title={title} href="/blog" linkLabel="All articles" />
+      <Head title={title} href={pageCopy.text_004} linkLabel="All articles" />
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {items.map((p) => <BlogCard key={p.slug} post={p} />)}
       </div>
@@ -43,11 +45,11 @@ export function RelatedArticles({ items, title = "Related reading" }: { items: P
   );
 }
 
-export function RelatedServices({ items, title = "Related services" }: { items: Service[]; title?: string }) {
+export function RelatedServices({ items, title = pageCopy.text_005 }: { items: Service[]; title?: string }) {
   if (!items.length) return null;
   return (
     <div>
-      <Head title={title} href="/services" linkLabel="All services" />
+      <Head title={title} href={pageCopy.text_006} linkLabel="All services" />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((s) => <ServiceCard key={s.slug} service={s} />)}
       </div>
@@ -64,8 +66,7 @@ export function RelatedIndustryLinks({ items, title = "Industries" }: { items: I
         {items.map((i) => (
           <li key={i.slug}>
             <Link href={`/industries/${i.slug}`} className="inline-flex rounded-full border border-line px-3.5 py-1.5 text-sm text-ink-2 transition-colors hover:border-ink hover:text-ink">
-              {i.name} SEO
-            </Link>
+              {i.name} {pageCopy.text_007}</Link>
           </li>
         ))}
       </ul>

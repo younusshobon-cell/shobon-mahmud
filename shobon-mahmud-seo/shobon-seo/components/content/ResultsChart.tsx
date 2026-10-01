@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-content-ResultsChart.json";
 /**
  * Server-rendered SVG line chart — no chart library, no client JS.
  * Pass monthly values (e.g. organic clicks from Search Console).
@@ -7,10 +9,8 @@ export function ResultsChart({ data, label }: { data?: { label: string; value: n
     return (
       <figure className="grid aspect-[16/7] place-items-center rounded-[var(--radius-card)] border border-dashed border-line-strong bg-paper-2 p-6 text-center">
         <figcaption className="max-w-sm text-sm text-muted">
-          Results chart appears here once real data is added.
-          <br />
-          Add monthly values to <code className="text-ink-2">chart</code> in <code className="text-ink-2">lib/content/case-studies.ts</code>.
-        </figcaption>
+          {pageCopy.text_001}<br />
+          {pageCopy.text_002}<code className="text-ink-2">{pageCopy.text_003}</code> {pageCopy.text_004}<code className="text-ink-2">{pageCopy.text_005}</code>{pageCopy.text_006}</figcaption>
       </figure>
     );
   }

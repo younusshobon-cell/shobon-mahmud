@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-cards-LocationCard.json";
 import Link from "next/link";
 import type { Location } from "@/lib/content/types";
 import { getIndustries } from "@/lib/content/industries";
@@ -15,7 +17,7 @@ export function LocationCard({ location }: { location: Location }) {
         {location.city} <Arrow className="text-muted group-hover:text-link" />
       </h3>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-muted line-clamp-3">{location.intro}</p>
-      <p className="mt-auto pt-6 text-sm text-ink-2">Mostly {inds.map((i) => i.name).join(", ")}</p>
+      <p className="mt-auto pt-6 text-sm text-ink-2">{pageCopy.text_001}{inds.map((i) => i.name).join(", ")}</p>
     </Link>
   );
 }

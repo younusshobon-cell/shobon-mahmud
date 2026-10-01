@@ -1,0 +1,247 @@
+import pageCopy from "@/content/copy-app-about-page.json";
+import { heroTheme } from "@/lib/hero-theme";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { buildMetadata } from "@/lib/seo";
+import { profilePageSchema } from "@/lib/schema";
+import { experience, siteConfig, tools } from "@/lib/site";
+import { photos } from "@/lib/images";
+import { industries } from "@/lib/content/industries";
+import { Container } from "@/components/ui/Container";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { Section } from "@/components/content/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ButtonLink } from "@/components/ui/Button";
+import { Fill } from "@/components/ui/Fill";
+import { RelatedIndustryLinks } from "@/components/related/Related";
+import { FAQ } from "@/components/content/FAQ";
+import { aboutFaqs } from "@/lib/content/faqs";
+import { FinalCta } from "@/components/sections/FinalCta";
+
+export const metadata: Metadata = buildMetadata({
+  title: pageCopy.text_001,
+  description: pageCopy.text_002,
+  path: "/about",
+  type: "profile",
+});
+
+const skills = [
+  pageCopy.text_003,
+  pageCopy.text_004,
+  pageCopy.text_005,
+  pageCopy.text_006,
+  pageCopy.text_007,
+  pageCopy.text_008,
+  pageCopy.text_009,
+  pageCopy.text_010,
+  pageCopy.text_011,
+  pageCopy.text_012,
+  pageCopy.text_013,
+];
+
+const principles = [
+  { title: pageCopy.text_014, body: pageCopy.text_015 },
+  { title: pageCopy.text_016, body: pageCopy.text_017 },
+  { title: pageCopy.text_018, body: pageCopy.text_019 },
+  { title: pageCopy.text_020, body: pageCopy.text_021 },
+];
+
+const workingStyle = [
+  { title: pageCopy.text_022, body: pageCopy.text_023 },
+  { title: pageCopy.text_024, body: pageCopy.text_025 },
+  { title: pageCopy.text_026, body: pageCopy.text_027 },
+  { title: pageCopy.text_028, body: pageCopy.text_029 },
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      <section className="hero-surface" style={heroTheme("/about")}>
+        <Container className="pt-10 sm:pt-14">
+          <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
+          <div className="grid gap-12 pb-16 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-16 lg:pb-24">
+            <div>
+              <p className="mb-5 text-sm font-medium text-link">
+                {pageCopy.text_030}
+              </p>
+              <h1 className="t-h1 text-ink">{pageCopy.text_031}</h1>
+              <div className="t-lead mt-7 max-w-2xl space-y-5 text-muted">
+                <p>{pageCopy.text_032}</p>
+                <p>{pageCopy.text_033}</p>
+              </div>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <ButtonLink href={pageCopy.text_034}>
+                  {pageCopy.text_035}
+                </ButtonLink>
+                <ButtonLink href={pageCopy.text_036} variant="secondary">
+                  {pageCopy.text_037}
+                </ButtonLink>
+              </div>
+            </div>
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[28px] bg-paper-2">
+              <Image
+                src={photos.outdoor.src}
+                alt={photos.outdoor.alt}
+                fill
+                priority
+                placeholder="blur"
+                sizes="(min-width: 1024px) 440px, 100vw"
+                className="object-cover object-[50%_25%]"
+              />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <Section tone="muted" labelledBy="story">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <h2 id="story" className="t-h2 text-ink">
+            {pageCopy.text_038}
+          </h2>
+          <div className="space-y-5 t-lead text-ink-2">
+            <p>{pageCopy.text_039}</p>
+            <p>{pageCopy.text_040}</p>
+            <p>{pageCopy.text_041}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section labelledBy="experience">
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div id="experience">
+            <SectionHeading title={pageCopy.text_042} />
+            {siteConfig.baseLocation && (
+              <p className="mt-4 text-muted">
+                {pageCopy.text_043}
+                <Fill text={siteConfig.baseLocation} />
+                {pageCopy.text_044}
+              </p>
+            )}
+          </div>
+          <ol className="relative border-l border-line-strong">
+            {experience.map((e) => (
+              <li
+                key={e.period + e.role}
+                className="relative pb-10 pl-8 last:pb-0"
+              >
+                <span
+                  aria-hidden
+                  className="absolute top-1.5 -left-[5px] size-2.5 rounded-full border-2 border-paper bg-link"
+                />
+                <p className="text-sm tabular-nums text-muted">
+                  <Fill text={e.period} />
+                </p>
+                <h3 className="mt-1 text-lg font-semibold tracking-tight text-ink">
+                  <Fill text={e.role} />{" "}
+                  <span className="font-normal text-muted">
+                    {pageCopy.text_045}
+                    <Fill text={e.org} />
+                  </span>
+                </h3>
+                <p className="mt-2 leading-relaxed text-ink-2">
+                  <Fill text={e.summary} />
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </Section>
+
+      <Section tone="muted" labelledBy="skills">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <h2 id="skills" className="t-h2 text-ink">
+              {pageCopy.text_046}
+            </h2>
+            <ul className="mt-8 flex flex-wrap gap-2">
+              {skills.map((s) => (
+                <li
+                  key={s}
+                  className="rounded-full border border-line-strong bg-paper px-4 py-2 text-sm text-ink-2"
+                >
+                  {s}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-10">
+              <RelatedIndustryLinks
+                items={industries}
+                title={pageCopy.text_047}
+              />
+            </div>
+          </div>
+          <div>
+            <h2 className="t-h2 text-ink">{pageCopy.text_048}</h2>
+            <ul className="mt-8 divide-y divide-line-strong border-y border-line-strong">
+              {tools.map((t) => (
+                <li
+                  key={t.name}
+                  className="flex items-baseline justify-between gap-6 py-3.5"
+                >
+                  <span className="font-medium text-ink">{t.name}</span>
+                  <span className="text-right text-sm text-muted">{t.use}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="dark" labelledBy="philosophy">
+        <div id="philosophy">
+          <SectionHeading tone="dark" title={pageCopy.text_049} />
+        </div>
+        <ul className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2">
+          {principles.map((p) => (
+            <li key={p.title} className="border-t border-night-line pt-5">
+              <h3 className="t-h3 text-on-night">{p.title}</h3>
+              <p className="mt-2 leading-relaxed text-on-night-muted">
+                {p.body}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section labelledBy="style">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-20">
+          <div>
+            <h2 id="style" className="t-h2 text-ink">
+              {pageCopy.text_050}
+            </h2>
+            <ul className="mt-10 space-y-7">
+              {workingStyle.map((w) => (
+                <li key={w.title}>
+                  <h3 className="t-h3 text-ink">{w.title}</h3>
+                  <p className="mt-1.5 leading-relaxed text-muted">{w.body}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <figure>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] bg-paper-2">
+              <Image
+                src={photos.coast.src}
+                alt={photos.coast.alt}
+                fill
+                placeholder="blur"
+                sizes="(min-width: 1024px) 520px, 100vw"
+                className="object-cover object-[50%_60%]"
+              />
+            </div>
+            <figcaption className="mt-3 text-sm text-muted">
+              {pageCopy.text_051}
+            </figcaption>
+          </figure>
+        </div>
+      </Section>
+
+      <Section>
+        <FAQ faqs={aboutFaqs} title={pageCopy.text_052} />
+      </Section>
+      <FinalCta />
+      <JsonLd data={profilePageSchema()} />
+    </>
+  );
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "q": "What information does the contact form request?",
+    "a": "It asks for your name, email, website and message, with optional business details so the SEO enquiry can be understood and answered."
+  },
+  {
+    "q": "Where does a contact message go?",
+    "a": "The form uses FormSubmit to forward an enquiry to younusshobon@gmail.com. You can email that address directly instead of using the form."
+  },
+  {
+    "q": "Do you sell contact details?",
+    "a": "No. Information submitted for an SEO enquiry is used to respond to that enquiry, as described in this policy."
+  },
+  {
+    "q": "Does the site use analytics?",
+    "a": "Google Analytics or Microsoft Clarity may load if configured. They can collect usage information such as viewed pages and device details."
+  },
+  {
+    "q": "Can I contact you without the form?",
+    "a": "Yes. Send an email directly to younusshobon@gmail.com or use the WhatsApp link in the footer."
+  },
+  {
+    "q": "Do location pages load a map?",
+    "a": "Some location pages may load a Google map. That external service has its own privacy practices."
+  },
+  {
+    "q": "How do I ask about information I sent?",
+    "a": "Email younusshobon@gmail.com and describe the enquiry so it can be located and reviewed."
+  },
+  {
+    "q": "Where can I find the latest policy?",
+    "a": "This Privacy Policy page contains the current public explanation and its last-updated date."
+  }
+]

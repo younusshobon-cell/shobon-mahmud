@@ -1,4 +1,6 @@
 "use client";
+import pageCopy from "@/content/copy-components-blog-TableOfContents.json";
+
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -36,7 +38,7 @@ export function TableOfContents({ items }: { items: Heading[] }) {
         const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         if (visible[0]) setActive(visible[0].target.id);
       },
-      { rootMargin: "-90px 0px -65% 0px" },
+      { rootMargin: pageCopy.text_001 },
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
@@ -47,14 +49,13 @@ export function TableOfContents({ items }: { items: Heading[] }) {
       {/* Mobile: collapsible */}
       <details className="group rounded-[var(--radius-card)] border border-line lg:hidden">
         <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-sm font-medium text-ink [&::-webkit-details-marker]:hidden">
-          On this page
-          <ChevronDown aria-hidden className="size-4 transition-transform group-open:rotate-180" />
+          {pageCopy.text_002}<ChevronDown aria-hidden className="size-4 transition-transform group-open:rotate-180" />
         </summary>
-        <nav aria-label="Table of contents" className="px-5 pb-5"><List items={items} active={active} /></nav>
+        <nav aria-label={pageCopy.text_003} className="px-5 pb-5"><List items={items} active={active} /></nav>
       </details>
       {/* Desktop: sticky */}
-      <nav aria-label="Table of contents" className="sticky top-28 hidden lg:block">
-        <p className="mb-4 text-sm font-medium text-ink">On this page</p>
+      <nav aria-label={pageCopy.text_004} className="sticky top-28 hidden lg:block">
+        <p className="mb-4 text-sm font-medium text-ink">{pageCopy.text_005}</p>
         <List items={items} active={active} />
       </nav>
     </>

@@ -1,0 +1,784 @@
+[
+  {
+    "slug": "saas",
+    "name": "SaaS",
+    "summary": "Product discovery, comparison and alternative searches, integration pages and content that moves trial and demo signups.",
+    "seoTitle": "SaaS SEO Consultant",
+    "heroTitle": "SaaS SEO that reaches buyers before they book a demo with someone else.",
+    "heroIntro": "SaaS buyers research heavily before they talk to sales. They search for the problem, then solutions, then comparisons, then alternatives. SEO lets you be present at each of those moments — and the later ones are worth far more than their search volume suggests.",
+    "landscape": [
+      "SaaS search results are crowded with review platforms, listicles and well-funded competitors publishing at scale. Winning usually means being more specific, not louder.",
+      "The most valuable SaaS keywords are often low volume: '[competitor] alternative', '[tool] integration with [tool]', '[use case] software for [industry]'. These are the searches people make when they're close to choosing."
+    ],
+    "challenges": [
+      {
+        "title": "Top-of-funnel traffic that never converts",
+        "body": "Blogs full of broad educational posts attract readers who'll never buy."
+      },
+      {
+        "title": "Product pages that don't rank",
+        "body": "Feature pages written for existing customers rather than people searching for a solution."
+      },
+      {
+        "title": "JavaScript-heavy marketing sites",
+        "body": "Modern frameworks can hide content from crawlers if rendering isn't handled carefully."
+      },
+      {
+        "title": "Review sites owning commercial SERPs",
+        "body": "G2, Capterra and 'best tools' lists sit above you for your own category."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Problem aware",
+        "intent": "Understanding a pain point",
+        "examples": [
+          "how to reduce customer churn",
+          "why are invoices paid late"
+        ]
+      },
+      {
+        "stage": "Solution aware",
+        "intent": "Looking for types of solution",
+        "examples": ["churn prediction software", "invoice automation tools"]
+      },
+      {
+        "stage": "Comparing",
+        "intent": "Evaluating specific options",
+        "examples": [
+          "[tool A] vs [tool B]",
+          "best invoicing software for agencies"
+        ]
+      },
+      {
+        "stage": "Switching",
+        "intent": "Replacing a current tool",
+        "examples": ["[competitor] alternatives", "migrate from [competitor]"]
+      },
+      {
+        "stage": "Deciding",
+        "intent": "Validating fit",
+        "examples": [
+          "[product] pricing",
+          "[product] integrates with Salesforce"
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Alternative & comparison pages",
+        "body": "Honest, detailed pages for searches like '[competitor] alternative' — often the highest-converting organic pages a SaaS site has."
+      },
+      {
+        "title": "Integration pages",
+        "body": "One page per meaningful integration, capturing searches from people already using the other tool."
+      },
+      {
+        "title": "Use-case and industry pages",
+        "body": "Pages for 'software for [role/industry]' that speak to specific buyers."
+      },
+      {
+        "title": "Feature-led searches",
+        "body": "Feature pages rewritten around the problem each feature solves."
+      },
+      {
+        "title": "Educational content with product paths",
+        "body": "Guides that solve the problem and show where the product fits, without forcing it."
+      }
+    ],
+    "exampleStrategy": [
+      "Map the buyer journey from sales calls and support tickets, not just keyword tools.",
+      "Build comparison, alternative and integration pages first — they're closest to revenue.",
+      "Create topic clusters around the core problem the product solves.",
+      "Fix rendering, indexing and internal linking on the marketing site.",
+      "Measure by trials, demos and pipeline from organic, not just sessions."
+    ],
+    "relatedServices": [
+      "keyword-research",
+      "content-seo",
+      "technical-seo",
+      "competitor-research"
+    ],
+    "faqs": [
+      {
+        "q": "How long does SaaS SEO take to show results?",
+        "a": "Bottom-of-funnel pages can start contributing within a few months. Building topical authority in a competitive category is usually a 6–12 month effort."
+      },
+      {
+        "q": "Should SaaS companies focus on blog content?",
+        "a": "Only as part of the picture. Comparison, alternative, integration and use-case pages usually drive more pipeline than general blog posts."
+      },
+      {
+        "q": "How do you measure SaaS SEO?",
+        "a": "By organic signups, demo requests and influenced pipeline, alongside rankings and traffic for the pages that feed them."
+      }
+    ]
+  },
+  {
+    "slug": "legal-tech",
+    "name": "Legal Tech",
+    "summary": "SEO for legal software and legal service platforms — high-trust content, precise terminology and buyers who research carefully.",
+    "seoTitle": "Legal Tech SEO",
+    "heroTitle": "SEO for legal tech, where accuracy is part of the ranking strategy.",
+    "heroIntro": "Legal technology sells to lawyers, in-house counsel and operations teams who are sceptical by profession. Content has to be precise, well sourced and clearly written by people who understand the practice. That's also what Google looks for in this space.",
+    "landscape": [
+      "Legal topics fall under Google's 'Your Money or Your Life' category, where expertise and trust signals carry extra weight.",
+      "Legal tech buyers use exact terminology — matter management, e-discovery, contract lifecycle management — and search intent varies by jurisdiction and practice area."
+    ],
+    "challenges": [
+      {
+        "title": "Trust & expertise signals",
+        "body": "Content without clear authorship or legal review struggles to rank."
+      },
+      {
+        "title": "Jurisdiction differences",
+        "body": "Terms and requirements change by country and state, affecting intent."
+      },
+      {
+        "title": "Long, committee-driven sales cycles",
+        "body": "Multiple stakeholders search for different things."
+      },
+      {
+        "title": "Competing with law firms and publishers",
+        "body": "Informational legal queries are dominated by established legal publishers."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Problem aware",
+        "intent": "Operational pain",
+        "examples": ["how to track contract renewals", "legal intake process"]
+      },
+      {
+        "stage": "Solution aware",
+        "intent": "Category research",
+        "examples": [
+          "contract management software",
+          "legal practice management"
+        ]
+      },
+      {
+        "stage": "Comparing",
+        "intent": "Evaluating vendors",
+        "examples": ["best CLM software for in-house teams"]
+      },
+      {
+        "stage": "Deciding",
+        "intent": "Risk and compliance checks",
+        "examples": ["[product] security", "[product] SOC 2"]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Practice-area pages",
+        "body": "Solutions pages for specific practice areas or legal teams."
+      },
+      {
+        "title": "Expert-reviewed guides",
+        "body": "Content with named, credentialed reviewers and clear sourcing."
+      },
+      {
+        "title": "Security & compliance content",
+        "body": "Pages answering the questions procurement and IT will ask."
+      },
+      {
+        "title": "Templates and resources",
+        "body": "Useful legal operations resources that earn links and trust."
+      }
+    ],
+    "exampleStrategy": [
+      "Establish authorship and review processes for every legal topic.",
+      "Separate content by audience: lawyers, legal ops and procurement.",
+      "Target precise category and practice-area terms over broad legal queries.",
+      "Build trust pages covering security, compliance and data handling."
+    ],
+    "relatedServices": [
+      "content-seo",
+      "on-page-seo",
+      "keyword-research",
+      "off-page-seo"
+    ],
+    "faqs": [
+      {
+        "q": "Does legal content need to be reviewed by a lawyer?",
+        "a": "For anything that could be read as legal guidance, a credentialed reviewer strengthens accuracy and trust — for readers and for search engines."
+      },
+      {
+        "q": "Can legal tech compete with big legal publishers?",
+        "a": "Directly on broad questions, rarely. On specific operational and software-related questions, often yes."
+      },
+      {
+        "q": "What matters most for legal tech SEO?",
+        "a": "Precision. Using the exact language your buyers use, covering jurisdictions correctly, and demonstrating real expertise."
+      }
+    ]
+  },
+  {
+    "slug": "health-tech",
+    "name": "Health Tech",
+    "summary": "SEO for digital health and healthcare technology, balancing strict accuracy standards with content that clinicians and patients find useful.",
+    "seoTitle": "Health Tech SEO",
+    "heroTitle": "Health tech SEO that earns trust from patients, clinicians and search engines.",
+    "heroIntro": "Health is where Google is most careful about who it ranks. Health tech companies need content that's medically accurate, clearly reviewed and genuinely helpful — and a site that makes that expertise visible.",
+    "landscape": [
+      "Health searches are held to the highest quality bar. Pages without clear expertise, sources and review dates face an uphill battle.",
+      "Health tech often has two audiences — clinicians or providers who buy, and patients who use — each with very different search behaviour."
+    ],
+    "challenges": [
+      {
+        "title": "Strict quality expectations",
+        "body": "Health content needs expert authorship, citations and regular review."
+      },
+      {
+        "title": "Two-sided audiences",
+        "body": "B2B buyers and end users search completely differently."
+      },
+      {
+        "title": "Regulated claims",
+        "body": "Marketing copy has to stay within regulatory limits while still being persuasive."
+      },
+      {
+        "title": "Competition from major health publishers",
+        "body": "Large medical sites dominate symptom and condition queries."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Problem aware",
+        "intent": "Clinical or operational need",
+        "examples": [
+          "reduce patient no-shows",
+          "remote patient monitoring benefits"
+        ]
+      },
+      {
+        "stage": "Solution aware",
+        "intent": "Technology category",
+        "examples": [
+          "telehealth platform for clinics",
+          "patient engagement software"
+        ]
+      },
+      {
+        "stage": "Comparing",
+        "intent": "Vendor evaluation",
+        "examples": ["HIPAA compliant telehealth software"]
+      },
+      {
+        "stage": "Deciding",
+        "intent": "Compliance & integration",
+        "examples": ["[product] EHR integration", "[product] HIPAA"]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Provider-focused solution pages",
+        "body": "Pages for specific clinical settings and specialties."
+      },
+      {
+        "title": "Clinically reviewed resources",
+        "body": "Guides with named medical reviewers and update dates."
+      },
+      {
+        "title": "Integration & compliance pages",
+        "body": "EHR integrations, HIPAA/GDPR information and security details."
+      },
+      {
+        "title": "Local visibility for providers",
+        "body": "Where the product supports clinics, local SEO for those locations."
+      }
+    ],
+    "exampleStrategy": [
+      "Separate B2B and patient-facing content architecture.",
+      "Add author and medical reviewer information with credentials.",
+      "Prioritise solution and integration pages for buyer searches.",
+      "Maintain a review schedule for all health content."
+    ],
+    "relatedServices": [
+      "content-seo",
+      "technical-seo",
+      "local-seo",
+      "keyword-research"
+    ],
+    "faqs": [
+      {
+        "q": "What is YMYL and why does it matter?",
+        "a": "'Your Money or Your Life' covers topics that can affect health, finances or safety. Google applies stricter quality expectations to them, so expertise and trust need to be clearly visible."
+      },
+      {
+        "q": "Can health tech companies rank for medical terms?",
+        "a": "It's possible with genuine clinical expertise, but it's often smarter to own specific technology and workflow searches first."
+      },
+      {
+        "q": "How often should health content be updated?",
+        "a": "At least annually, and immediately when guidelines or evidence change. Showing review dates helps readers and search engines."
+      }
+    ]
+  },
+  {
+    "slug": "logistics",
+    "name": "Logistics",
+    "summary": "SEO for freight, 3PL, shipping and supply chain companies — lane, service and location searches with high commercial intent.",
+    "seoTitle": "Logistics SEO",
+    "heroTitle": "Logistics SEO for searches that come with a shipment attached.",
+    "heroIntro": "Logistics buyers search with specific intent: a route, a service, a location, a requirement. The companies that rank for those precise searches get quote requests from people who already know what they need.",
+    "landscape": [
+      "Logistics search is highly specific and often local or route-based — freight forwarding from one port to another, cold-chain warehousing in a region, last-mile delivery in a city.",
+      "Many logistics websites are brochure sites with one page per service, missing the location, lane and industry combinations that buyers search for."
+    ],
+    "challenges": [
+      {
+        "title": "Generic service pages",
+        "body": "One 'Freight Forwarding' page can't rank for dozens of routes and cargo types."
+      },
+      {
+        "title": "Scaling location pages without thin content",
+        "body": "Hundreds of lanes or locations need real, distinct information."
+      },
+      {
+        "title": "Technical buyers",
+        "body": "Procurement and operations teams expect specifics — capacity, certifications, transit times."
+      },
+      {
+        "title": "Marketplace competition",
+        "body": "Freight marketplaces and quote aggregators compete for commercial terms."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Need identified",
+        "intent": "Specific service",
+        "examples": ["LCL shipping from China to UK", "bonded warehouse Dubai"]
+      },
+      {
+        "stage": "Evaluating",
+        "intent": "Capability check",
+        "examples": [
+          "temperature controlled freight forwarder",
+          "3PL for e-commerce"
+        ]
+      },
+      {
+        "stage": "Deciding",
+        "intent": "Quote and trust",
+        "examples": ["freight quote [route]", "[company] reviews"]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Lane and route pages",
+        "body": "Useful pages for key trade lanes with transit times, requirements and process."
+      },
+      {
+        "title": "Industry-specific logistics",
+        "body": "Pages for pharma, e-commerce, automotive or food logistics."
+      },
+      {
+        "title": "Location pages for facilities",
+        "body": "Real warehouse and depot pages with local search optimisation."
+      },
+      {
+        "title": "Shipping guides",
+        "body": "Customs, documentation and regulation content that earns links and trust."
+      }
+    ],
+    "exampleStrategy": [
+      "Map services × locations × cargo types against search demand.",
+      "Build templates that require unique data for every lane or location page.",
+      "Optimise Business Profiles for each physical facility.",
+      "Create expert shipping guides to support commercial pages."
+    ],
+    "relatedServices": [
+      "local-seo",
+      "international-seo",
+      "on-page-seo",
+      "technical-seo"
+    ],
+    "faqs": [
+      {
+        "q": "Should logistics companies create a page for every route?",
+        "a": "Only for routes you actively serve and can say something specific about. Quality lane pages beat hundreds of near-duplicates."
+      },
+      {
+        "q": "Does local SEO matter for logistics?",
+        "a": "Yes, for facilities, depots and regional services. Many buyers search for providers near a port, city or industrial zone."
+      },
+      {
+        "q": "What content works in logistics?",
+        "a": "Practical, specific content: documentation guides, customs requirements, transit expectations and industry-specific handling."
+      }
+    ]
+  },
+  {
+    "slug": "design",
+    "name": "Design & Creative",
+    "summary": "SEO for design studios, agencies and creative companies whose portfolios are visual but whose buyers still search in words.",
+    "seoTitle": "SEO for Design Agencies & Studios",
+    "heroTitle": "SEO for design studios whose best work is invisible to search engines.",
+    "heroIntro": "Design websites are often beautiful and nearly empty of text. That works for people who already know you, but not for the buyer searching for 'brand identity agency for fintech startups'. SEO for creative businesses is about making the work findable without making the site worse.",
+    "landscape": [
+      "Design and creative searches combine service, specialism and location: 'UX design agency London', 'packaging design for food brands'.",
+      "Portfolio-led websites often rely on heavy images, animation and minimal copy — which creates both technical and relevance problems."
+    ],
+    "challenges": [
+      {
+        "title": "Image-heavy, text-light pages",
+        "body": "Search engines need words to understand what a project or service is."
+      },
+      {
+        "title": "Heavy animation and media",
+        "body": "Slow pages and JavaScript-dependent content hurt crawling and Core Web Vitals."
+      },
+      {
+        "title": "Case studies without context",
+        "body": "Projects shown as galleries miss the searchable story around them."
+      },
+      {
+        "title": "Broad positioning",
+        "body": "'We do everything' is hard to rank for anything."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Need identified",
+        "intent": "Service by specialism",
+        "examples": ["brand identity agency", "UX audit services"]
+      },
+      {
+        "stage": "Evaluating",
+        "intent": "Specialist fit",
+        "examples": [
+          "branding agency for SaaS",
+          "web design studio for architects"
+        ]
+      },
+      {
+        "stage": "Deciding",
+        "intent": "Proof",
+        "examples": ["[studio] case studies", "[studio] reviews"]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Written case studies",
+        "body": "The challenge, process and outcome behind each project — searchable and persuasive."
+      },
+      {
+        "title": "Specialist service pages",
+        "body": "Pages by service × industry that match how clients describe their needs."
+      },
+      {
+        "title": "Performance-aware design",
+        "body": "Keeping the visual quality while fixing image weight and rendering."
+      },
+      {
+        "title": "Thought leadership",
+        "body": "Design process content that earns links from design publications."
+      }
+    ],
+    "exampleStrategy": [
+      "Add structured written context to every portfolio project.",
+      "Create service pages for the specialisms that generate the best clients.",
+      "Optimise image delivery and animation for Core Web Vitals.",
+      "Earn features from design directories and publications."
+    ],
+    "relatedServices": [
+      "on-page-seo",
+      "technical-seo",
+      "local-seo",
+      "off-page-seo"
+    ],
+    "faqs": [
+      {
+        "q": "Will SEO make our site look worse?",
+        "a": "It shouldn't. Most improvements — better case study copy, faster images, clearer service pages — make the site more persuasive to people as well."
+      },
+      {
+        "q": "Do awards and directory listings help SEO?",
+        "a": "Relevant, reputable ones can, through links and brand signals. They also help buyers validate your work."
+      },
+      {
+        "q": "Should design agencies blog?",
+        "a": "Only if there's something genuinely useful to say. Detailed case studies often do more than generic blog posts."
+      }
+    ]
+  },
+  {
+    "slug": "ecommerce",
+    "name": "E-commerce",
+    "summary": "SEO for online stores: categories, products, faceted navigation and technical scale, on Shopify, WooCommerce and headless platforms.",
+    "seoTitle": "E-commerce SEO Consultant",
+    "heroTitle": "E-commerce SEO for stores competing with marketplaces.",
+    "heroIntro": "Online stores win organic revenue through category pages that match shopping intent, product pages that answer buyers' questions, and a technical setup that keeps the catalogue crawlable as it grows.",
+    "landscape": [
+      "E-commerce SERPs are shared with marketplaces, comparison sites and Google's own shopping features. Independent stores need sharper category targeting and better product information to compete.",
+      "Technical scale is the hidden challenge: filters, variants and pagination multiply URLs quickly."
+    ],
+    "challenges": [
+      {
+        "title": "Faceted navigation sprawl",
+        "body": "Filter combinations create huge numbers of duplicate URLs."
+      },
+      {
+        "title": "Thin category pages",
+        "body": "Product grids with no context struggle for competitive terms."
+      },
+      {
+        "title": "Duplicate product content",
+        "body": "Manufacturer descriptions shared across hundreds of retailers."
+      },
+      {
+        "title": "Marketplace dominance",
+        "body": "Amazon and others own many head terms."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Browsing",
+        "intent": "Category exploration",
+        "examples": ["linen shirts men", "standing desk"]
+      },
+      {
+        "stage": "Narrowing",
+        "intent": "Attribute-specific",
+        "examples": ["oak standing desk with drawers"]
+      },
+      {
+        "stage": "Comparing",
+        "intent": "Reviews and alternatives",
+        "examples": ["best standing desk for small spaces"]
+      },
+      {
+        "stage": "Buying",
+        "intent": "Brand + product",
+        "examples": ["[brand] [product] price", "[brand] discount"]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Attribute-led categories",
+        "body": "Indexable pages for high-demand combinations shoppers search for."
+      },
+      {
+        "title": "Buying guides",
+        "body": "Guides that genuinely help people choose, linking to the right categories."
+      },
+      {
+        "title": "Rich results",
+        "body": "Product, review and merchant markup for better SERP presence."
+      },
+      {
+        "title": "Crawl efficiency",
+        "body": "Directing Google towards products and categories that sell."
+      }
+    ],
+    "exampleStrategy": [
+      "Rebuild the category structure around search demand.",
+      "Set indexing rules for filters, sort orders and pagination.",
+      "Prioritise unique content on top-selling products.",
+      "Implement product schema and merchant listing data."
+    ],
+    "relatedServices": [
+      "ecommerce-seo",
+      "technical-seo",
+      "content-seo",
+      "international-seo"
+    ],
+    "faqs": [
+      {
+        "q": "Which pages matter most in e-commerce SEO?",
+        "a": "Category pages usually drive the most organic revenue, followed by high-demand product pages and buying guides."
+      },
+      {
+        "q": "Can small stores compete with Amazon?",
+        "a": "On broad head terms, rarely. On specific, niche and attribute-driven searches — and with better product information — yes."
+      },
+      {
+        "q": "Does site speed matter for stores?",
+        "a": "It affects both rankings and conversion. Heavy apps, images and scripts are common culprits on e-commerce platforms."
+      }
+    ]
+  },
+  {
+    "slug": "technology",
+    "name": "Technology",
+    "summary": "SEO for technology companies, developer tools and IT services — technical audiences, technical content and technical websites.",
+    "seoTitle": "SEO for Technology Companies",
+    "heroTitle": "SEO for technology companies with technical buyers.",
+    "heroIntro": "Technical audiences have little patience for vague marketing copy. They search for specifics — protocols, integrations, error messages, architectures — and trust sites that answer with precision.",
+    "landscape": [
+      "Technology buyers include engineers, IT leaders and procurement teams, each with different searches and different content expectations.",
+      "Documentation, developer resources and changelogs are often the most-visited pages but are rarely optimised or connected to the marketing site."
+    ],
+    "challenges": [
+      {
+        "title": "Docs on a separate subdomain",
+        "body": "Documentation authority doesn't flow to commercial pages."
+      },
+      {
+        "title": "Jargon mismatch",
+        "body": "Marketing terms differ from how engineers actually search."
+      },
+      {
+        "title": "Complex, JavaScript-heavy sites",
+        "body": "Rendering and crawl issues are common."
+      },
+      {
+        "title": "Multiple buyer personas",
+        "body": "Technical evaluators and business buyers need different paths."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Technical problem",
+        "intent": "Troubleshooting or how-to",
+        "examples": ["how to rotate API keys", "kubernetes cost monitoring"]
+      },
+      {
+        "stage": "Solution search",
+        "intent": "Tool category",
+        "examples": ["open source log management", "secrets management tool"]
+      },
+      {
+        "stage": "Evaluation",
+        "intent": "Technical fit",
+        "examples": ["[tool] vs [tool] performance", "[tool] self-hosted"]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Documentation SEO",
+        "body": "Making docs discoverable and connecting them to product pages."
+      },
+      {
+        "title": "Technical guides",
+        "body": "In-depth, accurate how-to content that engineers bookmark and link to."
+      },
+      {
+        "title": "Comparison pages",
+        "body": "Technical comparisons with real benchmarks and trade-offs."
+      },
+      {
+        "title": "Glossary & concept pages",
+        "body": "Clear explanations that build topical authority."
+      }
+    ],
+    "exampleStrategy": [
+      "Unify docs, blog and marketing site architecture where possible.",
+      "Research the exact language engineers use in searches and forums.",
+      "Create technical content with named, credible authors.",
+      "Fix rendering and crawl issues on framework-based sites."
+    ],
+    "relatedServices": [
+      "technical-seo",
+      "content-seo",
+      "keyword-research",
+      "seo-audits"
+    ],
+    "faqs": [
+      {
+        "q": "Should documentation be on a subdomain or subfolder?",
+        "a": "Subfolders usually consolidate authority better, but the right choice depends on your docs platform and team. Either can work with strong internal linking."
+      },
+      {
+        "q": "Do developers use Google or other sources?",
+        "a": "Both. Google remains a major entry point, alongside communities and AI assistants — which also draw from well-structured, authoritative pages."
+      },
+      {
+        "q": "What makes technical content rank?",
+        "a": "Accuracy, specificity, working examples and clear structure. Thin summaries rarely hold rankings in technical topics."
+      }
+    ]
+  },
+  {
+    "slug": "local-services",
+    "name": "Local Services",
+    "summary": "SEO for businesses that serve customers in a specific area — clinics, trades, professional services and multi-location brands.",
+    "seoTitle": "SEO for Local Service Businesses",
+    "heroTitle": "SEO for local businesses where every search is a potential booking.",
+    "heroIntro": "For local service businesses, a handful of searches — '[service] near me', '[service] in [area]' — decide most of the new business. The map pack, reviews and a clear, fast website matter more than anything else.",
+    "landscape": [
+      "Local results are driven by proximity, relevance and prominence. Your Business Profile, reviews and local signals often count as much as your website.",
+      "Mobile dominates local search, and many searches end in a call or directions request rather than a website visit."
+    ],
+    "challenges": [
+      {
+        "title": "Map pack visibility",
+        "body": "Being outside the top three local results means being mostly invisible."
+      },
+      {
+        "title": "Limited service area reach",
+        "body": "Ranking only close to the office."
+      },
+      {
+        "title": "Review gaps",
+        "body": "Competitors with more, fresher reviews win clicks."
+      },
+      {
+        "title": "Thin city pages",
+        "body": "Duplicated location pages that don't rank."
+      }
+    ],
+    "journey": [
+      {
+        "stage": "Urgent need",
+        "intent": "Immediate service",
+        "examples": ["emergency plumber near me", "dentist open now"]
+      },
+      {
+        "stage": "Planned service",
+        "intent": "Research and compare",
+        "examples": ["best physiotherapist in [area]", "family lawyer [city]"]
+      },
+      {
+        "stage": "Deciding",
+        "intent": "Trust and convenience",
+        "examples": ["[business] reviews", "[business] prices"]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Business Profile optimisation",
+        "body": "The most direct lever on local visibility."
+      },
+      {
+        "title": "Service + area pages",
+        "body": "Useful pages for each core service and served area."
+      },
+      {
+        "title": "Review systems",
+        "body": "A steady flow of genuine reviews with thoughtful responses."
+      },
+      {
+        "title": "Local authority",
+        "body": "Links and mentions from local organisations and media."
+      }
+    ],
+    "exampleStrategy": [
+      "Fully optimise the Business Profile and keep it active.",
+      "Build service pages first, then area pages where you have something distinct to say.",
+      "Set up a review request process after each job or appointment.",
+      "Track rankings across a grid of locations, not just the office postcode."
+    ],
+    "relatedServices": [
+      "local-seo",
+      "on-page-seo",
+      "technical-seo",
+      "off-page-seo"
+    ],
+    "faqs": [
+      {
+        "q": "How quickly does local SEO work?",
+        "a": "Business Profile improvements can show results within weeks. Competitive markets and wider service areas take longer."
+      },
+      {
+        "q": "Do I need a website if I have a Business Profile?",
+        "a": "A strong website supports relevance, conversions and rankings in the local pack. The two work best together."
+      },
+      {
+        "q": "How do I rank in nearby towns?",
+        "a": "Relevant area pages, local links and reviews mentioning those areas help, though proximity still limits map pack reach."
+      }
+    ]
+  }
+]

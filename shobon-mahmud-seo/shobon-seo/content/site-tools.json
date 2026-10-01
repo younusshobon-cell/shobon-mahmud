@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Google Search Console",
+    "use": "Indexing, queries, performance"
+  },
+  {
+    "name": "Google Analytics 4",
+    "use": "Organic conversions and journeys"
+  },
+  {
+    "name": "Ahrefs",
+    "use": "Links, competitors, keyword gaps"
+  },
+  {
+    "name": "Semrush",
+    "use": "Keyword research, position tracking"
+  },
+  {
+    "name": "Screaming Frog",
+    "use": "Technical crawls and audits"
+  },
+  {
+    "name": "Google Business Profile",
+    "use": "Local visibility"
+  },
+  {
+    "name": "Looker Studio",
+    "use": "SEO reporting"
+  },
+  {
+    "name": "WordPress",
+    "use": "CMS implementation"
+  },
+  {
+    "name": "Shopify",
+    "use": "E-commerce implementation"
+  },
+  {
+    "name": "Webflow",
+    "use": "CMS implementation"
+  },
+  {
+    "name": "Figma",
+    "use": "Wireframes for SEO page templates"
+  }
+]

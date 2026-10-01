@@ -1,0 +1,500 @@
+[
+  {
+    "id": "services-services",
+    "label": "Services",
+    "group": "Services",
+    "path": "content/services-services.json"
+  },
+  {
+    "id": "industries-industries",
+    "label": "Industries",
+    "group": "Industries",
+    "path": "content/industries-industries.json"
+  },
+  {
+    "id": "locations-locations",
+    "label": "Locations",
+    "group": "Locations",
+    "path": "content/locations-locations.json"
+  },
+  {
+    "id": "case-studies-portfolioFilters",
+    "label": "Portfolio Filters",
+    "group": "Portfolio",
+    "path": "content/case-studies-portfolioFilters.json"
+  },
+  {
+    "id": "case-studies-caseStudies",
+    "label": "Case Studies",
+    "group": "Portfolio",
+    "path": "content/case-studies-caseStudies.json"
+  },
+  {
+    "id": "blog-blogCategories",
+    "label": "Blog Categories",
+    "group": "Blog",
+    "path": "content/blog-blogCategories.json"
+  },
+  {
+    "id": "blog-rawPosts",
+    "label": "Raw Posts",
+    "group": "Blog",
+    "path": "content/blog-rawPosts.json"
+  },
+  {
+    "id": "faqs-homeFaqs",
+    "label": "Home Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-homeFaqs.json"
+  },
+  {
+    "id": "faqs-serviceHubFaqs",
+    "label": "Service Hub Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-serviceHubFaqs.json"
+  },
+  {
+    "id": "faqs-industryHubFaqs",
+    "label": "Industry Hub Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-industryHubFaqs.json"
+  },
+  {
+    "id": "faqs-locationHubFaqs",
+    "label": "Location Hub Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-locationHubFaqs.json"
+  },
+  {
+    "id": "faqs-portfolioFaqs",
+    "label": "Portfolio Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-portfolioFaqs.json"
+  },
+  {
+    "id": "faqs-aboutFaqs",
+    "label": "About Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-aboutFaqs.json"
+  },
+  {
+    "id": "faqs-contactFaqs",
+    "label": "Contact Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-contactFaqs.json"
+  },
+  {
+    "id": "faqs-blogFaqs",
+    "label": "Blog Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-blogFaqs.json"
+  },
+  {
+    "id": "faqs-privacyFaqs",
+    "label": "Privacy Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-privacyFaqs.json"
+  },
+  {
+    "id": "faqs-termsFaqs",
+    "label": "Terms Faqs",
+    "group": "FAQs",
+    "path": "content/faqs-termsFaqs.json"
+  },
+  {
+    "id": "process-processSteps",
+    "label": "Process Steps",
+    "group": "Site settings",
+    "path": "content/process-processSteps.json"
+  },
+  {
+    "id": "location-extras-locationExtras",
+    "label": "Location Extras",
+    "group": "Locations",
+    "path": "content/location-extras-locationExtras.json"
+  },
+  {
+    "id": "service-search-faqs-serviceSearchFaqs",
+    "label": "Service Search Faqs",
+    "group": "Services",
+    "path": "content/service-search-faqs-serviceSearchFaqs.json"
+  },
+  {
+    "id": "site-siteConfig",
+    "label": "Profile & social links",
+    "group": "Site settings",
+    "path": "content/site-siteConfig.json"
+  },
+  {
+    "id": "site-socialLabels",
+    "label": "social Labels",
+    "group": "Site settings",
+    "path": "content/site-socialLabels.json"
+  },
+  {
+    "id": "site-trustMetrics",
+    "label": "trust Metrics",
+    "group": "Site settings",
+    "path": "content/site-trustMetrics.json"
+  },
+  {
+    "id": "site-tools",
+    "label": "tools",
+    "group": "Site settings",
+    "path": "content/site-tools.json"
+  },
+  {
+    "id": "site-experience",
+    "label": "experience",
+    "group": "Site settings",
+    "path": "content/site-experience.json"
+  },
+  {
+    "id": "site-mainNav",
+    "label": "main Nav",
+    "group": "Site settings",
+    "path": "content/site-mainNav.json"
+  },
+  {
+    "id": "copy-app-about-page",
+    "label": "about/page",
+    "group": "Page copy",
+    "path": "content/copy-app-about-page.json"
+  },
+  {
+    "id": "copy-app-blog-slug-page",
+    "label": "blog/[slug]/page",
+    "group": "Page copy",
+    "path": "content/copy-app-blog-slug-page.json"
+  },
+  {
+    "id": "copy-app-blog-page-page-page",
+    "label": "blog/page/[page]/page",
+    "group": "Page copy",
+    "path": "content/copy-app-blog-page-page-page.json"
+  },
+  {
+    "id": "copy-app-blog-page",
+    "label": "blog/page",
+    "group": "Page copy",
+    "path": "content/copy-app-blog-page.json"
+  },
+  {
+    "id": "copy-app-contact-page",
+    "label": "contact/page",
+    "group": "Page copy",
+    "path": "content/copy-app-contact-page.json"
+  },
+  {
+    "id": "copy-app-industries-slug-page",
+    "label": "industries/[slug]/page",
+    "group": "Page copy",
+    "path": "content/copy-app-industries-slug-page.json"
+  },
+  {
+    "id": "copy-app-industries-page",
+    "label": "industries/page",
+    "group": "Page copy",
+    "path": "content/copy-app-industries-page.json"
+  },
+  {
+    "id": "copy-app-layout",
+    "label": "layout",
+    "group": "Page copy",
+    "path": "content/copy-app-layout.json"
+  },
+  {
+    "id": "copy-app-locations-slug-page",
+    "label": "locations/[slug]/page",
+    "group": "Page copy",
+    "path": "content/copy-app-locations-slug-page.json"
+  },
+  {
+    "id": "copy-app-locations-page",
+    "label": "locations/page",
+    "group": "Page copy",
+    "path": "content/copy-app-locations-page.json"
+  },
+  {
+    "id": "copy-app-not-found",
+    "label": "not-found",
+    "group": "Page copy",
+    "path": "content/copy-app-not-found.json"
+  },
+  {
+    "id": "copy-app-page",
+    "label": "page",
+    "group": "Page copy",
+    "path": "content/copy-app-page.json"
+  },
+  {
+    "id": "copy-app-portfolio-slug-page",
+    "label": "portfolio/[slug]/page",
+    "group": "Page copy",
+    "path": "content/copy-app-portfolio-slug-page.json"
+  },
+  {
+    "id": "copy-app-portfolio-page",
+    "label": "portfolio/page",
+    "group": "Page copy",
+    "path": "content/copy-app-portfolio-page.json"
+  },
+  {
+    "id": "copy-app-privacy-page",
+    "label": "privacy/page",
+    "group": "Page copy",
+    "path": "content/copy-app-privacy-page.json"
+  },
+  {
+    "id": "copy-app-services-slug-page",
+    "label": "services/[slug]/page",
+    "group": "Page copy",
+    "path": "content/copy-app-services-slug-page.json"
+  },
+  {
+    "id": "copy-app-services-page",
+    "label": "services/page",
+    "group": "Page copy",
+    "path": "content/copy-app-services-page.json"
+  },
+  {
+    "id": "copy-app-terms-page",
+    "label": "terms/page",
+    "group": "Page copy",
+    "path": "content/copy-app-terms-page.json"
+  },
+  {
+    "id": "copy-components-blog-BlogIndex",
+    "label": "blog/BlogIndex",
+    "group": "Page copy",
+    "path": "content/copy-components-blog-BlogIndex.json"
+  },
+  {
+    "id": "copy-components-blog-BlogSearch",
+    "label": "blog/BlogSearch",
+    "group": "Page copy",
+    "path": "content/copy-components-blog-BlogSearch.json"
+  },
+  {
+    "id": "copy-components-blog-TableOfContents",
+    "label": "blog/TableOfContents",
+    "group": "Page copy",
+    "path": "content/copy-components-blog-TableOfContents.json"
+  },
+  {
+    "id": "copy-components-cards-BlogCard",
+    "label": "cards/BlogCard",
+    "group": "Page copy",
+    "path": "content/copy-components-cards-BlogCard.json"
+  },
+  {
+    "id": "copy-components-cards-CaseStudyCard",
+    "label": "cards/CaseStudyCard",
+    "group": "Page copy",
+    "path": "content/copy-components-cards-CaseStudyCard.json"
+  },
+  {
+    "id": "copy-components-cards-LocationCard",
+    "label": "cards/LocationCard",
+    "group": "Page copy",
+    "path": "content/copy-components-cards-LocationCard.json"
+  },
+  {
+    "id": "copy-components-cards-PostCover",
+    "label": "cards/PostCover",
+    "group": "Page copy",
+    "path": "content/copy-components-cards-PostCover.json"
+  },
+  {
+    "id": "copy-components-cards-ServiceCard",
+    "label": "cards/ServiceCard",
+    "group": "Page copy",
+    "path": "content/copy-components-cards-ServiceCard.json"
+  },
+  {
+    "id": "copy-components-content-ContextCta",
+    "label": "content/ContextCta",
+    "group": "Page copy",
+    "path": "content/copy-components-content-ContextCta.json"
+  },
+  {
+    "id": "copy-components-content-FAQ",
+    "label": "content/FAQ",
+    "group": "Page copy",
+    "path": "content/copy-components-content-FAQ.json"
+  },
+  {
+    "id": "copy-components-content-LegalPage",
+    "label": "content/LegalPage",
+    "group": "Page copy",
+    "path": "content/copy-components-content-LegalPage.json"
+  },
+  {
+    "id": "copy-components-content-LocationVisual",
+    "label": "content/LocationVisual",
+    "group": "Page copy",
+    "path": "content/copy-components-content-LocationVisual.json"
+  },
+  {
+    "id": "copy-components-content-PageHero",
+    "label": "content/PageHero",
+    "group": "Page copy",
+    "path": "content/copy-components-content-PageHero.json"
+  },
+  {
+    "id": "copy-components-content-ResultsChart",
+    "label": "content/ResultsChart",
+    "group": "Page copy",
+    "path": "content/copy-components-content-ResultsChart.json"
+  },
+  {
+    "id": "copy-components-forms-ContactForm",
+    "label": "forms/ContactForm",
+    "group": "Page copy",
+    "path": "content/copy-components-forms-ContactForm.json"
+  },
+  {
+    "id": "copy-components-layout-Footer",
+    "label": "layout/Footer",
+    "group": "Page copy",
+    "path": "content/copy-components-layout-Footer.json"
+  },
+  {
+    "id": "copy-components-layout-Logo",
+    "label": "layout/Logo",
+    "group": "Page copy",
+    "path": "content/copy-components-layout-Logo.json"
+  },
+  {
+    "id": "copy-components-layout-Navbar",
+    "label": "layout/Navbar",
+    "group": "Page copy",
+    "path": "content/copy-components-layout-Navbar.json"
+  },
+  {
+    "id": "copy-components-layout-SocialLinks",
+    "label": "layout/SocialLinks",
+    "group": "Page copy",
+    "path": "content/copy-components-layout-SocialLinks.json"
+  },
+  {
+    "id": "copy-components-maps-LocalMap",
+    "label": "maps/LocalMap",
+    "group": "Page copy",
+    "path": "content/copy-components-maps-LocalMap.json"
+  },
+  {
+    "id": "copy-components-portfolio-PortfolioGrid",
+    "label": "portfolio/PortfolioGrid",
+    "group": "Page copy",
+    "path": "content/copy-components-portfolio-PortfolioGrid.json"
+  },
+  {
+    "id": "copy-components-related-Related",
+    "label": "related/Related",
+    "group": "Page copy",
+    "path": "content/copy-components-related-Related.json"
+  },
+  {
+    "id": "copy-components-sections-BlogPreview",
+    "label": "sections/BlogPreview",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-BlogPreview.json"
+  },
+  {
+    "id": "copy-components-sections-Capabilities",
+    "label": "sections/Capabilities",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-Capabilities.json"
+  },
+  {
+    "id": "copy-components-sections-DhakaLanding",
+    "label": "sections/DhakaLanding",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-DhakaLanding.json"
+  },
+  {
+    "id": "copy-components-sections-FeaturedWork",
+    "label": "sections/FeaturedWork",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-FeaturedWork.json"
+  },
+  {
+    "id": "copy-components-sections-FinalCta",
+    "label": "sections/FinalCta",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-FinalCta.json"
+  },
+  {
+    "id": "copy-components-sections-GrowthFunnel",
+    "label": "sections/GrowthFunnel",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-GrowthFunnel.json"
+  },
+  {
+    "id": "copy-components-sections-GrowthSystem",
+    "label": "sections/GrowthSystem",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-GrowthSystem.json"
+  },
+  {
+    "id": "copy-components-sections-Hero",
+    "label": "sections/Hero",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-Hero.json"
+  },
+  {
+    "id": "copy-components-sections-HomeDepth",
+    "label": "sections/HomeDepth",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-HomeDepth.json"
+  },
+  {
+    "id": "copy-components-sections-HowIWork",
+    "label": "sections/HowIWork",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-HowIWork.json"
+  },
+  {
+    "id": "copy-components-sections-IndustriesGrid",
+    "label": "sections/IndustriesGrid",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-IndustriesGrid.json"
+  },
+  {
+    "id": "copy-components-sections-NinetyDayPlan",
+    "label": "sections/NinetyDayPlan",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-NinetyDayPlan.json"
+  },
+  {
+    "id": "copy-components-sections-SerpSnippet",
+    "label": "sections/SerpSnippet",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-SerpSnippet.json"
+  },
+  {
+    "id": "copy-components-sections-TrustStrip",
+    "label": "sections/TrustStrip",
+    "group": "Page copy",
+    "path": "content/copy-components-sections-TrustStrip.json"
+  },
+  {
+    "id": "copy-components-seo-Breadcrumbs",
+    "label": "seo/Breadcrumbs",
+    "group": "Page copy",
+    "path": "content/copy-components-seo-Breadcrumbs.json"
+  },
+  {
+    "id": "copy-components-ui-Fill",
+    "label": "ui/Fill",
+    "group": "Page copy",
+    "path": "content/copy-components-ui-Fill.json"
+  },
+  {
+    "id": "image-descriptions",
+    "label": "Portrait image descriptions",
+    "group": "Site settings",
+    "path": "content/image-descriptions.json"
+  }
+]

@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-content-LocationVisual.json";
 import { locationExtras } from "@/lib/content/location-extras";
 
 const silhouettes: Record<string, React.ReactNode> = {
@@ -14,8 +16,8 @@ export function LocationVisual({ slug, city }: { slug: string; city: string }) {
   if (!detail) return null;
   return <div className={`market-visual lg:self-center lg:-translate-y-8 market-${detail.palette}`} aria-label={`Stylised skyline inspired by ${city}`} role="img">
     <div className="market-visual__orb" />
-    <p className="relative z-10 text-xs font-semibold uppercase tracking-[0.22em] opacity-75">Market notes / 01</p>
+    <p className="relative z-10 text-xs font-semibold uppercase tracking-[0.22em] opacity-75">{pageCopy.text_001}</p>
     <svg viewBox="0 0 500 220" className="relative z-10 mt-auto w-full" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{silhouettes[detail.palette]}</svg>
-    <div className="relative z-10 flex items-center justify-between border-t border-current/25 pt-4 text-sm font-medium"><span>{detail.eyebrow}</span><span>↗</span></div>
+    <div className="relative z-10 flex items-center justify-between border-t border-current/25 pt-4 text-sm font-medium"><span>{detail.eyebrow}</span><span>{pageCopy.text_002}</span></div>
   </div>;
 }

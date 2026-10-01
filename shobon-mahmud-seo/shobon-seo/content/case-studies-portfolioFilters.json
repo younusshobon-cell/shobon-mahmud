@@ -1,0 +1,30 @@
+[
+  {
+    "value": "all",
+    "label": "All"
+  },
+  {
+    "value": "saas",
+    "label": "SaaS"
+  },
+  {
+    "value": "legal-tech",
+    "label": "Legal Tech"
+  },
+  {
+    "value": "health-tech",
+    "label": "Health Tech"
+  },
+  {
+    "value": "logistics",
+    "label": "Logistics"
+  },
+  {
+    "value": "design",
+    "label": "Design"
+  },
+  {
+    "value": "ecommerce",
+    "label": "E-commerce"
+  }
+]

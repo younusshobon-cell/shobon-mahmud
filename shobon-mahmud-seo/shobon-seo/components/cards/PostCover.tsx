@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-cards-PostCover.json";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -10,7 +12,7 @@ export function PostCover({ category, image, className, priority }: { title?: st
   if (image) {
     return (
       <div className={cn("relative overflow-hidden rounded-[var(--radius-card)] bg-paper-2", className)}>
-        <Image src={image} alt="" fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover" priority={priority} />
+        <Image src={image} alt={pageCopy.text_001} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover" priority={priority} />
       </div>
     );
   }

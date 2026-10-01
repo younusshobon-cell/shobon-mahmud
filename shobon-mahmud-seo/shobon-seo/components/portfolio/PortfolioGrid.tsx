@@ -1,4 +1,6 @@
 "use client";
+import pageCopy from "@/content/copy-components-portfolio-PortfolioGrid.json";
+
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -16,7 +18,7 @@ export function PortfolioGrid({ items, filters }: { items: Item[]; filters: { va
 
   return (
     <div>
-      <div role="group" aria-label="Filter case studies by industry" className="flex flex-wrap gap-2">
+      <div role="group" aria-label={pageCopy.text_001} className="flex flex-wrap gap-2">
         {available.map((f) => (
           <button
             key={f.value}
@@ -32,7 +34,7 @@ export function PortfolioGrid({ items, filters }: { items: Item[]; filters: { va
           </button>
         ))}
       </div>
-      <p aria-live="polite" className="sr-only">{shown.length} case studies shown</p>
+      <p aria-live="polite" className="sr-only">{shown.length} {pageCopy.text_002}</p>
       <motion.ul layout className="mt-10 grid gap-5 md:grid-cols-2">
         <AnimatePresence mode="popLayout" initial={false}>
           {shown.map((item) => (

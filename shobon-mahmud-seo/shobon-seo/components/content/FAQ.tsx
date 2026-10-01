@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-content-FAQ.json";
 import { Plus } from "lucide-react";
 import type { FAQ as FAQType } from "@/lib/content/types";
 import { faqSchema } from "@/lib/schema";
@@ -5,7 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 /** Native <details> — accessible and crawlable with zero JavaScript. */
-export function FAQ({ faqs, title = "Frequently asked questions", withSchema = false }: { faqs: FAQType[]; title?: string; withSchema?: boolean }) {
+export function FAQ({ faqs, title = pageCopy.text_001, withSchema = false }: { faqs: FAQType[]; title?: string; withSchema?: boolean }) {
   if (!faqs.length) return null;
   return (
     <section aria-labelledby="faq-heading" className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">

@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-sections-FeaturedWork.json";
 import Link from "next/link";
 import { caseStudies } from "@/lib/content/case-studies";
 import { Section } from "@/components/content/Section";
@@ -13,9 +15,9 @@ export function FeaturedWork() {
   return (
     <Section tone="muted" labelledBy="work-heading">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" id="work-heading">
-        <SectionHeading kicker="SEO approaches" title="Search problems, and a plan to solve them." />
-        <Link href="/portfolio" className="group inline-flex shrink-0 items-center gap-1.5 font-medium text-link">
-          All example strategies <Arrow />
+        <SectionHeading kicker={pageCopy.text_001} title={pageCopy.text_002} />
+        <Link href={pageCopy.text_003} className="group inline-flex shrink-0 items-center gap-1.5 font-medium text-link">
+          {pageCopy.text_004}<Arrow />
         </Link>
       </div>
       <div className="mt-12 grid gap-5">

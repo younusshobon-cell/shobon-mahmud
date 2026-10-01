@@ -1,0 +1,34 @@
+[
+  {
+    "q": "What does this SEO blog cover?",
+    "a": "The articles cover technical SEO, search intent, content strategy, local SEO, e-commerce and how to measure organic search."
+  },
+  {
+    "q": "Where should a beginner start learning SEO?",
+    "a": "Start with how search engines crawl and index pages, then learn search intent, useful content and Search Console reporting. Apply each concept to a real page."
+  },
+  {
+    "q": "Is technical SEO more important than content?",
+    "a": "Neither is universally more important. Technical issues can prevent good pages from being found, while a healthy site still needs content that answers a real search."
+  },
+  {
+    "q": "How can I find content ideas for my business?",
+    "a": "Use customer questions, Search Console queries, sales conversations and competing search results. Prioritise topics that help a buyer make a decision."
+  },
+  {
+    "q": "How often should I update SEO content?",
+    "a": "Review pages when facts, products or search intent change. Update useful information and remove inaccuracies rather than changing dates or wording without substance."
+  },
+  {
+    "q": "Does AI-generated content automatically rank?",
+    "a": "No. Whatever the production method, content should be accurate, original where possible and genuinely helpful to its intended reader."
+  },
+  {
+    "q": "How do I know whether a blog article works?",
+    "a": "Check relevant search queries, engaged visits and the next actions readers take. A post that supports a high-intent service page can be valuable even without large traffic."
+  },
+  {
+    "q": "Can I get help applying an article to my site?",
+    "a": "Yes. Send the URL and your goal through the contact page, and explain where implementation is getting stuck."
+  }
+]

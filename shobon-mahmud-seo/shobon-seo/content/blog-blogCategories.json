@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "seo-strategy",
+    "name": "SEO Strategy",
+    "description": "Planning, prioritising and measuring SEO as a growth channel."
+  },
+  {
+    "slug": "technical-seo",
+    "name": "Technical SEO",
+    "description": "Crawling, indexing, rendering, speed and site architecture."
+  },
+  {
+    "slug": "local-seo",
+    "name": "Local SEO",
+    "description": "Map pack visibility, Business Profiles, reviews and location pages."
+  },
+  {
+    "slug": "content-seo",
+    "name": "Content SEO",
+    "description": "Keyword research, topical authority, briefs and content strategy."
+  },
+  {
+    "slug": "ai-and-search",
+    "name": "AI & Search",
+    "description": "AI Overviews, AI assistants and how search visibility is changing."
+  }
+]

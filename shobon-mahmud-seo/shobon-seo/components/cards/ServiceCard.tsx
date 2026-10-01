@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-cards-ServiceCard.json";
 import Link from "next/link";
 import type { Service } from "@/lib/content/types";
 import { Arrow } from "@/components/ui/Arrow";
@@ -14,7 +16,7 @@ export function ServiceCard({ service, index }: { service: Service; index?: numb
       </div>
       <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted">{service.summary}</p>
       <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-medium text-link">
-        {service.name} services <Arrow />
+        {service.name} {pageCopy.text_001}<Arrow />
       </span>
     </Link>
   );

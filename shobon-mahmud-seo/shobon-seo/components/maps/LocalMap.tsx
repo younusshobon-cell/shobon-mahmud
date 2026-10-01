@@ -1,4 +1,6 @@
 "use client";
+import pageCopy from "@/content/copy-components-maps-LocalMap.json";
+
 import { useEffect, useRef, useState } from "react";
 import { MapPin } from "lucide-react";
 
@@ -46,7 +48,7 @@ export function LocalMap({ lat, lng, label, zoom = 12 }: { lat: number; lng: num
         />
       ) : (
         <div className="absolute inset-0 grid place-items-center text-sm text-muted">
-          <span className="inline-flex items-center gap-2"><MapPin aria-hidden className="size-4" /> Loading map of {label}</span>
+          <span className="inline-flex items-center gap-2"><MapPin aria-hidden className="size-4" /> {pageCopy.text_001}{label}</span>
         </div>
       )}
     </div>

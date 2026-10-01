@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-content-PageHero.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Crumb } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
@@ -25,7 +27,7 @@ export function PageHero({
 }) {
   const dark = tone === "dark";
   return (
-    <section className={cn("hero-surface", dark && "hero-surface--dark on-night")} data-hero-theme={theme} style={dark || theme ? undefined : heroTheme(crumbs.at(-1)?.href ?? "/")}>
+    <section className={cn("hero-surface", dark && pageCopy.text_001)} data-hero-theme={theme} style={dark || theme ? undefined : heroTheme(crumbs.at(-1)?.href ?? "/")}>
       <Container className="pt-10 pb-16 sm:pt-14 lg:pb-24">
         <Breadcrumbs items={crumbs} tone={tone} />
         <div className={cn("grid gap-10", aside && "lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16")}>

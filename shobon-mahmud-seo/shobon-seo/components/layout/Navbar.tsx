@@ -1,4 +1,6 @@
 "use client";
+import pageCopy from "@/content/copy-components-layout-Navbar.json";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -42,7 +44,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 w-full max-w-[1240px] items-center justify-between px-5 sm:px-8 lg:h-[4.5rem] lg:px-10">
         <Logo className="max-[380px]:[&>span]:hidden" />
 
-        <nav aria-label="Main" className="hidden lg:block">
+        <nav aria-label={pageCopy.text_001} className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => (
               <li key={item.href}>
@@ -66,17 +68,16 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="/contact"
+            href={pageCopy.text_002}
             className="inline-flex min-h-11 items-center rounded-full bg-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-link active:translate-y-px sm:px-5"
           >
-            Discuss SEO
-          </Link>
+            {pageCopy.text_003}</Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? pageCopy.text_004 : pageCopy.text_005}
             className="grid size-10 place-items-center rounded-full border border-line-strong text-ink lg:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -94,7 +95,7 @@ export function Navbar() {
             transition={{ duration: 0.2 }}
             className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-paper lg:hidden"
           >
-            <nav aria-label="Mobile" className="px-5 pt-6 pb-10 sm:px-8">
+            <nav aria-label={pageCopy.text_006} className="px-5 pt-6 pb-10 sm:px-8">
               <ul className="divide-y divide-line border-y border-line">
                 {mainNav.map((item, i) => (
                   <motion.li
@@ -113,9 +114,8 @@ export function Navbar() {
                   </motion.li>
                 ))}
               </ul>
-              <Link href="/contact" className="mt-8 flex h-12 items-center justify-center rounded-full bg-ink text-paper font-medium">
-                Discuss SEO
-              </Link>
+              <Link href={pageCopy.text_007} className="mt-8 flex h-12 items-center justify-center rounded-full bg-ink text-paper font-medium">
+                {pageCopy.text_008}</Link>
             </nav>
           </motion.div>
         )}

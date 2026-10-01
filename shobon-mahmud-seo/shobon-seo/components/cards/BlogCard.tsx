@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-cards-BlogCard.json";
 import Image from "next/image";
 import Link from "next/link";
 import type { PostWithMeta } from "@/lib/content/blog";
@@ -19,12 +21,12 @@ export function BlogCard({ post, priority }: { post: PostWithMeta; priority?: bo
       </h3>
       <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted line-clamp-3">{post.description}</p>
       <div className="mt-auto flex items-center gap-3 pt-5 text-sm text-muted">
-        <Image src={photos.smile.src} alt="" width={28} height={28} className="size-7 rounded-full object-cover" />
+        <Image src={photos.smile.src} alt={pageCopy.text_001} width={28} height={28} className="size-7 rounded-full object-cover" />
         <span className="text-ink-2">{post.author}</span>
         <span aria-hidden className="h-3 w-px bg-line-strong" />
         <time dateTime={post.date}>{formatDate(post.date)}</time>
         <span aria-hidden className="h-3 w-px bg-line-strong" />
-        <span>{post.readingTime} min read</span>
+        <span>{post.readingTime} {pageCopy.text_002}</span>
       </div>
     </article>
   );

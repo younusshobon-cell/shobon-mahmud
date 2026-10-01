@@ -1,4 +1,6 @@
 "use client";
+import pageCopy from "@/content/copy-components-sections-SerpSnippet.json";
+
 import Image from "next/image";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -15,10 +17,10 @@ export function SerpSnippet({ siteName, url, path, title, description, className
       className={cn("rounded-2xl border border-line bg-white p-4 shadow-[0_18px_40px_-18px_rgba(15,26,43,0.35)] sm:p-5", className)}
     >
       <div className="flex items-center gap-2.5">
-        <Image src="/icon.svg" alt="" aria-hidden width={28} height={28} unoptimized className="size-7 rounded-full" />
+        <Image src={pageCopy.text_001} alt={pageCopy.text_002} aria-hidden width={28} height={28} unoptimized className="size-7 rounded-full" />
         <div className="min-w-0 leading-tight">
           <p className="text-[0.8125rem] text-ink">{siteName}</p>
-          <p className="truncate text-xs text-url">{host} › {path}</p>
+          <p className="truncate text-xs text-url">{host} {pageCopy.text_003}{path}</p>
         </div>
       </div>
       <p className="mt-2.5 text-[1.0625rem] leading-snug text-link">{title}</p>

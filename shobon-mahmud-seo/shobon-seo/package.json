@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:admin": "node tests/admin.test.cjs",
+    "test:admin:runtime": "node tests/admin-runtime.test.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

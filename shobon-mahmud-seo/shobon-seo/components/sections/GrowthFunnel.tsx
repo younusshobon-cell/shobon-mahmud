@@ -1,15 +1,17 @@
 "use client";
+import pageCopy from "@/content/copy-components-sections-GrowthFunnel.json";
+
 import { motion } from "motion/react";
 
 const stages = [
-  { name: "Search demand", body: "What your market is already typing into Google." },
-  { name: "Content", body: "Pages that answer those searches better than anyone else." },
-  { name: "Technical infrastructure", body: "So those pages are crawled, rendered and indexed." },
-  { name: "Authority", body: "Reasons for search engines to trust them." },
-  { name: "Visibility", body: "Rankings, impressions and presence in search features." },
-  { name: "Qualified traffic", body: "The right visitors — not just more of them." },
-  { name: "Conversions", body: "Enquiries, demos, signups and orders." },
-  { name: "Revenue", body: "The only number that pays for SEO." },
+  { name: pageCopy.text_001, body: pageCopy.text_002 },
+  { name: "Content", body: pageCopy.text_003 },
+  { name: pageCopy.text_004, body: pageCopy.text_005 },
+  { name: "Authority", body: pageCopy.text_006 },
+  { name: "Visibility", body: pageCopy.text_007 },
+  { name: pageCopy.text_008, body: pageCopy.text_009 },
+  { name: "Conversions", body: pageCopy.text_010 },
+  { name: "Revenue", body: pageCopy.text_011 },
 ];
 
 /**

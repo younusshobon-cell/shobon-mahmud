@@ -1,4 +1,6 @@
 "use client";
+import pageCopy from "@/content/copy-components-blog-BlogSearch.json";
+
 import Link from "next/link";
 import { useId, useMemo, useState } from "react";
 import { Search } from "lucide-react";
@@ -17,7 +19,7 @@ export function BlogSearch({ index }: { index: SearchEntry[] }) {
 
   return (
     <div className="relative w-full max-w-md">
-      <label htmlFor={id} className="sr-only">Search articles</label>
+      <label htmlFor={id} className="sr-only">{pageCopy.text_001}</label>
       <div className="flex h-12 items-center gap-3 rounded-full border border-line-strong bg-white px-4 focus-within:border-ink">
         <Search aria-hidden className="size-4 text-muted" />
         <input
@@ -25,14 +27,14 @@ export function BlogSearch({ index }: { index: SearchEntry[] }) {
           type="search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Search articles"
+          placeholder={pageCopy.text_002}
           autoComplete="off"
           className="h-full w-full bg-transparent text-[0.9375rem] text-ink outline-none placeholder:text-muted"
         />
       </div>
       {q.trim().length >= 2 && (
         <div className="absolute inset-x-0 top-14 z-20 overflow-hidden rounded-2xl border border-line bg-white shadow-[0_18px_40px_-18px_rgba(15,26,43,0.3)]">
-          <p aria-live="polite" className="sr-only">{results.length} results</p>
+          <p aria-live="polite" className="sr-only">{results.length} {pageCopy.text_003}</p>
           {results.length ? (
             <ul className="divide-y divide-line">
               {results.map((r) => (
@@ -45,7 +47,7 @@ export function BlogSearch({ index }: { index: SearchEntry[] }) {
               ))}
             </ul>
           ) : (
-            <p className="px-5 py-4 text-sm text-muted">No articles match “{q}”. Try a broader term like “local” or “technical”.</p>
+            <p className="px-5 py-4 text-sm text-muted">{pageCopy.text_004}{q}{pageCopy.text_005}</p>
           )}
         </div>
       )}

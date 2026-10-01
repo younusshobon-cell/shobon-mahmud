@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-blog-BlogIndex.json";
 import { heroTheme } from "@/lib/hero-theme";
 import Link from "next/link";
 import { blogCategories, getCategory, posts, type PostWithMeta } from "@/lib/content/blog";
@@ -49,10 +51,10 @@ export function BlogIndex({
             <BlogSearch index={index} />
           </div>
 
-          <nav aria-label="Blog categories" className="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+          <nav aria-label={pageCopy.text_001} className="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
             <ul className="flex gap-2 pb-1">
               <li>
-                <Link href="/blog" aria-current={!activeCategory ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", !activeCategory ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>All</Link>
+                <Link href={pageCopy.text_002} aria-current={!activeCategory ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", !activeCategory ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>{pageCopy.text_003}</Link>
               </li>
               {blogCategories.map((c) => (
                 <li key={c.slug}>
@@ -71,31 +73,29 @@ export function BlogIndex({
         <article className="group relative mt-12 grid gap-8 rounded-[var(--radius-panel)] border border-line p-5 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12">
           <PostCover category={getCategory(featured.category)?.name ?? ""} image={featured.image} className="aspect-[16/10]" priority />
           <div>
-            <p className="text-sm text-link">Featured · {getCategory(featured.category)?.name}</p>
+            <p className="text-sm text-link">{pageCopy.text_004}{getCategory(featured.category)?.name}</p>
             <h2 className="mt-3 text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl">
               <Link href={`/blog/${featured.slug}`} className="after:absolute after:inset-0 group-hover:underline decoration-1 underline-offset-4">{featured.title}</Link>
             </h2>
             <p className="mt-4 leading-relaxed text-muted">{featured.description}</p>
             <p className="mt-6 text-sm text-muted">
-              <time dateTime={featured.date}>{formatDate(featured.date)}</time> <span aria-hidden className="mx-2 opacity-50">/</span> {featured.readingTime} min read
-            </p>
+              <time dateTime={featured.date}>{formatDate(featured.date)}</time> <span aria-hidden className="mx-2 opacity-50">{pageCopy.text_005}</span> {featured.readingTime} {pageCopy.text_006}</p>
           </div>
         </article>
       )}
 
-      <h2 className="sr-only">{featured ? "Latest articles" : "Articles"}</h2>
+      <h2 className="sr-only">{featured ? pageCopy.text_007 : "Articles"}</h2>
       {list.length ? (
         <div className="mt-14 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
           {list.map((p) => <BlogCard key={p.slug} post={p} />)}
         </div>
       ) : (
         <p className="mt-14 rounded-[var(--radius-card)] border border-dashed border-line-strong p-8 text-muted">
-          No articles in this category yet. <Link href="/blog" className="link">Browse all articles</Link>.
-        </p>
+          {pageCopy.text_008}<Link href={pageCopy.text_009} className="link">{pageCopy.text_010}</Link>{pageCopy.text_011}</p>
       )}
 
       {totalPages > 1 && (
-        <nav aria-label="Pagination" className="mt-16 flex items-center justify-center gap-2">
+        <nav aria-label={pageCopy.text_012} className="mt-16 flex items-center justify-center gap-2">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
             <Link
               key={n}
@@ -108,7 +108,7 @@ export function BlogIndex({
           ))}
         </nav>
       )}
-      <div className="mt-20 border-t border-line pt-16"><FAQ faqs={blogFaqs} title="SEO learning FAQs" /></div>
+      <div className="mt-20 border-t border-line pt-16"><FAQ faqs={blogFaqs} title={pageCopy.text_013} /></div>
     </Container>
     </>
   );

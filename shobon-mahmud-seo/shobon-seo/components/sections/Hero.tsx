@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-sections-Hero.json";
 import Image from "next/image";
 import { Search } from "lucide-react";
 import { photos } from "@/lib/images";
@@ -13,17 +15,15 @@ export function Hero() {
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-white py-1.5 pr-4 pl-3 text-sm text-ink-2 shadow-[0_1px_0_rgba(15,26,43,0.04)]">
             <Search aria-hidden className="size-3.5 text-link" strokeWidth={2.25} />
-            Based in Dubai · Working across markets
-          </p>
-          <h1 className="t-display mt-7 max-w-[15ch] text-ink">Grow on Google. Get discovered in AI. Turn visibility into business.</h1>
+            {pageCopy.text_001}</p>
+          <h1 className="t-display mt-7 max-w-[15ch] text-ink">{pageCopy.text_002}</h1>
           <p className="t-lead mt-7 max-w-[58ch] text-muted">
-            I&apos;m based in Dubai and work with businesses across the Gulf, US and UK. Together we build useful pages, stronger organic visibility and clearer paths from discovery to enquiries and sales.
-          </p>
+            {pageCopy.text_003}</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <ButtonLink href="/contact">Discuss My SEO Goals</ButtonLink>
-            <ButtonLink href="/portfolio" variant="secondary">Explore SEO Strategies</ButtonLink>
+            <ButtonLink href={pageCopy.text_004}>{pageCopy.text_005}</ButtonLink>
+            <ButtonLink href={pageCopy.text_006} variant="secondary">{pageCopy.text_007}</ButtonLink>
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-muted">Share your website and goals. I&apos;ll review them and suggest where to start.</p>
+          <p className="mt-4 text-sm leading-relaxed text-muted">{pageCopy.text_008}</p>
         </div>
 
         <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">
@@ -43,8 +43,8 @@ export function Hero() {
             siteName={siteConfig.name}
             url={siteConfig.url}
             path="services"
-            title="SEO that turns search visibility into business growth"
-            description="Technical SEO, content, authority and local search for SaaS, health tech, legal tech, logistics and more."
+            title={pageCopy.text_009}
+            description={pageCopy.text_010}
           />
         </div>
       </Container>

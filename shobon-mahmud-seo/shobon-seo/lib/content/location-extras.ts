@@ -1,150 +1,25 @@
+import cms_locationExtras from "@/content/location-extras-locationExtras.json";
 import type { FAQ, Point } from "./types";
 
 /** Editorial market themes, not forecasts or promises of sector growth. */
-export const locationExtras: Record<string, { eyebrow: string; palette: string; sectors: Point[]; searchPaths: Point[]; faqs: FAQ[]; source: { label: string; href: string } }> = {
-  "san-francisco": {
-    eyebrow: "Bay Area / Pacific innovation", palette: "pacific",
-    sectors: [
-      { title: "AI and developer platforms", body: "Make integrations, use cases and honest comparisons easy for technical buyers to find on Google and understand in AI answers." },
-      { title: "Digital health and biotech", body: "Build evidence-led pages reviewed by subject experts, with clear audience and product boundaries." },
-      { title: "Climate and advanced technology", body: "Explain specific applications and buyer problems rather than relying on broad category keywords." },
-    ],
-    searchPaths: [
-      { title: "Product-led discovery", body: "Map queries from the first problem search to integrations, alternatives and demo-ready comparisons." },
-      { title: "AI visibility", body: "Publish clear entity, product and evidence pages that people and answer systems can understand and cite." },
-      { title: "Bay Area service intent", body: "For local firms, connect real neighbourhood coverage, reviews and service detail to qualified enquiries." },
-    ],
-    faqs: [
-      { q: "How can a San Francisco SaaS startup rank on Google?", a: "Start with indexable product pages, specific use-case searches and comparison content. Measure demos and trial sign-ups from relevant non-branded queries." },
-      { q: "What does AI search visibility mean for Bay Area companies?", a: "It means making factual product information, expertise and useful answers easy to find and reference. Track cited pages and referral quality alongside traditional organic search." },
-      { q: "Is technical SEO important for a Next.js startup website?", a: "Yes. Check rendered content, canonical URLs, metadata, internal links and sitemaps before scaling content." },
-      { q: "Which B2B SEO keywords should a San Francisco startup target first?", a: "Prioritise problem, integration, alternative and use-case terms that match how buyers evaluate the product; verify them against actual results and sales questions." },
-      { q: "Can a San Francisco health tech company grow organic traffic safely?", a: "Yes, with accurate, expert-reviewed material and a clear distinction between product education and clinical advice. Quality of qualified visits matters more than raw traffic." },
-      { q: "How do I improve local SEO in SoMa or the Mission?", a: "Use a complete eligible Business Profile, accurate service details and genuine neighbourhood information. Physical proximity still affects map results." },
-      { q: "Can you work with a Bay Area team from Dubai?", a: "Yes. I'm based in Dubai and collaborate remotely using scheduled overlap, clear briefs and asynchronous implementation reviews." },
-      { q: "How long does San Francisco SEO take to produce leads?", a: "There is no fixed timeframe. Existing technical fixes may be visible sooner; competitive product topics usually need sustained testing and publishing over months." },
-    ],
-    source: { label: "US Commerce: regional technology priorities", href: "https://www.commerce.gov/news/press-releases/2023/10/biden-harris-administration-designates-31-tech-hubs-across-america" },
-  },
-  "new-york": {
-    eyebrow: "New York / borough by borough", palette: "newyork",
-    sectors: [
-      { title: "Financial and professional services", body: "Build trustworthy service and comparison pages around real decision questions and careful claims." },
-      { title: "Health and specialist care", body: "Connect expert-reviewed explanations, service detail and accessible booking paths." },
-      { title: "Commerce and consumer brands", body: "Improve category, product and editorial pages around purchase intent rather than volume alone." },
-    ],
-    searchPaths: [
-      { title: "Local intent across boroughs", body: "Write distinct, useful pages for areas actually served, then pair them with eligible local profiles." },
-      { title: "Trust before conversion", body: "Put credentials, methods, fees and practical next steps where buyers need them." },
-      { title: "Discovery to revenue", body: "Track calls, bookings, purchases and lead quality by page group, not only ranking changes." },
-    ],
-    faqs: [
-      { q: "How can a New York business rank in Google Maps?", a: "Maintain an eligible Business Profile, accurate categories, useful local pages and authentic reviews. Map visibility also depends on the searcher's proximity." },
-      { q: "What SEO keywords work for NYC law firms?", a: "Research practice-area and borough-specific queries, then answer the legal service questions accurately with qualified review and clear jurisdiction." },
-      { q: "How can a Brooklyn business reach Manhattan customers organically?", a: "Explain genuine service coverage with distinct location information; organic results can reach both areas, while map visibility remains proximity-dependent." },
-      { q: "Does SEO help New York fintech companies get qualified leads?", a: "It can if product and comparison pages address specific buyer needs, support trust and connect visits to demos or enquiries." },
-      { q: "What matters for New York ecommerce SEO?", a: "Useful categories, indexable product pages, stock and shipping clarity, structured data where valid, and a smooth purchase path." },
-      { q: "Should I build a page for every NYC borough?", a: "Only if you genuinely serve each borough and can provide distinct information. Thin pages with swapped location names add little value." },
-      { q: "Can a Dubai-based consultant support New York SEO?", a: "Yes. I work remotely with Eastern Time overlap and ground recommendations in the business's actual service area and search results." },
-      { q: "How do I measure NYC organic growth?", a: "Compare relevant non-branded queries, borough-specific landing pages and qualified actions against a dated baseline." },
-    ],
-    source: { label: "US Commerce: technology and industry priorities", href: "https://www.commerce.gov/issues/semiconductor-industry" },
-  },
-  austin: {
-    eyebrow: "Austin / built to scale", palette: "austin",
-    sectors: [
-      { title: "Software and AI tools", body: "Show concrete use cases and integrations for buyers searching beyond broad software terms." },
-      { title: "Advanced technology", body: "Turn technical capabilities into plain-language pages for procurement and partner searches." },
-      { title: "Local healthcare and home services", body: "Cover real service areas, booking questions and review signals across the metro." },
-    ],
-    searchPaths: [
-      { title: "Metro-wide relevance", body: "Differentiate Austin, Round Rock, Cedar Park and Pflugerville pages through real coverage and customer needs." },
-      { title: "Scalable content", body: "Start with core service, use-case and comparison pages before expanding the editorial calendar." },
-      { title: "Lead quality", body: "Use call, booking and demo outcomes to refine pages rather than chasing every popular query." },
-    ],
-    faqs: [
-      { q: "How do I rank a business in Austin and Round Rock?", a: "Create genuinely distinct service-area information and maintain accurate business details. Map results still depend heavily on proximity." },
-      { q: "Which Austin SaaS SEO pages bring demos?", a: "Use-case, integration, alternative and pricing-context pages often serve buyers who are actively comparing solutions; test with your sales data." },
-      { q: "Can Austin home service businesses grow through local SEO?", a: "Yes. Clear service pages, eligible profiles, genuine reviews and practical coverage details can lead to better local discovery." },
-      { q: "Is SEO useful for Austin AI startups?", a: "It can help explain a specific problem and product fit. Focus on factual product documentation and buyer questions rather than vague AI claims." },
-      { q: "Do I need separate pages for Cedar Park and Pflugerville?", a: "Only when services and information differ meaningfully and you actually serve those areas. Avoid duplicate city swaps." },
-      { q: "How do you track Austin organic leads?", a: "Connect local and non-branded landing pages to calls, forms or demos, then compare with a clear baseline." },
-      { q: "Can a Dubai-based consultant work with Austin teams?", a: "Yes. Delivery is remote, with scheduled Central Time overlap and written implementation plans." },
-      { q: "When should an Austin startup invest in technical SEO?", a: "Before scaling content if important pages are not indexed or rendered correctly, and again during platform changes or migrations." },
-    ],
-    source: { label: "US Commerce: regional technology priorities", href: "https://www.commerce.gov/news/press-releases/2023/10/biden-harris-administration-designates-31-tech-hubs-across-america" },
-  },
-  dubai: {
-    eyebrow: "Dubai / city of connected markets", palette: "dubai",
-    sectors: [
-      { title: "Trade and logistics", body: "Reach importers and operators through route, capability and service pages with clear geographic coverage." },
-      { title: "Tourism and hospitality", body: "Answer multilingual traveller questions and make bookings, locations and experiences easy to discover." },
-      { title: "Digital commerce and SMEs", body: "Build category and product discovery with Arabic and English intent, trustworthy details and conversion measurement." },
-    ],
-    searchPaths: [
-      { title: "Arabic and English intent", body: "Research each language independently; localise examples, terms and conversion paths." },
-      { title: "District-level demand", body: "Explain real coverage in Business Bay, DIFC, JLT or Dubai Marina without inventing offices." },
-      { title: "Gulf-wide discovery", body: "Use market-specific pages and correct language targeting to distinguish UAE from Saudi intent." },
-    ],
-    faqs: [
-      { q: "How do I rank my Dubai business on Google?", a: "Start with indexable service pages, an eligible Business Profile, market-specific keyword research and pages that answer buyer questions in the right language." },
-      { q: "Do Dubai businesses need Arabic SEO and English SEO?", a: "If both audiences matter, research and write for each separately. A direct translation often misses the words and context customers use." },
-      { q: "How can a Dubai brand appear in AI search answers?", a: "Publish accurate, clearly attributed business information and useful answers; test how major answer tools describe the brand and track referrals where possible." },
-      { q: "What SEO works for Dubai real estate or hospitality?", a: "Use distinct location, experience and service pages, current details and a clear enquiry path. Avoid unsupported performance claims." },
-      { q: "Can Dubai SEO target UAE and Saudi Arabia from one website?", a: "Yes. Separate market-specific pages where offerings differ, use appropriate language targeting and verify the correct pages are indexed." },
-      { q: "How do I improve Dubai local SEO in Business Bay or JLT?", a: "Describe the actual area served, update eligible profile details and gather authentic reviews. A made-up address is not a valid local strategy." },
-      { q: "Which Dubai growth sectors should I plan content for through 2030?", a: "D33 highlights digital adoption, international business and tourism. Choose sectors your business truly serves, then validate demand from current search data rather than treating a policy target as guaranteed growth." },
-      { q: "Are you based in Dubai?", a: "Yes. I am based in Dubai and work with UAE and international teams on organic growth, Google visibility and AI discovery." },
-    ],
-    source: { label: "Dubai DET: D33 initiatives", href: "https://www.dubaidet.gov.ae/en/about-det/initiatives" },
-  },
-  london: {
-    eyebrow: "London / globally connected", palette: "london",
-    sectors: [
-      { title: "Digital and technology", body: "Use UK buyer vocabulary to explain software, AI and digital services in ways people actually search." },
-      { title: "Life sciences and health", body: "Support careful, expert-reviewed content with clear product and audience scope." },
-      { title: "Creative and financial services", body: "Show expertise, distinctive work and decision-stage answers for crowded professional markets." },
-    ],
-    searchPaths: [
-      { title: "UK-first language", body: "Research British terms, pricing conventions and search intent instead of repurposing US pages." },
-      { title: "Borough relevance", body: "Use real service-area details and local proof for the parts of London actually served." },
-      { title: "International clarity", body: "Make UK and global pages distinct, with correct language signals and conversion details." },
-    ],
-    faqs: [
-      { q: "How do I rank a London business on Google?", a: "Build useful service pages that match UK intent, ensure the site is crawlable and support real local operations with accurate business details." },
-      { q: "What is the best SEO strategy for London fintech?", a: "Focus on specific product and buyer problems, clear trust signals, carefully reviewed information and measurable enquiry paths." },
-      { q: "Does British spelling matter for UK SEO?", a: "It can improve relevance and reader trust. Research UK phrasing and conventions instead of mechanically replacing American spellings." },
-      { q: "How can a London life sciences company be visible in AI answers?", a: "Publish accurate, cited and expert-reviewed explanations with clear authorship and product context; check what answer tools actually reference." },
-      { q: "Can I rank in several London boroughs?", a: "Organic pages can address different areas you genuinely serve; local map results remain affected by proximity and profile eligibility." },
-      { q: "Should a London brand use .co.uk or .com for international SEO?", a: "Either can work. Choose a structure that fits your actual countries and maintain distinct UK content and correct language targeting." },
-      { q: "Can a Dubai-based specialist work with London teams?", a: "Yes. I work remotely with UK-hours overlap and research British market terminology rather than reusing US assumptions." },
-      { q: "How do I measure organic growth in London?", a: "Compare relevant UK queries and landing pages to qualified calls, forms or sales, with a dated baseline and period." },
-    ],
-    source: { label: "UK Government: Industrial Strategy sectors", href: "https://www.gov.uk/government/publications/industrial-strategy" },
-  },
-  "saudi-arabia": {
-    eyebrow: "Saudi Arabia / Vision 2030", palette: "saudi",
-    sectors: [
-      { title: "Tourism and visitor experiences", body: "Help travellers find useful destination, itinerary and booking information in Arabic and English." },
-      { title: "Logistics and industrial services", body: "Show capabilities, coverage, certifications and practical procurement details for B2B buyers." },
-      { title: "Digital services and healthcare", body: "Explain products with local terminology, accessible service paths and appropriate expert review." },
-    ],
-    searchPaths: [
-      { title: "Arabic-first research", body: "Research Saudi Arabic phrasing and local intent separately from English or UAE searches." },
-      { title: "Riyadh to wider KSA", body: "Create useful pages for the cities actually served; be specific about coverage and delivery." },
-      { title: "Trust and action", body: "Make language, pricing context, contact details and business evidence easy to verify before enquiry." },
-    ],
-    faqs: [
-      { q: "How can a Saudi Arabia business rank on Google?", a: "Build clear service pages around Saudi search intent, fix indexing issues and support eligible local operations with accurate profiles and reviews." },
-      { q: "Do I need Arabic SEO for Saudi Arabia?", a: "For many Saudi audiences, yes. Research Arabic queries locally and write useful Arabic pages rather than relying only on translation." },
-      { q: "How does Riyadh local SEO work?", a: "Eligible Business Profile details, genuine reviews, useful city-specific pages and proximity all influence local discovery." },
-      { q: "Can a UAE website target Saudi customers?", a: "Yes, if the business truly serves them. Use market-specific content, language signals and accurate delivery or availability information." },
-      { q: "Which Saudi Vision 2030 industries suit organic growth content?", a: "Tourism, logistics, digital services and healthcare are policy priorities. Select the ones relevant to your offer and verify actual buyer demand before investing." },
-      { q: "How can a Saudi brand appear in AI search results?", a: "Publish factual, well-structured pages with clear identity and useful answers, then review which sources answer tools cite for your topics." },
-      { q: "What keywords matter for Saudi tourism SEO?", a: "Research destination, activity, itinerary and booking questions in Arabic and English; pair them with current, helpful trip information." },
-      { q: "Do you work with Saudi teams from Dubai?", a: "Yes. I'm based in Dubai and work remotely with Saudi teams, with convenient Gulf-time meetings and market-specific research." },
-      { q: "How are Saudi organic leads measured?", a: "Track relevant Saudi queries and landing pages, then connect them to qualified enquiries or purchases over a defined period." },
-    ],
-    source: { label: "Saudi Vision 2030: economic priorities", href: "https://www.vision2030.gov.sa/en/overview" },
-  },
-};
+export const locationExtras: Record<
+  string,
+  {
+    eyebrow: string;
+    palette: string;
+    sectors: Point[];
+    searchPaths: Point[];
+    faqs: FAQ[];
+    source: { label: string; href: string };
+  }
+> = cms_locationExtras as Record<
+  string,
+  {
+    eyebrow: string;
+    palette: string;
+    sectors: Point[];
+    searchPaths: Point[];
+    faqs: FAQ[];
+    source: { label: string; href: string };
+  }
+>;

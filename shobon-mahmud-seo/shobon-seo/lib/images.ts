@@ -1,3 +1,4 @@
+import imageDescriptions from "@/content/image-descriptions.json";
 import studio from "@/assets/images/portrait-studio.jpg";
 import outdoor from "@/assets/images/portrait-outdoor.jpg";
 import coast from "@/assets/images/portrait-coast.jpg";
@@ -10,10 +11,10 @@ import casual from "@/assets/images/portrait-casual.jpg";
  * To swap a photo, replace the file in /assets/images and keep the same name.
  */
 export const photos = {
-  studio: { src: studio, alt: "Shobon Mahmud, SEO specialist, smiling in a white shirt against a navy background" },
-  outdoor: { src: outdoor, alt: "Shobon Mahmud standing on a tree-lined road in a white shirt" },
-  coast: { src: coast, alt: "Black and white photo of Shobon Mahmud sitting on his motorbike by the sea" },
-  smile: { src: smile, alt: "Close-up portrait of Shobon Mahmud smiling" },
-  formal: { src: formal, alt: "Shobon Mahmud in a dark suit and tie" },
-  casual: { src: casual, alt: "Portrait of Shobon Mahmud in a navy t-shirt" },
+  studio: { src: studio, alt: imageDescriptions.studio },
+  outdoor: { src: outdoor, alt: imageDescriptions.outdoor },
+  coast: { src: coast, alt: imageDescriptions.coast },
+  smile: { src: smile, alt: imageDescriptions.smile },
+  formal: { src: formal, alt: imageDescriptions.formal },
+  casual: { src: casual, alt: imageDescriptions.casual },
 } as const;

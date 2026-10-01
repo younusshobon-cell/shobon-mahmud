@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-cards-CaseStudyCard.json";
 import Link from "next/link";
 import type { CaseStudy } from "@/lib/content/types";
 import { getIndustry } from "@/lib/content/industries";
@@ -8,15 +10,14 @@ import { cn } from "@/lib/utils";
 export function DraftBadge({ className }: { className?: string }) {
   return (
     <span className={cn("inline-flex items-center rounded-full border border-dashed border-current px-2.5 py-0.5 text-xs", className)}>
-      Draft — add real data
-    </span>
+      {pageCopy.text_001}</span>
   );
 }
 
 function Cta() {
   return (
     <span className="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-medium text-link lg:pt-6">
-      Explore strategy <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+      {pageCopy.text_002}<span aria-hidden className="transition-transform group-hover:translate-x-1">{pageCopy.text_003}</span>
     </span>
   );
 }
@@ -43,15 +44,15 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
       </div>
       <dl className={cn("grid content-start gap-5 border-t border-line pt-6 text-[0.9375rem]", variant === "wide" && "lg:border-t-0 lg:pt-0")}>
         <div>
-          <dt className="text-sm text-muted">Scenario</dt>
+          <dt className="text-sm text-muted">{pageCopy.text_004}</dt>
           <dd className="mt-1 text-ink-2">{study.summary}</dd>
         </div>
         <div>
-          <dt className="text-sm text-muted">Focus areas</dt>
+          <dt className="text-sm text-muted">{pageCopy.text_005}</dt>
           <dd className="mt-1 text-ink-2">{services.map((s) => s.name).join(" + ")}</dd>
         </div>
         <div>
-          <dt className="text-sm text-muted">Suggested direction</dt>
+          <dt className="text-sm text-muted">{pageCopy.text_006}</dt>
           <dd className="mt-1 font-medium text-ink"><Fill text={study.outcome} /></dd>
         </div>
       </dl>

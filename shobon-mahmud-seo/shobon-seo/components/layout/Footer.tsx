@@ -1,3 +1,5 @@
+
+import pageCopy from "@/content/copy-components-layout-Footer.json";
 import Link from "next/link";
 import { Mail, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site";
@@ -44,26 +46,26 @@ export function Footer() {
             <Logo tone="dark" />
             <p className="mt-5 text-[0.9375rem] leading-relaxed text-on-night-muted">{siteConfig.shortTagline}</p>
             <div className="mt-6 grid gap-2.5">
-              <a href="https://wa.me/8801309580863" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl border border-night-line px-4 py-3 text-sm text-on-night transition-colors hover:border-on-night focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-night" aria-label="Chat on WhatsApp at +880 1309 580863">
+              <a href={pageCopy.text_001} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl border border-night-line px-4 py-3 text-sm text-on-night transition-colors hover:border-on-night focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-night" aria-label={pageCopy.text_002}>
                 <MessageCircle className="size-5 shrink-0" aria-hidden />
-                <span><span className="block font-medium">WhatsApp chat</span><span className="block text-on-night-muted">+880 1309 580863</span></span>
+                <span><span className="block font-medium">{pageCopy.text_003}</span><span className="block text-on-night-muted">{pageCopy.text_004}</span></span>
               </a>
-              <a href="mailto:younusshobon@gmail.com" className="flex items-center gap-3 rounded-xl border border-night-line px-4 py-3 text-sm text-on-night transition-colors hover:border-on-night focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-night">
+              <a href={pageCopy.text_005} className="flex items-center gap-3 rounded-xl border border-night-line px-4 py-3 text-sm text-on-night transition-colors hover:border-on-night focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-night">
                 <Mail className="size-5 shrink-0" aria-hidden />
-                <span><span className="block font-medium">Email me</span><span className="block break-all text-on-night-muted">younusshobon@gmail.com</span></span>
+                <span><span className="block font-medium">{pageCopy.text_006}</span><span className="block break-all text-on-night-muted">{pageCopy.text_007}</span></span>
               </a>
             </div>
             <SocialLinks tone="dark" iconOnly className="mt-5" />
           </div>
-          <Column title="Site" links={siteLinks} />
-          <Column title="Services" links={services.slice(0, 7).map((s) => ({ href: `/services/${s.slug}`, label: s.name }))} />
-          <Column title="Industries" links={industries.map((i) => ({ href: `/industries/${i.slug}`, label: i.name }))} />
+          <Column title={pageCopy.text_008} links={siteLinks} />
+          <Column title={pageCopy.text_009} links={services.slice(0, 7).map((s) => ({ href: `/services/${s.slug}`, label: s.name }))} />
+          <Column title={pageCopy.text_010} links={industries.map((i) => ({ href: `/industries/${i.slug}`, label: i.name }))} />
         </div>
         <div className="mt-16 flex flex-col gap-4 border-t border-night-line pt-6 text-sm text-on-night-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} {siteConfig.name}. All rights reserved.</p>
+          <p>{pageCopy.text_011}{year} {siteConfig.name}{pageCopy.text_012}</p>
           <ul className="flex gap-5">
-            <li><Link href="/privacy" className="hover:text-on-night">Privacy</Link></li>
-            <li><Link href="/terms" className="hover:text-on-night">Terms</Link></li>
+            <li><Link href={pageCopy.text_013} className="hover:text-on-night">{pageCopy.text_014}</Link></li>
+            <li><Link href={pageCopy.text_015} className="hover:text-on-night">{pageCopy.text_016}</Link></li>
           </ul>
         </div>
       </Container>
