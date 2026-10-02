@@ -99,8 +99,14 @@
         "a": "Sometimes significantly — especially when pages weren't being indexed. More often, technical work removes a ceiling so content and authority work can deliver results."
       }
     ],
-    "relatedIndustries": ["saas", "ecommerce", "technology"],
-    "relatedPosts": ["technical-seo-audit"],
+    "relatedIndustries": [
+      "saas",
+      "ecommerce",
+      "technology"
+    ],
+    "relatedPosts": [
+      "technical-seo-audit"
+    ],
     "ctaLine": "Have technical issues blocking growth?"
   },
   {
@@ -201,8 +207,14 @@
         "a": "Pages with existing impressions and rankings close to page one usually come first, weighted by how close each page sits to revenue."
       }
     ],
-    "relatedIndustries": ["saas", "legal-tech", "local-services"],
-    "relatedPosts": ["internal-linking-strategy"],
+    "relatedIndustries": [
+      "saas",
+      "legal-tech",
+      "local-services"
+    ],
+    "relatedPosts": [
+      "internal-linking-strategy"
+    ],
     "ctaLine": "Pages ranking, but not high enough?"
   },
   {
@@ -303,8 +315,14 @@
         "a": "Content ranks when it's useful, accurate and original enough to add something. How it's produced matters less than whether it has real expertise and a reason to exist."
       }
     ],
-    "relatedIndustries": ["saas", "health-tech", "technology"],
-    "relatedPosts": ["saas-keyword-research-by-intent"],
+    "relatedIndustries": [
+      "saas",
+      "health-tech",
+      "technology"
+    ],
+    "relatedPosts": [
+      "saas-keyword-research-by-intent"
+    ],
     "ctaLine": "Publishing content that isn't moving the numbers?"
   },
   {
@@ -404,8 +422,14 @@
         "a": "Usually weeks to a few months after a link is discovered and crawled. Effects are cumulative and more visible in competitive terms."
       }
     ],
-    "relatedIndustries": ["saas", "legal-tech", "ecommerce"],
-    "relatedPosts": ["internal-linking-strategy"],
+    "relatedIndustries": [
+      "saas",
+      "legal-tech",
+      "ecommerce"
+    ],
+    "relatedPosts": [
+      "internal-linking-strategy"
+    ],
     "ctaLine": "Outranked by competitors with weaker content?"
   },
   {
@@ -507,8 +531,14 @@
         "a": "Only where you have something specific to say. Thin city pages can hurt more than help. Fewer, better location pages usually win."
       }
     ],
-    "relatedIndustries": ["local-services", "health-tech", "legal-tech"],
-    "relatedPosts": ["google-business-profile-optimization"],
+    "relatedIndustries": [
+      "local-services",
+      "health-tech",
+      "legal-tech"
+    ],
+    "relatedPosts": [
+      "google-business-profile-optimization"
+    ],
     "ctaLine": "Missing from the map pack in your area?"
   },
   {
@@ -609,7 +639,10 @@
         "a": "It's a solid foundation with some fixed URL patterns and duplicate-path quirks. Most issues can be managed with templates, apps used carefully and good internal linking."
       }
     ],
-    "relatedIndustries": ["ecommerce", "design"],
+    "relatedIndustries": [
+      "ecommerce",
+      "design"
+    ],
     "ctaLine": "Catalogue growing faster than your organic traffic?"
   },
   {
@@ -705,7 +738,11 @@
         "a": "Generally no. Suggest the right version with a banner instead. Forced redirects can stop search engines crawling other versions."
       }
     ],
-    "relatedIndustries": ["saas", "ecommerce", "logistics"],
+    "relatedIndustries": [
+      "saas",
+      "ecommerce",
+      "logistics"
+    ],
     "ctaLine": "Expanding into a new market?"
   },
   {
@@ -801,8 +838,14 @@
         "a": "Yes. Many audits turn into ongoing work, but the roadmap is written so your team can execute it independently too."
       }
     ],
-    "relatedIndustries": ["saas", "ecommerce", "technology"],
-    "relatedPosts": ["technical-seo-audit"],
+    "relatedIndustries": [
+      "saas",
+      "ecommerce",
+      "technology"
+    ],
+    "relatedPosts": [
+      "technical-seo-audit"
+    ],
     "ctaLine": "Not sure what's holding your SEO back?"
   },
   {
@@ -897,8 +940,14 @@
         "a": "Revisit priorities quarterly and do a full refresh yearly or when the product or market changes."
       }
     ],
-    "relatedIndustries": ["saas", "legal-tech", "health-tech"],
-    "relatedPosts": ["saas-keyword-research-by-intent"],
+    "relatedIndustries": [
+      "saas",
+      "legal-tech",
+      "health-tech"
+    ],
+    "relatedPosts": [
+      "saas-keyword-research-by-intent"
+    ],
     "ctaLine": "Getting traffic that doesn't convert?"
   },
   {
@@ -993,7 +1042,11 @@
         "a": "Keep light monitoring monthly and do a deeper review every six months or after big market changes."
       }
     ],
-    "relatedIndustries": ["saas", "ecommerce", "logistics"],
+    "relatedIndustries": [
+      "saas",
+      "ecommerce",
+      "logistics"
+    ],
     "ctaLine": "Watching a competitor pull ahead?"
   }
 ]
