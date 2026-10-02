@@ -77,7 +77,7 @@ function load(file, stub = {}) {
     ),
     false,
   );
-  const validate = load(root + "/lib/admin/validation.ts").validateContent,
+  const validate = load(root + "/lib/admin/validation.ts", {"@/lib/content/editor": load(root + "/lib/content/editor.ts")}).validateContent,
     manifest = JSON.parse(fs.readFileSync("content/manifest.json"));
   for (const entry of manifest) {
     assert.equal(

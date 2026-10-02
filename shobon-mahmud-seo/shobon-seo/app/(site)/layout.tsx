@@ -1,3 +1,4 @@
+import { VisitorTracker } from "@/components/layout/VisitorTracker";
 import pageCopy from "@/content/copy-app-layout.json";
 import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/lib/site";
@@ -59,6 +60,7 @@ export default function SiteLayout({
         </MotionProvider>
         <JsonLd data={[personSchema(), websiteSchema()]} />
         <Analytics />
+        <VisitorTracker />
       </div>
     </>
   );

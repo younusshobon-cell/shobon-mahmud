@@ -496,5 +496,11 @@
     "label": "Portrait image descriptions",
     "group": "Site settings",
     "path": "content/image-descriptions.json"
+  },
+  {
+    "id": "custom-pages",
+    "label": "Website pages",
+    "group": "Pages",
+    "path": "content/custom-pages.json"
   }
 ]

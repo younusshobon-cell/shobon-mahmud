@@ -1,3 +1,4 @@
+import { customPages } from "@/lib/content/pages";
 import { blogCategories, POSTS_PER_PAGE, posts } from "@/lib/content/blog";
 import { caseStudies } from "@/lib/content/case-studies";
 import { industries } from "@/lib/content/industries";
@@ -18,7 +19,7 @@ const escapeXml = (value: string) => value.replace(/[&<>"']/g, (char) => ({
 export function entriesFor(section: SitemapSection): SitemapEntry[] {
   switch (section) {
     case "pages":
-      return ["/", "/about", "/contact", "/privacy", "/terms"].map((path) => ({ path }));
+      return [...["/", "/about", "/contact", "/privacy", "/terms"].map((path) => ({ path })), ...customPages.map(p => ({path: `/${p.slug}`, lastModified:p.updated}))];
     case "services":
       return [{ path: "/services" }, ...services.map(({ slug }) => ({ path: `/services/${slug}` }))];
     case "locations":

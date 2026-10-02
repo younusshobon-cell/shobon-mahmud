@@ -8,7 +8,8 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test:admin": "node tests/admin.test.cjs",
-    "test:admin:runtime": "node tests/admin-runtime.test.cjs"
+    "test:admin:runtime": "node tests/admin-runtime.test.cjs",
+    "test:cms": "node tests/cms-analytics.test.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

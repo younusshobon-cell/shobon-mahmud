@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
+  BarChart3,
   Search,
   Globe,
   FileText,
@@ -29,10 +30,14 @@ import {
   title,
   type Value,
 } from "./FormEditor";
+import { AnalyticsDashboard } from "./AnalyticsDashboard";
+import { ContentStudio } from "./ContentStudio";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
 const groups = [
   "Overview",
+  "Analytics",
+  "Pages",
   "Site settings",
   "Page copy",
   "Blog",
@@ -45,6 +50,8 @@ const groups = [
 ];
 const icons: Record<string, typeof Globe> = {
   Overview: LayoutDashboard,
+  Analytics: BarChart3,
+  Pages: FileText,
   "Site settings": Settings,
   "Page copy": FileText,
   Blog: BookOpen,
@@ -82,9 +89,12 @@ export function AdminPanel({
     [commit, setCommit] = useState(""),
     [advanced, setAdvanced] = useState(false),
     [json, setJson] = useState(""),
-    [mobile, setMobile] = useState(false);
+    [mobile, setMobile] = useState(false),
+    [studioDirty, setStudioDirty] = useState(false),
+    [studioBusy, setStudioBusy] = useState(false),
+    [studioAdvanced, setStudioAdvanced] = useState(false);
   const loadId = useRef(0),
-    dirty = doc !== null && JSON.stringify(draft) !== JSON.stringify(doc.data);
+    dirty = studioDirty || (doc !== null && JSON.stringify(draft) !== JSON.stringify(doc.data));
   useEffect(() => {
     function warn(e: BeforeUnloadEvent) {
       if (dirty) {
@@ -96,7 +106,7 @@ export function AdminPanel({
     return () => window.removeEventListener("beforeunload", warn);
   }, [dirty]);
   function discard() {
-    if (busy) return false;
+    if (busy || studioBusy) return false;
     return !dirty || window.confirm("Discard your unpublished changes?");
   }
   async function open(entry: Entry) {
@@ -131,6 +141,8 @@ export function AdminPanel({
     if (!discard()) return;
     loadId.current++;
     setGroup(next);
+    setStudioDirty(false);
+    setStudioAdvanced(false);
     setActive(null);
     setDoc(null);
     setDraft(null);
@@ -351,7 +363,7 @@ export function AdminPanel({
                     Choose an area to start editing.
                   </p>
                   <div className="admin-quick-links">
-                    {["Site settings", "Page copy", "FAQs", "Media"].map(
+                    {["Analytics", "Pages", "Blog", "Site settings", "Page copy", "FAQs", "Media"].map(
                       (g) => {
                         const Icon = icons[g];
                         return (
@@ -403,6 +415,10 @@ export function AdminPanel({
                 </section>
               </div>
             </>
+          ) : group === "Analytics" ? (
+            <AnalyticsDashboard />
+          ) : (group === "Blog" || group === "Pages") && !active && !studioAdvanced ? (
+            <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
           ) : group === "Media" ? (
             <MediaManager />
           ) : (

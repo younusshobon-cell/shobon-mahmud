@@ -48,6 +48,8 @@ child.stderr.on("data", (x) => (output += x));
       401,
     );
     assert.equal((await fetch(host + "/api/admin/media")).status, 401);
+    assert.equal((await fetch(host + "/api/admin/analytics")).status, 401);
+    assert.equal((await fetch(host + "/api/analytics", {method:"POST", headers:{origin:"https://attacker.test","content-type":"application/json"},body:"{}"})).status,403);
     assert.equal(
       (
         await fetch(host + "/api/admin/content", {
@@ -92,6 +94,10 @@ child.stderr.on("data", (x) => (output += x));
     assert.ok(cookie.includes("Secure"));
     assert.ok(cookie.includes("SameSite=strict"));
     const headers = { cookie: cookie.split(";")[0] };
+    const analytics=await (await fetch(host+"/api/admin/analytics",{headers})).json();
+    assert.equal(analytics.configured,false);
+    assert.equal((await fetch(host+"/api/admin/analytics?days=999",{headers})).status,400);
+    assert.equal((await fetch(host+"/not-a-published-page")).status,404);
     response = await fetch(host + "/admin", { headers });
     text = await response.text();
     assert.ok(text.includes("Your website, at a glance."));

@@ -1,3 +1,4 @@
+import { reservedSlugs } from "@/lib/content/editor";
 import definitions from "./schemas.json";
 type Schema = {
   type?: string;
@@ -97,5 +98,14 @@ export function validateContent(id: string, value: unknown) {
   if (typeof id !== "string" || !Object.hasOwn(groups, id))
     return "Unknown content group.";
   const schema = groups[id];
-  return check(value, schema, id) ?? inspect(value);
+  const error = check(value, schema, id) ?? inspect(value);
+  if(error) return error;
+  if(id === "custom-pages" || id === "blog-rawPosts") {
+    for(const item of value as Record<string, unknown>[]) {
+      if(id === "custom-pages" && reservedSlugs.has(String(item.slug))) return "That URL is reserved for an existing website section.";
+      if(!String(item.title).trim()) return "A title is required.";
+      if(item.status !== "draft" && (!String(item.description).trim() || (id === "custom-pages" ? !String(item.body).trim() : !(item.sections as unknown[]).length))) return "Published content needs a description and body.";
+    }
+  }
+  return null;
 }

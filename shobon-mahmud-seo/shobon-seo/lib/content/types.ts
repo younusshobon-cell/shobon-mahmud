@@ -110,6 +110,7 @@ export type Block =
   | { type: "quote"; text: string };
 
 export type Post = {
+  status?: "draft" | "published";
   slug: string;
   title: string;
   seoTitle?: string;

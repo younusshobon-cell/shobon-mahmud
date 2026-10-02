@@ -247,3 +247,24 @@
   --hero-grid-x: 48px; --hero-grid-y: 32px;
   --hero-grid-color: rgba(74, 71, 116, .075);
 }
+.cms-body h2{font-size:1.5rem;
+font-weight:600;
+margin:2rem 0 1rem}
+.cms-body h3{font-size:1.15rem;
+font-weight:600;
+margin:1.5rem 0 .75rem}
+.cms-body p{line-height:1.85;
+margin:1rem 0}
+.cms-body ul{list-style:disc;
+padding-left:1.5rem;
+margin:1rem 0}
+.cms-body ol{list-style:decimal;
+padding-left:1.5rem;
+margin:1rem 0}
+.cms-body li{margin:.45rem 0;
+line-height:1.7}
+.cms-body blockquote{border-left:3px solid #427c60;
+padding:8px 20px;
+margin:1rem 0;
+background:#f6f8f5}
+

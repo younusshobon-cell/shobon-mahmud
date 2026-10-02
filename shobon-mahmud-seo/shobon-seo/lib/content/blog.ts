@@ -23,6 +23,7 @@ function postWords(p: Post) {
 }
 
 export const posts = rawPosts
+  .filter((p) => p.status !== "draft")
   .map((p) => ({ ...p, readingTime: readingMinutes(postWords(p)) }))
   .sort((a, b) => (a.date < b.date ? 1 : -1));
 
