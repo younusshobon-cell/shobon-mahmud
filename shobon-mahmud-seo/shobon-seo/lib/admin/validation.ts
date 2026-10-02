@@ -77,6 +77,11 @@ function inspect(value: unknown, key = ""): string | null {
     )
       return `${key}: use YYYY-MM-DD.`;
   }
+  if(value && typeof value === "object" && !Array.isArray(value)) {
+    const block=value as Record<string,unknown>;
+    if(block.type === "image" && (typeof block.src !== "string" || !/^(\/(?!\/)[^\s<>]*|https?:\/\/[^\s<>]+)$/i.test(block.src))) return "Image: use a site path or HTTP(S) URL.";
+    if(block.type === "table" && Array.isArray(block.headers) && Array.isArray(block.rows) && (!block.headers.length || block.headers.length>12 || block.rows.length>100 || block.rows.some(r=>!Array.isArray(r)||r.length!==(block.headers as unknown[]).length))) return "Table: use 1–12 columns, up to 100 rows, and equal cell counts.";
+  }
   if (Array.isArray(value)) {
     const slugs = value.flatMap((v) =>
       v && typeof v === "object" && "slug" in v ? [v.slug] : [],

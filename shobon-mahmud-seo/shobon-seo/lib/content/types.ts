@@ -103,6 +103,9 @@ export type CaseStudy = {
 };
 
 export type Block =
+  | { type: "heading"; level: 1 | 2 | 3 | 4 | 5 | 6; text: string; id?: string }
+  | { type: "image"; src: string; alt: string; caption?: string }
+  | { type: "table"; headers: string[]; rows: string[][] }
   | { type: "p"; text: string }
   | { type: "h3"; text: string }
   | { type: "ul"; items: string[] }

@@ -1,3 +1,4 @@
+import { blockText } from "./rich";
 import cms_blogCategories from "@/content/blog-blogCategories.json";
 import cms_rawPosts from "@/content/blog-rawPosts.json";
 import type { BlogCategory, Post } from "./types";
@@ -16,7 +17,7 @@ function postWords(p: Post) {
   const text = p.sections
     .flatMap((s) => [
       s.heading,
-      ...s.blocks.flatMap((b) => ("items" in b ? b.items : [b.text])),
+      ...s.blocks.map(blockText),
     ])
     .join(" ");
   return wordCount(text);

@@ -10,7 +10,7 @@ export type CustomPage = {
     updated: string;
 };
 export function slugify(text: string) { return text.normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 100); }
-export function toMarkdown(sections: Post['sections']) { return sections.map(s => `## ${s.heading}\n\n` + s.blocks.map(b => b.type === 'ul' || b.type === 'ol' ? b.items.map((x, i) => `${b.type === 'ul' ? '-' : `${i + 1}.`} ${x}`).join('\n') : b.type === 'h3' ? `### ${b.text}` : b.type === 'quote' ? `> ${b.text}` : b.text).join('\n\n')).join('\n\n'); }
+export function toMarkdown(sections:Post['sections']) {return sections.map(s=>`## ${s.heading}\n\n`+s.blocks.map(b=>b.type==='ul'||b.type==='ol'?b.items.map((x,i)=>`${b.type==='ul'?'-':`${i+1}.`} ${x}`).join('\n'):b.type==='heading'?`${'#'.repeat(b.level)} ${b.text}`:b.type==='image'?b.caption||b.alt:b.type==='table'?[b.headers,...b.rows].map(row=>row.join(' | ')).join('\n'):b.type==='h3'?`### ${b.text}`:b.type==='quote'?`> ${b.text}`:b.text).join('\n\n')).join('\n\n');}
 export function parseMarkdown(body: string, previous: Post["sections"] = []): Post['sections'] {
     const sections: Post['sections'] = [];
     let section: Post['sections'][number] = { id: 'introduction', heading: 'Introduction', blocks: [] };
