@@ -50,7 +50,15 @@ function load(file, stub = {}) {
   assert.equal(await auth.verifyPassword("dummy-pass1"), true);
   process.env.ADMIN_PASSWORD = "dummy-pass";
   assert.equal(auth.authConfigured(), false);
+  assert.equal(auth.authConfigurationErrors().length, 1);
+  assert.ok(auth.authConfigurationErrors()[0].startsWith("ADMIN_PASSWORD"));
   process.env.ADMIN_PASSWORD = previousPassword;
+  const previousSecret = process.env.ADMIN_SESSION_SECRET;
+  process.env.ADMIN_SESSION_SECRET = "too-short";
+  assert.equal(auth.authConfigurationErrors().length, 1);
+  assert.ok(auth.authConfigurationErrors()[0].startsWith("ADMIN_SESSION_SECRET"));
+  assert.ok(!JSON.stringify(auth.authConfigurationErrors()).includes("too-short"));
+  process.env.ADMIN_SESSION_SECRET = previousSecret;
   assert.equal(await auth.verifyPassword("wrong"), false);
   assert.equal(await auth.verifyPassword(process.env.ADMIN_PASSWORD), true);
   const session = auth.issueSession();

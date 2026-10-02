@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { LockKeyhole, ArrowRight, ShieldCheck } from "lucide-react";
-export function AdminLogin({ configured }: { configured: boolean }) {
+export function AdminLogin({ configured, configurationErrors }: { configured: boolean; configurationErrors: string[] }) {
   const router = useRouter(),
     [password, setPassword] = useState(""),
     [busy, setBusy] = useState(false),
@@ -47,8 +47,7 @@ export function AdminLogin({ configured }: { configured: boolean }) {
         </p>
         {!configured && (
           <div className="admin-notice">
-            Login setup is pending. Configure ADMIN_PASSWORD and
-            ADMIN_SESSION_SECRET in Vercel to activate secure access.
+            Login setup is pending. {configurationErrors.join(" ")} Save the settings and redeploy to activate access.
           </div>
         )}
         <form onSubmit={submit}>

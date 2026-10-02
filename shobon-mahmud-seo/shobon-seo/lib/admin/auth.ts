@@ -5,12 +5,17 @@ import { cookies } from "next/headers";
 
 export const COOKIE = "shobon_admin";
 const derive = promisify(scrypt);
+export function authConfigurationErrors() {
+  const errors: string[] = [];
+  const passwordLength = process.env.ADMIN_PASSWORD?.length ?? 0;
+  if (passwordLength < 11 || passwordLength > 256)
+    errors.push("ADMIN_PASSWORD must contain 11–256 characters in its Vercel Value field.");
+  if ((process.env.ADMIN_SESSION_SECRET?.length ?? 0) < 32)
+    errors.push("ADMIN_SESSION_SECRET must contain at least 32 characters in its Vercel Value field.");
+  return errors;
+}
 export function authConfigured() {
-  return (
-    (process.env.ADMIN_PASSWORD?.length ?? 0) >= 11 &&
-    (process.env.ADMIN_PASSWORD?.length ?? 0) <= 256 &&
-    (process.env.ADMIN_SESSION_SECRET?.length ?? 0) >= 32
-  );
+  return authConfigurationErrors().length === 0;
 }
 function signingKey() {
   if (!authConfigured())

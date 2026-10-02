@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import {
   authenticated,
   authConfigured,
+  authConfigurationErrors,
   allowLogin,
   verifyPassword,
   issueSession,
@@ -16,6 +17,7 @@ export async function GET() {
     {
       authenticated: await authenticated(),
       configured: authConfigured(),
+      configurationErrors: authConfigurationErrors(),
       publishing: publishingConfigured(),
     },
     { headers: { "Cache-Control": "no-store" } },
@@ -30,8 +32,7 @@ export async function POST(request: Request) {
   if (!authConfigured())
     return NextResponse.json(
       {
-        error:
-          "Admin login needs ADMIN_PASSWORD (11+ characters) and ADMIN_SESSION_SECRET (32+ characters) in Vercel.",
+        error: authConfigurationErrors().join(" "),
       },
       { status: 503 },
     );
