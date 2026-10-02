@@ -502,5 +502,11 @@
     "label": "Website pages",
     "group": "Pages",
     "path": "content/custom-pages.json"
+  },
+  {
+    "id": "image-sources",
+    "label": "Page photos",
+    "group": "Media",
+    "path": "content/image-sources.json"
   }
 ]

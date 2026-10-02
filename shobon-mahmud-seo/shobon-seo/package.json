@@ -10,7 +10,8 @@
     "test:admin": "node tests/admin.test.cjs",
     "test:admin:runtime": "node tests/admin-runtime.test.cjs",
     "test:cms": "node tests/cms-analytics.test.cjs",
-    "test:rich-blog": "node tests/rich-blog.test.cjs"
+    "test:rich-blog": "node tests/rich-blog.test.cjs",
+    "test:visual": "node tests/visual-editor.test.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

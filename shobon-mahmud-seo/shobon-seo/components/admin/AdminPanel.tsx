@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
+  Eye,
   BarChart3,
   Search,
   Globe,
@@ -31,12 +32,14 @@ import {
   type Value,
 } from "./FormEditor";
 import { AnalyticsDashboard } from "./AnalyticsDashboard";
+import { VisualEditor } from "./VisualEditor";
 import { ContentStudio } from "./ContentStudio";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
 const groups = [
   "Overview",
   "Analytics",
+  "Live editor",
   "Pages",
   "Site settings",
   "Page copy",
@@ -51,6 +54,7 @@ const groups = [
 const icons: Record<string, typeof Globe> = {
   Overview: LayoutDashboard,
   Analytics: BarChart3,
+  "Live editor": Eye,
   Pages: FileText,
   "Site settings": Settings,
   "Page copy": FileText,
@@ -77,6 +81,7 @@ export function AdminPanel({
 }) {
   const router = useRouter(),
     [group, setGroup] = useState("Overview"),
+    [visualPage, setVisualPage] = useState("/"),
     [active, setActive] = useState<Entry | null>(null),
     [doc, setDoc] = useState<Document | null>(null),
     [draft, setDraft] = useState<Value | null>(null),
@@ -137,10 +142,11 @@ export function AdminPanel({
       if (id === loadId.current) setLoading(false);
     }
   }
-  function navigate(next: string) {
+  function navigate(next: string, path = "/") {
     if (!discard()) return;
     loadId.current++;
     setGroup(next);
+    if (next === "Live editor") setVisualPage(path);
     setStudioDirty(false);
     setStudioAdvanced(false);
     setActive(null);
@@ -282,6 +288,7 @@ export function AdminPanel({
             <span className="admin-slash">/</span>
             {group}
           </div>
+          <button className="admin-small" onClick={() => navigate("Live editor")} aria-label="Open live page editor"><Eye size={16}/> Live editor</button>
           <a
             href="https://shobon-mahmud.vercel.app"
             target="_blank"
@@ -415,10 +422,12 @@ export function AdminPanel({
                 </section>
               </div>
             </>
+          ) : group === "Live editor" ? (
+            <VisualEditor initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
           ) : group === "Analytics" ? (
             <AnalyticsDashboard />
           ) : (group === "Blog" || group === "Pages") && !active && !studioAdvanced ? (
-            <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
+            <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onLiveEditor={path => navigate("Live editor", path)} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
           ) : group === "Media" ? (
             <MediaManager />
           ) : (

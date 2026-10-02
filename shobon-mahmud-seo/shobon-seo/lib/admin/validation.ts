@@ -105,6 +105,7 @@ export function validateContent(id: string, value: unknown) {
   const schema = groups[id];
   const error = check(value, schema, id) ?? inspect(value);
   if(error) return error;
+  if (id === "image-sources" && Object.values(value as Record<string, string>).some(src => src !== "" && !/^\/(?!\/)[^?#\s]+\.(png|jpe?g|webp|gif)$/i.test(src))) return "Page photos need a local PNG, JPG, WEBP or GIF URL. Upload the image in the live editor or Media first.";
   if(id === "custom-pages" || id === "blog-rawPosts") {
     for(const item of value as Record<string, unknown>[]) {
       if(id === "custom-pages" && reservedSlugs.has(String(item.slug))) return "That URL is reserved for an existing website section.";

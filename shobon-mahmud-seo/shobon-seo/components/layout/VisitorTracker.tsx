@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { trafficSource } from '@/lib/analytics/model';
-export function VisitorTracker() { const path = usePathname(), last = useRef(''); useEffect(() => { if (!path || last.current === path || path.startsWith('/admin') || navigator.doNotTrack === '1' || (navigator as Navigator & {
+export function VisitorTracker() { const path = usePathname(), last = useRef(''); useEffect(() => { if (window.parent !== window && new URLSearchParams(location.search).get('admin-preview') === '1') return; if (!path || last.current === path || path.startsWith('/admin') || navigator.doNotTrack === '1' || (navigator as Navigator & {
     globalPrivacyControl?: boolean;
 }).globalPrivacyControl)
     return; last.current = path; try {

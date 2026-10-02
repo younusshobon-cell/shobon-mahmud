@@ -1,0 +1,20 @@
+const fs = require('fs'), vm = require('vm'), assert = require('assert/strict'), ts = require('typescript');
+function load(file, stubs = {}) {const mod = {exports: {}}; const code = ts.transpileModule(fs.readFileSync(file, 'utf8'), {compilerOptions: {module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true}}).outputText; vm.runInThisContext('(function(require,module,exports){'+code+'\n})')(p => p in stubs ? stubs[p] : p.endsWith('.json') ? JSON.parse(fs.readFileSync(require('path').resolve(require('path').dirname(file), p))) : require(p), mod, mod.exports); return mod.exports;}
+const visual = load('lib/admin/visual.ts');
+const original = [{title: 'Shared title', blocks: [{text: 'Shared title'}]}];
+const fields = visual.fieldsOf('blog', original);
+assert.equal(fields.length, 2);
+assert.notEqual(visual.fieldKey(fields[0]), visual.fieldKey(fields[1]));
+const changed = visual.replaceAt(original, [0, 'blocks', 0, 'text'], '<script>literal</script>');
+assert.equal(original[0].blocks[0].text, 'Shared title');
+assert.equal(changed[0].title, 'Shared title');
+assert.equal(changed[0].blocks[0].text, '<script>literal</script>');
+assert.equal(visual.normalize('  A\n B  '), 'A B');
+for (const path of [['__proto__'], ['constructor'], [0, 'missing'], [0, 'blocks', 20]]) assert.throws(() => visual.replaceAt(original, path, 'Bad'));
+assert.equal({}.polluted, undefined);
+assert.equal(visual.fieldsOf('images', {studio: ''})[0].value, '');
+const validate = load('lib/admin/validation.ts', {'@/lib/content/editor': load('lib/content/editor.ts')}).validateContent;
+const sources = JSON.parse(fs.readFileSync('content/image-sources.json'));
+assert.equal(validate('image-sources', {...sources, studio: '/uploads/photo.webp'}), null);
+for (const studio of ['javascript:alert(1)', '//evil.test/photo.jpg', 'https://evil.test/photo.jpg', '/admin', '/uploads/image.svg']) assert.ok(validate('image-sources', {...sources, studio}));
+console.log('PASS: exact field paths, duplicate labels, immutable drafts, removed fields, prototype defenses and local photo validation.');

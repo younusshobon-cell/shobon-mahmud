@@ -48,6 +48,7 @@ child.stderr.on("data", (x) => (output += x));
       401,
     );
     assert.equal((await fetch(host + "/api/admin/media")).status, 401);
+    assert.equal((await fetch(host + "/api/admin/visual")).status, 401);
     assert.equal((await fetch(host + "/api/admin/analytics")).status, 401);
     assert.equal((await fetch(host + "/api/analytics", {method:"POST", headers:{origin:"https://attacker.test","content-type":"application/json"},body:"{}"})).status,403);
     assert.equal(
@@ -94,6 +95,14 @@ child.stderr.on("data", (x) => (output += x));
     assert.ok(cookie.includes("Secure"));
     assert.ok(cookie.includes("SameSite=strict"));
     const headers = { cookie: cookie.split(";")[0] };
+    const visualResponse = await fetch(host + "/api/admin/visual", {headers});
+    assert.equal(visualResponse.status, 200);
+    assert.ok(visualResponse.headers.get("cache-control").includes("no-store"));
+    const visual = await visualResponse.json();
+    for (const path of ["/", "/about", "/contact", "/blog", "/services/technical-seo", "/locations/dhaka"]) assert.ok(visual.pages.includes(path));
+    assert.ok(!visual.pages.includes("/admin"));
+    assert.ok(visual.fields.some(f => f.id === "copy-components-sections-Hero" && f.path[0] === "text_002"));
+    assert.equal(visual.images.length, 6);
     const analytics=await (await fetch(host+"/api/admin/analytics",{headers})).json();
     assert.equal(analytics.configured,false);
     assert.equal((await fetch(host+"/api/admin/analytics?days=999",{headers})).status,400);
