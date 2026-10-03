@@ -1,7 +1,7 @@
 
 import pageCopy from "@/content/copy-components-layout-Logo.json";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { cn } from "@/lib/utils";
 
 export function Logo({ tone = "light", className }: { tone?: "light" | "dark"; className?: string }) {

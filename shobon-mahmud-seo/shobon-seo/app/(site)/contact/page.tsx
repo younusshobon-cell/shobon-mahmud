@@ -1,7 +1,7 @@
 import pageCopy from "@/content/copy-app-contact-page.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import { photos } from "@/lib/images";

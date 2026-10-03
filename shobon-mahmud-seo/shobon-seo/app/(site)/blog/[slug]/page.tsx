@@ -1,7 +1,7 @@
 import pageCopy from "@/content/copy-app-blog-slug-page.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";

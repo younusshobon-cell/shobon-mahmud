@@ -1,7 +1,7 @@
 import pageCopy from "@/content/copy-app-locations-slug-page.json";
 import type { Metadata } from "next";
 import { DhakaLanding } from "@/components/sections/DhakaLanding";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getLocation, locations } from "@/lib/content/locations";

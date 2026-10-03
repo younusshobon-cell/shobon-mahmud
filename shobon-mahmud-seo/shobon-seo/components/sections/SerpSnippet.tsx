@@ -1,7 +1,7 @@
 "use client";
 import pageCopy from "@/content/copy-components-sections-SerpSnippet.json";
 
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 

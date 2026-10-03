@@ -1,6 +1,6 @@
 
 import pageCopy from "@/content/copy-components-cards-BlogCard.json";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import Link from "next/link";
 import type { PostWithMeta } from "@/lib/content/blog";
 import { getCategory } from "@/lib/content/blog";

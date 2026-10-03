@@ -508,5 +508,11 @@
     "label": "Page photos",
     "group": "Media",
     "path": "content/image-sources.json"
+  },
+  {
+    "id": "page-images",
+    "label": "Page images",
+    "group": "Media",
+    "path": "content/page-images.json"
   }
 ]

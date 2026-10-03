@@ -105,6 +105,17 @@ export function validateContent(id: string, value: unknown) {
   const schema = groups[id];
   const error = check(value, schema, id) ?? inspect(value);
   if(error) return error;
+  if (id === "page-images") {
+    const seen = new Set<string>();
+    for (const item of value as {page: string; key: string; src: string; alt: string}[]) {
+      if (!/^\/(?!\/)[^?#\s<>]*$/.test(item.page) || item.page.startsWith("/admin") || item.page.startsWith("/api/")) return "Choose a public website page.";
+      if (!item.key || item.key.length > 2000) return "Choose an image on the page.";
+      if (!/^\/(?!\/)[^?#\s<>]+\.(png|jpe?g|webp|gif)$/i.test(item.src)) return "Upload a PNG, JPG, WEBP or GIF, or choose an image from Media.";
+      const identity = JSON.stringify([item.page, item.key]);
+      if (seen.has(identity)) return "Each page image must have a unique slot.";
+      seen.add(identity);
+    }
+  }
   if (id === "image-sources" && Object.values(value as Record<string, string>).some(src => src !== "" && !/^\/(?!\/)[^?#\s]+\.(png|jpe?g|webp|gif)$/i.test(src))) return "Page photos need a local PNG, JPG, WEBP or GIF URL. Upload the image in the live editor or Media first.";
   if(id === "custom-pages" || id === "blog-rawPosts") {
     for(const item of value as Record<string, unknown>[]) {

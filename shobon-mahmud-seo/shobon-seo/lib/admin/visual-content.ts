@@ -84,6 +84,7 @@ import c81 from "@/content/copy-components-ui-Fill.json";
 import c82 from "@/content/image-descriptions.json";
 import c83 from "@/content/custom-pages.json";
 import c84 from "@/content/image-sources.json";
+import pageImages from "@/content/page-images.json";
 export const visualContent: Record<string, unknown> = {
   "services-services": c0,
   "industries-industries": c1,
@@ -170,4 +171,5 @@ export const visualContent: Record<string, unknown> = {
   "image-descriptions": c82,
   "custom-pages": c83,
   "image-sources": c84,
+  "page-images": pageImages,
 };

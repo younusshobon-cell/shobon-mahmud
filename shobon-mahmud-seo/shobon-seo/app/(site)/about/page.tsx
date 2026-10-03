@@ -1,7 +1,7 @@
 import pageCopy from "@/content/copy-app-about-page.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { buildMetadata } from "@/lib/seo";
 import { profilePageSchema } from "@/lib/schema";
 import { experience, siteConfig, tools } from "@/lib/site";

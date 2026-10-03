@@ -1,6 +1,6 @@
 
 import pageCopy from "@/content/copy-components-sections-Hero.json";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { Search } from "lucide-react";
 import { photos } from "@/lib/images";
 import { siteConfig } from "@/lib/site";

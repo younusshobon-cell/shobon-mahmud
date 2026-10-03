@@ -1,6 +1,6 @@
 
 import pageCopy from "@/content/copy-components-cards-PostCover.json";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { cn } from "@/lib/utils";
 
 /**

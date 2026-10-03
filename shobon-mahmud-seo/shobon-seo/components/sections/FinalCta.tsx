@@ -1,6 +1,6 @@
 
 import pageCopy from "@/content/copy-components-sections-FinalCta.json";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { siteConfig } from "@/lib/site";
 import { photos } from "@/lib/images";
 import { Container } from "@/components/ui/Container";

@@ -33,6 +33,7 @@ import {
 } from "./FormEditor";
 import { AnalyticsDashboard } from "./AnalyticsDashboard";
 import { VisualEditor } from "./VisualEditor";
+import { PageImages } from "./PageImages";
 import { ContentStudio } from "./ContentStudio";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
@@ -40,6 +41,7 @@ const groups = [
   "Overview",
   "Analytics",
   "Live editor",
+  "Page images",
   "Pages",
   "Site settings",
   "Page copy",
@@ -55,6 +57,7 @@ const icons: Record<string, typeof Globe> = {
   Overview: LayoutDashboard,
   Analytics: BarChart3,
   "Live editor": Eye,
+  "Page images": ImagePlus,
   Pages: FileText,
   "Site settings": Settings,
   "Page copy": FileText,
@@ -146,7 +149,7 @@ export function AdminPanel({
     if (!discard()) return;
     loadId.current++;
     setGroup(next);
-    if (next === "Live editor") setVisualPage(path);
+    if (next === "Live editor" || next === "Page images") setVisualPage(path);
     setStudioDirty(false);
     setStudioAdvanced(false);
     setActive(null);
@@ -422,8 +425,10 @@ export function AdminPanel({
                 </section>
               </div>
             </>
+          ) : group === "Page images" ? (
+            <PageImages initialPage={visualPage} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
           ) : group === "Live editor" ? (
-            <VisualEditor initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
+            <VisualEditor onPageImages={path => navigate("Page images", path)} initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
           ) : group === "Analytics" ? (
             <AnalyticsDashboard />
           ) : (group === "Blog" || group === "Pages") && !active && !studioAdvanced ? (

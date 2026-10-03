@@ -1,6 +1,6 @@
 import pageCopy from "@/content/copy-app-page.json";
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/content/EditableImage";
 import { photos } from "@/lib/images";
 import { ButtonLink } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/seo";
