@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Eye, MousePointer2, Monitor, Tablet, Smartphone, Save, RotateCcw, Upload } from "lucide-react";
+import { Eye, MousePointer2, Monitor, Tablet, Smartphone, Save, RotateCcw, Upload, ImagePlus } from "lucide-react";
+import { ImageInspector } from "./ImageInspector";
+import type { PageImage } from "@/components/content/EditableImage";
 import { FormEditor, groupSchema, type Value } from "./FormEditor";
 import { fieldKey, fieldsOf, normalize, replaceAt, valueAt, type Field } from "@/lib/admin/visual";
 
@@ -31,7 +33,8 @@ function sourceOf(image: HTMLElement) {
   const src = image.getAttribute("src") || "";
   try { const url = new URL(src, location.origin); return url.pathname === "/_next/image" ? url.searchParams.get("url") || src : src; } catch { return src; }
 }
-export function VisualEditor({onPageImages, manifest, publishing, onDirty, onBusy, initialPage = "/"}: {onPageImages: (path: string) => void; initialPage?: string; manifest: Entry[]; publishing: boolean; onDirty: (dirty: boolean) => void; onBusy: (busy: boolean) => void}) {
+export function VisualEditor({initialImages = false, manifest, publishing, onDirty, onBusy, initialPage = "/"}: {initialImages?: boolean; initialPage?: string; manifest: Entry[]; publishing: boolean; onDirty: (dirty: boolean) => void; onBusy: (busy: boolean) => void}) {
+  const [imageMode, setImageMode] = useState(initialImages), [imageKey, setImageKey] = useState(""), [frameRevision, setFrameRevision] = useState(0);
   const [pages, setPages] = useState<string[]>([]), [page, setPage] = useState(initialPage), [catalog, setCatalog] = useState<Field[]>([]);
   const [docs, setDocs] = useState<Record<string, Doc>>({}), [options, setOptions] = useState<Field[]>([]), [selected, setSelected] = useState<Field | null>(null);
   const [collection, setCollection] = useState(""), [edit, setEdit] = useState(true), [viewport, setViewport] = useState<"desktop" | "tablet" | "mobile">("desktop"), [busy, setBusy] = useState(false), [loading, setLoading] = useState(false);
@@ -53,6 +56,11 @@ export function VisualEditor({onPageImages, manifest, publishing, onDirty, onBus
     const doc: Doc = {...result, baseline: structuredClone(result.data)};
     updateDocs({...docsRef.current, [id]: doc}); return doc;
   }
+  async function openImages(key = "") {
+    clearSelection(); setImageMode(true); setImageKey(key); setError(""); setLoading(true);
+    try {await loadDocument("page-images");} catch (e) {setError((e as Error).message);} finally {setLoading(false);}
+  }
+  useEffect(() => {if (initialImages) void openImages();}, []);
   async function choose(field: Field) {
     const token = ++selectionId.current; setSelected(null); setError(""); setLoading(true);
     try {
@@ -77,7 +85,12 @@ export function VisualEditor({onPageImages, manifest, publishing, onDirty, onBus
     if (element.closest('[contenteditable="true"]')) return;
     if (!editRef.current || busyRef.current) return;
     event.preventDefault(); event.stopPropagation(); clearSelection(); setError(""); setNotice("");
-    if (element.closest("[data-page-image-slot], img")) {onPageImages(page); return;}
+    const image = element.closest<HTMLElement>("[data-page-image-slot], img");
+    if (image) {
+      const slot = image.closest<HTMLElement>("[data-page-image-slot]");
+      void openImages(slot?.dataset.pageImageSlot || image.dataset.pageImageKey || ""); return;
+    }
+    setImageMode(false);
     const values = fields();
     let hit: Target | null = null, candidates: Field[] = [];
     for (let node: HTMLElement | null = element; node && !["BODY", "HTML"].includes(node.tagName); node = node.parentElement) {
@@ -98,6 +111,7 @@ export function VisualEditor({onPageImages, manifest, publishing, onDirty, onBus
     else setNotice("Several fields share this value. Select the correct collection and field before editing.");
   }
   function attach() {
+    setFrameRevision(value => value + 1);
     cleanup.current(); clearSelection();
     const document = iframe.current?.contentDocument;
     if (!document || !pages.includes(new URL(iframe.current?.contentWindow?.location.href || location.origin).pathname)) return;
@@ -170,16 +184,22 @@ export function VisualEditor({onPageImages, manifest, publishing, onDirty, onBus
   }
   const value = selected && docs[selected.id] ? String(valueAt(docs[selected.id].data, selected.path)) : "";
   return <section className="visual-studio">
-    <div className="visual-toolbar"><div><h1><Eye size={22}/> Live page editor</h1><p>Page দেখুন → content-এ click করুন → edit করুন → Publish করুন।</p></div><button className="admin-primary" disabled={busy || loading || !publishing || !changed.length} onClick={publish}><Save size={16}/> {busy ? "Saving…" : `Publish${changed.length ? ` (${changed.length})` : ""}`}</button></div>
+    <div className="visual-toolbar"><div><h1><Eye size={22}/> Live page editor</h1><p>Text বা image-এ click করে edit করুন। একবার Publish করলে desktop, tablet ও mobile—সব version update হবে।</p></div><button className="admin-primary" disabled={busy || loading || !publishing || !changed.length} onClick={publish}><Save size={16}/> {busy ? "Saving…" : `Publish${changed.length ? ` (${changed.length})` : ""}`}</button></div>
     {error && <div className="admin-notice" role="alert">{error}</div>}{notice && <div className="admin-notice" role="status">{notice}</div>}
-    <div className="visual-controls"><button className="admin-small" disabled={busy || loading} onClick={() => onPageImages(page)}>Edit page images</button><label>Page <select value={page} disabled={busy || loading} onChange={e => {clearSelection();setPage(e.target.value);}}>{pages.map(path => <option key={path} value={path}>{path === "/" ? "Home /" : path}</option>)}</select></label><button className="admin-small" aria-pressed={edit} onClick={() => setEdit(!edit)} disabled={busy || loading}><MousePointer2 size={15}/>{edit ? "Editing on" : "Viewing"}</button><button className="admin-small" aria-label="Desktop preview" aria-pressed={viewport === "desktop"} onClick={() => setViewport("desktop")}><Monitor size={16}/> Desktop</button><button className="admin-small" aria-label="Tablet preview" aria-pressed={viewport === "tablet"} onClick={() => setViewport("tablet")}><Tablet size={16}/> Tablet</button><button className="admin-small" aria-label="Mobile preview" aria-pressed={viewport === "mobile"} onClick={() => setViewport("mobile")}><Smartphone size={16}/> Mobile</button><button className="admin-small" disabled={busy || loading} onClick={() => {clearSelection();setRevision(revision + 1);}}><RotateCcw size={15}/> Reload preview</button><a href={page} target="_blank" rel="noopener noreferrer" className="admin-small"><Eye size={15}/> Live page</a></div>
-    <div className="visual-workspace"><div className="visual-canvas responsive-preview-canvas"><iframe key={`${page}:${revision}`} ref={iframe} title={`Live preview of ${page}`} src={`${page}?admin-preview=1`} onLoad={attach} sandbox="allow-same-origin allow-scripts" style={{width: {desktop: 1280, tablet: 820, mobile: 390}[viewport], maxWidth: "none"}}/></div><aside className="visual-inspector"><h2>Content inspector</h2><p>Click text, images or links on the page. All changes stay unpublished until you press Publish.</p>
+    <div className="visual-controls"><button className="admin-small" aria-label="Edit images on this page" aria-pressed={imageMode} disabled={busy || loading} onClick={() => void openImages()}><ImagePlus size={16}/> Images</button><label>Page <select value={page} disabled={busy || loading} onChange={e => {clearSelection();setImageKey("");setPage(e.target.value);}}>{pages.map(path => <option key={path} value={path}>{path === "/" ? "Home /" : path}</option>)}</select></label><button className="admin-small" aria-pressed={edit} onClick={() => setEdit(!edit)} disabled={busy || loading}><MousePointer2 size={15}/>{edit ? "Editing on" : "Viewing"}</button><button className="admin-small" aria-label="Desktop preview" aria-pressed={viewport === "desktop"} onClick={() => setViewport("desktop")}><Monitor size={16}/> Desktop</button><button className="admin-small" aria-label="Tablet preview" aria-pressed={viewport === "tablet"} onClick={() => setViewport("tablet")}><Tablet size={16}/> Tablet</button><button className="admin-small" aria-label="Mobile preview" aria-pressed={viewport === "mobile"} onClick={() => setViewport("mobile")}><Smartphone size={16}/> Mobile</button><button className="admin-small" disabled={busy || loading} onClick={() => {clearSelection();setRevision(revision + 1);}}><RotateCcw size={15}/> Reload preview</button><a href={page} target="_blank" rel="noopener noreferrer" className="admin-small"><Eye size={15}/> Live page</a></div>
+    <div className="visual-workspace"><div className="visual-canvas responsive-preview-canvas"><iframe key={`${page}:${revision}`} ref={iframe} title={`Live preview of ${page}`} src={`${page}?admin-preview=1`} onLoad={attach} sandbox="allow-same-origin allow-scripts" style={{width: {desktop: 1280, tablet: 820, mobile: 390}[viewport], maxWidth: "none"}}/></div><aside className="visual-inspector">
+      <div className="visual-inspector-tabs"><button className="admin-small" aria-pressed={!imageMode} disabled={busy || loading} onClick={() => setImageMode(false)}>Text & content</button><button className="admin-small" aria-pressed={imageMode} disabled={busy || loading} onClick={() => void openImages()}><ImagePlus size={15}/> Images</button></div>
+      {docs["page-images"] && <ImageInspector page={page} iframe={iframe} revision={frameRevision} active={imageMode} selectedKey={imageKey} onSelectKey={setImageKey} data={docs["page-images"].data as unknown as PageImage[]} disabled={busy || loading} onBusy={setBusy} onChange={images => {const doc = docsRef.current["page-images"]; if (doc) updateDocs({...docsRef.current, "page-images": {...doc, data: images}});}}/>}
+      {imageMode && loading && <p role="status">Loading page images…</p>}
+      <div hidden={imageMode}><h2>Content inspector</h2><p>Click text, images or links on the page. All changes stay unpublished until you press Publish.</p>
       {options.length > 0 && <label>Content field<select value={selected ? fieldKey(selected) : ""} disabled={busy || loading} onChange={e => {inlineCleanup.current(); const field = options.find(f => fieldKey(f) === e.target.value); if (field) void choose(field);}}><option value="">Select a field…</option>{options.map(f => <option key={fieldKey(f)} value={fieldKey(f)}>{manifest.find(e => e.id === f.id)?.label} / {f.path.join(" → ")}</option>)}</select></label>}
       {loading && <p role="status">Loading latest repository content…</p>}
       {selected && <div className="visual-field"><label>{target.current?.kind === "src" ? "Image URL" : target.current?.kind === "href" ? "Link URL" : selected.path.join(" / ")}<textarea value={value} disabled={busy || loading} rows={5} onChange={e => change(selected, e.target.value)}/></label>{target.current?.kind === "text" && <button className="admin-small" disabled={busy || loading} onClick={inlineEdit}>Edit directly on page</button>}{target.current?.kind === "src" && <label className="admin-small"><Upload size={14}/> Upload image<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" disabled={busy || loading} onChange={e => {void upload(e.target.files?.[0]);e.target.value = "";}}/></label>}</div>}
       {target.current?.element.closest("a") && <button className="admin-small" disabled={busy || loading} onClick={() => selectAttribute("href")}>Edit link destination</button>}{target.current?.element.tagName === "IMG" && <button className="admin-small" disabled={busy || loading} onClick={() => selectAttribute("alt")}>Edit image alt text</button>}
       <hr/><h3>All content fields</h3><p>Use the collection editor for SEO, menus, lists and content without a direct page match. Structural changes appear in the live layout after publishing.</p><label>Find collection<input value={search} onChange={e => setSearch(e.target.value)} placeholder="Home, services, blog…"/></label><label>Content collection<select value={collection} disabled={busy || loading} onChange={e => void openCollection(e.target.value)}><option value="">Choose collection…</option>{manifest.filter(e => `${e.label} ${e.group}`.toLowerCase().includes(search.toLowerCase()) || e.id === collection).map(e => <option key={e.id} value={e.id}>{e.group} / {e.label}</option>)}</select></label>
       {collection && docs[collection] && <fieldset disabled={busy || loading}><FormEditor value={docs[collection].data} schema={groupSchema(collection)} name={manifest.find(e => e.id === collection)?.label} onChange={data => {inlineCleanup.current(); clearSelection(); updateDocs({...docsRef.current, [collection]: {...docsRef.current[collection], data}});}}/></fieldset>}
+
+      </div>
       {changed.length > 0 && <button className="admin-small" disabled={busy || loading} onClick={() => {if (window.confirm("Discard all unpublished visual editor changes?")) {clearSelection();updateDocs(Object.fromEntries(Object.entries(docsRef.current).map(([id,d]) => [id,{...d,data:structuredClone(d.baseline)}])));setRevision(revision + 1);setNotice("");}}}>Discard unpublished changes</button>}
     </aside></div>
   </section>;

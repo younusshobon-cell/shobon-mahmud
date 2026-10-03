@@ -277,3 +277,5 @@ background:#f6f8f5}
 .visual-canvas.responsive-preview-canvas{display:block;overflow:auto}
 .responsive-preview-canvas iframe{display:block;flex-shrink:0;max-width:none;margin-inline:auto}
 .visual-controls button[aria-pressed="true"]{background:#edf3e9;border-color:#79bd92;color:#244e37}
+
+.visual-inspector-tabs{display:flex;gap:8px;margin-bottom:18px}.visual-inspector-tabs button[aria-pressed="true"]{background:#edf3e9;border-color:#79bd92}

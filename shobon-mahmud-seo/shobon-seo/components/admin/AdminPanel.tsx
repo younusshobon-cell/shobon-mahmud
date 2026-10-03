@@ -33,7 +33,6 @@ import {
 } from "./FormEditor";
 import { AnalyticsDashboard } from "./AnalyticsDashboard";
 import { VisualEditor } from "./VisualEditor";
-import { PageImages } from "./PageImages";
 import { ContentStudio } from "./ContentStudio";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
@@ -41,7 +40,6 @@ const groups = [
   "Overview",
   "Analytics",
   "Live editor",
-  "Page images",
   "Pages",
   "Site settings",
   "Page copy",
@@ -57,7 +55,6 @@ const icons: Record<string, typeof Globe> = {
   Overview: LayoutDashboard,
   Analytics: BarChart3,
   "Live editor": Eye,
-  "Page images": ImagePlus,
   Pages: FileText,
   "Site settings": Settings,
   "Page copy": FileText,
@@ -85,6 +82,7 @@ export function AdminPanel({
   const router = useRouter(),
     [group, setGroup] = useState("Overview"),
     [visualPage, setVisualPage] = useState("/"),
+    [visualImages, setVisualImages] = useState(false),
     [active, setActive] = useState<Entry | null>(null),
     [doc, setDoc] = useState<Document | null>(null),
     [draft, setDraft] = useState<Value | null>(null),
@@ -145,11 +143,11 @@ export function AdminPanel({
       if (id === loadId.current) setLoading(false);
     }
   }
-  function navigate(next: string, path = "/") {
+  function navigate(next: string, path = "/", images = false) {
     if (!discard()) return;
     loadId.current++;
     setGroup(next);
-    if (next === "Live editor" || next === "Page images") setVisualPage(path);
+    if (next === "Live editor") {setVisualPage(path); setVisualImages(images);}
     setStudioDirty(false);
     setStudioAdvanced(false);
     setActive(null);
@@ -425,14 +423,12 @@ export function AdminPanel({
                 </section>
               </div>
             </>
-          ) : group === "Page images" ? (
-            <PageImages initialPage={visualPage} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
           ) : group === "Live editor" ? (
-            <VisualEditor onPageImages={path => navigate("Page images", path)} initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
+            <VisualEditor initialImages={visualImages} initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
           ) : group === "Analytics" ? (
             <AnalyticsDashboard />
           ) : (group === "Blog" || group === "Pages") && !active && !studioAdvanced ? (
-            <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onLiveEditor={path => navigate("Live editor", path)} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
+            <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onLiveEditor={(path, images) => navigate("Live editor", path, images)} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
           ) : group === "Media" ? (
             <MediaManager />
           ) : (
