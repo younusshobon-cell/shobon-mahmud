@@ -238,9 +238,18 @@
   background-size: 100% 100%;
 }
 .hero-surface[data-hero-theme="saudi-arabia"] {
-  --hero-start: #dcece2; --hero-end: #f2e7cd;
+  --hero-start: #06452c; --hero-end: #08713e;
   --hero-grid-x: 48px; --hero-grid-y: 48px;
-  --hero-grid-color: rgba(29, 104, 73, .08);
+  --color-on-night: #f4faf5;
+  --color-on-night-muted: #c9e3d3;
+  --color-link-night: #b9efbd;
+  background-color: #075b35;
+  background-image: linear-gradient(110deg, var(--hero-start) 0%, #075b35 52%, var(--hero-end) 100%);
+  background-size: 100% 100%;
+}
+.hero-surface[data-hero-theme="saudi-arabia"]::before {
+  background-image: linear-gradient(to right, rgba(211, 242, 219, .055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(211, 242, 219, .025) 1px, transparent 1px);
 }
 .hero-surface[data-hero-theme="london"] {
   --hero-start: #e4e8f4; --hero-end: #efe1df;

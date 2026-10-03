@@ -70,6 +70,7 @@ export default async function LocationPage({ params }: Props) {
     <>
       <PageHero
         theme={loc.slug}
+        tone={loc.slug === "saudi-arabia" ? "dark" : "light"}
         crumbs={[
           { name: "Locations", href: "/locations" },
           { name: loc.city, href: path },
@@ -99,7 +100,7 @@ export default async function LocationPage({ params }: Props) {
           )
         }
       >
-        <ButtonLink href={pageCopy.text_004}>
+        <ButtonLink href={pageCopy.text_004} variant={loc.slug === "saudi-arabia" ? "light" : "primary"}>
           {pageCopy.text_005}
           {loc.city} {pageCopy.text_006}
         </ButtonLink>
