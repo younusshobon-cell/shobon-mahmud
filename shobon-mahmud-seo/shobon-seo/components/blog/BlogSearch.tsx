@@ -11,6 +11,10 @@ export type SearchEntry = { slug: string; title: string; description: string; ca
 export function BlogSearch({ index }: { index: SearchEntry[] }) {
   const [q, setQ] = useState("");
   const id = useId();
+  const resultsId = `${id}-results`;
+  const [focused, setFocused] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+  const showResults = focused && !dismissed && q.trim().length >= 2;
   const results = useMemo(() => {
     const term = q.trim().toLowerCase();
     if (term.length < 2) return [];
@@ -18,7 +22,11 @@ export function BlogSearch({ index }: { index: SearchEntry[] }) {
   }, [q, index]);
 
   return (
-    <div className="relative w-full max-w-md">
+    <div className="relative w-full max-w-md" onFocus={() => setFocused(true)} onBlur={(event) => {
+      if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setFocused(false);
+    }} onKeyDown={(event) => {
+      if (event.key === "Escape") { event.preventDefault(); setDismissed(true); }
+    }}>
       <label htmlFor={id} className="sr-only">{pageCopy.text_001}</label>
       <div className="flex h-12 items-center gap-3 rounded-full border border-line-strong bg-white px-4 focus-within:border-ink">
         <Search aria-hidden className="size-4 text-muted" />
@@ -26,15 +34,17 @@ export function BlogSearch({ index }: { index: SearchEntry[] }) {
           id={id}
           type="search"
           value={q}
-          onChange={(e) => setQ(e.target.value)}
+          onChange={(e) => { setQ(e.target.value); setDismissed(false); }}
+          aria-expanded={showResults}
+          aria-controls={showResults ? resultsId : undefined}
           placeholder={pageCopy.text_002}
           autoComplete="off"
-          className="h-full w-full bg-transparent text-[0.9375rem] text-ink outline-none placeholder:text-muted"
+          className="h-full w-full bg-transparent text-base text-ink outline-none placeholder:text-muted"
         />
       </div>
-      {q.trim().length >= 2 && (
-        <div className="absolute inset-x-0 top-14 z-20 overflow-hidden rounded-2xl border border-line bg-white shadow-[0_18px_40px_-18px_rgba(15,26,43,0.3)]">
-          <p aria-live="polite" className="sr-only">{results.length} {pageCopy.text_003}</p>
+      <p role="status" aria-live="polite" className="sr-only">{showResults ? `${results.length} ${pageCopy.text_003}` : ""}</p>
+      {showResults && (
+        <div id={resultsId} className="absolute inset-x-0 top-14 z-20 overflow-hidden rounded-2xl border border-line bg-white shadow-[0_18px_40px_-18px_rgba(15,26,43,0.3)]">
           {results.length ? (
             <ul className="divide-y divide-line">
               {results.map((r) => (

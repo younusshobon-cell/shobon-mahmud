@@ -9,7 +9,7 @@ const goals = [pageCopy.text_005, pageCopy.text_006, pageCopy.text_007, pageCopy
 // TODO: adjust budget ranges to match how you price your work.
 const budgets = [pageCopy.text_012, pageCopy.text_013, pageCopy.text_014, pageCopy.text_015, pageCopy.text_016, pageCopy.text_017];
 
-const field = "mt-2 block w-full rounded-xl border border-line-strong bg-white px-4 py-3 text-[0.9375rem] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-ink";
+const field = "mt-2 block w-full rounded-xl border border-line-strong bg-white px-4 py-3 text-base text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-ink";
 const label = "text-sm font-medium text-ink";
 
 type Status = { state: "idle" | "sending" | "error"; message?: string };
@@ -19,6 +19,7 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (status.state === "sending") return;
     const form = e.currentTarget;
     setStatus({ state: "sending" });
     try {
@@ -43,7 +44,7 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
   }
 
   return (
-    <form action="https://formsubmit.co/younusshobon@gmail.com" method="POST" onSubmit={onSubmit} className="grid gap-5 sm:grid-cols-2">
+    <form action="https://formsubmit.co/younusshobon@gmail.com" method="POST" aria-busy={status.state === "sending"} onSubmit={onSubmit} className="grid gap-5 sm:grid-cols-2">
       <input type="hidden" name="_subject" value="New enquiry from Shobon Mahmud website" />
       <input type="hidden" name="_template" value="table" />
       {/* Honeypot: hidden from people, filled by bots */}
@@ -69,10 +70,11 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
       </label>
       <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted">{pageCopy.text_038}{fallbackEmail ? <> {pageCopy.text_039}<a className="underline" href={`mailto:${fallbackEmail}`}>{fallbackEmail}</a> {pageCopy.text_040}</> : null}</p>
-        <button type="submit" disabled={status.state === "sending"} className="inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-link active:translate-y-px disabled:opacity-60">
+        <button type="submit" disabled={status.state === "sending"} className="site-button inline-flex min-h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-link active:translate-y-px disabled:cursor-wait disabled:opacity-60">
           {status.state === "sending" ? "Checking…" : pageCopy.text_041}
         </button>
       </div>
+      <p role="status" aria-live="polite" className="sr-only">{status.state === "sending" ? "Checking your enquiry. Please wait." : ""}</p>
       {status.state === "error" && <p role="alert" className="text-sm text-red-700 sm:col-span-2">{status.message}</p>}
     </form>
   );

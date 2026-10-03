@@ -3,7 +3,7 @@ import pageCopy from "@/content/copy-components-layout-Navbar.json";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { mainNav } from "@/lib/site";
@@ -14,6 +14,8 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -26,10 +28,45 @@ export function Navbar() {
   useEffect(() => setOpen(false), [pathname]);
 
   useEffect(() => {
-    document.documentElement.style.overflow = open ? "hidden" : "";
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const onResize = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener("change", onResize);
+    return () => desktop.removeEventListener("change", onResize);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const root = document.documentElement;
+    const previousOverflow = root.style.overflow;
+    root.style.overflow = "hidden";
+    const background = Array.from(document.querySelectorAll<HTMLElement>("main, footer"));
+    const previousInert = background.map(element => element.inert);
+    background.forEach(element => { element.inert = true; });
+    const frame = requestAnimationFrame(() => menuRef.current?.querySelector<HTMLButtonElement>("button")?.focus());
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { event.preventDefault(); setOpen(false); }
+      if (event.key !== "Tab") return;
+      const links = menuRef.current?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])");
+      if (!links?.length) return;
+      const first = links[0];
+      const last = links[links.length - 1];
+      if (!menuRef.current?.contains(document.activeElement)) {
+        event.preventDefault(); first.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+      }
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    const toggle = toggleRef.current;
+    return () => {
+      cancelAnimationFrame(frame);
+      root.style.overflow = previousOverflow;
+      background.forEach((element, index) => { element.inert = previousInert[index]; });
+      window.removeEventListener("keydown", onKey);
+      toggle?.focus();
+    };
   }, [open]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
@@ -38,7 +75,7 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300",
-        scrolled || open ? "border-b border-line bg-paper/90 backdrop-blur-md" : "border-b border-transparent bg-paper",
+        open ? "border-b border-line bg-paper" : scrolled ? "border-b border-line bg-paper/90 backdrop-blur-md" : "border-b border-transparent bg-paper",
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-[1240px] items-center justify-between px-5 sm:px-8 lg:h-[4.5rem] lg:px-10">
@@ -58,7 +95,7 @@ export function Navbar() {
                 >
                   {item.label}
                   {isActive(item.href) && (
-                    <motion.span layoutId="nav-underline" className="absolute inset-x-3.5 -bottom-0.5 h-px bg-link" />
+                    <motion.span aria-hidden layoutId="nav-underline" className="absolute inset-x-3.5 -bottom-0.5 h-px bg-link" />
                   )}
                 </Link>
               </li>
@@ -69,18 +106,19 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Link
             href={pageCopy.text_002}
-            className="inline-flex min-h-11 items-center rounded-full bg-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-link active:translate-y-px sm:px-5"
+            className="site-button inline-flex min-h-11 items-center rounded-full bg-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-link active:translate-y-px sm:px-5"
           >
             {pageCopy.text_003}</Link>
           <button
+            ref={toggleRef}
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? pageCopy.text_004 : pageCopy.text_005}
-            className="grid size-10 place-items-center rounded-full border border-line-strong text-ink lg:hidden"
+            className="grid size-11 place-items-center rounded-full border border-line-strong text-ink lg:hidden"
           >
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+            {open ? <X aria-hidden className="size-5" /> : <Menu aria-hidden className="size-5" />}
           </button>
         </div>
       </div>
@@ -88,13 +126,21 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            ref={menuRef}
             id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={pageCopy.text_006}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-paper lg:hidden"
+            className="fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] z-40 overflow-y-auto bg-paper lg:hidden"
           >
+            <div className="flex items-center justify-between px-5 pt-5 sm:px-8">
+              <p className="text-sm font-medium text-muted">{pageCopy.text_001}</p>
+              <button type="button" onClick={() => setOpen(false)} aria-label={pageCopy.text_004} className="grid size-11 place-items-center rounded-full border border-line-strong"><X aria-hidden className="size-5" /></button>
+            </div>
             <nav aria-label={pageCopy.text_006} className="px-5 pt-6 pb-10 sm:px-8">
               <ul className="divide-y divide-line border-y border-line">
                 {mainNav.map((item, i) => (
@@ -106,6 +152,7 @@ export function Navbar() {
                   >
                     <Link
                       href={item.href}
+                      onClick={() => setOpen(false)}
                       aria-current={isActive(item.href) ? "page" : undefined}
                       className={cn("flex items-center justify-between py-4 text-2xl font-medium tracking-tight", isActive(item.href) ? "text-link" : "text-ink")}
                     >
@@ -114,7 +161,7 @@ export function Navbar() {
                   </motion.li>
                 ))}
               </ul>
-              <Link href={pageCopy.text_007} className="mt-8 flex h-12 items-center justify-center rounded-full bg-ink text-paper font-medium">
+              <Link href={pageCopy.text_007} onClick={() => setOpen(false)} className="site-button mt-8 flex h-12 items-center justify-center rounded-full bg-ink text-paper font-medium">
                 {pageCopy.text_008}</Link>
             </nav>
           </motion.div>

@@ -8,7 +8,7 @@ export function ServiceCard({ service, index }: { service: Service; index?: numb
   return (
     <Link
       href={`/services/${service.slug}`}
-      className="group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-paper p-6 transition-colors duration-200 hover:border-ink sm:p-7"
+      className="interactive-card group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-paper p-6 transition-colors duration-200 hover:border-ink sm:p-7"
     >
       <div className="flex items-start justify-between gap-4">
         <h3 className="t-h3 text-ink">{service.name}</h3>

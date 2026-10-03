@@ -240,7 +240,7 @@ export default function AboutPage() {
       <Section>
         <FAQ faqs={aboutFaqs} title={pageCopy.text_052} />
       </Section>
-      <FinalCta />
+      <FinalCta title="Let’s find the right SEO approach for your business." />
       <JsonLd data={profilePageSchema()} />
     </>
   );

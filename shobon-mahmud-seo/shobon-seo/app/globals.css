@@ -288,3 +288,33 @@ background:#f6f8f5}
 .visual-controls button[aria-pressed="true"]{background:#edf3e9;border-color:#79bd92;color:#244e37}
 
 .visual-inspector-tabs{display:flex;gap:8px;margin-bottom:18px}.visual-inspector-tabs button[aria-pressed="true"]{background:#edf3e9;border-color:#79bd92}
+
+/* Small, progressive motion across public pages. Content is never hidden while waiting. */
+@keyframes section-enter {
+  from { opacity: .65; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .hero-surface > div { animation: section-enter .65s var(--ease-out-soft) both; }
+  .section-enter { animation: section-enter .55s var(--ease-out-soft) both; }
+  .site-button { transition: background-color .2s, border-color .2s, box-shadow .2s, transform .2s; }
+  .interactive-card { transition: border-color .2s, background-color .2s, box-shadow .25s, transform .25s; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .site-button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -12px rgba(15,26,43,.4); }
+  .interactive-card:hover { transform: translateY(-3px); }
+}
+.cta-panel::before {
+  content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 100% 0%, #e6ecfb 0%, transparent 58%),
+    radial-gradient(ellipse at 0% 100%, #e7f2eb 0%, transparent 48%);
+}
+#main { scroll-margin-top: 5.5rem; }
+#main:focus { outline: none; }
+#main :is(h2[id], h3[id], section[id]) { scroll-margin-top: 6.5rem; }
+#main :is(input, textarea, select) { font-size: max(16px, 1em); }
+#main .rich-table-wrap:focus-visible { outline: 2px solid var(--color-link); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .site-button, .interactive-card, .hero-surface > div, .section-enter { animation: none; transform: none; }
+}

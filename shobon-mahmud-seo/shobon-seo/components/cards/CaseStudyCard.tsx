@@ -29,7 +29,7 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
     <Link
       href={`/portfolio/${study.slug}`}
       className={cn(
-        "group flex h-full flex-col gap-6 rounded-[var(--radius-panel)] border border-line bg-paper p-6 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-ink sm:p-8",
+        "interactive-card group flex h-full flex-col gap-6 rounded-[var(--radius-panel)] border border-line bg-paper p-6 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-ink sm:p-8",
         variant === "wide" && "lg:grid lg:grid-cols-[1fr_1.1fr] lg:gap-12",
       )}
     >

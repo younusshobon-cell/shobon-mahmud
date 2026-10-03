@@ -26,7 +26,7 @@ export function PortfolioGrid({ items, filters }: { items: Item[]; filters: { va
             aria-pressed={active === f.value}
             onClick={() => setActive(f.value)}
             className={cn(
-              "h-10 rounded-full border px-4 text-sm transition-colors",
+              "min-h-11 rounded-full border px-4 text-sm transition-colors",
               active === f.value ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink",
             )}
           >

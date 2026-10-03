@@ -9,6 +9,7 @@ import { BlogCard } from "@/components/cards/BlogCard";
 import { PostCover } from "@/components/cards/PostCover";
 import { BlogSearch } from "./BlogSearch";
 import { formatDate, cn } from "@/lib/utils";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { FAQ } from "@/components/content/FAQ";
 import { blogFaqs } from "@/lib/content/faqs";
 import type { Crumb } from "@/lib/schema";
@@ -54,11 +55,11 @@ export function BlogIndex({
           <nav aria-label={pageCopy.text_001} className="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
             <ul className="flex gap-2 pb-1">
               <li>
-                <Link href={pageCopy.text_002} aria-current={!activeCategory ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", !activeCategory ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>{pageCopy.text_003}</Link>
+                <Link href={pageCopy.text_002} aria-current={!activeCategory ? "page" : undefined} className={cn("inline-flex min-h-11 items-center whitespace-nowrap rounded-full border px-4 text-sm", !activeCategory ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>{pageCopy.text_003}</Link>
               </li>
               {blogCategories.map((c) => (
                 <li key={c.slug}>
-                  <Link href={`/blog/category/${c.slug}`} aria-current={activeCategory === c.slug ? "page" : undefined} className={cn("inline-flex h-9 items-center whitespace-nowrap rounded-full border px-4 text-sm", activeCategory === c.slug ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>
+                  <Link href={`/blog/category/${c.slug}`} aria-current={activeCategory === c.slug ? "page" : undefined} className={cn("inline-flex min-h-11 items-center whitespace-nowrap rounded-full border px-4 text-sm", activeCategory === c.slug ? "border-ink bg-ink text-paper" : "border-line-strong text-ink-2 hover:border-ink")}>
                     {c.name}
                   </Link>
                 </li>
@@ -70,7 +71,7 @@ export function BlogIndex({
       </section>
     <Container className="pb-20 lg:pb-28">
       {featured && (
-        <article className="group relative mt-12 grid gap-8 rounded-[var(--radius-panel)] border border-line p-5 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12">
+        <article className="interactive-card group relative mt-12 grid gap-8 rounded-[var(--radius-panel)] border border-line p-5 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12">
           <PostCover category={getCategory(featured.category)?.name ?? ""} image={featured.image} className="aspect-[16/10]" priority />
           <div>
             <p className="text-sm text-link">{pageCopy.text_004}{getCategory(featured.category)?.name}</p>
@@ -101,7 +102,7 @@ export function BlogIndex({
               key={n}
               href={n === 1 ? basePath : `${basePath}/page/${n}`}
               aria-current={n === page ? "page" : undefined}
-              className={cn("grid size-10 place-items-center rounded-full border text-sm", n === page ? "border-ink bg-ink text-paper" : "border-line-strong hover:border-ink")}
+              className={cn("grid size-11 place-items-center rounded-full border text-sm", n === page ? "border-ink bg-ink text-paper" : "border-line-strong hover:border-ink")}
             >
               {n}
             </Link>
@@ -110,6 +111,7 @@ export function BlogIndex({
       )}
       <div className="mt-20 border-t border-line pt-16"><FAQ faqs={blogFaqs} title={pageCopy.text_013} /></div>
     </Container>
+    <FinalCta title="Put these SEO insights to work on your website." />
     </>
   );
 }

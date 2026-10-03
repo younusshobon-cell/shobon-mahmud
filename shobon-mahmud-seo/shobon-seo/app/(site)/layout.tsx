@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Analytics } from "@/components/layout/Analytics";
+import { SiteMotion } from "@/components/motion/SiteMotion";
 import { MotionProvider } from "@/components/motion/MotionProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { personSchema, websiteSchema } from "@/lib/schema";
@@ -53,10 +54,11 @@ export default function SiteLayout({
         </a>
         <MotionProvider>
           <Navbar />
-          <main id="main" className="flex-1">
+          <main id="main" tabIndex={-1} className="min-w-0 flex-1">
             {children}
           </main>
           <Footer />
+          <SiteMotion />
         </MotionProvider>
         <JsonLd data={[personSchema(), websiteSchema()]} />
         <Analytics />

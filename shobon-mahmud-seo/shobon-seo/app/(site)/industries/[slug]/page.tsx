@@ -186,7 +186,7 @@ export default async function IndustryPage({ params }: Props) {
           <RelatedArticles items={articles} />
         </Section>
       )}
-      <FinalCta />
+      <FinalCta title={`Build an SEO plan for your ${industry.name.toLowerCase()} business.`} />
     </>
   );
 }

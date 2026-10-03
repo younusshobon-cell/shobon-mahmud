@@ -219,7 +219,7 @@ export default async function LocationPage({ params }: Props) {
         <FAQ faqs={extra.faqs} title={`Organic growth in ${loc.city}: FAQs`} />
       </Section>
       <FinalCta
-        title={`Growing a business in ${loc.city}?`}
+        title={`Reach more customers in ${loc.city} through search.`}
         body="Tell me about your market, your competitors and what you've tried. I'll share how I'd approach it."
       />
       {localSeo && <JsonLd data={serviceSchema(localSeo, path, loc.city)} />}

@@ -10,7 +10,7 @@ export function IndustryCard({ industry }: { industry: Industry }) {
   return (
     <Link
       href={`/industries/${industry.slug}`}
-      className="group flex h-full flex-col justify-between gap-8 border-line bg-paper p-6 transition-colors duration-200 hover:bg-paper-2 sm:p-7"
+      className="interactive-card group flex h-full flex-col justify-between gap-8 border-line bg-paper p-6 transition-colors duration-200 hover:bg-paper-2 sm:p-7"
     >
       <div>
         <h3 className="flex items-center justify-between text-lg font-semibold tracking-tight text-ink">
