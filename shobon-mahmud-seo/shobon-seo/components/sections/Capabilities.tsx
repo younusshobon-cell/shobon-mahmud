@@ -31,7 +31,7 @@ export function Capabilities() {
         </div>
         <ul className="border-t border-line">
           {capabilities.map((c) => (
-            <li key={c.slug} className="border-b border-line">
+            <li data-motion-step key={c.slug} className="border-b border-line">
               <Link href={`/services/${c.slug}`} className="group grid gap-2 py-6 sm:grid-cols-[180px_1fr_auto] sm:items-baseline sm:gap-8">
                 <h3 className="text-lg font-semibold tracking-tight text-ink transition-colors group-hover:text-link">{c.name}</h3>
                 <p className="leading-relaxed text-muted">{c.body}</p>

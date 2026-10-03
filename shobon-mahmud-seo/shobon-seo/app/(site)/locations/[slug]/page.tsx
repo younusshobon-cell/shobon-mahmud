@@ -10,6 +10,7 @@ import { getIndustries } from "@/lib/content/industries";
 import { caseStudies } from "@/lib/content/case-studies";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { serviceSchema } from "@/lib/schema";
+import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
@@ -170,6 +171,8 @@ export default async function LocationPage({ params }: Props) {
           <PointGrid points={loc.opportunities} />
         </div>
       </Section>
+
+      <GrowthPrompt title={`Be the business customers find in ${loc.city}.`} />
 
       <Section labelledBy="sectors">
         <div id="sectors">

@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Analytics } from "@/components/layout/Analytics";
+import { ScrollJourney } from "@/components/motion/ScrollJourney";
 import { SiteMotion } from "@/components/motion/SiteMotion";
 import { MotionProvider } from "@/components/motion/MotionProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -59,6 +60,7 @@ export default function SiteLayout({
           </main>
           <Footer />
           <SiteMotion />
+          <ScrollJourney />
         </MotionProvider>
         <JsonLd data={[personSchema(), websiteSchema()]} />
         <Analytics />

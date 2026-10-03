@@ -5,6 +5,9 @@ import { photos } from "@/lib/images";
 import { ButtonLink } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+import growthCopy from "@/content/copy-components-content-ContextCta.json";
+import { GrowthGuide } from "@/components/content/GrowthGuide";
+import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Capabilities } from "@/components/sections/Capabilities";
@@ -76,8 +79,10 @@ export default function HomePage() {
       <HowIWork />
       <NinetyDayPlan />
       <IndustriesGrid />
+      <GrowthGuide />
       <FeaturedWork />
       <GrowthSystem />
+      <GrowthPrompt tone="dark" title={growthCopy.text_021} body={growthCopy.text_022} action={growthCopy.text_023} />
       <HomeDepth />
       <BlogPreview />
       <Section>

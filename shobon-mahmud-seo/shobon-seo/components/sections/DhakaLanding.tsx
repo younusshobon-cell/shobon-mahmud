@@ -3,6 +3,7 @@ import pageCopy from "@/content/copy-components-sections-DhakaLanding.json";
 import { MapPin, Search, Megaphone, Globe, MessageCircle, BarChart3, ArrowUpRight, Check, Stethoscope, Store, CalendarDays } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/content/Section";
+import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { ButtonLink } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { FAQ } from "@/components/content/FAQ";
@@ -120,6 +121,7 @@ export function DhakaLanding() {
 
       <Section tone="muted" labelledBy="dhaka-channel-plan"><h2 id="dhaka-channel-plan" className="t-h2 text-ink">{pageCopy.text_154}</h2><div className="mt-10 grid gap-5 md:grid-cols-3">{[{ title: pageCopy.text_155, body: pageCopy.text_156, tag: pageCopy.text_157 }, { title: pageCopy.text_158, body: pageCopy.text_159, tag: pageCopy.text_160 }, { title: pageCopy.text_161, body: pageCopy.text_162, tag: pageCopy.text_163 }].map(p => <div key={p.title} className="rounded-2xl border border-line bg-white p-7"><p className="text-xs font-semibold uppercase tracking-wider text-[#14604b]">{p.tag}</p><h3 className="t-h3 mt-4 text-ink">{p.title}</h3><p className="mt-3 leading-relaxed text-muted">{p.body}</p></div>)}</div><p className="mt-6 text-sm text-muted">{pageCopy.text_164}</p></Section>
 
+      <GrowthPrompt title="Reach the Dhaka customers looking for your services." />
       <Section labelledBy="dhaka-process"><h2 id="dhaka-process" className="t-h2 text-ink">{pageCopy.text_165}</h2><ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{steps.map((p, i) => <li key={p.title} className="border-t border-line-strong pt-5"><span className="text-sm font-semibold text-[#14604b]">{pageCopy.text_166}{i + 1}</span><h3 className="t-h3 mt-4 text-ink">{p.title}</h3><p className="mt-3 leading-relaxed text-muted">{p.body}</p></li>)}</ol></Section>
 
       <Section tone="muted" labelledBy="dhaka-areas"><div className="grid gap-10 lg:grid-cols-2 lg:gap-20"><div><h2 id="dhaka-areas" className="t-h2 text-ink">{pageCopy.text_167}</h2><p className="mt-5 leading-relaxed text-muted">{pageCopy.text_168}</p><p className="mt-4 leading-relaxed text-muted">{pageCopy.text_169}<a className="link" href={pageCopy.text_170}>{pageCopy.text_171}</a> {pageCopy.text_172}<a className="link" href={pageCopy.text_173}>{pageCopy.text_174}</a>{pageCopy.text_175}</p></div><div><ul className="flex flex-wrap gap-3">{areas.map(area => <li key={area} className="rounded-full border border-line bg-white px-5 py-2.5 text-sm text-ink">{area}</li>)}</ul><p className="mt-5 leading-relaxed text-sm text-muted">{pageCopy.text_176}</p></div></div></Section>

@@ -7,6 +7,7 @@ import { getIndustry, industries } from "@/lib/content/industries";
 import { getServices } from "@/lib/content/services";
 import { caseStudiesFor } from "@/lib/content/case-studies";
 import { postsFor } from "@/lib/content/blog";
+import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
@@ -136,6 +137,8 @@ export default async function IndustryPage({ params }: Props) {
           <PointGrid points={industry.opportunities} />
         </div>
       </Section>
+
+      <GrowthPrompt title={`Make your ${industry.name} expertise easier to discover.`} />
 
       <Section tone="muted" labelledBy="strategy">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">

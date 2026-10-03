@@ -33,7 +33,7 @@ export function HeroImageLayout({children, aside, alt}: {children: ReactNode; as
   const override = useOverride("hero");
   return <div className={cn("grid gap-10", (aside || override) && "lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16")}>
     {children}
-    <div data-page-image-slot="hero" data-original-alt={alt} data-has-original-aside={Boolean(aside)} hidden={!aside && !override} className="lg:self-center">
+    <div data-page-image-slot="hero" data-original-alt={alt} data-has-original-aside={Boolean(aside)} hidden={!aside && !override} className="hero-media lg:self-center">
       <div data-page-image-original hidden={Boolean(override)}>{aside}</div>
       {override && <img data-page-image-replacement src={override.src} alt={override.alt} fetchPriority="high" className="h-auto w-full rounded-[28px]"/>}
     </div>

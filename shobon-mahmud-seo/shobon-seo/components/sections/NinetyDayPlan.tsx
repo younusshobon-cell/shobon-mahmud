@@ -52,7 +52,7 @@ export function NinetyDayPlan() {
       </div>
       <ol className="mt-12 grid gap-4 lg:grid-cols-3">
         {phases.map((phase, index) => (
-          <li key={phase.days} className="flex h-full flex-col rounded-[var(--radius-panel)] border border-line bg-paper p-6 sm:p-8">
+          <li data-motion-step key={phase.days} className="flex h-full flex-col rounded-[var(--radius-panel)] border border-line bg-paper p-6 sm:p-8">
             <div className="flex items-center justify-between gap-4">
               <span className="text-sm font-semibold tabular-nums text-link">{phase.days}</span>
               <span className="text-sm tabular-nums text-muted">{pageCopy.text_025}{index + 1} {pageCopy.text_026}</span>

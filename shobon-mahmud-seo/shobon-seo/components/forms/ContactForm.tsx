@@ -1,7 +1,8 @@
 "use client";
 import pageCopy from "@/content/copy-components-forms-ContactForm.json";
 
-import { useState } from "react";
+import { visitorGoals } from "@/lib/visitor-goals";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const industries = ["SaaS", pageCopy.text_001, pageCopy.text_002, "Logistics", pageCopy.text_003, "E-commerce", "Technology", pageCopy.text_004, "Other"];
@@ -15,6 +16,12 @@ const label = "text-sm font-medium text-ink";
 type Status = { state: "idle" | "sending" | "error"; message?: string };
 
 export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
+  const [selectedGoal, setSelectedGoal] = useState("");
+  useEffect(() => {
+    const goal = visitorGoals.find(item => item.id === new URLSearchParams(window.location.search).get("goal"));
+    if (goal) setSelectedGoal(goal.formGoal);
+  }, []);
+
   const [status, setStatus] = useState<Status>({ state: "idle" });
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -63,7 +70,7 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
         <select name="budget" defaultValue="" className={field}><option value="" disabled>{pageCopy.text_033}</option>{budgets.map((b) => <option key={b}>{b}</option>)}</select>
       </label>
       <label className="block sm:col-span-2"><span className={label}>{pageCopy.text_034}</span>
-        <select required name="goal" defaultValue="" className={field}><option value="" disabled>{pageCopy.text_035}</option>{goals.map((g) => <option key={g}>{g}</option>)}</select>
+        <select required name="goal" value={selectedGoal} onChange={(event) => setSelectedGoal(event.target.value)} className={field}><option value="" disabled>{pageCopy.text_035}</option>{goals.map((g) => <option key={g}>{g}</option>)}</select>
       </label>
       <label className="block sm:col-span-2"><span className={label}>{pageCopy.text_036}</span>
         <textarea required maxLength={5000} name="message" rows={6} placeholder={pageCopy.text_037} className={cn(field, "resize-y")} />

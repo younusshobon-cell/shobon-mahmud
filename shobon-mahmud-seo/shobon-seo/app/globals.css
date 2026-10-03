@@ -297,7 +297,7 @@ background:#f6f8f5}
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
   .hero-surface > div { animation: section-enter .65s var(--ease-out-soft) both; }
-  .section-enter { animation: section-enter .55s var(--ease-out-soft) both; }
+  .section-enter { animation: section-enter .65s var(--ease-out-soft) var(--reveal-delay, 0ms) backwards; }
   .site-button { transition: background-color .2s, border-color .2s, box-shadow .2s, transform .2s; }
   .interactive-card { transition: border-color .2s, background-color .2s, box-shadow .25s, transform .25s; }
 }
@@ -317,4 +317,21 @@ background:#f6f8f5}
 #main .rich-table-wrap:focus-visible { outline: 2px solid var(--color-link); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) {
   .site-button, .interactive-card, .hero-surface > div, .section-enter { animation: none; transform: none; }
+}
+
+.growth-prompt-glow { position:absolute; z-index:-1; right:-5rem; top:-6rem; width:20rem; height:20rem; border-radius:50%; background:radial-gradient(circle,rgba(77,182,140,.18),transparent 68%); pointer-events:none; }
+@keyframes hero-drift { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-7px); } }
+@keyframes goal-enter { from { opacity:.5; transform:translateY(5px); } to { opacity:1; transform:none; } }
+@keyframes glow-drift { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-35px,30px) scale(1.15); } }
+@media (prefers-reduced-motion: no-preference) {
+  .goal-answer { animation:goal-enter .25s ease-out; }
+  .growth-prompt-glow { animation:glow-drift 10s ease-in-out infinite; }
+  .back-to-top { animation:goal-enter .2s ease-out; transition:background-color .2s,transform .2s; }
+  .goal-choice { transition:background-color .2s,border-color .2s,box-shadow .2s; }
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion: no-preference) {
+  .hero-visual, .hero-media { animation:hero-drift 9s ease-in-out infinite; }
+  .hero-visual:hover, .hero-media:hover { animation-play-state:paused; }
+  .goal-choice:hover { box-shadow:0 5px 18px -12px rgba(31,63,209,.35); }
+  .back-to-top:hover { transform:translateY(-3px); background:var(--color-paper-2); }
 }

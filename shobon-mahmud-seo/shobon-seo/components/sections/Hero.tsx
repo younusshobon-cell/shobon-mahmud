@@ -26,7 +26,7 @@ export function Hero() {
           <p className="mt-4 text-sm leading-relaxed text-muted">{pageCopy.text_008}</p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">
+        <div className="hero-visual relative mx-auto w-full max-w-[460px] lg:max-w-none">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-night">
             <Image
               src={photos.studio.src}
