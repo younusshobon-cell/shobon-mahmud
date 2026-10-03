@@ -13,20 +13,16 @@ function load(file,extra={}) {const module={exports:{}};const code=ts.transpileM
 (async()=>{
 const s=load('lib/sitemaps.ts');
 for(const section of s.sitemapSections) assert.ok(s.sitemapIndex().includes(`/sitemaps/${section}.xml`));
-assert.ok(s.sitemapIndex().includes('/sitemaps/industries/healthcare.xml'));
+assert.equal((s.sitemapIndex().match(/<sitemap>/g)||[]).length,6);
+assert.ok(!s.sitemapIndex().includes('/sitemaps/industries/'));
 industries.push({slug:'new-industry',relatedServices:[]});
-assert.ok(s.sitemapIndex().includes('/sitemaps/industries/new-industry.xml'),'new CMS industry joins index automatically');
-assert.ok(s.sectionSitemap('industries').includes('/industries/new-industry'));
-const xml=s.urlSitemap(s.industryEntries('healthcare'));
-for(const path of ['/industries/healthcare','/services/audit','/locations/dhaka','/blog/care-guide','/portfolio/published-case']) assert.ok(xml.includes(path));
-assert.ok(!xml.includes('draft-case'));assert.equal(s.industryEntries('missing'),undefined);
+assert.ok(s.sectionSitemap('industries').includes('/industries/new-industry'),'new CMS industry joins the single industry sitemap automatically');
+assert.equal((s.sitemapIndex().match(/<sitemap>/g)||[]).length,6,'adding industries does not add separate sitemaps');
+assert.ok(!s.sectionSitemap('portfolio').includes('draft-case'));
 assert.ok(s.sectionSitemap('pages').includes('/new-page'));assert.ok(!s.sectionSitemap('pages').includes('<lastmod>'));
 assert.equal((s.urlSitemap([{path:'/a&b'},{path:'/a&b'}]).match(/<url>/g)||[]).length,1);assert.ok(s.urlSitemap([{path:'/a&b'}]).includes('&amp;'));
-const route=load('app/sitemaps/industries/[file]/route.ts',{'@/lib/sitemaps':s});
-assert.equal((await route.GET(new Request('https://site.test'),{params:Promise.resolve({file:'healthcare.xml'})})).status,200);
-for(const file of ['missing.xml','healthcare']) assert.equal((await route.GET(new Request('https://site.test'),{params:Promise.resolve({file})})).status,404);
 const robots=load('app/robots.ts').default;
 process.env.VERCEL_ENV='production';assert.ok(robots().rules[0].disallow.includes('/admin'));assert.ok(robots().rules[0].disallow.includes('/api/'));assert.equal(robots().sitemap,'https://shobon-mahmud.vercel.app/sitemap.xml');
 process.env.VERCEL_ENV='preview';assert.equal(robots().rules[0].disallow,'/');delete process.env.VERCEL_ENV;
-console.log('PASS: automatic section and industry discovery, related content, draft exclusion, XML safety, route 404s and production/preview robots.');
+console.log('PASS: six-folder index, automatic industry page discovery, draft exclusion, XML safety and production/preview robots.');
 })().catch(e=>{console.error(e);process.exitCode=1});

@@ -40,18 +40,6 @@ export function entriesFor(section: SitemapSection): SitemapEntry[] {
   }
 }
 
-export function industryEntries(slug: string): SitemapEntry[] | undefined {
-  const industry = industries.find((item) => item.slug === slug);
-  if (!industry) return undefined;
-  return [
-    { path: `/industries/${slug}` },
-    ...services.filter((item) => item.relatedIndustries.includes(slug) || industry.relatedServices.includes(item.slug)).map((item) => ({ path: `/services/${item.slug}` })),
-    ...locations.filter((item) => item.industries.includes(slug)).map((item) => ({ path: `/locations/${item.slug}` })),
-    ...posts.filter((item) => item.relatedIndustries?.includes(slug)).map((item) => ({ path: `/blog/${item.slug}`, lastModified: item.updated ?? item.date })),
-    ...caseStudies.filter((item) => !item.draft && item.industry === slug).map((item) => ({ path: `/portfolio/${item.slug}`, lastModified: item.date })),
-  ];
-}
-
 export function urlSitemap(entries: SitemapEntry[]): string {
   const urls = [...new Map(entries.map((entry) => [entry.path, entry])).values()].map(({ path, lastModified }) => {
     const date = lastModified ? new Date(lastModified) : undefined;
@@ -70,7 +58,6 @@ export function sitemapIndex(): string {
   // the connected Vercel build, so new industries never need a manual XML edit.
   const paths = [
     ...sitemapSections.map((section) => `/sitemaps/${section}.xml`),
-    ...industries.map(({ slug }) => `/sitemaps/industries/${slug}.xml`),
   ];
   const items = paths.map((path) => `  <sitemap><loc>${escapeXml(absoluteUrl(path))}</loc></sitemap>`);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items.join("\n")}\n</sitemapindex>`;

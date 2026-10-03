@@ -65,11 +65,10 @@ The iframe is limited to same-origin public routes, forms cannot submit, admin p
 
 ## Automatic sitemaps and robots
 
-`/sitemap.xml` lists folder sitemaps for pages, services, locations, industries,
-blog and portfolio, plus `/sitemaps/industries/<industry-slug>.xml` for each industry.
-Industry sitemaps use the existing related-industry fields on services, locations
-and blog posts, and the industry field on published case studies. Unknown industry
-sitemap URLs return 404. Draft pages, posts and case studies are excluded.
+`/sitemap.xml` lists exactly six folder sitemaps: pages, services, locations,
+industries, blog and portfolio. Every industry page belongs in industries.xml;
+there are no separate per-industry sitemaps. Draft pages, posts and case studies
+are excluded.
 
 Publish content normally in Admin. Once the connected Vercel production deployment
 finishes, new pages and industries appear automatically; XML files need no manual
