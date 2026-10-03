@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ImagePlus, Save, RotateCcw, Eye, Upload } from "lucide-react";
+import { ImagePlus, Save, RotateCcw, Eye, Upload, Monitor, Tablet, Smartphone } from "lucide-react";
 import type { PageImage } from "@/components/content/EditableImage";
 type Slot = {key: string; src: string; alt: string; label: string};
 async function api(url: string, options?: RequestInit) {
@@ -16,6 +16,8 @@ function srcOf(img: HTMLImageElement | null) {
 export function PageImages({initialPage = "/", publishing, onDirty, onBusy}: {initialPage?: string; publishing: boolean; onDirty: (value: boolean) => void; onBusy: (value: boolean) => void}) {
   const [pages, setPages] = useState<string[]>([]), [page, setPage] = useState(initialPage);
   const [draft, setDraft] = useState<PageImage[]>([]), [baseline, setBaseline] = useState<PageImage[]>([]), [sha, setSha] = useState("");
+  const [viewport, setViewport] = useState<"desktop" | "tablet" | "mobile">("desktop");
+  const previewWidth = {desktop: 1280, tablet: 820, mobile: 390}[viewport];
   const [slots, setSlots] = useState<Slot[]>([]), [selected, setSelected] = useState("");
   const [media, setMedia] = useState<{url: string | null; path: string}[]>([]);
   const [busy, setBusy] = useState(true), [error, setError] = useState(""), [notice, setNotice] = useState(""), [revision, setRevision] = useState(0);
@@ -50,7 +52,10 @@ export function PageImages({initialPage = "/", publishing, onDirty, onBusy}: {in
           const replacement = element.querySelector<HTMLElement>("[data-page-image-replacement], [data-admin-draft-image]");
           if (replacement) replacement.hidden = true;
           element.hidden = element.dataset.hasOriginalAside !== "true";
-          if (element.parentElement) element.parentElement.style.gridTemplateColumns = element.hidden ? "1fr" : "";
+          if (element.parentElement) {
+            element.parentElement.style.gridTemplateColumns = "";
+            if (element.hidden) element.parentElement.classList.remove("lg:grid-cols-[1.35fr_1fr]");
+          }
         }
         continue;
       }
@@ -63,7 +68,8 @@ export function PageImages({initialPage = "/", publishing, onDirty, onBusy}: {in
       if (element.tagName !== "IMG") {
         element.hidden = false;
         for (const child of element.children) if (child !== img) (child as HTMLElement).style.display = "none";
-        const grid = element.parentElement; if (grid) {grid.style.gridTemplateColumns = iframe.current!.clientWidth >= 1024 ? "1.35fr 1fr" : "1fr";}
+        const grid = element.parentElement;
+        if (grid) {grid.style.gridTemplateColumns = ""; grid.classList.add("lg:grid-cols-[1.35fr_1fr]");}
       }
       img.hidden = false;
       const src = previews.current.get(JSON.stringify([pageRef.current, key])) || override.src;
@@ -131,10 +137,10 @@ export function PageImages({initialPage = "/", publishing, onDirty, onBusy}: {in
     } catch (e) {setError((e as Error).message);} finally {lock.current = false; setBusy(false);}
   }
   return <section className="visual-studio">
-    <div className="visual-toolbar"><div><h1><ImagePlus size={22}/> Page images</h1><p>Choose a page → select its hero or another image → upload → publish.</p></div><button className="admin-primary" disabled={busy || !dirty || !sha || !publishing} onClick={publish}><Save size={16}/>{busy ? "Working…" : "Publish image changes"}</button></div>
+    <div className="visual-toolbar"><div><h1><ImagePlus size={22}/> Page images</h1><p>One edit updates desktop, tablet and mobile. Switch preview size to review each layout.</p></div><button className="admin-primary" disabled={busy || !dirty || !sha || !publishing} onClick={publish}><Save size={16}/>{busy ? "Working…" : "Publish image changes"}</button></div>
     {error && <div className="admin-error-box" role="alert">{error}</div>}{notice && <div className="admin-success" role="status">{notice}</div>}
-    <div className="visual-controls"><label>Page<select value={page} disabled={busy} onChange={e => {setPage(e.target.value); setSelected(""); setSlots([]);}}>{pages.map(path => <option key={path} value={path}>{path === "/" ? "Home /" : path}</option>)}</select></label><button className="admin-small" disabled={busy} onClick={() => setRevision(v => v + 1)}><RotateCcw size={15}/> Reload preview</button><a href={page} target="_blank" rel="noopener noreferrer" className="admin-small"><Eye size={15}/> Live page</a><span>{dirty ? "Unpublished changes" : "Up to date"}</span></div>
-    <div className="visual-workspace"><div className="visual-canvas"><iframe ref={iframe} key={`${page}:${revision}`} src={`${page}?admin-preview=1`} title={`Image preview of ${page}`} onLoad={attach} sandbox="allow-same-origin allow-scripts"/></div><aside className="visual-inspector">
+    <div className="visual-controls"><label>Page<select value={page} disabled={busy} onChange={e => {setPage(e.target.value); setSelected(""); setSlots([]);}}>{pages.map(path => <option key={path} value={path}>{path === "/" ? "Home /" : path}</option>)}</select></label><button className="admin-small" aria-pressed={viewport === "desktop"} onClick={() => setViewport("desktop")}><Monitor size={15}/> Desktop</button><button className="admin-small" aria-pressed={viewport === "tablet"} onClick={() => setViewport("tablet")}><Tablet size={15}/> Tablet</button><button className="admin-small" aria-pressed={viewport === "mobile"} onClick={() => setViewport("mobile")}><Smartphone size={15}/> Mobile</button><button className="admin-small" disabled={busy} onClick={() => setRevision(v => v + 1)}><RotateCcw size={15}/> Reload preview</button><a href={page} target="_blank" rel="noopener noreferrer" className="admin-small"><Eye size={15}/> Live page</a><span>{dirty ? "Unpublished changes" : "Up to date"}</span></div>
+    <div className="visual-workspace"><div className="visual-canvas responsive-preview-canvas"><iframe style={{width: previewWidth, maxWidth: "none"}} ref={iframe} key={`${page}:${revision}`} src={`${page}?admin-preview=1`} title={`Image preview of ${page}`} onLoad={attach} sandbox="allow-same-origin allow-scripts"/></div><aside className="visual-inspector">
       <h2>Images on this page</h2><p>Changes apply only to the selected page. Uploads keep their original quality.</p>
       <label>Select image<select value={selected} disabled={busy} onChange={e => setSelected(e.target.value)}><option value="">Choose an image…</option>{slots.map(item => <option key={item.key} value={item.key}>{item.label} · {item.alt.slice(0, 55) || "Add an image"}</option>)}</select></label>
       {!slots.length && !busy && <p>This page has no editable images.</p>}
