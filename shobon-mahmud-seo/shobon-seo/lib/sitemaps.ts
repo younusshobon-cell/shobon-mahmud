@@ -58,7 +58,7 @@ export function urlSitemap(entries: SitemapEntry[]): string {
     const modified = date && Number.isFinite(date.getTime()) ? `<lastmod>${escapeXml(date.toISOString())}</lastmod>` : "";
     return `  <url><loc>${escapeXml(absoluteUrl(path))}</loc>${modified}</url>`;
   });
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>`;
 }
 
 export function sectionSitemap(section: SitemapSection): string {
@@ -73,7 +73,7 @@ export function sitemapIndex(): string {
     ...industries.map(({ slug }) => `/sitemaps/industries/${slug}.xml`),
   ];
   const items = paths.map((path) => `  <sitemap><loc>${escapeXml(absoluteUrl(path))}</loc></sitemap>`);
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items.join("\n")}\n</sitemapindex>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items.join("\n")}\n</sitemapindex>`;
 }
 
 export function xmlResponse(body: string): Response {
