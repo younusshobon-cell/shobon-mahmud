@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     : true;
   return {
     rules: isProd
-      ? [{ userAgent: "*", allow: "/", disallow: ["/admin", "/api/admin"] }]
+      ? [{ userAgent: "*", allow: "/", disallow: ["/admin", "/api/"] }]
       : [{ userAgent: "*", disallow: "/" }],
     sitemap: `${siteConfig.url}/sitemap.xml`,
     host: siteConfig.url,

@@ -40,19 +40,42 @@ export function entriesFor(section: SitemapSection): SitemapEntry[] {
   }
 }
 
-export function sectionSitemap(section: SitemapSection): string {
-  const urls = entriesFor(section).map(({ path, lastModified }) => {
-    const modified = lastModified ? `<lastmod>${escapeXml(new Date(lastModified).toISOString())}</lastmod>` : "";
+export function industryEntries(slug: string): SitemapEntry[] | undefined {
+  const industry = industries.find((item) => item.slug === slug);
+  if (!industry) return undefined;
+  return [
+    { path: `/industries/${slug}` },
+    ...services.filter((item) => item.relatedIndustries.includes(slug) || industry.relatedServices.includes(item.slug)).map((item) => ({ path: `/services/${item.slug}` })),
+    ...locations.filter((item) => item.industries.includes(slug)).map((item) => ({ path: `/locations/${item.slug}` })),
+    ...posts.filter((item) => item.relatedIndustries?.includes(slug)).map((item) => ({ path: `/blog/${item.slug}`, lastModified: item.updated ?? item.date })),
+    ...caseStudies.filter((item) => !item.draft && item.industry === slug).map((item) => ({ path: `/portfolio/${item.slug}`, lastModified: item.date })),
+  ];
+}
+
+export function urlSitemap(entries: SitemapEntry[]): string {
+  const urls = [...new Map(entries.map((entry) => [entry.path, entry])).values()].map(({ path, lastModified }) => {
+    const date = lastModified ? new Date(lastModified) : undefined;
+    const modified = date && Number.isFinite(date.getTime()) ? `<lastmod>${escapeXml(date.toISOString())}</lastmod>` : "";
     return `  <url><loc>${escapeXml(absoluteUrl(path))}</loc>${modified}</url>`;
   });
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>`;
 }
 
+export function sectionSitemap(section: SitemapSection): string {
+  return urlSitemap(entriesFor(section));
+}
+
 export function sitemapIndex(): string {
-  const items = sitemapSections.map((section) => `  <sitemap><loc>${escapeXml(absoluteUrl(`/sitemaps/${section}.xml`))}</loc></sitemap>`);
+  // Read the same CMS collections as the public pages. Publishing content triggers
+  // the connected Vercel build, so new industries never need a manual XML edit.
+  const paths = [
+    ...sitemapSections.map((section) => `/sitemaps/${section}.xml`),
+    ...industries.map(({ slug }) => `/sitemaps/industries/${slug}.xml`),
+  ];
+  const items = paths.map((path) => `  <sitemap><loc>${escapeXml(absoluteUrl(path))}</loc></sitemap>`);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items.join("\n")}\n</sitemapindex>`;
 }
 
 export function xmlResponse(body: string): Response {
-  return new Response(body, { headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=0, s-maxage=3600" } });
+  return new Response(body, { headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=0, s-maxage=60, must-revalidate" } });
 }

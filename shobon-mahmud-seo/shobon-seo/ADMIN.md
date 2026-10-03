@@ -62,3 +62,19 @@ The collection editor also covers SEO, lists and fields that cannot be matched t
 **Publish** saves changed collections using their latest file SHA. Each collection is a separate commit. On partial failure, successful collections remain saved and remaining drafts stay in the editor. Wait for the Vercel deployment then reload the preview. Navigation warns before discarding unpublished changes. Draft edits are held in memory; they do not survive closing the browser. New pages become available after publishing and deploying.
 
 The iframe is limited to same-origin public routes, forms cannot submit, admin previews are excluded from first-party analytics, and catalog/read/write APIs require the existing admin session. Existing photos use `image-sources` overrides; empty values retain the original files. Only local uploaded image URLs are accepted for these overrides.
+
+## Automatic sitemaps and robots
+
+`/sitemap.xml` lists folder sitemaps for pages, services, locations, industries,
+blog and portfolio, plus `/sitemaps/industries/<industry-slug>.xml` for each industry.
+Industry sitemaps use the existing related-industry fields on services, locations
+and blog posts, and the industry field on published case studies. Unknown industry
+sitemap URLs return 404. Draft pages, posts and case studies are excluded.
+
+Publish content normally in Admin. Once the connected Vercel production deployment
+finishes, new pages and industries appear automatically; XML files need no manual
+editing. Plain custom pages go into pages.xml. New industry pages should be added
+in the Industries collection. Robots allows public production pages, blocks admin
+and API paths, declares the sitemap index, and blocks preview deployments.
+
+Verify with `node tests/sitemaps.test.cjs`.
