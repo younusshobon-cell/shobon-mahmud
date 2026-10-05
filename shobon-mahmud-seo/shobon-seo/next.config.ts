@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import locations from "./content/locations-locations.json";
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -40,6 +41,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     // Friendly aliases that match the navigation label "Work"
     return [
+      ...locations.map(({ slug }) => ({
+        source: `/locations/${slug}`,
+        destination: `/locations/seo-consultant-${slug}`,
+        permanent: true,
+      })),
       { source: "/work", destination: "/portfolio", permanent: true },
       { source: "/case-studies", destination: "/portfolio", permanent: true },
     ];

@@ -52,7 +52,7 @@ const steps = [
 ];
 
 export function DhakaLanding() {
-  const url = new URL("/locations/dhaka", siteConfig.url).toString();
+  const url = new URL("/locations/seo-consultant-dhaka", siteConfig.url).toString();
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -69,7 +69,7 @@ export function DhakaLanding() {
     <div lang="en">
       <section className="hero-surface relative overflow-hidden" data-hero-theme="dhaka">
         <Container className="relative pt-10 pb-16 sm:pt-14 lg:pb-24">
-          <Breadcrumbs items={[{ name: "Locations", href: "/locations" }, { name: "Dhaka", href: "/locations/dhaka" }]} />
+          <Breadcrumbs items={[{ name: "Locations", href: "/locations" }, { name: "Dhaka", href: "/locations/seo-consultant-dhaka" }]} />
           <HeroImageLayout
             alt="Dhaka location hero image"
             aside={

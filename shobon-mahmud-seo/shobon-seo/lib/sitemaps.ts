@@ -23,7 +23,7 @@ export function entriesFor(section: SitemapSection): SitemapEntry[] {
     case "services":
       return [{ path: "/services" }, ...services.map(({ slug }) => ({ path: `/services/${slug}` }))];
     case "locations":
-      return [{ path: "/locations" }, ...locations.map(({ slug }) => ({ path: `/locations/${slug}` }))];
+      return [{ path: "/locations" }, ...locations.map(({ slug }) => ({ path: `/locations/seo-consultant-${slug}` }))];
     case "industries":
       return [{ path: "/industries" }, ...industries.map(({ slug }) => ({ path: `/industries/${slug}` }))];
     case "blog": {

@@ -9,4 +9,4 @@ import type { Location } from "./types";
 export const locations: Location[] = cms_locations as Location[];
 
 export const getLocation = (slug: string) =>
-  locations.find((l) => l.slug === slug);
+  locations.find((l) => `seo-consultant-${l.slug}` === slug);

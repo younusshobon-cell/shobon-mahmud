@@ -6,9 +6,9 @@ function load(file, stubs = {}) {
   return mod.exports;
 }
 const validate = load('lib/admin/validation.ts', {'@/lib/content/editor': load('lib/content/editor.ts')}).validateContent;
-const image = {page: '/locations/saudi-arabia', key: 'hero', src: '/uploads/saudi.png', alt: 'Saudi hero'};
+const image = {page: '/locations/seo-consultant-saudi-arabia', key: 'hero', src: '/uploads/saudi.png', alt: 'Saudi hero'};
 assert.equal(validate('page-images', [image]), null);
-assert.equal(validate('page-images', [image, {...image, page: '/locations/dubai'}]), null);
+assert.equal(validate('page-images', [image, {...image, page: '/locations/seo-consultant-dubai'}]), null);
 assert.ok(validate('page-images', [image, image]));
 for (const src of ['javascript:alert(1)', '//evil.test/image.png', '/uploads/file.svg', '/admin', 'https://evil.test/a.jpg']) assert.ok(validate('page-images', [{...image, src}]));
 for (const page of ['/admin', '/api/admin/content', '//evil.test', '/about?x=1']) assert.ok(validate('page-images', [{...image, page}]));
@@ -26,7 +26,7 @@ assert.match(hero(), /src="\/uploads\/saudi.png"/);
 assert.match(hero(), /Original diagram/);
 assert.match(renderToStaticMarkup(React.createElement(Image, {src: '/original.png', alt: 'Original', width: 10, height: 10})), /data-unoptimized="true"/);
 assert.match(renderToStaticMarkup(React.createElement(EditableInlineImage, {src: '/original.png', alt: 'Original'})), /src="\/uploads\/saudi.png"/);
-pathname = '/locations/dubai';
+pathname = '/locations/seo-consultant-dubai';
 assert.doesNotMatch(hero(), /src="\/uploads\/saudi.png"/);
 assert.match(renderToStaticMarkup(React.createElement(Image, {src: '/original.png', alt: 'Original', width: 10, height: 10})), /src="\/original.png"/);
 console.log('PASS: page-scoped images, SSR hero overrides, original quality, native article images, stable keys and invalid URL / duplicate slot protection.');

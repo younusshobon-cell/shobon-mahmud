@@ -9,7 +9,7 @@ export function LocationCard({ location }: { location: Location }) {
   const inds = getIndustries(location.industries).slice(0, 3);
   return (
     <Link
-      href={`/locations/${location.slug}`}
+      href={`/locations/seo-consultant-${location.slug}`}
       className="interactive-card group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-white p-6 shadow-[0_12px_35px_-28px_rgba(15,26,43,0.65)] transition-all hover:-translate-y-1 hover:border-ink hover:shadow-[0_24px_48px_-25px_rgba(15,26,43,0.35)] sm:p-7"
     >
       <p className="text-sm text-muted">{location.country}</p>

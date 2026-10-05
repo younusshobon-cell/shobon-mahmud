@@ -31,7 +31,7 @@ type Props = { params: Promise<{ slug: string }> };
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return locations.map((l) => ({ slug: l.slug }));
+  return locations.map((l) => ({ slug: `seo-consultant-${l.slug}` }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const metadata = buildMetadata({
       title: l.seoTitle,
       description: l.intro,
-      path: "/locations/dhaka",
+      path: "/locations/seo-consultant-dhaka",
       absoluteTitle: true,
     });
     return {
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title: l.seoTitle,
     description: l.intro.slice(0, 158),
-    path: `/locations/${l.slug}`,
+    path: `/locations/seo-consultant-${l.slug}`,
   });
 }
 
@@ -60,7 +60,7 @@ export default async function LocationPage({ params }: Props) {
   const loc = getLocation((await params).slug);
   if (!loc) notFound();
   if (loc.slug === "dhaka") return <DhakaLanding />;
-  const path = `/locations/${loc.slug}`;
+  const path = `/locations/seo-consultant-${loc.slug}`;
   const studies = caseStudies
     .filter((c) => loc.industries.includes(c.industry))
     .slice(0, 3);

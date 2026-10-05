@@ -99,7 +99,7 @@ child.stderr.on("data", (x) => (output += x));
     assert.equal(visualResponse.status, 200);
     assert.ok(visualResponse.headers.get("cache-control").includes("no-store"));
     const visual = await visualResponse.json();
-    for (const path of ["/", "/about", "/contact", "/blog", "/services/technical-seo", "/locations/dhaka"]) assert.ok(visual.pages.includes(path));
+    for (const path of ["/", "/about", "/contact", "/blog", "/services/technical-seo", "/locations/seo-consultant-dhaka"]) assert.ok(visual.pages.includes(path));
     assert.ok(!visual.pages.includes("/admin"));
     assert.ok(visual.fields.some(f => f.id === "copy-components-sections-Hero" && f.path[0] === "text_002"));
     assert.equal(visual.images.length, 6);
