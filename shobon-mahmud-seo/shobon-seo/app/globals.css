@@ -408,3 +408,10 @@ background:#f6f8f5}
   .hero-media img { transition: filter .4s ease; }
   .hero-media:hover img { filter: drop-shadow(0 10px 18px rgba(15,26,43,.15)); }
 }
+
+/* Lift only the side-by-side Dhaka hero image to align with the main copy. */
+@media (min-width: 1024px) {
+  .hero-surface[data-hero-theme="dhaka"] .hero-media {
+    transform: translateY(-40px);
+  }
+}
