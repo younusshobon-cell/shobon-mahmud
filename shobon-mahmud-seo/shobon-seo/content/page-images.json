@@ -16,5 +16,11 @@
     "key": "hero",
     "src": "/uploads/14d4bd28-f59f-47e1-a346-7b0675cad25d.png",
     "alt": "Dhaka location hero image"
+  },
+  {
+    "page": "/locations/san-francisco",
+    "key": "hero",
+    "src": "/uploads/93fd47c0-6422-4ae3-bdd0-3093444646f7.png",
+    "alt": "Grow a San Francisco business on Google and across AI discovery."
   }
 ]
