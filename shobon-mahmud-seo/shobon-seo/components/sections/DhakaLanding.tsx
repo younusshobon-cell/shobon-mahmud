@@ -1,6 +1,7 @@
 
 import pageCopy from "@/content/copy-components-sections-DhakaLanding.json";
 import { MapPin, Search, Megaphone, Globe, MessageCircle, BarChart3, ArrowUpRight, Check, Stethoscope, Store, CalendarDays } from "lucide-react";
+import { HeroImageLayout } from "@/components/content/EditableImage";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/content/Section";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
@@ -69,7 +70,12 @@ export function DhakaLanding() {
       <section className="relative overflow-hidden bg-[#eef5f1]">
         <Container className="relative pt-10 pb-16 sm:pt-14 lg:pb-24">
           <Breadcrumbs items={[{ name: "Locations", href: "/locations" }, { name: "Dhaka", href: "/locations/dhaka" }]} />
-          <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+          <HeroImageLayout
+            alt="Dhaka location hero image"
+            aside={
+              <div aria-hidden="true" className="aspect-[4/3] w-full rounded-[28px] border border-dashed border-[#b8d1c4] bg-[#e4efe8]" />
+            }
+          >
             <div>
               <p className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[#14604b]"><MapPin className="size-4" aria-hidden /> {pageCopy.text_069}</p>
               <h1 className="t-h1 text-ink">{pageCopy.text_070}</h1>
@@ -78,13 +84,8 @@ export function DhakaLanding() {
               <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href={pageCopy.text_075}>{pageCopy.text_076}</ButtonLink><ButtonLink href={pageCopy.text_077} variant="secondary">{pageCopy.text_078}</ButtonLink></div>
               <p className="mt-4 text-sm text-muted">{pageCopy.text_079}</p>
             </div>
-            <div className="rounded-[28px] border border-[#cbded4] bg-white p-6 shadow-[0_24px_70px_-35px_rgba(20,96,75,.3)] sm:p-8">
-              <div className="flex items-center justify-between border-b border-line pb-5"><span className="text-sm font-semibold text-[#14604b]">{pageCopy.text_080}</span><Store className="size-5 text-[#14604b]" aria-hidden /></div>
-              <p className="mt-6 text-2xl font-semibold text-ink">{pageCopy.text_081}</p>
-              <ol className="mt-7 space-y-4">{[{ icon: Search, title: pageCopy.text_082, text: pageCopy.text_083 }, { icon: Megaphone, title: pageCopy.text_084, text: pageCopy.text_085 }, { icon: CalendarDays, title: pageCopy.text_086, text: pageCopy.text_087 }].map(({ icon: Icon, title, text }, i) => <li key={title} className="flex items-center gap-4 rounded-2xl bg-[#f3f7f5] p-4"><span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-white text-[#14604b]"><Icon className="size-5" aria-hidden /></span><div><span className="text-xs text-muted">{pageCopy.text_088}{i + 1}</span><h2 className="text-base font-semibold text-ink">{title}</h2><p className="mt-1 text-sm text-muted">{text}</p></div></li>)}</ol>
-              <a href={pageCopy.text_089} className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#153d32] px-5 py-4 text-white"><span className="text-sm">{pageCopy.text_090}</span><span className="text-xl font-semibold">{pageCopy.text_091}</span></a>
-            </div>
-          </div>
+
+          </HeroImageLayout>
           <nav aria-label={pageCopy.text_092} className="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-[#cbded4] pt-6 text-sm font-medium text-[#14604b]">
             <a href={pageCopy.text_093}>{pageCopy.text_094}</a><a href={pageCopy.text_095}>{pageCopy.text_096}</a><a href={pageCopy.text_097}>{pageCopy.text_098}</a><a href={pageCopy.text_099}>{pageCopy.text_100}</a><a href={pageCopy.text_101}>{pageCopy.text_102}</a>
           </nav>
@@ -92,7 +93,19 @@ export function DhakaLanding() {
       </section>
 
       <Section labelledBy="dhaka-context">
-        <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20"><div><p className="mb-4 text-sm font-medium text-[#14604b]">{pageCopy.text_103}</p><h2 id="dhaka-context" className="t-h2 text-ink">{pageCopy.text_104}</h2></div><div className="t-lead space-y-5 text-muted"><p>{pageCopy.text_105}</p><p>{pageCopy.text_106}</p></div></div>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+          <div>
+            <p className="mb-4 text-sm font-medium text-[#14604b]">{pageCopy.text_103}</p>
+            <h2 id="dhaka-context" className="t-h2 text-ink">{pageCopy.text_104}</h2>
+            <div className="t-lead mt-6 space-y-5 text-muted"><p>{pageCopy.text_105}</p><p>{pageCopy.text_106}</p></div>
+          </div>
+            <div className="rounded-[28px] border border-[#cbded4] bg-white p-6 shadow-[0_24px_70px_-35px_rgba(20,96,75,.3)] sm:p-8">
+              <div className="flex items-center justify-between border-b border-line pb-5"><span className="text-sm font-semibold text-[#14604b]">{pageCopy.text_080}</span><Store className="size-5 text-[#14604b]" aria-hidden /></div>
+              <p className="mt-6 text-2xl font-semibold text-ink">{pageCopy.text_081}</p>
+              <ol className="mt-7 space-y-4">{[{ icon: Search, title: pageCopy.text_082, text: pageCopy.text_083 }, { icon: Megaphone, title: pageCopy.text_084, text: pageCopy.text_085 }, { icon: CalendarDays, title: pageCopy.text_086, text: pageCopy.text_087 }].map(({ icon: Icon, title, text }, i) => <li key={title} className="flex items-center gap-4 rounded-2xl bg-[#f3f7f5] p-4"><span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-white text-[#14604b]"><Icon className="size-5" aria-hidden /></span><div><span className="text-xs text-muted">{pageCopy.text_088}{i + 1}</span><h2 className="text-base font-semibold text-ink">{title}</h2><p className="mt-1 text-sm text-muted">{text}</p></div></li>)}</ol>
+              <a href={pageCopy.text_089} className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#153d32] px-5 py-4 text-white"><span className="text-sm">{pageCopy.text_090}</span><span className="text-xl font-semibold">{pageCopy.text_091}</span></a>
+            </div>
+        </div>
       </Section>
 
       <Section tone="muted" labelledBy="dhaka-problems">
