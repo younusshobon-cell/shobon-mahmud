@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-portfolio-page.json";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -20,6 +21,7 @@ export const metadata: Metadata = buildMetadata({
 export default function PortfolioPage() {
   return (
     <>
+      <PageSchema path={"/portfolio"} />
       <PageHero
         crumbs={[{ name: "Work", href: "/portfolio" }]}
         kicker={pageCopy.text_003}

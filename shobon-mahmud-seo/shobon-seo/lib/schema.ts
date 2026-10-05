@@ -1,4 +1,5 @@
-import { siteConfig, activeSocials } from "./site";
+import { siteConfig } from "./site";
+import sameAs from "@/content/schema-sameAs.json";
 import type { FAQ, Post, Service } from "./content/types";
 
 const url = (path = "/") => new URL(path, siteConfig.url).toString();
@@ -26,7 +27,7 @@ export function personSchema() {
       "Keyword research",
       "Link building",
     ],
-    sameAs: activeSocials().map((s) => s.href),
+    sameAs,
     ...(siteConfig.email ? { email: `mailto:${siteConfig.email}` } : {}),
   };
 }
@@ -75,6 +76,7 @@ export function articleSchema(post: Post, path: string) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `${url(path)}#article`,
     headline: post.title,
     description: post.description,
     datePublished: post.date,
@@ -94,6 +96,7 @@ export function serviceSchema(service: Service, path: string, areaServed?: strin
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url(path)}#service`,
     name: service.name,
     serviceType: service.name,
     description: service.summary,

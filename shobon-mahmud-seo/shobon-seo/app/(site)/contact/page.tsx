@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-contact-page.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
@@ -25,6 +26,7 @@ const contactEmail = siteConfig.email || "younusshobon@gmail.com";
 export default function ContactPage() {
   return (
     <>
+      <PageSchema path={"/contact"} />
       <section className="hero-surface" style={heroTheme("/contact")}>
         <Container className="pt-10 pb-20 sm:pt-14 lg:pb-28">
           <Breadcrumbs items={[{ name: "Contact", href: "/contact" }]} />

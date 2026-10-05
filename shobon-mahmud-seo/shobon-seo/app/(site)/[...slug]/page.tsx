@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { customPages } from '@/lib/content/pages';
@@ -18,4 +19,4 @@ export default async function Page({ params }: {
     params: Promise<{
         slug: string[];
     }>;
-}) { const p = await pageFor(params); return <article className="mx-auto max-w-4xl px-6 py-20"><header className="mb-12"><h1 className="text-4xl font-semibold tracking-tight">{p.title}</h1><p className="mt-5 text-lg text-muted">{p.description}</p></header><MarkdownBody body={p.body}/></article>; }
+}) { const p = await pageFor(params); return <><PageSchema path={`/${p.slug}`} /><article className="mx-auto max-w-4xl px-6 py-20"><header className="mb-12"><h1 className="text-4xl font-semibold tracking-tight">{p.title}</h1><p className="mt-5 text-lg text-muted">{p.description}</p></header><MarkdownBody body={p.body}/></article></>; }

@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-blog-slug-page.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
@@ -61,6 +62,8 @@ export default async function ArticlePage({ params }: Props) {
     ].slice(0, 3);
 
   return (
+    <>
+      <PageSchema path={path} />
     <article>
       <section className="hero-surface" style={heroTheme(path)}>
         <Container className="pt-10 pb-12 sm:pt-14 lg:pb-16">
@@ -196,5 +199,6 @@ export default async function ArticlePage({ params }: Props) {
       </Section>
       <JsonLd data={articleSchema(post, path)} />
     </article>
+    </>
   );
 }

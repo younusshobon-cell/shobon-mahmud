@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-privacy-page.json";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -13,6 +14,8 @@ export const metadata: Metadata = buildMetadata({
 // TODO: review with a qualified professional for your jurisdiction before launch.
 export default function PrivacyPage() {
   return (
+    <>
+      <PageSchema path={"/privacy"} />
     <LegalPage
       title={pageCopy.text_002}
       path="/privacy"
@@ -34,5 +37,6 @@ export default function PrivacyPage() {
         {pageCopy.text_014}
       </p>
     </LegalPage>
+    </>
   );
 }

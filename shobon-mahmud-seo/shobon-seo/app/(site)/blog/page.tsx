@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-blog-page.json";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -12,6 +13,8 @@ export const metadata: Metadata = buildMetadata({
 
 export default function BlogPage() {
   return (
+    <>
+    <PageSchema path={"/blog"} />
     <BlogIndex
       title={pageCopy.text_003}
       intro={pageCopy.text_004}
@@ -20,5 +23,6 @@ export default function BlogPage() {
       totalPages={Math.ceil(posts.length / POSTS_PER_PAGE)}
       showFeatured
     />
+    </>
   );
 }

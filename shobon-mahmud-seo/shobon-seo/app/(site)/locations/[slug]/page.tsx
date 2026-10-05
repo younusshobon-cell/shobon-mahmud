@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-locations-slug-page.json";
 import type { Metadata } from "next";
 import { DhakaLanding } from "@/components/sections/DhakaLanding";
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocationPage({ params }: Props) {
   const loc = getLocation((await params).slug);
   if (!loc) notFound();
-  if (loc.slug === "dhaka") return <DhakaLanding />;
+  if (loc.slug === "dhaka") return <><PageSchema path="/locations/seo-consultant-dhaka" /><DhakaLanding /></>;
   const path = `/locations/seo-consultant-${loc.slug}`;
   const studies = caseStudies
     .filter((c) => loc.industries.includes(c.industry))
@@ -69,6 +70,7 @@ export default async function LocationPage({ params }: Props) {
 
   return (
     <>
+      <PageSchema path={path} />
       <PageHero
         theme={loc.slug}
         tone={loc.slug === "saudi-arabia" ? "dark" : "light"}

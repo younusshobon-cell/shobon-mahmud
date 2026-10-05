@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-industries-slug-page.json";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -49,6 +50,7 @@ export default async function IndustryPage({ params }: Props) {
 
   return (
     <>
+      <PageSchema path={path} />
       <PageHero
         crumbs={[
           { name: "Industries", href: "/industries" },

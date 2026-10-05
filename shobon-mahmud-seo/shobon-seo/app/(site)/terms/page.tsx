@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-terms-page.json";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -13,6 +14,8 @@ export const metadata: Metadata = buildMetadata({
 // TODO: review with a qualified professional for your jurisdiction before launch.
 export default function TermsPage() {
   return (
+    <>
+      <PageSchema path={"/terms"} />
     <LegalPage
       title={pageCopy.text_002}
       path="/terms"
@@ -31,5 +34,6 @@ export default function TermsPage() {
       <h2>{pageCopy.text_011}</h2>
       <p>{pageCopy.text_012}</p>
     </LegalPage>
+    </>
   );
 }

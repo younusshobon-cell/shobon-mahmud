@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
@@ -28,6 +29,8 @@ export default async function CategoryPage({ params }: Props) {
   const cat = getCategory((await params).category);
   if (!cat) notFound();
   return (
+    <>
+    <PageSchema path={`/blog/category/${cat.slug}`} />
     <BlogIndex
       title={cat.name}
       intro={cat.description}
@@ -38,5 +41,6 @@ export default async function CategoryPage({ params }: Props) {
       ]}
       activeCategory={cat.slug}
     />
+    </>
   );
 }

@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-page.json";
 import type { Metadata } from "next";
 import Image from "@/components/content/EditableImage";
@@ -33,6 +34,7 @@ export const metadata: Metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
+      <PageSchema path={"/"} />
       <Hero />
       <TrustStrip />
       <Capabilities />

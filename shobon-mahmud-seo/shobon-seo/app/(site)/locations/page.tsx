@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-locations-page.json";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -37,6 +38,7 @@ const orderedLocations = [...locations].sort(
 export default function LocationsPage() {
   return (
     <>
+      <PageSchema path={"/locations"} />
       <PageHero
         crumbs={[{ name: "Locations", href: "/locations" }]}
         kicker={pageCopy.text_003}

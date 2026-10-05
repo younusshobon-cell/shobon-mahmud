@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-services-slug-page.json";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -55,6 +56,7 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <>
+      <PageSchema path={path} />
       <PageHero
         crumbs={[
           { name: "Services", href: "/services" },

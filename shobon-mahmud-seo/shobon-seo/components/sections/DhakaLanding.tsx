@@ -62,7 +62,7 @@ export function DhakaLanding() {
     url,
     description: pageCopy.text_065,
     areaServed: { "@type": "City", name: "Dhaka", containedInPlace: { "@type": "Country", name: "Bangladesh" } },
-    provider: { "@type": "Person", name: siteConfig.name, url: new URL("/about", siteConfig.url).toString() },
+    provider: { "@id": `${siteConfig.url}/#person`, "@type": "Person", name: siteConfig.name, url: new URL("/about", siteConfig.url).toString() },
     hasOfferCatalog: { "@type": "OfferCatalog", name: pageCopy.text_066, itemListElement: [{ "@type": "Offer", price: "15000", priceCurrency: "BDT", url: url + "#website-offer", itemOffered: { "@type": "Service", name: pageCopy.text_067, description: pageCopy.text_068 } }] },
   };
   return (

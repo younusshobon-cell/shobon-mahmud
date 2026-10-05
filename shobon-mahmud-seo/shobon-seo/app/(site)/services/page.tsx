@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-services-page.json";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -22,6 +23,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ServicesPage() {
   return (
     <>
+      <PageSchema path={"/services"} />
       <PageHero
         crumbs={[{ name: "Services", href: "/services" }]}
         kicker={pageCopy.text_003}

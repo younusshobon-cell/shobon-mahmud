@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-blog-page-page-page.json";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -32,6 +33,8 @@ export default async function BlogPaged({ params }: Props) {
   if (!Number.isInteger(n) || n < 2 || n > totalPages) notFound();
   const items = posts.slice((n - 1) * POSTS_PER_PAGE, n * POSTS_PER_PAGE);
   return (
+    <>
+    <PageSchema path={`/blog/page/${n}`} />
     <BlogIndex
       title={`Articles — page ${n}`}
       intro={pageCopy.text_001}
@@ -43,5 +46,6 @@ export default async function BlogPaged({ params }: Props) {
       page={n}
       totalPages={totalPages}
     />
+    </>
   );
 }

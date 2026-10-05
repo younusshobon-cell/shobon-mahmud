@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-portfolio-slug-page.json";
 import type { Metadata } from "next";
 import Image from "@/components/content/EditableImage";
@@ -73,6 +74,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <>
+      <PageSchema path={path} />
       <PageHero
         tone="dark"
         crumbs={[

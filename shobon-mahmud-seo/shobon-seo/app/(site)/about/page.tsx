@@ -1,15 +1,14 @@
+import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-about-page.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
 import Image from "@/components/content/EditableImage";
 import { buildMetadata } from "@/lib/seo";
-import { profilePageSchema } from "@/lib/schema";
 import { experience, siteConfig, tools } from "@/lib/site";
 import { photos } from "@/lib/images";
 import { industries } from "@/lib/content/industries";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { JsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/content/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
@@ -57,6 +56,7 @@ const workingStyle = [
 export default function AboutPage() {
   return (
     <>
+      <PageSchema path={"/about"} />
       <section className="hero-surface" style={heroTheme("/about")}>
         <Container className="pt-10 sm:pt-14">
           <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
@@ -241,7 +241,7 @@ export default function AboutPage() {
         <FAQ faqs={aboutFaqs} title={pageCopy.text_052} />
       </Section>
       <FinalCta title="Let’s find the right SEO approach for your business." />
-      <JsonLd data={profilePageSchema()} />
+
     </>
   );
 }
