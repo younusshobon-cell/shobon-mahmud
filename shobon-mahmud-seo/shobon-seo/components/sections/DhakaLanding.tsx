@@ -67,7 +67,7 @@ export function DhakaLanding() {
   };
   return (
     <div lang="en">
-      <section className="relative overflow-hidden bg-[#eef5f1]">
+      <section className="hero-surface relative overflow-hidden" data-hero-theme="dhaka">
         <Container className="relative pt-10 pb-16 sm:pt-14 lg:pb-24">
           <Breadcrumbs items={[{ name: "Locations", href: "/locations" }, { name: "Dhaka", href: "/locations/dhaka" }]} />
           <HeroImageLayout
@@ -77,7 +77,7 @@ export function DhakaLanding() {
             }
           >
             <div>
-              <p className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[#14604b]"><MapPin className="size-4" aria-hidden /> {pageCopy.text_069}</p>
+              <p className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-link"><MapPin className="size-4" aria-hidden /> {pageCopy.text_069}</p>
               <h1 className="t-h1 text-ink">{pageCopy.text_070}</h1>
               <p className="t-lead mt-6 text-ink-2">{pageCopy.text_071}</p>
               <p className="mt-4 leading-relaxed text-muted">{pageCopy.text_072}<strong className="text-ink">{pageCopy.text_073}</strong>{pageCopy.text_074}</p>
@@ -86,7 +86,7 @@ export function DhakaLanding() {
             </div>
 
           </HeroImageLayout>
-          <nav aria-label={pageCopy.text_092} className="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-[#cbded4] pt-6 text-sm font-medium text-[#14604b]">
+          <nav aria-label={pageCopy.text_092} className="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-line-strong pt-6 text-sm font-medium text-link">
             <a href={pageCopy.text_093}>{pageCopy.text_094}</a><a href={pageCopy.text_095}>{pageCopy.text_096}</a><a href={pageCopy.text_097}>{pageCopy.text_098}</a><a href={pageCopy.text_099}>{pageCopy.text_100}</a><a href={pageCopy.text_101}>{pageCopy.text_102}</a>
           </nav>
         </Container>
