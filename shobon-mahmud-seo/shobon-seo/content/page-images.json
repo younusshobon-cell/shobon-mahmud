@@ -10,5 +10,11 @@
     "key": "[\"/_next/static/immutable/media/portrait-studio.1t0mv5pc3ru4h.jpg\",\"Shobon Mahmud, SEO specialist, smiling in a white shirt against a navy background\"]",
     "src": "/uploads/33ed95d2-bc94-4d15-92cf-f22af45da61d.jpg",
     "alt": "Shobon Mahmud, SEO specialist, smiling in a white shirt against a navy background"
+  },
+  {
+    "page": "/locations/dhaka",
+    "key": "hero",
+    "src": "/uploads/14d4bd28-f59f-47e1-a346-7b0675cad25d.png",
+    "alt": "Dhaka location hero image"
   }
 ]
