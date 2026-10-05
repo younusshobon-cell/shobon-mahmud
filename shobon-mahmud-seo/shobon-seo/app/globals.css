@@ -412,6 +412,6 @@ background:#f6f8f5}
 /* Lift only the side-by-side Dhaka hero image to align with the main copy. */
 @media (min-width: 1024px) {
   .hero-surface[data-hero-theme="dhaka"] .hero-media {
-    transform: translateY(-40px);
+    translate: 0 -40px;
   }
 }
