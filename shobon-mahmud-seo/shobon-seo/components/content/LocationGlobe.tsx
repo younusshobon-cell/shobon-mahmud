@@ -25,7 +25,7 @@ export function LocationGlobe({ places }: { places: Place[] }) {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
-    let frame = 0, previous = 0, lastDraw = 0, visible = true, width = 0;
+    let frame = 0, previous = 0, visible = true, width = 0;
     const projection = geoOrthographic().clipAngle(90).precision(.4);
     const path = geoPath(projection, ctx);
     const grid = geoGraticule10();
@@ -96,10 +96,10 @@ export function LocationGlobe({ places }: { places: Place[] }) {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw();
     };
     const tick = (time: number) => {
-      if (visible && !document.hidden && !paused && !reduced && time - lastDraw >= 33) {
+      if (visible && !document.hidden && !paused && !reduced) {
         const delta = previous ? Math.min(time - previous, 80) : 0;
-        angle.current.lng = (angle.current.lng + delta * .004) % 360;
-        draw(); lastDraw = time;
+        angle.current.lng = (angle.current.lng + delta * .009) % 360;
+        draw();
       }
       previous = time;
       frame = requestAnimationFrame(tick);
