@@ -49,12 +49,6 @@
   },
   {
     "page": "/",
-    "key": "[\"/_next/static/immutable/media/portrait-casual.0sgd0-x2_5ot6.jpg\",\"Shobon Mahmud\"]",
-    "src": "/uploads/4405e9aa-9cc3-4093-b253-1f698bc09176.png",
-    "alt": "Shobon Mahmud"
-  },
-  {
-    "page": "/",
     "key": "[\"/_next/static/immutable/media/portrait-smile.3t8231nano0le.jpg\",\"\"]",
     "src": "/uploads/7350e26a-b472-4bae-9e14-98732e8bccdd.png",
     "alt": ""
@@ -64,5 +58,11 @@
     "key": "[\"/_next/static/immutable/media/portrait-outdoor.0adwpkvmqt_20.jpg\",\"Shobon Mahmud standing on a tree-lined road in a white shirt\"]",
     "src": "/uploads/1fdc15eb-87ce-4b8c-97fc-82a173e1b27d.jpg",
     "alt": "Shobon Mahmud standing on a tree-lined road in a white shirt"
+  },
+  {
+    "page": "/",
+    "key": "[\"/_next/static/immutable/media/portrait-casual.0sgd0-x2_5ot6.jpg\",\"Shobon Mahmud\"]",
+    "src": "/uploads/935e015d-2b54-43a3-a185-f3ea60b5f0c4.png",
+    "alt": "Shobon Mahmud"
   }
 ]
