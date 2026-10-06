@@ -5,6 +5,10 @@ import Image from "@/components/content/EditableImage";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { photos } from "@/lib/images";
+import pageImages from "@/content/page-images.json";
+
+// Reuse the current home footer portrait across every shared footer CTA.
+const footerPhoto = pageImages.find(image => image.page === "/" && image.key.includes("portrait-casual"));
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 
@@ -23,7 +27,7 @@ export function FinalCta({
             <p className="t-lead mt-5 max-w-xl text-muted">{body}</p>
           </div>
           <div className="relative rounded-[22px] border border-line bg-white/80 p-6 sm:p-7">
-            <Image src={photos.casual.src} alt={pageCopy.text_003} width={640} height={360} sizes="(min-width: 1024px) 360px, 90vw" className="aspect-[16/9] w-full rounded-[16px] object-cover" />
+            <Image src={footerPhoto?.src ?? photos.casual.src} alt={footerPhoto?.alt || pageCopy.text_003} unoptimized={Boolean(footerPhoto)} width={640} height={360} sizes="(min-width: 1024px) 360px, 90vw" className="aspect-[16/9] w-full rounded-[16px] object-cover" />
             <div className="mt-6 flex flex-col gap-3">
               <ButtonLink href={pageCopy.text_004}>{pageCopy.text_005}<ArrowUpRight aria-hidden className="size-4 shrink-0" /></ButtonLink>
               {siteConfig.email ? <ButtonLink href={`mailto:${siteConfig.email}`} variant="secondary"><Mail aria-hidden className="size-4 shrink-0" />{pageCopy.text_006}</ButtonLink> : null}
