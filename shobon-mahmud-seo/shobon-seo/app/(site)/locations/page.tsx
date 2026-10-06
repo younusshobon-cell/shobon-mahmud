@@ -1,3 +1,4 @@
+import { LocationGlobe } from "@/components/content/LocationGlobe";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-locations-page.json";
 import type { Metadata } from "next";
@@ -44,6 +45,7 @@ export default function LocationsPage() {
         kicker={pageCopy.text_003}
         title={pageCopy.text_004}
         intro={pageCopy.text_005}
+        aside={<LocationGlobe places={orderedLocations.map(({ slug, city, coords }) => ({ slug, city, coords }))} />}
       />
       <Section className="pt-0 sm:pt-0 lg:pt-0">
         <h2 className="sr-only">{pageCopy.text_006}</h2>
