@@ -70,5 +70,11 @@
     "key": "hero",
     "src": "/uploads/8eed3608-d3ad-4dfb-95ad-c7f33f8dcf33.png",
     "alt": "Help Austin customers find you, understand you and choose you."
+  },
+  {
+    "page": "/locations/seo-consultant-london",
+    "key": "hero",
+    "src": "/uploads/7c3c50a8-843f-4758-9cb4-df50a47c141a.png",
+    "alt": "Help London customers find your business, from Google to AI answers."
   }
 ]
