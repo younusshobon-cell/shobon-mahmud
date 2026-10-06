@@ -110,6 +110,7 @@ export default async function LocationPage({ params }: Props) {
         </ButtonLink>
       </PageHero>
 
+      <div className="location-content" data-location={loc.slug}>
       <div className="hero-grid-band border-y border-line">
         <div className="mx-auto grid max-w-7xl gap-3 px-5 py-5 sm:grid-cols-3 sm:px-8">
           {[pageCopy.text_007, pageCopy.text_008, pageCopy.text_009].map(
@@ -129,21 +130,15 @@ export default async function LocationPage({ params }: Props) {
           )}
         </div>
       </div>
-      {loc.slug === "london" ? (
-        <nav aria-label="London page sections" className="london-section-nav">
-          <div className="mx-auto flex max-w-7xl flex-wrap gap-2 px-5 py-5 sm:px-8">
-            <a href="#context">London market</a>
-            <a href="#opps">Growth opportunities</a>
-            <a href="#growth-path">The approach</a>
-            <a href="#london-services">SEO services</a>
-            <a href="#london-faqs">FAQs</a>
-          </div>
-        </nav>
-      ) : (
-        <Section className="pt-10 sm:pt-10 lg:pt-10">
-          <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
-        </Section>
-      )}
+      <nav aria-label={`${loc.city} page sections`} className="location-section-nav">
+        <div className="mx-auto flex max-w-7xl flex-wrap gap-2 px-5 py-5 sm:px-8">
+          <a href="#context">{loc.city} market</a>
+          <a href="#opps">Growth opportunities</a>
+          <a href="#growth-path">The approach</a>
+          <a href={loc.slug === "london" ? "#london-services" : "#location-services"}>SEO services</a>
+          <a href={loc.slug === "london" ? "#london-faqs" : "#location-faqs"}>FAQs</a>
+        </div>
+      </nav>
 
       <Section tone="muted" labelledBy="context">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -223,7 +218,7 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </Section>
       {loc.slug === "oman" && <OmanDelivery />}
-      <Section id={loc.slug === "london" ? "london-services" : undefined}>
+      <Section id={loc.slug === "london" ? "london-services" : "location-services"}>
         <RelatedServices
           items={getServices(loc.relatedServices)}
           title={`Services for ${loc.city} businesses`}
@@ -234,22 +229,21 @@ export default async function LocationPage({ params }: Props) {
           <RelatedCaseStudies items={studies} />
         </Section>
       )}
-      {loc.slug === "london" && (
-        <Section labelledBy="london-coverage" className="london-map-section">
-          <div className="mb-8 max-w-2xl">
-            <h2 id="london-coverage" className="t-h2 text-ink">Built around your London market</h2>
-            <p className="mt-5 leading-relaxed text-muted">Your borough, customers and actual service area shape the strategy. I work remotely from Dubai with London teams, with clear priorities and agreed communication.</p>
-          </div>
-          <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
-        </Section>
-      )}
-      <Section id={loc.slug === "london" ? "london-faqs" : undefined}>
+      <Section labelledBy="location-coverage" className="location-map-section">
+        <div className="mb-8 max-w-2xl">
+          <h2 id="location-coverage" className="t-h2 text-ink">Built around your {loc.city} market</h2>
+          <p className="mt-5 leading-relaxed text-muted">Your customers and actual service area shape the strategy. I work remotely from Dubai with {loc.city} teams, with clear priorities and agreed communication.</p>
+        </div>
+        <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
+      </Section>
+      <Section id={loc.slug === "london" ? "london-faqs" : "location-faqs"}>
         <FAQ faqs={extra.faqs} title={`Organic growth in ${loc.city}: FAQs`} />
       </Section>
       <FinalCta
         title={loc.slug === "oman" ? "Give your Oman project a clearer path from discovery to action." : `Reach more customers in ${loc.city} through search.`}
         body="Tell me about your market, your competitors and what you've tried. I'll share how I'd approach it."
       />
+      </div>
       {localSeo && <JsonLd data={serviceSchema(localSeo, path, loc.city)} />}
     </div>
   );
