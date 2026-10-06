@@ -76,5 +76,11 @@
     "key": "hero",
     "src": "/uploads/7c3c50a8-843f-4758-9cb4-df50a47c141a.png",
     "alt": "Help London customers find your business, from Google to AI answers."
+  },
+  {
+    "page": "/about",
+    "key": "[\"/images/about/photo-1.svg\",\"Photo space: Meet Shobon\"]",
+    "src": "/uploads/87fc3e62-9e33-4b4c-852f-f6039ea311b7.png",
+    "alt": "Photo space: Meet Shobon"
   }
 ]
