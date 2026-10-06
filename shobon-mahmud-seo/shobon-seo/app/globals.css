@@ -514,3 +514,10 @@ background:#f6f8f5}
   animation: none;
   opacity: .2;
 }
+
+/* Align Austin hero media slightly higher beside the heading. */
+@media (min-width: 1024px) {
+  .hero-surface[data-hero-theme="austin"] .hero-media {
+    translate: 0 -32px;
+  }
+}
