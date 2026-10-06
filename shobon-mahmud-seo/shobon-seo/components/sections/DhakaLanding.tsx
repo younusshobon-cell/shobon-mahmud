@@ -92,6 +92,7 @@ export function DhakaLanding() {
         </Container>
       </section>
 
+      <div className="location-content" data-location="dhaka">
       <Section labelledBy="dhaka-context">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <div>
@@ -144,6 +145,7 @@ export function DhakaLanding() {
       <Section id="dhaka-faq" tone="muted"><FAQ faqs={faqs} title={pageCopy.text_183} /></Section>
 
       <Section tone="dark" labelledBy="dhaka-contact"><div className="max-w-3xl"><p className="mb-4 text-sm text-[#bbdfce]">{pageCopy.text_184}</p><h2 id="dhaka-contact" className="t-h2 text-on-night">{pageCopy.text_185}</h2><p className="t-lead mt-6 text-on-night-muted">{pageCopy.text_186}</p><div className="mt-8 flex flex-wrap gap-3"><ButtonLink href={pageCopy.text_187} variant="light">{pageCopy.text_188}</ButtonLink>{siteConfig.email && <ButtonLink href={"mailto:" + siteConfig.email} variant="outline-light">{pageCopy.text_189}</ButtonLink>}</div></div></Section>
+      </div>
       <JsonLd data={schema} />
     </div>
   );
