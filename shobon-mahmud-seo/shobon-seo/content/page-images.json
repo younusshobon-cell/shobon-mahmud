@@ -79,8 +79,14 @@
   },
   {
     "page": "/about",
+    "key": "[\"/images/about/photo-2.svg\",\"Photo space: Our growth team\"]",
+    "src": "/uploads/bf1ad55e-5746-41ad-937d-586110a2cf27.jpg",
+    "alt": "Photo space: Our growth team"
+  },
+  {
+    "page": "/about",
     "key": "[\"/images/about/photo-1.svg\",\"Photo space: Meet Shobon\"]",
-    "src": "/uploads/87fc3e62-9e33-4b4c-852f-f6039ea311b7.png",
+    "src": "/uploads/f6f19aa5-5eb5-444e-921f-e0e1005f247e.jpg",
     "alt": "Photo space: Meet Shobon"
   }
 ]
