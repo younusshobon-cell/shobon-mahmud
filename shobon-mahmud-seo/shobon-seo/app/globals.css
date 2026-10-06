@@ -597,3 +597,76 @@ background:#f6f8f5}
 .hero-surface[data-hero-theme="oman"]::after { animation: none; background-image: none; }
 .hero-surface[data-hero-theme="oman"] .site-button:not(.border) { background-color:#18383d; color:#fff; }
 .hero-surface[data-hero-theme="oman"] .site-button:not(.border):hover { background-color:#24555a; }
+
+
+/* London page: consistent UK palette, clear reading rhythm and useful navigation. */
+.london-page {
+  --color-paper: #ffffff;
+  --color-paper-2: #f1f5fa;
+  --color-ink: #152b49;
+  --color-ink-2: #293f5c;
+  --color-muted: #43556c;
+  --color-line: #d8e1ec;
+  --color-line-strong: #9aaabd;
+  --color-link: #012169;
+  --color-link-hover: #001747;
+  background: #ffffff;
+}
+.london-page > section:not(.hero-surface) { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
+.london-page > section.bg-paper-2 { background-color: #f1f5fa; }
+.london-page .hero-grid-band { background: #eaf0f7; border-color: #d8e1ec; }
+.london-page .hero-grid-band > div > div { border-color: #d8e1ec; box-shadow: none; }
+.london-page .hero-grid-band span { color: #b50f2b; }
+.london-section-nav { border-bottom: 1px solid #d8e1ec; background: #fff; }
+.london-section-nav a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: .65rem 1rem; border: 1px solid #d8e1ec; border-radius: 999px;
+  font-size: .9375rem; font-weight: 500; color: #012169;
+}
+.london-section-nav a:hover { background: #eef3f8; border-color: #012169; }
+.london-page :is(#problems, #opps, #sectors, #growth-path) + div { margin-top: 2rem; }
+.london-page :is(#problems, #opps, #sectors, #growth-path) + div > ul { gap: 1.25rem; }
+.london-page :is(#problems, #opps, #sectors, #growth-path) + div > ul > li {
+  padding: 1.5rem; border: 1px solid #d8e1ec; border-radius: 18px; background: #fff;
+}
+.london-page #problems + div > ul > li { border-top: 3px solid #b50f2b; }
+.london-page #opps + div > ul > li { border-top: 3px solid #012169; }
+.london-page #growth-path + div > ul > li { background: #f9fbfe; }
+.london-page #growth-path + div h3 > span { color: #b50f2b; }
+.london-page .interactive-card { background-color: #fff; border-color: #d8e1ec; }
+.london-page .interactive-card:hover { border-color: #012169; }
+.london-page .interactive-card p { font-size: 1rem; }
+.london-page .growth-prompt {
+  background: #152b49; border-color: #293f5c; color: #fff;
+}
+.london-page .growth-prompt :is(.text-muted, .text-on-night-muted) { color: #d6e1ef; }
+.london-page .growth-prompt > div > div:first-child > p:first-child { color: #d6e1ef; }
+.london-page .growth-prompt [data-motion-step] { background: #223c5d; border-color: #48617e; color: #fff; }
+.london-page .growth-prompt [data-motion-step] svg { color: #fff; }
+.london-page .growth-prompt [data-motion-step] p { font-size: .875rem; }
+.london-page .growth-prompt-glow { display: none; }
+.london-page .growth-prompt::after { opacity: .35; }
+.london-page .site-button:not(.border) { background-color: #b50f2b; color: #fff; }
+.london-page .site-button:not(.border):hover { background-color: #940c23; }
+.london-page .growth-prompt .site-button.border { color: #fff; border-color: #9aaabd; }
+.london-page .growth-prompt .site-button.border:hover { background-color: #223c5d; border-color: #fff; }
+.london-page .cta-panel {
+  background: #eaf0f7; border-color: #c5d2e3; box-shadow: none;
+}
+.london-page .cta-panel::before { background: radial-gradient(ellipse at 100% 100%, rgba(200,16,46,.06), transparent 60%); }
+.london-page .cta-panel::after { opacity: .4; }
+.london-page .cta-panel > div:last-child { background: #fff; border-color: #d8e1ec; }
+.london-page .cta-panel .site-button.border { background: #fff; color: #012169; }
+.london-page #london-faqs details { padding-inline: 1.25rem; background: #fff; }
+.london-page #london-faqs details[open] { background: #f1f5fa; }
+.london-page #london-faqs summary { min-height: 56px; }
+.london-page #london-faqs summary:focus-visible { outline: 3px solid #012169; outline-offset: 2px; }
+.london-page a:focus-visible { outline: 3px solid #012169; outline-offset: 4px; }
+.london-page .growth-prompt a:focus-visible { outline-color: #fff; }
+.london-page .london-map-section > div > div:last-child { max-height: 320px; }
+@media (max-width: 639px) {
+  .london-page .t-h2 { font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.15; }
+  .london-page :is(#problems, #opps, #sectors, #growth-path) + div > ul > li { padding: 1.25rem; }
+  .london-page .cta-panel { padding: 1.5rem; }
+  .london-page .cta-panel > div:last-child { padding: 1.25rem; }
+}
