@@ -24,12 +24,6 @@
     "alt": "Grow a San Francisco business on Google and across AI discovery."
   },
   {
-    "page": "/",
-    "key": "[\"/_next/static/immutable/media/portrait-casual.0sgd0-x2_5ot6.jpg\",\"Shobon Mahmud\"]",
-    "src": "/uploads/1bc11beb-a687-49c4-bf41-d5c5d5e98bdd.png",
-    "alt": "Shobon Mahmud"
-  },
-  {
     "page": "/locations/seo-consultant-new-york",
     "key": "hero",
     "src": "/uploads/3fa6396a-ab20-4f20-8af0-7dadf5523290.webp",
@@ -52,5 +46,23 @@
     "key": "[\"/_next/static/immutable/media/portrait-casual.0sgd0-x2_5ot6.jpg\",\"Shobon Mahmud\"]",
     "src": "/uploads/83004844-10b4-4157-a3a3-239f9b535040.png",
     "alt": "Shobon Mahmud"
+  },
+  {
+    "page": "/",
+    "key": "[\"/_next/static/immutable/media/portrait-casual.0sgd0-x2_5ot6.jpg\",\"Shobon Mahmud\"]",
+    "src": "/uploads/4405e9aa-9cc3-4093-b253-1f698bc09176.png",
+    "alt": "Shobon Mahmud"
+  },
+  {
+    "page": "/",
+    "key": "[\"/_next/static/immutable/media/portrait-smile.3t8231nano0le.jpg\",\"\"]",
+    "src": "/uploads/7350e26a-b472-4bae-9e14-98732e8bccdd.png",
+    "alt": ""
+  },
+  {
+    "page": "/",
+    "key": "[\"/_next/static/immutable/media/portrait-outdoor.0adwpkvmqt_20.jpg\",\"Shobon Mahmud standing on a tree-lined road in a white shirt\"]",
+    "src": "/uploads/1fdc15eb-87ce-4b8c-97fc-82a173e1b27d.jpg",
+    "alt": "Shobon Mahmud standing on a tree-lined road in a white shirt"
   }
 ]
