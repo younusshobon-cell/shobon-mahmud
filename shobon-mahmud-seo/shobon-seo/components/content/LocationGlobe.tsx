@@ -29,6 +29,15 @@ export function LocationGlobe({ places }: { places: Place[] }) {
     const projection = geoOrthographic().clipAngle(90).precision(.4);
     const path = geoPath(projection, ctx);
     const grid = geoGraticule10();
+    // Reuse one small texture tile instead of drawing thousands of dots every frame.
+    const texture = document.createElement("canvas");
+    texture.width = texture.height = 5;
+    const textureContext = texture.getContext("2d");
+    if (textureContext) {
+      textureContext.fillStyle = "rgba(13,63,76,.16)";
+      textureContext.beginPath(); textureContext.arc(2.5, 2.5, .55, 0, Math.PI * 2); textureContext.fill();
+    }
+    const terrainPattern = ctx.createPattern(texture, "repeat");
     const draw = () => {
       if (!width) return;
       const center = width / 2, radius = width * .4;
@@ -51,14 +60,7 @@ export function LocationGlobe({ places }: { places: Place[] }) {
       const terrain = ctx.createLinearGradient(center - radius, center - radius, center + radius, center + radius);
       terrain.addColorStop(0, "#d9e9d7"); terrain.addColorStop(.5, "#9bcec2"); terrain.addColorStop(1, "#5f9f9c");
       ctx.fillStyle = terrain; ctx.fill(); ctx.strokeStyle = "rgba(226,248,236,.65)"; ctx.lineWidth = .6; ctx.stroke();
-      ctx.save(); ctx.clip();
-      ctx.fillStyle = "rgba(13,63,76,.16)";
-      for (let x = center - radius; x < center + radius; x += 5) {
-        for (let y = center - radius; y < center + radius; y += 5) {
-          ctx.beginPath(); ctx.arc(x, y, .55, 0, Math.PI * 2); ctx.fill();
-        }
-      }
-      ctx.restore();
+      if (terrainPattern) { ctx.fillStyle = terrainPattern; ctx.fill(); }
       ctx.beginPath(); path(grid); ctx.strokeStyle = "rgba(216,237,242,.12)"; ctx.lineWidth = .6; ctx.stroke();
       const shade = ctx.createRadialGradient(center - radius * .4, center - radius * .45, radius * .12, center + radius * .22, center + radius * .2, radius * 1.3);
       shade.addColorStop(0, "rgba(255,255,255,.16)"); shade.addColorStop(.5, "rgba(12,24,43,0)");
@@ -98,7 +100,7 @@ export function LocationGlobe({ places }: { places: Place[] }) {
     const tick = (time: number) => {
       if (visible && !document.hidden && !paused && !reduced) {
         const delta = previous ? Math.min(time - previous, 80) : 0;
-        angle.current.lng = (angle.current.lng + delta * .009) % 360;
+        angle.current.lng = (angle.current.lng + delta * .011) % 360;
         draw();
       }
       previous = time;
