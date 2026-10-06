@@ -344,8 +344,8 @@ background:#f6f8f5}
 }
 .cta-panel::before {
   content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none;
-  background: radial-gradient(ellipse at 100% 0%, #e6ecfb 0%, transparent 58%),
-    radial-gradient(ellipse at 0% 100%, #e7f2eb 0%, transparent 48%);
+  background: radial-gradient(ellipse at 100% 0%, #c7d5ff 0%, transparent 68%),
+    radial-gradient(ellipse at 0% 100%, #d4efdf 0%, transparent 58%);
 }
 #main { scroll-margin-top: 5.5rem; }
 #main:focus { outline: none; }
@@ -415,3 +415,8 @@ background:#f6f8f5}
     translate: 0 -40px;
   }
 }
+
+.cta-panel { border-color: #bdcaf1; background-color: #eef2ff; }
+.cta-panel .site-button:first-child { background-color: #1f3fd1; color: #fff; }
+.cta-panel .site-button:first-child:hover { background-color: #142ba3; }
+.context-cta { border-color: #c3cef1; background: linear-gradient(120deg, #edf2ff, #eaf5ee); }

@@ -25,7 +25,12 @@ export const metadata: Metadata = buildMetadata({
   type: "profile",
 });
 
+const channels = [{"title": "channel_1_title", "body": "channel_1_body"}, {"title": "channel_2_title", "body": "channel_2_body"}, {"title": "channel_3_title", "body": "channel_3_body"}, {"title": "channel_4_title", "body": "channel_4_body"}, {"title": "channel_5_title", "body": "channel_5_body"}, {"title": "channel_6_title", "body": "channel_6_body"}].map(item => ({title: pageCopy[item.title as keyof typeof pageCopy], body: pageCopy[item.body as keyof typeof pageCopy]}));
+const markets = [{"title": "industry_1_title", "body": "industry_1_body"}, {"title": "industry_2_title", "body": "industry_2_body"}, {"title": "industry_3_title", "body": "industry_3_body"}, {"title": "industry_4_title", "body": "industry_4_body"}, {"title": "industry_5_title", "body": "industry_5_body"}, {"title": "industry_6_title", "body": "industry_6_body"}, {"title": "industry_7_title", "body": "industry_7_body"}].map(item => ({title: pageCopy[item.title as keyof typeof pageCopy], body: pageCopy[item.body as keyof typeof pageCopy]}));
+const gallery = [pageCopy.photo_1, pageCopy.photo_2, pageCopy.photo_3, pageCopy.photo_4, pageCopy.photo_5, pageCopy.photo_6];
+
 const skills = [
+  pageCopy.skill_social, pageCopy.skill_funnel, pageCopy.skill_content, pageCopy.skill_conversion,
   pageCopy.text_003,
   pageCopy.text_004,
   pageCopy.text_005,
@@ -106,6 +111,47 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
+
+      <Section labelledBy="growth-channels">
+        <h2 id="growth-channels" className="t-h2 max-w-3xl text-ink">{pageCopy.channels_title}</h2>
+        <p className="t-lead mt-5 max-w-3xl text-muted">{pageCopy.channels_body}</p>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {channels.map((item, i) => <article key={item.title} className="rounded-[24px] border border-line bg-paper-2 p-7">
+            <span className="text-sm font-medium text-link">0{i + 1}</span>
+            <h3 className="t-h3 mt-5 text-ink">{item.title}</h3>
+            <p className="mt-3 leading-relaxed text-muted">{item.body}</p>
+          </article>)}
+        </div>
+      </Section>
+
+      <Section tone="muted" labelledBy="industry-experience">
+        <h2 id="industry-experience" className="t-h2 max-w-3xl text-ink">{pageCopy.industries_title}</h2>
+        <p className="t-lead mt-5 max-w-3xl text-muted">{pageCopy.industries_body}</p>
+        <div className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
+          {markets.map(item => <article key={item.title} className="border-t border-line-strong pt-5">
+            <h3 className="t-h3 text-ink">{item.title}</h3>
+            <p className="mt-3 leading-relaxed text-muted">{item.body}</p>
+          </article>)}
+        </div>
+      </Section>
+
+      <Section labelledBy="growth-team">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <h2 id="growth-team" className="t-h2 text-ink">{pageCopy.team_title}</h2>
+          <div className="t-lead space-y-5 text-muted"><p>{pageCopy.team_body}</p><p>{pageCopy.team_detail}</p></div>
+        </div>
+        <h3 className="t-h3 mt-14 text-ink">{pageCopy.gallery_title}</h3>
+        <p className="mt-3 text-muted">{pageCopy.gallery_body}</p>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {gallery.map((caption, i) => <figure key={caption}>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] bg-paper-2">
+              <Image src={`/images/about/photo-${i + 1}.svg`} alt={`Photo space: ${caption}`} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+            </div>
+            <figcaption className="mt-3 text-sm font-medium text-ink-2">{caption}</figcaption>
+          </figure>)}
+        </div>
+      </Section>
+      <FinalCta title={pageCopy.cta_mid_title} body={pageCopy.cta_mid_body} />
 
       <Section labelledBy="experience">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -240,7 +286,7 @@ export default function AboutPage() {
       <Section>
         <FAQ faqs={aboutFaqs} title={pageCopy.text_052} />
       </Section>
-      <FinalCta title="Let’s find the right SEO approach for your business." />
+      <FinalCta title={pageCopy.cta_final_title} body={pageCopy.cta_final_body} />
 
     </>
   );

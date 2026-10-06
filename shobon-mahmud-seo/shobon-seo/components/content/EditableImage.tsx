@@ -3,6 +3,7 @@ import NextImage, { type ImageProps } from "next/image";
 import { usePathname } from "next/navigation";
 import type { ImgHTMLAttributes, ReactNode } from "react";
 import pageImages from "@/content/page-images.json";
+import { resolveImageOverride } from "@/lib/image-overrides";
 import { cn } from "@/lib/utils";
 export type PageImage = {page: string; key: string; src: string; alt: string};
 const images = pageImages as PageImage[];
@@ -15,7 +16,7 @@ export function imageKey(src: string, alt: string) {
 }
 function useOverride(key: string) {
   const page = usePathname();
-  return images.find(item => item.page === page && item.key === key);
+  return resolveImageOverride(images, page, key);
 }
 export default function EditableImage(props: ImageProps) {
   const original = source(props.src), key = imageKey(original, props.alt);

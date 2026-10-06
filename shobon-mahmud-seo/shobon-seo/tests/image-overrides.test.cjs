@@ -1,0 +1,16 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const ts = require('typescript');
+const vm = require('node:vm');
+const sandbox = {exports: {}};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/image-overrides.ts','utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText, sandbox);
+const resolve = sandbox.exports.resolveImageOverride;
+const images = JSON.parse(fs.readFileSync('content/page-images.json','utf8'));
+const key = (name, alt, hash='abc123def') => JSON.stringify([`/_next/static/immutable/media/portrait-${name}.${hash}.jpg`,alt]);
+assert.equal(resolve(images,'/about',key('casual','Shobon Mahmud')).src,'/uploads/83004844-10b4-4157-a3a3-239f9b535040.png');
+assert.equal(resolve(images,'/blog/example',key('smile','Author photo')).src,'/uploads/0e2221dc-c670-4725-90be-60933a89230b.png');
+assert.equal(resolve(images,'/locations/seo-consultant-new-york',key('casual','Shobon Mahmud')).src,'/uploads/79cc7ed9-94d1-4eaf-b238-2d40bb48dba5.png');
+assert.equal(resolve(images,'/','hero'),undefined);
+assert.equal(resolve(images,'/about',key('outdoor','Portrait')),undefined);
+assert.equal(resolve(images,'/locations/seo-consultant-dhaka','hero').src,'/uploads/14d4bd28-f59f-47e1-a346-7b0675cad25d.png');
+console.log('PASS: shared photo replacements, non-hex media hashes, local overrides and unchanged hero slots.');
