@@ -440,3 +440,31 @@ background:#f6f8f5}
   border-color: #d8e4ee;
   box-shadow: 0 14px 36px -24px rgba(0, 0, 0, .35);
 }
+
+/* Decorative CTA grids stay behind content and never intercept clicks. */
+.cta-panel, .growth-prompt, .context-cta {
+  --cta-grid-line: rgba(31, 63, 100, .06);
+  --cta-grid-size: 40px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.home-final-cta .cta-panel, .growth-prompt.on-night {
+  --cta-grid-line: rgba(225, 239, 255, .075);
+}
+.cta-panel::after, .growth-prompt::after, .context-cta::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image: linear-gradient(to right, var(--cta-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--cta-grid-line) 1px, transparent 1px);
+  background-size: var(--cta-grid-size) var(--cta-grid-size);
+  background-position: center;
+  mask-image: linear-gradient(110deg, rgba(0, 0, 0, .45), #000 75%);
+}
+@media (max-width: 639px) {
+  .cta-panel, .growth-prompt, .context-cta { --cta-grid-size: 28px; }
+}
