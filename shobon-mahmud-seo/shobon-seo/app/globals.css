@@ -521,3 +521,33 @@ background:#f6f8f5}
     translate: 0 -32px;
   }
 }
+
+/* Exact sky and sunset colours sampled from the current Austin hero image. */
+.hero-surface[data-hero-theme="austin"] {
+  --hero-start: #f7e1b7;
+  --hero-end: #439af1;
+  --color-ink: #102d49;
+  --color-ink-2: #16344a;
+  --color-muted: #16344a;
+  --color-link: #123955;
+  --color-line-strong: #698eab;
+  --hero-grid-color: rgba(16, 45, 73, .04);
+  background-color: #f7e1b7;
+  background-image: linear-gradient(110deg, #f7e1b7 0%, #f7e1b7 38%, #9fbde5 72%, #439af1 100%);
+  background-size: 100% 100%;
+}
+.hero-surface[data-hero-theme="austin"]::after {
+  animation: none;
+  background-image: none;
+}
+.hero-surface[data-hero-theme="austin"] .site-button:not(.border) {
+  background-color: #102d49;
+  color: #ffffff;
+}
+.hero-surface[data-hero-theme="austin"] .site-button:not(.border):hover {
+  background-color: #163e62;
+}
+.hero-surface[data-hero-theme="austin"] a:focus-visible {
+  outline: 3px solid #102d49;
+  outline-offset: 4px;
+}
