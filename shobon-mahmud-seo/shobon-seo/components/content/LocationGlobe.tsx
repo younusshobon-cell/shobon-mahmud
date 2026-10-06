@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { geoDistance, geoGraticule10, geoOrthographic, geoPath, type GeoPermissibleObjects } from "d3-geo";
-import Link from "next/link";
 import land from "@/content/globe-land.json";
 
 type Place = { slug: string; city: string; coords: { lat: number; lng: number } };
@@ -10,10 +9,9 @@ type Place = { slug: string; city: string; coords: { lat: number; lng: number } 
 export function LocationGlobe({ places }: { places: Place[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const angle = useRef({ lng: 55.27, lat: 25.2 });
-  const [selected, setSelected] = useState("dubai");
+  const selected = "dubai";
   const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
-  const active = places.find(p => p.slug === selected) ?? places[0];
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -40,12 +38,27 @@ export function LocationGlobe({ places }: { places: Place[] }) {
       halo.addColorStop(0, "rgba(82,156,183,.22)");
       halo.addColorStop(1, "rgba(82,156,183,0)");
       ctx.fillStyle = halo; ctx.fillRect(0, 0, width, width);
+      // A quiet orbital arc gives the globe a distinctive observatory silhouette.
+      ctx.save(); ctx.translate(center, center); ctx.rotate(-.32);
+      ctx.beginPath(); ctx.ellipse(0, 0, radius * 1.17, radius * .42, 0, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(57,120,150,.22)"; ctx.lineWidth = 1; ctx.stroke();
+      ctx.restore();
       ctx.save(); ctx.beginPath(); ctx.arc(center, center, radius, 0, Math.PI * 2); ctx.clip();
       const ocean = ctx.createLinearGradient(center - radius, center - radius, center + radius, center + radius);
-      ocean.addColorStop(0, "#294d72"); ocean.addColorStop(.6, "#162d49"); ocean.addColorStop(1, "#0c182b");
+      ocean.addColorStop(0, "#397a92"); ocean.addColorStop(.45, "#163c60"); ocean.addColorStop(1, "#08182d");
       ctx.fillStyle = ocean; ctx.fillRect(0, 0, width, width);
       ctx.beginPath(); path(land as unknown as GeoPermissibleObjects);
-      ctx.fillStyle = "#8dbfb6"; ctx.fill(); ctx.strokeStyle = "#b3d3cc"; ctx.lineWidth = .5; ctx.stroke();
+      const terrain = ctx.createLinearGradient(center - radius, center - radius, center + radius, center + radius);
+      terrain.addColorStop(0, "#d9e9d7"); terrain.addColorStop(.5, "#9bcec2"); terrain.addColorStop(1, "#5f9f9c");
+      ctx.fillStyle = terrain; ctx.fill(); ctx.strokeStyle = "rgba(226,248,236,.65)"; ctx.lineWidth = .6; ctx.stroke();
+      ctx.save(); ctx.clip();
+      ctx.fillStyle = "rgba(13,63,76,.16)";
+      for (let x = center - radius; x < center + radius; x += 5) {
+        for (let y = center - radius; y < center + radius; y += 5) {
+          ctx.beginPath(); ctx.arc(x, y, .55, 0, Math.PI * 2); ctx.fill();
+        }
+      }
+      ctx.restore();
       ctx.beginPath(); path(grid); ctx.strokeStyle = "rgba(216,237,242,.12)"; ctx.lineWidth = .6; ctx.stroke();
       const shade = ctx.createRadialGradient(center - radius * .4, center - radius * .45, radius * .12, center + radius * .22, center + radius * .2, radius * 1.3);
       shade.addColorStop(0, "rgba(255,255,255,.16)"); shade.addColorStop(.5, "rgba(12,24,43,0)");
@@ -99,11 +112,6 @@ export function LocationGlobe({ places }: { places: Place[] }) {
     return () => { cancelAnimationFrame(frame); resizeObserver.disconnect(); observer.disconnect(); };
   }, [paused, reduced, selected, places]);
 
-  function focus(place: Place) {
-    angle.current = { lng: place.coords.lng, lat: place.coords.lat };
-    setSelected(place.slug); setPaused(true);
-  }
-
   return (
     <div className="location-globe">
       <div className="location-globe__top">
@@ -112,17 +120,9 @@ export function LocationGlobe({ places }: { places: Place[] }) {
           {paused ? "Rotate globe" : "Pause rotation"}
         </button>
       </div>
-      <canvas ref={canvasRef} className="location-globe__canvas" role="img" aria-label="Rotating globe with pins for Dubai, Dhaka, San Francisco, New York, Austin, London, Saudi Arabia and Oman. Select a location below to focus its pin.">
+      <canvas ref={canvasRef} className="location-globe__canvas" role="img" aria-label="Rotating globe with pins for Dubai, Dhaka, San Francisco, New York, Austin, London, Saudi Arabia and Oman.">
         SEO locations: {places.map(p => p.city).join(", ")}.
       </canvas>
-      <div className="location-globe__selection">
-        <span>{active.city}{active.slug === "dubai" ? " · Based here" : ""}</span>
-        <Link href={`/locations/seo-consultant-${active.slug}`}>Explore {active.city}</Link>
-      </div>
-      <div className="location-globe__places" role="group" aria-label="Focus a location on the globe">
-        {places.map(place => <button key={place.slug} type="button" aria-pressed={selected === place.slug} onClick={() => focus(place)}>{place.city}</button>)}
-      </div>
-      <p className="location-globe__note">Select a market to focus its pin. Pins mark the areas served.</p>
     </div>
   );
 }

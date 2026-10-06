@@ -820,11 +820,7 @@ background:#f6f8f5}
 .location-globe__top { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; color:#43556c; font-size:.875rem; }
 .location-globe__top button { min-height:44px; padding:.6rem .85rem; border:1px solid #b9cbd9; border-radius:999px; background:rgba(255,255,255,.8); color:#162d49; font-weight:500; }
 .location-globe__canvas { display:block; width:100%; aspect-ratio:1; height:auto; margin-top:-12px; filter:drop-shadow(0 18px 24px rgba(22,45,73,.12)); }
-.location-globe__selection { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-top:-12px; padding-block:8px; border-bottom:1px solid #c9d6e2; color:#162d49; font-size:.9375rem; font-weight:600; }
-.location-globe__selection a { min-height:44px; display:inline-flex; align-items:center; padding:.5rem .8rem; border-radius:999px; color:#fff; background:#162d49; }
-.location-globe__places { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
-.location-globe__places button { min-height:44px; padding:.5rem .8rem; border:1px solid #c9d6e2; border-radius:999px; background:rgba(255,255,255,.75); color:#344c65; font-size:.875rem; }
-.location-globe__places button[aria-pressed="true"] { background:#e3eff8; border-color:#165178; color:#123a56; font-weight:600; }
 .location-globe button:hover { background:#e3eff8; }
-.location-globe :is(button,a):focus-visible { outline:3px solid #165178; outline-offset:3px; }
-.location-globe__note { margin-top:12px; color:#43556c; font-size:.875rem; line-height:1.5; }
+.location-globe button:focus-visible { outline:3px solid #165178; outline-offset:3px; }
+/* Keep the hub heading aligned with its visual instead of bottom-aligned. */
+.hero-surface:has(.location-globe) > div > .grid { align-items:center; }
