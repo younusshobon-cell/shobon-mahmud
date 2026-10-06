@@ -288,10 +288,43 @@
   background-image: linear-gradient(to right, rgba(211, 242, 219, .055) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(211, 242, 219, .025) 1px, transparent 1px);
 }
+/* London: Union Jack navy, white and restrained red, with a quiet reading surface. */
 .hero-surface[data-hero-theme="london"] {
-  --hero-start: #e4e8f4; --hero-end: #efe1df;
-  --hero-grid-x: 48px; --hero-grid-y: 32px;
-  --hero-grid-color: rgba(74, 71, 116, .075);
+  --hero-start: #f4f7fb;
+  --hero-end: #d7e2ef;
+  --hero-grid-color: rgba(1, 33, 105, .035);
+  --hero-grid-x: 48px;
+  --hero-grid-y: 48px;
+  --color-ink: #152b49;
+  --color-ink-2: #293f5c;
+  --color-muted: #43556c;
+  --color-link: #012169;
+  --color-link-hover: #001747;
+  --color-line-strong: #9aaabd;
+  background-color: #eef3f8;
+  background-image: radial-gradient(ellipse at 96% 82%, rgba(200, 16, 46, .09), transparent 48%),
+    linear-gradient(115deg, #f7f9fc 0%, #eef3f8 46%, #d7e2ef 100%);
+  background-size: 100% 100%;
+}
+.hero-surface[data-hero-theme="london"]::after {
+  animation: none;
+  background-image: none;
+}
+.hero-surface[data-hero-theme="london"] .site-button:not(.border) {
+  background-color: #b50f2b;
+  color: #ffffff;
+}
+.hero-surface[data-hero-theme="london"] .site-button:not(.border):hover {
+  background-color: #940c23;
+}
+.hero-surface[data-hero-theme="london"] a:focus-visible {
+  outline: 3px solid #012169;
+  outline-offset: 4px;
+}
+@media (min-width: 1024px) {
+  .hero-surface[data-hero-theme="london"] .hero-media {
+    translate: 0 -32px;
+  }
 }
 .cms-body h2{font-size:1.5rem;
 font-weight:600;
