@@ -70,7 +70,7 @@ export default async function LocationPage({ params }: Props) {
   const extra = locationExtras[loc.slug];
 
   return (
-    <>
+    <div className={loc.slug === "london" ? "london-page" : undefined}>
       <PageSchema path={path} />
       <PageHero
         theme={loc.slug}
@@ -129,9 +129,21 @@ export default async function LocationPage({ params }: Props) {
           )}
         </div>
       </div>
-      <Section className="pt-10 sm:pt-10 lg:pt-10">
-        <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
-      </Section>
+      {loc.slug === "london" ? (
+        <nav aria-label="London page sections" className="london-section-nav">
+          <div className="mx-auto flex max-w-7xl flex-wrap gap-2 px-5 py-5 sm:px-8">
+            <a href="#context">London market</a>
+            <a href="#opps">Growth opportunities</a>
+            <a href="#growth-path">The approach</a>
+            <a href="#london-services">SEO services</a>
+            <a href="#london-faqs">FAQs</a>
+          </div>
+        </nav>
+      ) : (
+        <Section className="pt-10 sm:pt-10 lg:pt-10">
+          <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
+        </Section>
+      )}
 
       <Section tone="muted" labelledBy="context">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -211,7 +223,7 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </Section>
       {loc.slug === "oman" && <OmanDelivery />}
-      <Section>
+      <Section id={loc.slug === "london" ? "london-services" : undefined}>
         <RelatedServices
           items={getServices(loc.relatedServices)}
           title={`Services for ${loc.city} businesses`}
@@ -222,7 +234,16 @@ export default async function LocationPage({ params }: Props) {
           <RelatedCaseStudies items={studies} />
         </Section>
       )}
-      <Section>
+      {loc.slug === "london" && (
+        <Section labelledBy="london-coverage" className="london-map-section">
+          <div className="mb-8 max-w-2xl">
+            <h2 id="london-coverage" className="t-h2 text-ink">Built around your London market</h2>
+            <p className="mt-5 leading-relaxed text-muted">Your borough, customers and actual service area shape the strategy. I work remotely from Dubai with London teams, with clear priorities and agreed communication.</p>
+          </div>
+          <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
+        </Section>
+      )}
+      <Section id={loc.slug === "london" ? "london-faqs" : undefined}>
         <FAQ faqs={extra.faqs} title={`Organic growth in ${loc.city}: FAQs`} />
       </Section>
       <FinalCta
@@ -230,6 +251,6 @@ export default async function LocationPage({ params }: Props) {
         body="Tell me about your market, your competitors and what you've tried. I'll share how I'd approach it."
       />
       {localSeo && <JsonLd data={serviceSchema(localSeo, path, loc.city)} />}
-    </>
+    </div>
   );
 }
