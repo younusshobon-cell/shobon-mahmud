@@ -40,5 +40,17 @@
     "key": "[\"/_next/static/immutable/media/portrait-casual.0sgd0-x2_5ot6.jpg\",\"Shobon Mahmud\"]",
     "src": "/uploads/79cc7ed9-94d1-4eaf-b238-2d40bb48dba5.png",
     "alt": "Shobon Mahmud"
+  },
+  {
+    "page": "/blog",
+    "key": "[\"/_next/static/immutable/media/portrait-smile.3t8231nano0le.jpg\",\"\"]",
+    "src": "/uploads/0e2221dc-c670-4725-90be-60933a89230b.png",
+    "alt": ""
+  },
+  {
+    "page": "/blog",
+    "key": "[\"/_next/static/immutable/media/portrait-casual.0sgd0-x2_5ot6.jpg\",\"Shobon Mahmud\"]",
+    "src": "/uploads/83004844-10b4-4157-a3a3-239f9b535040.png",
+    "alt": "Shobon Mahmud"
   }
 ]
