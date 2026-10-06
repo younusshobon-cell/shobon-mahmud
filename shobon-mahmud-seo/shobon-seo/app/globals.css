@@ -468,3 +468,10 @@ background:#f6f8f5}
 @media (max-width: 639px) {
   .cta-panel, .growth-prompt, .context-cta { --cta-grid-size: 28px; }
 }
+
+/* Align San Francisco hero media slightly higher beside the heading. */
+@media (min-width: 1024px) {
+  .hero-surface[data-hero-theme="san-francisco"] .hero-media {
+    translate: 0 -32px;
+  }
+}
