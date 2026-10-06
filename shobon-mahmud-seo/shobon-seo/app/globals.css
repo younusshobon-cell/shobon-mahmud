@@ -475,3 +475,42 @@ background:#f6f8f5}
     translate: 0 -32px;
   }
 }
+
+/* Image-led city palettes, scoped only to these two location hero sections. */
+.hero-surface[data-hero-theme="san-francisco"] {
+  --hero-start: #fff0d6;
+  --hero-end: #cce5f5;
+  background-color: #f6eddd;
+  background-image: radial-gradient(ellipse at 5% 80%, rgba(255, 216, 145, .32), transparent 55%),
+    linear-gradient(115deg, #fff4df 0%, #f7eddf 44%, #cce5f5 100%);
+  background-size: 100% 100%;
+}
+.hero-surface[data-hero-theme="new-york"] {
+  --hero-start: #fff0d1;
+  --hero-end: #c8e1f2;
+  --hero-grid-color: rgba(32, 67, 96, .045);
+  --color-ink: #162d43;
+  --color-ink-2: #2c465c;
+  --color-muted: #465b6d;
+  --color-link: #165178;
+  --color-line-strong: #97adba;
+  background-color: #f5ecdd;
+  background-image: radial-gradient(ellipse at 10% 85%, rgba(255, 207, 126, .28), transparent 58%),
+    linear-gradient(115deg, #fff3dc 0%, #f4eadf 43%, #c8e1f2 100%);
+  background-size: 100% 100%;
+}
+.hero-surface[data-hero-theme="new-york"] .site-button:not(.border) {
+  background-color: #ffd34d;
+  color: #162d43;
+}
+.hero-surface[data-hero-theme="new-york"] .site-button:not(.border):hover {
+  background-color: #f3c132;
+}
+.hero-surface[data-hero-theme="new-york"] a:focus-visible {
+  outline: 3px solid #162d43;
+  outline-offset: 4px;
+}
+.hero-surface:is([data-hero-theme="san-francisco"], [data-hero-theme="new-york"])::after {
+  animation: none;
+  opacity: .2;
+}
