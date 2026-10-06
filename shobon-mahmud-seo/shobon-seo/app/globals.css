@@ -420,3 +420,23 @@ background:#f6f8f5}
 .cta-panel .site-button:first-child { background-color: #1f3fd1; color: #fff; }
 .cta-panel .site-button:first-child:hover { background-color: #142ba3; }
 .context-cta { border-color: #c3cef1; background: linear-gradient(120deg, #edf2ff, #eaf5ee); }
+
+/* Home final CTA follows the earlier navy growth prompt with a blue-to-teal wash. */
+.home-final-cta .cta-panel {
+  border-color: #345773;
+  background-color: #16263a;
+  background-image: linear-gradient(120deg, #16263a 0%, #203d65 52%, #1b555b 100%);
+  box-shadow: 0 20px 52px -32px rgba(15, 26, 43, .5);
+}
+.home-final-cta .cta-panel::before {
+  background: radial-gradient(ellipse at 92% 8%, rgba(89, 155, 219, .18), transparent 62%),
+    radial-gradient(ellipse at 8% 95%, rgba(80, 182, 154, .14), transparent 58%);
+}
+.home-final-cta .cta-panel > div:first-child .text-ink { color: #f1f6fc; }
+.home-final-cta .cta-panel > div:first-child .text-muted { color: #cbd8e8; }
+.home-final-cta .cta-panel > div:first-child .text-link { color: #b8d1ff; }
+.home-final-cta .cta-panel > div:last-child {
+  background-color: #f7faff;
+  border-color: #d8e4ee;
+  box-shadow: 0 14px 36px -24px rgba(0, 0, 0, .35);
+}

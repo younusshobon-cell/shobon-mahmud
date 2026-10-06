@@ -90,7 +90,7 @@ export default function HomePage() {
       <Section>
         <FAQ faqs={homeFaqs} title={pageCopy.text_010} />
       </Section>
-      <FinalCta />
+      <div className="home-final-cta"><FinalCta /></div>
     </>
   );
 }
