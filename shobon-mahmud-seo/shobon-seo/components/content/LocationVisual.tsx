@@ -1,3 +1,4 @@
+import Image from "@/components/content/EditableImage";
 
 import pageCopy from "@/content/copy-components-content-LocationVisual.json";
 import { locationExtras } from "@/lib/content/location-extras";
@@ -12,6 +13,7 @@ const silhouettes: Record<string, React.ReactNode> = {
 };
 
 export function LocationVisual({ slug, city }: { slug: string; city: string }) {
+  if (slug === "oman") return <div className="overflow-hidden rounded-[28px] lg:self-center lg:-translate-y-8"><Image src="/images/oman-organic-growth.webp" alt="Muscat-inspired Omani waterfront architecture and mountains with a subtle growth chart for government project and real estate SEO in Oman" width={1600} height={1200} priority sizes="(min-width: 1024px) 560px, (min-width: 640px) 600px, 100vw" className="aspect-[4/3] h-auto w-full object-cover" /></div>;
   const detail = locationExtras[slug];
   if (!detail) return null;
   return <div className={`market-visual lg:self-center lg:-translate-y-8 market-${detail.palette}`} aria-label={`Stylised skyline inspired by ${city}`} role="img">

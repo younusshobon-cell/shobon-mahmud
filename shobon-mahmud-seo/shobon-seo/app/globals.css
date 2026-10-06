@@ -551,3 +551,16 @@ background:#f6f8f5}
   outline: 3px solid #102d49;
   outline-offset: 4px;
 }
+
+/* Omani limestone, sea and mountain palette. */
+.hero-surface[data-hero-theme="oman"] {
+  --color-ink: #18383d;
+  --color-ink-2: #24494e;
+  --color-muted: #39585c;
+  --color-link: #24555a;
+  --hero-grid-color: rgba(24,56,61,.04);
+  background: linear-gradient(115deg,#faf2e4 0%,#f2eadb 44%,#c6e1df 100%);
+}
+.hero-surface[data-hero-theme="oman"]::after { animation: none; background-image: none; }
+.hero-surface[data-hero-theme="oman"] .site-button:not(.border) { background-color:#18383d; color:#fff; }
+.hero-surface[data-hero-theme="oman"] .site-button:not(.border):hover { background-color:#24555a; }

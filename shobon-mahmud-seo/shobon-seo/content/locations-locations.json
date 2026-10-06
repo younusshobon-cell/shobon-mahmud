@@ -12,10 +12,18 @@
       "lng": 90.4125
     },
     "context": [],
-    "industries": ["health-tech", "local-services", "ecommerce"],
+    "industries": [
+      "health-tech",
+      "local-services",
+      "ecommerce"
+    ],
     "problems": [],
     "opportunities": [],
-    "relatedServices": ["local-seo", "on-page-seo", "technical-seo"],
+    "relatedServices": [
+      "local-seo",
+      "on-page-seo",
+      "technical-seo"
+    ],
     "faqs": []
   },
   {
@@ -35,7 +43,12 @@
       "Marketing sites here are often built on Next.js, React or headless CMS setups. That's great for speed of shipping, and a common source of rendering, indexing and internal-linking problems.",
       "Where local search does matter — clinics, professional services, restaurants, trades — the city's neighbourhood structure (SoMa, the Mission, the Marina, Financial District) shapes how people search."
     ],
-    "industries": ["saas", "technology", "health-tech", "legal-tech"],
+    "industries": [
+      "saas",
+      "technology",
+      "health-tech",
+      "legal-tech"
+    ],
     "problems": [
       {
         "title": "Crowded category SERPs",
@@ -106,7 +119,12 @@
       "Legal, financial, health and real estate services dominate commercial search here, and they fall into categories where Google looks hard at expertise and trust.",
       "The city is also a base for many e-commerce and DTC brands competing nationally, where category structure and product content decide rankings."
     ],
-    "industries": ["legal-tech", "ecommerce", "health-tech", "local-services"],
+    "industries": [
+      "legal-tech",
+      "ecommerce",
+      "health-tech",
+      "local-services"
+    ],
     "problems": [
       {
         "title": "Borough-level local competition",
@@ -177,7 +195,12 @@
       "The city has a strong base of SaaS, hardware and technology companies, many at the stage where SEO shifts from 'nice to have' to a core acquisition channel.",
       "Home services, healthcare and professional services are highly competitive locally as population growth drives demand."
     ],
-    "industries": ["saas", "technology", "local-services", "ecommerce"],
+    "industries": [
+      "saas",
+      "technology",
+      "local-services",
+      "ecommerce"
+    ],
     "problems": [
       {
         "title": "Metro sprawl",
@@ -244,7 +267,12 @@
       "Businesses frequently target multiple Gulf countries, which makes international SEO — structure, hreflang and market-specific pages — a practical need, not an advanced extra.",
       "Local search in Dubai is organised around districts and free zones (Business Bay, JLT, Dubai Marina, DIFC, Deira), and people often search with those names."
     ],
-    "industries": ["logistics", "ecommerce", "health-tech", "local-services"],
+    "industries": [
+      "logistics",
+      "ecommerce",
+      "health-tech",
+      "local-services"
+    ],
     "problems": [
       {
         "title": "Bilingual content gaps",
@@ -315,7 +343,12 @@
       "Local search in London works by borough, postcode area and neighbourhood (Shoreditch, Canary Wharf, Camden, Clapham), and proximity limits map pack reach in such a dense city.",
       "Many London companies serve international customers, making en-GB vs en-US targeting and hreflang a frequent issue."
     ],
-    "industries": ["saas", "legal-tech", "design", "ecommerce"],
+    "industries": [
+      "saas",
+      "legal-tech",
+      "design",
+      "ecommerce"
+    ],
     "problems": [
       {
         "title": "US-first content",
@@ -386,7 +419,12 @@
       "Riyadh, Jeddah and other Saudi markets have different service coverage, competition and customer questions. Pages should reflect where the business really operates.",
       "Vision 2030 names tourism, the digital economy and healthcare among its priorities. A sensible content plan connects those themes to the business's own evidence and current customer demand."
     ],
-    "industries": ["logistics", "ecommerce", "health-tech", "local-services"],
+    "industries": [
+      "logistics",
+      "ecommerce",
+      "health-tech",
+      "local-services"
+    ],
     "problems": [
       {
         "title": "Generic Arabic translations",
@@ -424,6 +462,70 @@
       "local-seo",
       "content-seo",
       "keyword-research"
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "oman",
+    "city": "Oman",
+    "region": "Muscat, Salalah and Oman-wide projects",
+    "country": "Oman",
+    "seoTitle": "SEO Consultant Oman | Government & Real Estate Growth",
+    "heroTitle": "Make Oman’s public projects and property businesses easier to find—and trust.",
+    "intro": "SEO consultant for Oman government projects and real estate teams. Grow qualified discovery with Arabic and English content, technical SEO and clearer enquiry journeys. Based in Dubai, I work remotely with your team.",
+    "coords": {
+      "lat": 23.588,
+      "lng": 58.3829
+    },
+    "context": [
+      "Oman’s digital transformation and urban development agendas make clear, accessible project information valuable. A public-service visitor needs accurate guidance; a property buyer needs reliable project detail and a useful next step. Their search journeys need different plans.",
+      "For Muscat, Salalah, Sohar and other areas you actually serve, I research location, service and property intent separately. Arabic and English pages need their own search research and editorial review, rather than a literal translation.",
+      "My role is to help your public-facing website connect discovery with understanding and action. Your organisation retains approval of official information, eligibility, project availability and all commercial or regulatory claims."
+    ],
+    "industries": [],
+    "problems": [
+      {
+        "title": "Important pages are difficult to discover",
+        "body": "PDF-only project information, weak internal links and unclear service names leave citizens, partners and buyers searching elsewhere."
+      },
+      {
+        "title": "Arabic and English journeys disagree",
+        "body": "Different project details or weak language targeting can send visitors to outdated information or the wrong page."
+      },
+      {
+        "title": "Property traffic produces few qualified leads",
+        "body": "Broad keywords attract visitors without matching location, property type, budget or readiness to arrange a viewing."
+      },
+      {
+        "title": "Publishing needs several approvals",
+        "body": "Without named reviewers and version control, technical fixes and important content can stall between stakeholders."
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Public-service and project information SEO",
+        "body": "Create searchable service guides, project overview pages and clear routes to the official application or information source."
+      },
+      {
+        "title": "Real estate SEO in Oman",
+        "body": "Organise development, available property, neighbourhood and enquiry pages around genuine buyer and tenant intent."
+      },
+      {
+        "title": "Oman-specific content clusters",
+        "body": "Connect useful questions about location, amenities, access and project details to relevant pages reviewed by your specialists."
+      },
+      {
+        "title": "Technical SEO and conversion measurement",
+        "body": "Resolve crawl and indexing issues, strengthen mobile journeys and measure meaningful actions rather than traffic alone."
+      }
+    ],
+    "relatedServices": [
+      "technical-seo",
+      "on-page-seo",
+      "content-seo",
+      "keyword-research",
+      "international-seo",
+      "local-seo"
     ],
     "faqs": []
   }

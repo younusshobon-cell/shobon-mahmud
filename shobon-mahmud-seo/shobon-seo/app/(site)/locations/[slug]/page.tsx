@@ -26,6 +26,7 @@ import {
 } from "@/components/related/Related";
 import { LocationVisual } from "@/components/content/LocationVisual";
 import { locationExtras } from "@/lib/content/location-extras";
+import { OmanDelivery } from "@/components/sections/OmanDelivery";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -179,7 +180,7 @@ export default async function LocationPage({ params }: Props) {
       <Section labelledBy="sectors">
         <div id="sectors">
           <SectionHeading
-            title={`Priority sectors to watch through 2030 in ${loc.city}`}
+            title={loc.slug === "oman" ? "SEO for Oman’s public projects and property sector" : `Priority sectors to watch through 2030 in ${loc.city}`}
             intro={pageCopy.text_013}
           />
         </div>
@@ -209,6 +210,7 @@ export default async function LocationPage({ params }: Props) {
           <PointGrid points={extra.searchPaths} numbered />
         </div>
       </Section>
+      {loc.slug === "oman" && <OmanDelivery />}
       <Section>
         <RelatedServices
           items={getServices(loc.relatedServices)}
@@ -224,7 +226,7 @@ export default async function LocationPage({ params }: Props) {
         <FAQ faqs={extra.faqs} title={`Organic growth in ${loc.city}: FAQs`} />
       </Section>
       <FinalCta
-        title={`Reach more customers in ${loc.city} through search.`}
+        title={loc.slug === "oman" ? "Give your Oman project a clearer path from discovery to action." : `Reach more customers in ${loc.city} through search.`}
         body="Tell me about your market, your competitors and what you've tried. I'll share how I'd approach it."
       />
       {localSeo && <JsonLd data={serviceSchema(localSeo, path, loc.city)} />}

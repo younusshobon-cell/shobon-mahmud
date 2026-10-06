@@ -422,5 +422,79 @@
       "label": "Saudi Vision 2030: economic priorities",
       "href": "https://www.vision2030.gov.sa/en/overview"
     }
+  },
+  "oman": {
+    "eyebrow": "Oman / public projects and property",
+    "palette": "oman",
+    "sectors": [
+      {
+        "title": "Government and public-facing projects",
+        "body": "Help citizens, businesses and delivery partners find approved project information and understand the next step."
+      },
+      {
+        "title": "Real estate developers and communities",
+        "body": "Build credible development pages with verified status, location, amenities, imagery and clear enquiry routes."
+      },
+      {
+        "title": "Brokerages and property service teams",
+        "body": "Connect genuine inventory and service coverage with neighbourhood searches, relevant landing pages and qualified leads."
+      }
+    ],
+    "searchPaths": [
+      {
+        "title": "Find the right audience",
+        "body": "Separate citizen service queries, partner research and property buyer intent before selecting keywords."
+      },
+      {
+        "title": "Answer with approved evidence",
+        "body": "Publish accurate details, responsible authorship and useful answers linked to the relevant project or service."
+      },
+      {
+        "title": "Make the next step easy",
+        "body": "Lead visitors to the appropriate official service, project enquiry, brochure request or viewing appointment."
+      },
+      {
+        "title": "Measure and improve",
+        "body": "Review enquiry quality, service journey clicks and content performance with your internal team."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do you offer SEO services for government projects in Oman?",
+        "a": "I can support public-facing project and service websites with technical SEO, content architecture and clearer discovery journeys. We agree scope, access, approval owners and procurement requirements before work starts."
+      },
+      {
+        "q": "Have you delivered an Oman government contract?",
+        "a": "This page describes the work I can support, rather than claiming a previous Oman government contract. My relevant experience is four years across SEO, content, growth channels and team delivery. We can review relevant work and references when discussing your scope."
+      },
+      {
+        "q": "How is public-sector SEO different from real estate SEO?",
+        "a": "Public-sector work prioritises accurate service information and successful visitor journeys. Property work focuses on verified project detail and qualified buyer or tenant enquiries. Each needs separate content and reporting."
+      },
+      {
+        "q": "Can you help developers and real estate agencies in Muscat?",
+        "a": "Yes. We can organise project, neighbourhood and property-type pages, improve technical foundations and connect useful content with enquiry or viewing flows. The plan depends on your actual inventory and service area."
+      },
+      {
+        "q": "Do we need Arabic and English content?",
+        "a": "We first research your audience. If both languages matter, we build separate keyword maps and use your Arabic-speaking reviewers to approve terminology, meaning and right-to-left presentation."
+      },
+      {
+        "q": "Can SEO guarantee government contracts or property sales?",
+        "a": "No. SEO improves discovery and the website journey; procurement decisions and sales depend on your offer, eligibility, availability and wider business process. We agree measurable website outcomes."
+      },
+      {
+        "q": "What will our team receive?",
+        "a": "A baseline audit, prioritised roadmap, keyword and page map, content briefs, implementation tickets, review checklists and agreed reporting. Deliverables are scoped before the project begins."
+      },
+      {
+        "q": "Where are you based and how do you collaborate?",
+        "a": "I am based in Dubai and collaborate remotely with Oman teams. We use scheduled calls, documented decisions, clear approvals and implementation reviews with your internal or agency team."
+      }
+    ],
+    "source": {
+      "label": "Oman Vision 2040: national priorities",
+      "href": "https://www.oman2040.om/vision?lang=en"
+    }
   }
 }
