@@ -2,7 +2,7 @@
 import pageCopy from "@/content/copy-components-forms-ContactForm.json";
 
 import { visitorGoals } from "@/lib/visitor-goals";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const industries = ["SaaS", pageCopy.text_001, pageCopy.text_002, "Logistics", pageCopy.text_003, "E-commerce", "Technology", pageCopy.text_004, "Other"];
@@ -16,6 +16,7 @@ const label = "text-sm font-medium text-ink";
 type Status = { state: "idle" | "sending" | "error"; message?: string };
 
 export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
+  const submissionId = useRef("");
   const [selectedGoal, setSelectedGoal] = useState("");
   useEffect(() => {
     const goal = visitorGoals.find(item => item.id === new URLSearchParams(window.location.search).get("goal"));
@@ -28,12 +29,13 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
     e.preventDefault();
     if (status.state === "sending") return;
     const form = e.currentTarget;
+    if (!submissionId.current) submissionId.current = crypto.randomUUID();
     setStatus({ state: "sending" });
     try {
       const res = await fetch("/api/contact?validate=1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        body: JSON.stringify({...Object.fromEntries(new FormData(form)), submissionId: submissionId.current}),
       });
       const data = (await res.json().catch(() => ({}))) as { error?: string; blocked?: boolean };
       if (!res.ok) throw new Error(data.error || pageCopy.text_018);
@@ -78,10 +80,10 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail?: string }) {
       <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted">{pageCopy.text_038}{fallbackEmail ? <> {pageCopy.text_039}<a className="underline" href={`mailto:${fallbackEmail}`}>{fallbackEmail}</a> {pageCopy.text_040}</> : null}</p>
         <button type="submit" disabled={status.state === "sending"} className="site-button inline-flex min-h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-link active:translate-y-px disabled:cursor-wait disabled:opacity-60">
-          {status.state === "sending" ? "Checking…" : pageCopy.text_041}
+          {status.state === "sending" ? "Saving…" : pageCopy.text_041}
         </button>
       </div>
-      <p role="status" aria-live="polite" className="sr-only">{status.state === "sending" ? "Checking your enquiry. Please wait." : ""}</p>
+      <p role="status" aria-live="polite" className="sr-only">{status.state === "sending" ? "Saving your enquiry. Please wait." : ""}</p>
       {status.state === "error" && <p role="alert" className="text-sm text-red-700 sm:col-span-2">{status.message}</p>}
     </form>
   );

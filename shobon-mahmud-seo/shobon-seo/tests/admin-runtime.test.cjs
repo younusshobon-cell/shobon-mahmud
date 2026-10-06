@@ -50,6 +50,8 @@ child.stderr.on("data", (x) => (output += x));
     assert.equal((await fetch(host + "/api/admin/media")).status, 401);
     assert.equal((await fetch(host + "/api/admin/visual")).status, 401);
     assert.equal((await fetch(host + "/api/admin/analytics")).status, 401);
+    assert.equal((await fetch(host + "/api/admin/enquiries")).status, 401);
+    assert.equal((await fetch(host + "/api/analytics/cta",{method:"POST",headers:{origin:"https://attacker.test","content-type":"application/json"},body:"{}"})).status,403);
     assert.equal((await fetch(host + "/api/analytics", {method:"POST", headers:{origin:"https://attacker.test","content-type":"application/json"},body:"{}"})).status,403);
     assert.equal(
       (
@@ -105,11 +107,15 @@ child.stderr.on("data", (x) => (output += x));
     assert.equal(visual.images.length, 6);
     const analytics=await (await fetch(host+"/api/admin/analytics",{headers})).json();
     assert.equal(analytics.configured,false);
+    const enquiries = await fetch(host+"/api/admin/enquiries",{headers});
+    assert.equal(enquiries.status,200);
+    assert.ok(enquiries.headers.get("cache-control").includes("no-store"));
+    assert.equal((await enquiries.json()).configured,false);
     assert.equal((await fetch(host+"/api/admin/analytics?days=999",{headers})).status,400);
     assert.equal((await fetch(host+"/not-a-published-page")).status,404);
     response = await fetch(host + "/admin", { headers });
     text = await response.text();
-    assert.ok(text.includes("Your website, at a glance."));
+    assert.ok(text.includes("Grow. Follow up. Publish."));
     assert.ok(!text.includes(password));
     assert.ok(!text.includes("NEXT_PUBLIC_ADMIN"));
     assert.equal(

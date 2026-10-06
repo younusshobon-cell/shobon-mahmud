@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Eye,
@@ -31,29 +31,17 @@ import {
   title,
   type Value,
 } from "./FormEditor";
+import { EnquiryInbox } from "./EnquiryInbox";
 import { AnalyticsDashboard } from "./AnalyticsDashboard";
 import { VisualEditor } from "./VisualEditor";
 import { ContentStudio } from "./ContentStudio";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
-const groups = [
-  "Overview",
-  "Analytics",
-  "Live editor",
-  "Pages",
-  "Site settings",
-  "Page copy",
-  "Blog",
-  "Services",
-  "Industries",
-  "Locations",
-  "Portfolio",
-  "FAQs",
-  "Media",
-];
+const groups = ["Overview","Analytics","Enquiries","Live editor","Pages","Blog","Services","Industries","Locations","Portfolio","FAQs","Media","Site settings","Page copy"];
 const icons: Record<string, typeof Globe> = {
   Overview: LayoutDashboard,
   Analytics: BarChart3,
+  Enquiries: FileText,
   "Live editor": Eye,
   Pages: FileText,
   "Site settings": Settings,
@@ -221,7 +209,7 @@ export function AdminPanel({
         <div className="admin-brand">
           <span>SM</span>
           <div>
-            Shobon Mahmud<small>Content studio</small>
+            Shobon Mahmud<small>Growth workspace</small>
           </div>
           <button
             className="admin-mobile-close"
@@ -232,18 +220,19 @@ export function AdminPanel({
           </button>
         </div>
         <p className="admin-nav-label">WORKSPACE</p>
-        <nav>
+        <nav aria-label="Admin navigation">
           {groups.map((g) => {
             const Icon = icons[g];
             return (
               <button
                 key={g}
+                aria-current={group === g ? "page" : undefined}
                 className={group === g ? "active" : ""}
                 onClick={() => navigate(g)}
               >
                 <Icon size={18} />
                 <span>{g}</span>
-                {g !== "Overview" && g !== "Media" && (
+                {!["Overview","Media","Analytics","Enquiries","Live editor","Pages"].includes(g) && (
                   <small>{manifest.filter((x) => x.group === g).length}</small>
                 )}
               </button>
@@ -326,107 +315,15 @@ export function AdminPanel({
           )}
           {group === "Overview" ? (
             <>
-              <div className="admin-page-heading">
-                <div>
-                  <p className="admin-eyebrow">CONTENT STUDIO</p>
-                  <h1>Your website, at a glance.</h1>
-                  <p className="admin-muted">
-                    Make a small update or tell a bigger story. Everything
-                    starts here.
-                  </p>
-                </div>
-                <a
-                  className="admin-secondary"
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open website
-                  <ArrowUpRight size={16} />
-                </a>
-              </div>
-              <div className="admin-stat-grid">
-                {["Blog", "Services", "Locations", "Portfolio"].map((g) => {
-                  const Icon = icons[g];
-                  return (
-                    <button key={g} onClick={() => navigate(g)}>
-                      <Icon size={20} />
-                      <strong>{g}</strong>
-                      <span>
-                        {g === "Blog"
-                          ? "Articles & categories"
-                          : g === "Portfolio"
-                            ? "Case studies & filters"
-                            : "Content & search visibility"}
-                      </span>
-                      <ArrowUpRight size={16} />
-                    </button>
-                  );
-                })}
-              </div>
-              <div className="admin-overview-grid">
-                <section className="admin-card">
-                  <h2>What would you like to update?</h2>
-                  <p className="admin-muted">
-                    Choose an area to start editing.
-                  </p>
-                  <div className="admin-quick-links">
-                    {["Analytics", "Pages", "Blog", "Site settings", "Page copy", "FAQs", "Media"].map(
-                      (g) => {
-                        const Icon = icons[g];
-                        return (
-                          <button key={g} onClick={() => navigate(g)}>
-                            <Icon size={19} />
-                            <div>
-                              <strong>{g}</strong>
-                              <small>
-                                {g === "Site settings"
-                                  ? "Profile, navigation & social links"
-                                  : g === "Page copy"
-                                    ? "Headings, buttons & page SEO"
-                                    : g === "FAQs"
-                                      ? "Answers across your website"
-                                      : "Upload or replace original images"}
-                              </small>
-                            </div>
-                            <ArrowUpRight size={16} />
-                          </button>
-                        );
-                      },
-                    )}
-                  </div>
-                </section>
-                <section className="admin-card admin-publishing-card">
-                  <span className="admin-status-dot" />
-                  <p className="admin-eyebrow">REPOSITORY PUBLISHING</p>
-                  <h2>Edit. Review. Publish.</h2>
-                  <p>
-                    Your edits are saved as GitHub commits. Vercel deploys the
-                    updated website, including new pages and sitemap entries.
-                  </p>
-                  <div>
-                    1<span>Choose and edit your content.</span>
-                  </div>
-                  <div>
-                    2<span>Review your draft before publishing.</span>
-                  </div>
-                  <div>
-                    3<span>Publish and wait for deployment.</span>
-                  </div>
-                  <a
-                    href="https://github.com/younusshobon-cell/shobon-mahmud/commits/main"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View change history ↗
-                  </a>
-                </section>
-              </div>
+              <div className="admin-command-bar"><div><p className="admin-eyebrow">SHOBON MAHMUD / WORKSPACE</p><h2>Grow. Follow up. Publish.</h2><p className="admin-muted">Start with performance, then take the next action.</p></div><div className="admin-heading-actions"><button className="admin-primary" onClick={()=>navigate("Enquiries")}>Manage enquiries <ArrowUpRight size={16}/></button><button className="admin-secondary" onClick={()=>navigate("Pages")}>Edit pages</button><button className="admin-secondary" onClick={()=>navigate("Blog")}>Manage blog</button></div></div>
+              <AnalyticsDashboard onDirty={setStudioDirty}/>
             </>
           ) : group === "Live editor" ? (
             <VisualEditor initialImages={visualImages} initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
+          ) : group === "Enquiries" ? (
+            <EnquiryWorkspace onDirty={setStudioDirty}/>
           ) : group === "Analytics" ? (
-            <AnalyticsDashboard />
+            <AnalyticsDashboard onDirty={setStudioDirty}/>
           ) : (group === "Blog" || group === "Pages") && !active && !studioAdvanced ? (
             <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onLiveEditor={(path, images) => navigate("Live editor", path, images)} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
           ) : group === "Media" ? (
@@ -675,7 +572,7 @@ export function AdminPanel({
             </>
           )}
           <footer className="admin-footer">
-            Shobon Mahmud · Content studio<span>GitHub + Vercel</span>
+            Shobon Mahmud · Private growth workspace<span>Content, performance & enquiries</span>
           </footer>
         </div>
       </div>
@@ -862,4 +759,12 @@ function MediaManager() {
       </div>
     </>
   );
+}
+
+function EnquiryWorkspace({onDirty}:{onDirty:(dirty:boolean)=>void}){
+ const [dirty,setDirty]=useState(false);
+ const reportDirty=useCallback((v:boolean)=>{setDirty(v);onDirty(v);},[onDirty]);
+ function canReload(){return !dirty || window.confirm('Discard unsaved enquiry notes and reload?');}
+ const [days,setDays]=useState(28),[refresh,setRefresh]=useState(0);
+ return <><div className="admin-page-heading"><div><p className="admin-eyebrow">RELATIONSHIPS & FOLLOW-UP</p><h1>Enquiries</h1><p className="admin-muted">Keep every submitted detail and next step in one place.</p></div><div className="admin-heading-actions"><select aria-label="Enquiry date range" value={days} onChange={e=>{if(canReload())setDays(Number(e.target.value));}}><option value={7}>Last 7 days</option><option value={28}>Last 28 days</option><option value={90}>Last 90 days</option></select><button className="admin-secondary" onClick={()=>{if(canReload())setRefresh(n=>n+1);}}>Refresh</button></div></div><EnquiryInbox days={days} refresh={refresh} onDirty={reportDirty}/></>;
 }

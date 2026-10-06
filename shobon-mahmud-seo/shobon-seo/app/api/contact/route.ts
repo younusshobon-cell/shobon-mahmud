@@ -1,3 +1,5 @@
+import { sameOrigin } from "@/lib/admin/auth";
+import { saveEnquiry } from "@/lib/analytics/conversions";
 import { NextResponse } from "next/server";
 
 /**
@@ -10,13 +12,18 @@ type Payload = Partial<Record<keyof typeof MAX | "company_url" | "_honey", strin
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
 export async function POST(req: Request) {
+  if (!sameOrigin(req)) return NextResponse.json({error:"Invalid origin."},{status:403});
   const validateOnly = new URL(req.url).searchParams.get("validate") === "1";
   let body: Payload;
   try {
-    body = (await req.json()) as Payload;
+    const text = await req.text();
+    if (text.length > 12000) return NextResponse.json({error:"Request too large."},{status:413});
+    body = JSON.parse(text) as Payload;
   } catch {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
+
+  if (!body || typeof body !== "object" || Array.isArray(body)) return NextResponse.json({error:"Invalid request."},{status:400});
 
   // Honeypot: pretend success to bots
   if (body.company_url || body._honey) return NextResponse.json({ ok: true, blocked: true });
@@ -28,7 +35,13 @@ export async function POST(req: Request) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean.email)) return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
 
   // The browser submits valid forms to FormSubmit, which presents its CAPTCHA.
-  if (validateOnly) return NextResponse.json({ ok: true });
+  const submissionId = (body as Payload & {submissionId?:string}).submissionId;
+  if (validateOnly) {
+    if (!submissionId || !/^[a-f0-9-]{36}$/.test(submissionId)) return NextResponse.json({error:"Invalid submission."},{status:400});
+    try { await saveEnquiry(clean, submissionId, req); }
+    catch (error) { return NextResponse.json({error:error instanceof Error ? error.message : "Could not save your enquiry. Please try again."},{status:503}); }
+    return NextResponse.json({ok:true,saved:true});
+  }
 
   const key = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;

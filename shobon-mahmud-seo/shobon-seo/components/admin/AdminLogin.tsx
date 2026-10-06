@@ -33,7 +33,7 @@ export function AdminLogin({ configured, configurationErrors }: { configured: bo
         <div className="admin-brand">
           <span>SM</span>
           <div>
-            Shobon Mahmud<small>Content studio</small>
+            Shobon Mahmud<small>Growth workspace</small>
           </div>
         </div>
         <div className="admin-lock">
@@ -42,8 +42,7 @@ export function AdminLogin({ configured, configurationErrors }: { configured: bo
         <p className="admin-eyebrow">YOUR WEBSITE, YOUR CONTROL</p>
         <h1>Welcome back.</h1>
         <p className="admin-muted">
-          Sign in to edit your pages, publish stories and keep your website up
-          to date.
+          Sign in to review performance, follow up on enquiries and publish your next update.
         </p>
         {!configured && (
           <div className="admin-notice">
@@ -67,7 +66,7 @@ export function AdminLogin({ configured, configurationErrors }: { configured: bo
             </p>
           )}
           <button className="admin-primary" disabled={busy || !configured}>
-            {busy ? "Signing in…" : "Enter content studio"}
+            {busy ? "Signing in…" : "Open workspace"}
             <ArrowRight size={17} />
           </button>
         </form>
