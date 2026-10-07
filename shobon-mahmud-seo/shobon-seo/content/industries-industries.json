@@ -390,7 +390,6 @@
     ],
     "relatedServices": [
       "local-seo",
-      "international-seo",
       "on-page-seo",
       "technical-seo"
     ],
@@ -581,8 +580,7 @@
     "relatedServices": [
       "ecommerce-seo",
       "technical-seo",
-      "content-seo",
-      "international-seo"
+      "content-seo"
     ],
     "faqs": [
       {

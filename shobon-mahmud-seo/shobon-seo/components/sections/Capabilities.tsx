@@ -12,7 +12,6 @@ const capabilities = [
   { slug: "off-page-seo", name: pageCopy.text_007, body: pageCopy.text_008 },
   { slug: "local-seo", name: pageCopy.text_009, body: pageCopy.text_010 },
   { slug: "ecommerce-seo", name: pageCopy.text_011, body: pageCopy.text_012 },
-  { slug: "international-seo", name: pageCopy.text_013, body: pageCopy.text_014 },
 ];
 
 export function Capabilities() {

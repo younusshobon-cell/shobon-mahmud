@@ -131,28 +131,6 @@
       "a": "Decide which filtered combinations deserve indexable pages, control the rest and verify canonicals and crawl paths on the actual store."
     }
   ],
-  "international-seo": [
-    {
-      "q": "How do I target UAE and Saudi Arabia on one website?",
-      "a": "Create distinct market content where offerings differ, use appropriate URL structure and language signals, and confirm the right pages surface in each country."
-    },
-    {
-      "q": "When should I use hreflang for Arabic and English pages?",
-      "a": "Use it when equivalent regional or language pages exist. Each version still needs useful localisation, self-references and working return links."
-    },
-    {
-      "q": "Is automatic translation enough for international SEO?",
-      "a": "Usually no. Research local queries, review cultural and product details, and have fluent editors check important conversion pages."
-    },
-    {
-      "q": "Can a Dubai business rank on Google in the US and UK?",
-      "a": "Yes if it genuinely serves those markets and publishes relevant, well-targeted pages. A Dubai base does not imply offices in those countries."
-    },
-    {
-      "q": "How do I measure organic growth by country?",
-      "a": "Segment Search Console, landing-page and conversion data by country and language, then compare against each market's baseline."
-    }
-  ],
   "seo-audits": [
     {
       "q": "What does a technical SEO audit include?",
