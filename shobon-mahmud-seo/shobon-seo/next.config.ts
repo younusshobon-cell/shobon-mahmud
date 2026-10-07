@@ -41,6 +41,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     // Friendly aliases that match the navigation label "Work"
     return [
+      { source: "/services/international-seo", destination: "/services", permanent: true },
       ...locations.map(({ slug }) => ({
         source: `/locations/${slug}`,
         destination: `/locations/seo-consultant-${slug}`,
