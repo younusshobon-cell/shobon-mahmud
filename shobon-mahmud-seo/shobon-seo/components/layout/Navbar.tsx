@@ -10,7 +10,10 @@ import { mainNav } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
 
-export function Navbar() {
+export function Navbar({ locale = "en" }: { locale?: "en" | "ar" | "bn" } = {}) {
+  const native = locale !== "en";
+  const navLabels: Record<string, string> = locale === "ar" ? { Work: "أعمالي", Services: "الخدمات", Industries: "القطاعات", Locations: "المناطق", Blog: "المقالات", About: "عنّي" } : locale === "bn" ? { Work: "কাজ", Services: "সেবা", Industries: "ইন্ডাস্ট্রি", Locations: "লোকেশন", Blog: "ব্লগ", About: "আমার সম্পর্কে" } : {};
+  const labels = locale === "ar" ? { contact: "تواصل معي", nav: "التنقل الرئيسي", close: "إغلاق القائمة", open: "فتح القائمة", menu: "قائمة الموقع" } : { contact: "যোগাযোগ করুন", nav: "প্রধান নেভিগেশন", close: "মেনু বন্ধ করুন", open: "মেনু খুলুন", menu: "সাইট মেনু" };
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -81,7 +84,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 w-full max-w-[1240px] items-center justify-between px-5 sm:px-8 lg:h-[4.5rem] lg:px-10">
         <Logo className="max-[380px]:[&>span]:hidden" />
 
-        <nav aria-label={pageCopy.text_001} className="hidden lg:block">
+        <nav aria-label={native ? labels.nav : pageCopy.text_001} className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => (
               <li key={item.href}>
@@ -93,7 +96,7 @@ export function Navbar() {
                     isActive(item.href) ? "text-ink" : "text-muted hover:text-ink",
                   )}
                 >
-                  {item.label}
+                  {navLabels[item.label] ?? item.label}
                   {isActive(item.href) && (
                     <motion.span aria-hidden layoutId="nav-underline" className="absolute inset-x-3.5 -bottom-0.5 h-px bg-link" />
                   )}
@@ -108,14 +111,14 @@ export function Navbar() {
             href={pageCopy.text_002}
             className="site-button inline-flex min-h-11 items-center rounded-full bg-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-link active:translate-y-px sm:px-5"
           >
-            {pageCopy.text_003}</Link>
+            {native ? labels.contact : pageCopy.text_003}</Link>
           <button
             ref={toggleRef}
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? pageCopy.text_004 : pageCopy.text_005}
+            aria-label={open ? (native ? labels.close : pageCopy.text_004) : (native ? labels.open : pageCopy.text_005)}
             className="grid size-11 place-items-center rounded-full border border-line-strong text-ink lg:hidden"
           >
             {open ? <X aria-hidden className="size-5" /> : <Menu aria-hidden className="size-5" />}
@@ -130,7 +133,7 @@ export function Navbar() {
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
-            aria-label={pageCopy.text_006}
+            aria-label={native ? labels.menu : pageCopy.text_006}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -138,10 +141,10 @@ export function Navbar() {
             className="fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] z-40 overflow-y-auto bg-paper lg:hidden"
           >
             <div className="flex items-center justify-between px-5 pt-5 sm:px-8">
-              <p className="text-sm font-medium text-muted">{pageCopy.text_001}</p>
-              <button type="button" onClick={() => setOpen(false)} aria-label={pageCopy.text_004} className="grid size-11 place-items-center rounded-full border border-line-strong"><X aria-hidden className="size-5" /></button>
+              <p className="text-sm font-medium text-muted">{native ? labels.nav : pageCopy.text_001}</p>
+              <button type="button" onClick={() => setOpen(false)} aria-label={native ? labels.close : pageCopy.text_004} className="grid size-11 place-items-center rounded-full border border-line-strong"><X aria-hidden className="size-5" /></button>
             </div>
-            <nav aria-label={pageCopy.text_006} className="px-5 pt-6 pb-10 sm:px-8">
+            <nav aria-label={native ? labels.menu : pageCopy.text_006} className="px-5 pt-6 pb-10 sm:px-8">
               <ul className="divide-y divide-line border-y border-line">
                 {mainNav.map((item, i) => (
                   <motion.li
@@ -156,13 +159,13 @@ export function Navbar() {
                       aria-current={isActive(item.href) ? "page" : undefined}
                       className={cn("flex items-center justify-between py-4 text-2xl font-medium tracking-tight", isActive(item.href) ? "text-link" : "text-ink")}
                     >
-                      {item.label}
+                      {navLabels[item.label] ?? item.label}
                     </Link>
                   </motion.li>
                 ))}
               </ul>
               <Link href={pageCopy.text_007} onClick={() => setOpen(false)} className="site-button mt-8 flex h-12 items-center justify-center rounded-full bg-ink text-paper font-medium">
-                {pageCopy.text_008}</Link>
+                {native ? labels.contact : pageCopy.text_008}</Link>
             </nav>
           </motion.div>
         )}

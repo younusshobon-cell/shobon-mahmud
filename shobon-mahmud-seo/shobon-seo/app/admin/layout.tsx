@@ -1,3 +1,4 @@
+import { DocumentLayout } from "@/components/layout/DocumentLayout";
 import type { Metadata } from "next";
 import "./admin.css";
 export const metadata: Metadata = {
@@ -10,5 +11,5 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="admin-app">{children}</div>;
+  return <DocumentLayout><div className="admin-app">{children}</div></DocumentLayout>;
 }

@@ -16,6 +16,7 @@ const React = require('react'), {renderToStaticMarkup} = require('react-dom/serv
 let pathname = image.page;
 const {default: Image, HeroImageLayout, imageKey, EditableInlineImage} = load('components/content/EditableImage.tsx', {
   'next/navigation': {usePathname: () => pathname},
+  '@/lib/image-overrides': load('lib/image-overrides.ts'),
   'next/image': {__esModule: true, default: props => React.createElement('img', {src: props.src, alt: props.alt, 'data-original-src': props['data-original-src'], 'data-unoptimized': props.unoptimized})},
   '@/lib/utils': {cn: (...values) => values.filter(Boolean).join(' ')},
   '@/content/page-images.json': [image, {...image, key: JSON.stringify(['/original.png', 'Original'])}]
@@ -26,6 +27,9 @@ assert.match(hero(), /src="\/uploads\/saudi.png"/);
 assert.match(hero(), /Original diagram/);
 assert.match(renderToStaticMarkup(React.createElement(Image, {src: '/original.png', alt: 'Original', width: 10, height: 10})), /data-unoptimized="true"/);
 assert.match(renderToStaticMarkup(React.createElement(EditableInlineImage, {src: '/original.png', alt: 'Original'})), /src="\/uploads\/saudi.png"/);
+pathname = '/ar' + image.page;
+assert.match(hero(), /src="\/uploads\/saudi.png"/);
+assert.match(hero(), /alt="Hero"/);
 pathname = '/locations/seo-consultant-dubai';
 assert.doesNotMatch(hero(), /src="\/uploads\/saudi.png"/);
 assert.match(renderToStaticMarkup(React.createElement(Image, {src: '/original.png', alt: 'Original', width: 10, height: 10})), /src="\/original.png"/);

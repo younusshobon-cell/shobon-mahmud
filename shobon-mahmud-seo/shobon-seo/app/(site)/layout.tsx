@@ -1,3 +1,4 @@
+import { DocumentLayout } from "@/components/layout/DocumentLayout";
 import { VisitorTracker } from "@/components/layout/VisitorTracker";
 import pageCopy from "@/content/copy-app-layout.json";
 import type { Metadata, Viewport } from "next";
@@ -45,7 +46,7 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <DocumentLayout>
       <div className="flex min-h-dvh flex-col">
         <a
           href={pageCopy.text_001}
@@ -66,6 +67,6 @@ export default function SiteLayout({
         <Analytics />
         <VisitorTracker />
       </div>
-    </>
+    </DocumentLayout>
   );
 }

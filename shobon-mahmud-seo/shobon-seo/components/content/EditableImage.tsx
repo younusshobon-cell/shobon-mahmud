@@ -14,24 +14,26 @@ export function imageKey(src: string, alt: string) {
   // Static import hashes change when an original portrait is replaced.
   return JSON.stringify([src.replace(/\.[a-f0-9]{8,}\./g, "."), alt]);
 }
-function useOverride(key: string) {
+function useOverride(key: string, alt: string) {
   const page = usePathname();
-  return resolveImageOverride(images, page, key);
+  const englishPage = page.replace(/^\/(ar|bn)(?=\/locations\/)/, "");
+  const override = resolveImageOverride(images, englishPage, key);
+  return override && englishPage !== page ? { ...override, alt } : override;
 }
 export default function EditableImage(props: ImageProps) {
   const original = source(props.src), key = imageKey(original, props.alt);
-  const override = useOverride(key);
+  const override = useOverride(key, props.alt);
   return <NextImage {...props} data-page-image-key={key} data-original-src={original} data-original-alt={props.alt}
     {...(override ? {src: override.src, alt: override.alt, placeholder: "empty", blurDataURL: undefined, unoptimized: true, overrideSrc: undefined} : {})}/>;
 }
 export function EditableInlineImage(props: ImgHTMLAttributes<HTMLImageElement>) {
   const original = typeof props.src === "string" ? props.src : "", alt = props.alt || "", key = imageKey(original, alt);
-  const override = useOverride(key);
+  const override = useOverride(key, alt);
   return <img {...props} data-page-image-key={key} data-original-src={original} data-original-alt={alt}
     {...(override ? {src: override.src, alt: override.alt, srcSet: undefined} : {})}/>;
 }
 export function HeroImageLayout({children, aside, alt}: {children: ReactNode; aside?: ReactNode; alt: string}) {
-  const override = useOverride("hero");
+  const override = useOverride("hero", alt);
   return <div className={cn("grid gap-10", (aside || override) && "lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16")}>
     {children}
     <div data-page-image-slot="hero" data-original-alt={alt} data-has-original-aside={Boolean(aside)} hidden={!aside && !override} className="hero-media lg:self-center">

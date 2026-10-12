@@ -1,6 +1,8 @@
 const fs = require('fs'), vm = require('vm'), assert = require('assert/strict'), ts = require('typescript');
 const industries = [{slug:'healthcare',relatedServices:['audit']}];
+const routingModule={exports:{}};vm.runInThisContext('(function(module,exports){'+ts.transpileModule(fs.readFileSync('lib/i18n/routing.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText+'\n})')(routingModule,routingModule.exports);
 const stubs = {
+ '@/lib/i18n/routing':routingModule.exports,
  '@/lib/content/pages':{customPages:[{slug:'new-page',updated:'invalid'}]},
  '@/lib/content/blog':{blogCategories:[],POSTS_PER_PAGE:10,posts:[{slug:'care-guide',relatedIndustries:['healthcare'],date:'2026-10-03'}]},
  '@/lib/content/case-studies':{caseStudies:[{slug:'published-case',industry:'healthcare',draft:false},{slug:'draft-case',industry:'healthcare',draft:true}]},
@@ -19,6 +21,8 @@ industries.push({slug:'new-industry',relatedServices:[]});
 assert.ok(s.sectionSitemap('industries').includes('/industries/new-industry'),'new CMS industry joins the single industry sitemap automatically');
 assert.equal((s.sitemapIndex().match(/<sitemap>/g)||[]).length,6,'adding industries does not add separate sitemaps');
 assert.ok(!s.sectionSitemap('portfolio').includes('draft-case'));
+for(const slug of ['dubai','saudi-arabia','oman']) assert.ok(s.sectionSitemap('locations').includes('/ar/locations/seo-consultant-'+slug));
+assert.ok(s.sectionSitemap('locations').includes('/bn/locations/seo-consultant-dhaka'));
 assert.ok(s.sectionSitemap('pages').includes('/new-page'));assert.ok(!s.sectionSitemap('pages').includes('<lastmod>'));
 assert.equal((s.urlSitemap([{path:'/a&b'},{path:'/a&b'}]).match(/<url>/g)||[]).length,1);assert.ok(s.urlSitemap([{path:'/a&b'}]).includes('&amp;'));
 const robots=load('app/robots.ts').default;

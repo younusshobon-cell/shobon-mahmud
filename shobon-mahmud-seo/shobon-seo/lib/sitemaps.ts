@@ -1,3 +1,4 @@
+import { localizedLocations, locationPath } from "@/lib/i18n/routing";
 import { customPages } from "@/lib/content/pages";
 import { blogCategories, POSTS_PER_PAGE, posts } from "@/lib/content/blog";
 import { caseStudies } from "@/lib/content/case-studies";
@@ -23,7 +24,7 @@ export function entriesFor(section: SitemapSection): SitemapEntry[] {
     case "services":
       return [{ path: "/services" }, ...services.map(({ slug }) => ({ path: `/services/${slug}` }))];
     case "locations":
-      return [{ path: "/locations" }, ...locations.map(({ slug }) => ({ path: `/locations/seo-consultant-${slug}` }))];
+      return [{ path: "/locations" }, ...locations.map(({ slug }) => ({ path: `/locations/seo-consultant-${slug}` })), ...Object.entries(localizedLocations).map(([slug, config]) => ({ path: locationPath(slug, config.locale) }))];
     case "industries":
       return [{ path: "/industries" }, ...industries.map(({ slug }) => ({ path: `/industries/${slug}` }))];
     case "blog": {

@@ -1,5 +1,5 @@
 
-import pageCopy from "@/content/copy-components-sections-DhakaLanding.json";
+import englishCopy from "@/content/copy-components-sections-DhakaLanding.json";
 import { MapPin, Search, Megaphone, Globe, MessageCircle, BarChart3, ArrowUpRight, Check, Stethoscope, Store, CalendarDays } from "lucide-react";
 import { HeroImageLayout } from "@/components/content/EditableImage";
 import { Container } from "@/components/ui/Container";
@@ -11,6 +11,8 @@ import { FAQ } from "@/components/content/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
 
+export function DhakaLanding({ copy = englishCopy, locale = "en" }: { copy?: typeof englishCopy; locale?: "en" | "bn" } = {}) {
+  const pageCopy = copy;
 const services = [
   { icon: Search, title: pageCopy.text_001, body: pageCopy.text_002, href: "/services/on-page-seo" },
   { icon: MapPin, title: pageCopy.text_003, body: pageCopy.text_004, href: "/services/local-seo" },
@@ -42,7 +44,7 @@ const faqs = [
   { q: pageCopy.text_043, a: pageCopy.text_044 },
 ];
 
-const areas = ["Dhanmondi", "Mirpur", "Uttara", "Gulshan", "Banani", "Bashundhara", "Mohammadpur", "Badda", "Rampura", "Motijheel", pageCopy.text_045];
+const areas = locale === "bn" ? ["ধানমন্ডি", "মিরপুর", "উত্তরা", "গুলশান", "বনানী", "বসুন্ধরা", "মোহাম্মদপুর", "বাড্ডা", "রামপুরা", "মতিঝিল", "পুরান ঢাকা"] : ["Dhanmondi", "Mirpur", "Uttara", "Gulshan", "Banani", "Bashundhara", "Mohammadpur", "Badda", "Rampura", "Motijheel", pageCopy.text_045];
 const included = [pageCopy.text_046, pageCopy.text_047, pageCopy.text_048, pageCopy.text_049, pageCopy.text_050, pageCopy.text_051];
 const steps = [
   { title: pageCopy.text_052, body: pageCopy.text_053 },
@@ -51,8 +53,8 @@ const steps = [
   { title: pageCopy.text_058, body: pageCopy.text_059 },
 ];
 
-export function DhakaLanding() {
-  const url = new URL("/locations/seo-consultant-dhaka", siteConfig.url).toString();
+  const path = `${locale === "bn" ? "/bn" : ""}/locations/seo-consultant-dhaka`;
+  const url = new URL(path, siteConfig.url).toString();
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -66,12 +68,12 @@ export function DhakaLanding() {
     hasOfferCatalog: { "@type": "OfferCatalog", name: pageCopy.text_066, itemListElement: [{ "@type": "Offer", price: "15000", priceCurrency: "BDT", url: url + "#website-offer", itemOffered: { "@type": "Service", name: pageCopy.text_067, description: pageCopy.text_068 } }] },
   };
   return (
-    <div lang="en">
+    <div lang={locale}>
       <section className="hero-surface relative overflow-hidden" data-hero-theme="dhaka">
         <Container className="relative pt-10 pb-16 sm:pt-14 lg:pb-24">
-          <Breadcrumbs items={[{ name: "Locations", href: "/locations" }, { name: "Dhaka", href: "/locations/seo-consultant-dhaka" }]} />
+          <Breadcrumbs homeLabel={locale === "bn" ? "হোম" : "Home"} label={locale === "bn" ? "পেজের অবস্থান" : undefined} items={[{ name: locale === "bn" ? "লোকেশন" : "Locations", href: "/locations" }, { name: locale === "bn" ? "ঢাকা" : "Dhaka", href: path }]} />
           <HeroImageLayout
-            alt="Dhaka location hero image"
+            alt={locale === "bn" ? "ঢাকা শহরের ব্যবসা ও ডিজিটাল মার্কেটিং" : "Dhaka location hero image"}
             aside={
               <div aria-hidden="true" className="aspect-[4/3] w-full rounded-[28px] border border-dashed border-[#b8d1c4] bg-[#e4efe8]" />
             }
@@ -135,7 +137,7 @@ export function DhakaLanding() {
 
       <Section tone="muted" labelledBy="dhaka-channel-plan"><h2 id="dhaka-channel-plan" className="t-h2 text-ink">{pageCopy.text_154}</h2><div className="mt-10 grid gap-5 md:grid-cols-3">{[{ title: pageCopy.text_155, body: pageCopy.text_156, tag: pageCopy.text_157 }, { title: pageCopy.text_158, body: pageCopy.text_159, tag: pageCopy.text_160 }, { title: pageCopy.text_161, body: pageCopy.text_162, tag: pageCopy.text_163 }].map(p => <div key={p.title} className="rounded-2xl border border-line bg-white p-7"><p className="text-xs font-semibold uppercase tracking-wider text-[#14604b]">{p.tag}</p><h3 className="t-h3 mt-4 text-ink">{p.title}</h3><p className="mt-3 leading-relaxed text-muted">{p.body}</p></div>)}</div><p className="mt-6 text-sm text-muted">{pageCopy.text_164}</p></Section>
 
-      <GrowthPrompt title="Reach the Dhaka customers looking for your services." />
+      <GrowthPrompt title={locale === "bn" ? "আপনার সেবা খুঁজছেন এমন ঢাকার গ্রাহকের কাছে পৌঁছান।" : "Reach the Dhaka customers looking for your services."} {...(locale === "bn" ? { body: "আপনার ব্যবসা, গ্রাহক ও সেবার এলাকা নিয়ে আলোচনা করি। দরকারি পেজ ও সহজ যোগাযোগের পথ দিয়ে শুরু করুন।", action: "আমার ব্যবসা নিয়ে আলোচনা করি", labels: { kicker: "আপনার পরবর্তী গ্রোথ পরিকল্পনা", cards: ["সার্চ", "কনটেন্ট", "যোগাযোগ"], services: "সব সেবা দেখুন" } } : {})} />
       <Section labelledBy="dhaka-process"><h2 id="dhaka-process" className="t-h2 text-ink">{pageCopy.text_165}</h2><ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{steps.map((p, i) => <li key={p.title} className="border-t border-line-strong pt-5"><span className="text-sm font-semibold text-[#14604b]">{pageCopy.text_166}{i + 1}</span><h3 className="t-h3 mt-4 text-ink">{p.title}</h3><p className="mt-3 leading-relaxed text-muted">{p.body}</p></li>)}</ol></Section>
 
       <Section tone="muted" labelledBy="dhaka-areas"><div className="grid gap-10 lg:grid-cols-2 lg:gap-20"><div><h2 id="dhaka-areas" className="t-h2 text-ink">{pageCopy.text_167}</h2><p className="mt-5 leading-relaxed text-muted">{pageCopy.text_168}</p><p className="mt-4 leading-relaxed text-muted">{pageCopy.text_169}<a className="link" href={pageCopy.text_170}>{pageCopy.text_171}</a> {pageCopy.text_172}<a className="link" href={pageCopy.text_173}>{pageCopy.text_174}</a>{pageCopy.text_175}</p></div><div><ul className="flex flex-wrap gap-3">{areas.map(area => <li key={area} className="rounded-full border border-line bg-white px-5 py-2.5 text-sm text-ink">{area}</li>)}</ul><p className="mt-5 leading-relaxed text-sm text-muted">{pageCopy.text_176}</p></div></div></Section>

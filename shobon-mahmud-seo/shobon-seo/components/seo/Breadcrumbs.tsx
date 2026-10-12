@@ -5,11 +5,11 @@ import { breadcrumbSchema, type Crumb } from "@/lib/schema";
 import { JsonLd } from "./JsonLd";
 import { cn } from "@/lib/utils";
 
-export function Breadcrumbs({ items, tone = "light" }: { items: Crumb[]; tone?: "light" | "dark" }) {
-  const all = [{ name: "Home", href: "/" }, ...items];
+export function Breadcrumbs({ items, tone = "light", homeLabel = "Home", label = pageCopy.text_001 }: { items: Crumb[]; tone?: "light" | "dark"; homeLabel?: string; label?: string }) {
+  const all = [{ name: homeLabel, href: "/" }, ...items];
   return (
     <>
-      <nav aria-label={pageCopy.text_001} className="mb-8">
+      <nav aria-label={label} className="mb-8">
         <ol className={cn("flex flex-wrap items-center gap-x-2 gap-y-1 text-sm", tone === "dark" ? "text-on-night-muted" : "text-muted")}>
           {all.map((c, i) => {
             const last = i === all.length - 1;

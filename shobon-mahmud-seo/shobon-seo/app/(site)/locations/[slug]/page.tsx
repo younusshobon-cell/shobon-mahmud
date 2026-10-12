@@ -1,3 +1,6 @@
+import { LanguageSwitch } from "@/components/i18n/LanguageSwitch";
+import { locationAlternates } from "@/lib/i18n/routing";
+import { siteConfig } from "@/lib/site";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-locations-slug-page.json";
 import type { Metadata } from "next";
@@ -48,20 +51,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
     return {
       ...metadata,
-      openGraph: { ...metadata.openGraph, locale: "en_BD" },
+      alternates: { ...metadata.alternates, languages: locationAlternates(l.slug, siteConfig.url) },
+      openGraph: { ...metadata.openGraph, locale: "en_BD", alternateLocale: ["bn_BD"] },
     };
   }
-  return buildMetadata({
+  const metadata = buildMetadata({
     title: l.seoTitle,
     description: l.intro.slice(0, 158),
     path: `/locations/seo-consultant-${l.slug}`,
   });
+  return { ...metadata, alternates: { ...metadata.alternates, languages: locationAlternates(l.slug, siteConfig.url) } };
 }
 
 export default async function LocationPage({ params }: Props) {
   const loc = getLocation((await params).slug);
   if (!loc) notFound();
-  if (loc.slug === "dhaka") return <><PageSchema path="/locations/seo-consultant-dhaka" /><DhakaLanding /></>;
+  if (loc.slug === "dhaka") return <><LanguageSwitch slug="dhaka" /><PageSchema path="/locations/seo-consultant-dhaka" /><DhakaLanding /></>;
   const path = `/locations/seo-consultant-${loc.slug}`;
   const studies = caseStudies
     .filter((c) => loc.industries.includes(c.industry))
@@ -71,6 +76,7 @@ export default async function LocationPage({ params }: Props) {
 
   return (
     <div className={loc.slug === "london" ? "london-page" : undefined}>
+      <LanguageSwitch slug={loc.slug} />
       <PageSchema path={path} />
       <PageHero
         theme={loc.slug}

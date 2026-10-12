@@ -824,3 +824,11 @@ background:#f6f8f5}
 .location-globe button:focus-visible { outline:3px solid #165178; outline-offset:3px; }
 /* Keep the hub heading aligned with its visual instead of bottom-aligned. */
 .hero-surface:has(.location-globe) > div > .grid { align-items:center; }
+
+/* Localized location pages keep native script shaping and logical alignment. */
+.localized-page { font-family: Arial, "Noto Sans Arabic", "Noto Sans Bengali", sans-serif; }
+.localized-page :is(h1,h2,h3,p,summary) { letter-spacing: normal; }
+.localized-page :is(.t-h1,.t-h2,.t-h3) { line-height: 1.45; }
+html[lang="bn"] .localized-page :is(p,li,summary) { line-height: 1.8; }
+html[dir="rtl"] .localized-page :is(summary,.text-left) { text-align: start; }
+html[dir="rtl"] .localized-page .tracking-wider { letter-spacing: normal; }
