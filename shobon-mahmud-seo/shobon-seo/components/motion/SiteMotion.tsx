@@ -31,5 +31,58 @@ export function SiteMotion() {
     preference.addEventListener("change", start);
     return () => { observer?.disconnect(); preference.removeEventListener("change", start); };
   }, [pathname]);
+
+  useEffect(() => {
+    // Includes translated location pages and their custom Dhaka layout.
+    if (!/\/locations\/[^/]+\/?$/.test(pathname)) return;
+    const main = document.querySelector("main");
+    if (!main) return;
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const animations = new Set<Animation>();
+    let observer: IntersectionObserver | undefined;
+    main.classList.add("location-motion");
+    const cancel = () => {
+      observer?.disconnect();
+      animations.forEach((animation) => animation.cancel());
+      animations.clear();
+    };
+    const enter = (element: HTMLElement, delay: number, media = false) => {
+      if (typeof element.animate !== "function") return;
+      const animation = element.animate([
+        { opacity: 0.65, transform: media ? "scale(.97)" : "translateY(18px)" },
+        { opacity: 1, transform: media ? "scale(1)" : "translateY(0)" },
+      ], { duration: media ? 850 : 650, delay, easing: "cubic-bezier(.22,1,.36,1)", fill: "backwards" });
+      animations.add(animation);
+      animation.onfinish = () => animations.delete(animation);
+    };
+    const start = () => {
+      cancel();
+      if (preference.matches) return;
+      const hero = main.querySelector(".hero-surface");
+      hero?.querySelectorAll<HTMLElement>("h1, .t-lead, .site-button, .hero-media").forEach((element, index) => {
+        enter(element, Math.min(index * 90, 360), element.matches(".hero-media"));
+      });
+      if (!("IntersectionObserver" in window)) return;
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const element = entry.target as HTMLElement;
+          const siblings = Array.from(element.parentElement?.children ?? []);
+          enter(element, (siblings.indexOf(element) % 3) * 90);
+          observer?.unobserve(element);
+        });
+      }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
+      main.querySelectorAll<HTMLElement>("section ul.grid > li, section .grid > a, section .grid > article, .hero-grid-band .grid > *, .location-section-nav a").forEach((element) => {
+        if (!element.closest(".hero-surface")) observer?.observe(element);
+      });
+    };
+    start();
+    preference.addEventListener("change", start);
+    return () => {
+      cancel();
+      preference.removeEventListener("change", start);
+      main.classList.remove("location-motion");
+    };
+  }, [pathname]);
   return null;
 }
