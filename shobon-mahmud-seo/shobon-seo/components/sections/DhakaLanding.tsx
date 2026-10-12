@@ -14,7 +14,7 @@ import { siteConfig } from "@/lib/site";
 export function DhakaLanding({ copy = englishCopy, locale = "en" }: { copy?: typeof englishCopy; locale?: "en" | "bn" } = {}) {
   const pageCopy = copy;
 const services = [
-  { icon: Search, title: pageCopy.text_001, body: pageCopy.text_002, href: "/services/on-page-seo" },
+  { icon: Search, title: pageCopy.text_001, body: pageCopy.text_002, href: "/services/Holistic-SEO" },
   { icon: MapPin, title: pageCopy.text_003, body: pageCopy.text_004, href: "/services/local-seo" },
   { icon: Megaphone, title: pageCopy.text_005, body: pageCopy.text_006, href: "#facebook-marketing" },
   { icon: ArrowUpRight, title: pageCopy.text_007, body: pageCopy.text_008, href: "/contact" },

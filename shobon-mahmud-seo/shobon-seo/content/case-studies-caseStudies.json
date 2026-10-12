@@ -8,10 +8,8 @@
     "outcome": "Suggested direction: Prioritise honest comparison and integration pages over broad awareness content.",
     "summary": "A SaaS search strategy that connects product-led pages, technical access and demo intent.",
     "services": [
-      "technical-seo",
-      "content-seo",
-      "competitor-research",
-      "on-page-seo"
+      "Holistic-SEO",
+      "content-seo"
     ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
@@ -75,7 +73,10 @@
     "title": "Health tech SEO: clarity, evidence and findable pages",
     "outcome": "Suggested direction: Build separate pathways for each audience with clear page purpose.",
     "summary": "An SEO framework for expert-reviewed health technology content and distinct audiences.",
-    "services": ["content-seo", "technical-seo", "keyword-research"],
+    "services": [
+      "content-seo",
+      "Holistic-SEO"
+    ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
     "featured": true,
@@ -138,7 +139,10 @@
     "title": "Logistics SEO: service and route search architecture",
     "outcome": "Suggested direction: Create distinct service pages before expanding route coverage.",
     "summary": "A logistics SEO approach for real service coverage, freight queries and quote-ready traffic.",
-    "services": ["local-seo", "on-page-seo", "technical-seo"],
+    "services": [
+      "local-seo",
+      "Holistic-SEO"
+    ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
     "featured": true,
@@ -201,7 +205,10 @@
     "title": "Legal tech SEO: precise pages for expert buyers",
     "outcome": "Suggested direction: Create workflow pages tied to real product capabilities.",
     "summary": "A search strategy for legal technology teams targeting workflow and software evaluation queries.",
-    "services": ["keyword-research", "on-page-seo", "content-seo"],
+    "services": [
+      "content-seo",
+      "Holistic-SEO"
+    ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
     "featured": false,
@@ -264,7 +271,9 @@
     "title": "Design agency SEO: make case studies discoverable",
     "outcome": "Suggested direction: Turn selected projects into clear narratives with context and process.",
     "summary": "A search approach for visual portfolios that need useful text, service clarity and fast pages.",
-    "services": ["on-page-seo", "technical-seo", "off-page-seo"],
+    "services": [
+      "Holistic-SEO"
+    ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
     "featured": false,
@@ -327,7 +336,11 @@
     "title": "E-commerce SEO: category structure and crawl control",
     "outcome": "Suggested direction: Make high-value categories distinct and helpful.",
     "summary": "An online-store SEO framework for useful categories, filtered URLs and product discovery.",
-    "services": ["ecommerce-seo", "technical-seo", "keyword-research"],
+    "services": [
+      "ecommerce-seo",
+      "Holistic-SEO",
+      "content-seo"
+    ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
     "featured": false,

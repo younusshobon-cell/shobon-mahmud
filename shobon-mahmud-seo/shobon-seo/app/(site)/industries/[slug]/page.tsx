@@ -1,3 +1,5 @@
+import { EngagementDetails } from "@/components/content/EngagementDetails";
+import { PageContents } from "@/components/content/PageContents";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-industries-slug-page.json";
 import type { Metadata } from "next";
@@ -13,7 +15,6 @@ import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
 import { FAQ } from "@/components/content/FAQ";
-import { expandFaqs } from "@/lib/content/faqs";
 import { ContextCta } from "@/components/content/ContextCta";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
@@ -37,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title: i.seoTitle,
     description: i.summary,
+    imageAlt: "Shobon Mahmud — industry SEO consulting",
     path: `/industries/${i.slug}`,
   });
 }
@@ -66,6 +68,7 @@ export default async function IndustryPage({ params }: Props) {
         </ButtonLink>
       </PageHero>
 
+      <PageContents label={`${industry.name} SEO page sections`} items={[{ id: "landscape", label: "Market context" }, { id: "journey", label: "Buyer searches" }, { id: "strategy", label: "Strategy" }, ...(industry.engagement ? [{ id: "delivery-details", label: "The work in practice" }] : []), { id: "industry-services", label: "Relevant services" }, { id: "industry-faqs", label: "FAQs" }]} />
       <Section tone="muted" labelledBy="landscape">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <h2 id="landscape" className="t-h2 text-ink">
@@ -120,7 +123,7 @@ export default async function IndustryPage({ params }: Props) {
                       aria-hidden
                       className="size-3 shrink-0 text-on-night-muted"
                     />
-                    <span className="truncate">{e}</span>
+                    <span className="min-w-0 break-words">{e}</span>
                   </li>
                 ))}
               </ul>
@@ -166,7 +169,9 @@ export default async function IndustryPage({ params }: Props) {
         </div>
       </Section>
 
-      <Section>
+      <EngagementDetails content={industry.engagement} topic={`${industry.name} SEO`} />
+
+      <Section id="industry-services">
         <RelatedServices
           items={getServices(industry.relatedServices)}
           title={`Services for ${industry.name}`}
@@ -183,8 +188,8 @@ export default async function IndustryPage({ params }: Props) {
           <RelatedCaseStudies items={studies} title={`${industry.name} work`} />
         </Section>
       )}
-      <Section>
-        <FAQ faqs={expandFaqs(industry.faqs, industry.name, "industry")} />
+      <Section id="industry-faqs">
+        <FAQ faqs={industry.faqs} title={`${industry.name} SEO: questions before you start`} withSchema />
       </Section>
       {articles.length > 0 && (
         <Section tone="muted">

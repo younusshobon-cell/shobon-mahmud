@@ -33,14 +33,16 @@ export function SiteMotion() {
   }, [pathname]);
 
   useEffect(() => {
-    // Includes translated location pages and their custom Dhaka layout.
-    if (!/\/locations\/[^/]+\/?$/.test(pathname)) return;
+    // Service and industry hubs/details share progressive buyer-journey motion.
+    // Location motion retains its existing scope, including translated pages.
+    if (!/^(?:\/(?:ar|bn))?\/locations\/[^/]+\/?$/.test(pathname) &&
+        !/^\/(?:services|industries)(?:\/[^/]+)?\/?$/.test(pathname)) return;
     const main = document.querySelector("main");
     if (!main) return;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const animations = new Set<Animation>();
     let observer: IntersectionObserver | undefined;
-    main.classList.add("location-motion");
+    main.classList.add("page-motion");
     const cancel = () => {
       observer?.disconnect();
       animations.forEach((animation) => animation.cancel());
@@ -72,8 +74,8 @@ export function SiteMotion() {
           observer?.unobserve(element);
         });
       }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
-      main.querySelectorAll<HTMLElement>("section ul.grid > li, section .grid > a, section .grid > article, .hero-grid-band .grid > *, .location-section-nav a").forEach((element) => {
-        if (!element.closest(".hero-surface")) observer?.observe(element);
+      main.querySelectorAll<HTMLElement>("section ul.grid > li, section ol.grid > li, section .grid > a, section .grid > article, .hero-grid-band .grid > *, .location-section-nav a, .page-contents a").forEach((element) => {
+        if (!element.closest(".hero-surface") && !element.matches("[data-motion-step], .interactive-card")) observer?.observe(element);
       });
     };
     start();
@@ -81,7 +83,7 @@ export function SiteMotion() {
     return () => {
       cancel();
       preference.removeEventListener("change", start);
-      main.classList.remove("location-motion");
+      main.classList.remove("page-motion");
     };
   }, [pathname]);
   return null;

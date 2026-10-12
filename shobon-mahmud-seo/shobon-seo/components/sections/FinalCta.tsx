@@ -15,7 +15,9 @@ import { ButtonLink } from "@/components/ui/Button";
 export function FinalCta({
   title = pageCopy.text_001,
   body = pageCopy.text_002,
-}: { title?: string; body?: string }) {
+  actionTitle = pageCopy.text_005,
+  actionClassName,
+}: { title?: string; body?: string; actionTitle?: string; actionClassName?: string }) {
   const headingId = useId();
   return (
     <section aria-labelledby={headingId} className="bg-paper-2">
@@ -29,7 +31,7 @@ export function FinalCta({
           <div className="relative rounded-[22px] border border-line bg-white/80 p-6 sm:p-7">
             <Image src={footerPhoto?.src ?? photos.casual.src} alt={footerPhoto?.alt || pageCopy.text_003} unoptimized={Boolean(footerPhoto)} width={640} height={360} sizes="(min-width: 1024px) 360px, 90vw" className="aspect-[16/9] w-full rounded-[16px] object-cover" />
             <div className="mt-6 flex flex-col gap-3">
-              <ButtonLink href={pageCopy.text_004}>{pageCopy.text_005}<ArrowUpRight aria-hidden className="size-4 shrink-0" /></ButtonLink>
+              <ButtonLink href={pageCopy.text_004} className={actionClassName}>{actionTitle}<ArrowUpRight aria-hidden className="size-4 shrink-0" /></ButtonLink>
               {siteConfig.email ? <ButtonLink href={`mailto:${siteConfig.email}`} variant="secondary"><Mail aria-hidden className="size-4 shrink-0" />{pageCopy.text_006}</ButtonLink> : null}
             </div>
             <p className="mt-5 text-sm leading-relaxed text-muted">{pageCopy.text_007}</p>

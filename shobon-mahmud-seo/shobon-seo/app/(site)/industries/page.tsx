@@ -1,3 +1,4 @@
+import { SeoSelectionGuide } from "@/components/content/SeoSelectionGuide";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-industries-page.json";
 import type { Metadata } from "next";
@@ -35,6 +36,7 @@ export default function IndustriesPage() {
           ))}
         </div>
       </Section>
+      <SeoSelectionGuide kind="industry" />
       <SeoBrief
         title={pageCopy.text_007}
         intro={pageCopy.text_008}
@@ -45,7 +47,7 @@ export default function IndustriesPage() {
         ]}
       />
       <Section>
-        <FAQ faqs={industryHubFaqs} />
+        <FAQ faqs={industryHubFaqs} title="Industry SEO: questions and answers" withSchema />
       </Section>
       <FinalCta
         title={pageCopy.text_015}

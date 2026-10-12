@@ -1,3 +1,6 @@
+import { EngagementDetails } from "@/components/content/EngagementDetails";
+import { HolisticSeoLanding } from "@/components/sections/HolisticSeoLanding";
+import { PageContents } from "@/components/content/PageContents";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-services-slug-page.json";
 import type { Metadata } from "next";
@@ -40,6 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title: s.seoTitle,
     description: s.summary,
+    imageAlt: "Shobon Mahmud — SEO services",
     path: `/services/${s.slug}`,
   });
 }
@@ -47,11 +51,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ServicePage({ params }: Props) {
   const service = getService((await params).slug);
   if (!service) notFound();
+  if (service.slug === "Holistic-SEO") return <HolisticSeoLanding service={service} />;
   const path = `/services/${service.slug}`;
   const studies = caseStudiesFor({ service: service.slug });
   const articles = postsFor({ service: service.slug });
   const others = getServices(
-    services.filter((s) => s.slug !== service.slug).map((s) => s.slug),
+    service.relatedServices ?? services.filter((s) => s.slug !== service.slug).map((s) => s.slug),
   ).slice(0, 4);
 
   return (
@@ -93,6 +98,7 @@ export default async function ServicePage({ params }: Props) {
           )}
         </div>
       </div>
+      <PageContents label={`${service.name} page sections`} items={[{ id: "covers", label: "What’s included" }, { id: "process", label: "Process & deliverables" }, ...(service.engagement ? [{ id: "delivery-details", label: "The work in practice" }] : []), { id: "fit", label: "Who it’s for" }, { id: "service-faqs", label: "FAQs" }]} />
       <Section tone="muted" labelledBy="problem">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <h2 id="problem" className="t-h2 text-ink">
@@ -160,6 +166,8 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </Section>
 
+      <EngagementDetails content={service.engagement} topic={service.name} />
+
       <GrowthPrompt title={`Get a focused ${service.name} plan for your website.`} />
 
       <Section labelledBy="fit">
@@ -216,11 +224,15 @@ export default async function ServicePage({ params }: Props) {
           <RelatedCaseStudies items={studies} />
         </Section>
       )}
-      <Section className={studies.length ? "pt-0 sm:pt-0 lg:pt-0" : ""}>
+      <Section id="service-faqs" className={studies.length ? "pt-0 sm:pt-0 lg:pt-0" : ""}>
         <FAQ
+          title={`${service.name}: questions before you start`}
+          withSchema
           faqs={[
             ...service.faqs,
             ...(serviceSearchFaqs[service.slug] ?? []),
+            { q: `What affects the cost of ${service.name.toLowerCase()}?`, a: "Scope depends on the number of pages or templates, research depth, implementation needs and review requirements. Share your URL and priorities for a scoped proposal. Audit, content production and implementation responsibilities are agreed before work starts." },
+            { q: `What is outside a ${service.name.toLowerCase()} engagement?`, a: "The proposal defines the pages, deliverables, access and responsibilities included. Additional development, paid campaigns, third-party fees or specialist legal and clinical review are not assumed to be included. Ranking positions and a fixed number of leads are not guaranteed." },
           ].slice(0, 10)}
         />
       </Section>

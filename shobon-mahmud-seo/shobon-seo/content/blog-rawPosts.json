@@ -7,7 +7,12 @@
     "date": "2026-08-18",
     "author": "Shobon Mahmud",
     "category": "technical-seo",
-    "tags": ["technical seo", "seo audit", "crawling", "indexing"],
+    "tags": [
+      "technical seo",
+      "seo audit",
+      "crawling",
+      "indexing"
+    ],
     "featured": true,
     "sections": [
       {
@@ -100,8 +105,14 @@
         "a": "Search Console and a crawler cover most needs. Log file analysis becomes valuable on large sites."
       }
     ],
-    "relatedServices": ["technical-seo", "seo-audits"],
-    "relatedIndustries": ["saas", "ecommerce", "technology"]
+    "relatedServices": [
+      "Holistic-SEO"
+    ],
+    "relatedIndustries": [
+      "saas",
+      "ecommerce",
+      "technology"
+    ]
   },
   {
     "slug": "saas-keyword-research-by-intent",
@@ -110,7 +121,11 @@
     "date": "2026-07-29",
     "author": "Shobon Mahmud",
     "category": "content-seo",
-    "tags": ["saas seo", "keyword research", "search intent"],
+    "tags": [
+      "saas seo",
+      "keyword research",
+      "search intent"
+    ],
     "sections": [
       {
         "id": "volume-trap",
@@ -168,11 +183,12 @@
       }
     ],
     "relatedServices": [
-      "keyword-research",
-      "content-seo",
-      "competitor-research"
+      "content-seo"
     ],
-    "relatedIndustries": ["saas", "technology"]
+    "relatedIndustries": [
+      "saas",
+      "technology"
+    ]
   },
   {
     "slug": "google-business-profile-optimization",
@@ -181,7 +197,11 @@
     "date": "2026-07-08",
     "author": "Shobon Mahmud",
     "category": "local-seo",
-    "tags": ["local seo", "google business profile", "map pack"],
+    "tags": [
+      "local seo",
+      "google business profile",
+      "map pack"
+    ],
     "sections": [
       {
         "id": "three-factors",
@@ -254,8 +274,13 @@
         "a": "Weekly or every other week is a good rhythm. Consistency matters more than volume."
       }
     ],
-    "relatedServices": ["local-seo"],
-    "relatedIndustries": ["local-services", "health-tech"]
+    "relatedServices": [
+      "local-seo"
+    ],
+    "relatedIndustries": [
+      "local-services",
+      "health-tech"
+    ]
   },
   {
     "slug": "internal-linking-strategy",
@@ -264,7 +289,11 @@
     "date": "2026-06-16",
     "author": "Shobon Mahmud",
     "category": "seo-strategy",
-    "tags": ["internal linking", "site architecture", "on-page seo"],
+    "tags": [
+      "internal linking",
+      "site architecture",
+      "on-page seo"
+    ],
     "sections": [
       {
         "id": "why",
@@ -324,8 +353,13 @@
         ]
       }
     ],
-    "relatedServices": ["on-page-seo", "technical-seo", "off-page-seo"],
-    "relatedIndustries": ["saas", "ecommerce"]
+    "relatedServices": [
+      "Holistic-SEO"
+    ],
+    "relatedIndustries": [
+      "saas",
+      "ecommerce"
+    ]
   },
   {
     "slug": "ai-overviews-search-visibility",
@@ -334,7 +368,11 @@
     "date": "2026-05-27",
     "author": "Shobon Mahmud",
     "category": "ai-and-search",
-    "tags": ["ai overviews", "ai search", "search visibility"],
+    "tags": [
+      "ai overviews",
+      "ai search",
+      "search visibility"
+    ],
     "sections": [
       {
         "id": "what-changes",
@@ -383,7 +421,13 @@
         ]
       }
     ],
-    "relatedServices": ["content-seo", "seo-audits"],
-    "relatedIndustries": ["saas", "technology"]
+    "relatedServices": [
+      "content-seo",
+      "Holistic-SEO"
+    ],
+    "relatedIndustries": [
+      "saas",
+      "technology"
+    ]
   }
 ]

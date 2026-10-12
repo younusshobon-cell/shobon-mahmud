@@ -42,6 +42,12 @@ const nextConfig: NextConfig = {
     // Friendly aliases that match the navigation label "Work"
     return [
       { source: "/services/international-seo", destination: "/services", permanent: true },
+      ...["technical-seo", "on-page-seo", "off-page-seo"].map((slug) => ({
+        source: `/services/${slug}`, destination: "/services/Holistic-SEO", permanent: true,
+      })),
+      ...["seo-audits", "keyword-research", "competitor-research"].map((slug) => ({
+        source: `/services/${slug}`, destination: "/services", permanent: true,
+      })),
       ...locations.map(({ slug }) => ({
         source: `/locations/${slug}`,
         destination: `/locations/seo-consultant-${slug}`,

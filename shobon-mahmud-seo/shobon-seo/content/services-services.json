@@ -1,228 +1,204 @@
 [
   {
-    "slug": "technical-seo",
-    "name": "Technical SEO",
-    "summary": "Crawling, indexing, site architecture, Core Web Vitals and structured data — the foundations that decide whether good content can rank.",
-    "seoTitle": "Technical SEO Services & Audits",
-    "heroTitle": "Technical SEO that removes what's quietly holding rankings back.",
-    "heroIntro": "If Google can't crawl, render or understand your pages, the best content in your market won't rank. I find the technical issues that actually cost you visibility and help your team fix them in the right order.",
+    "slug": "Holistic-SEO",
+    "name": "Holistic SEO",
+    "seoTitle": "Holistic SEO Services | Technical, On-Page & Off-Page",
+    "summary": "Holistic SEO connects technical health, on-page content and relevant authority in one prioritised plan. Improve discovery and qualified enquiries.",
+    "heroTitle": "Holistic SEO that connects visibility to qualified enquiries.",
+    "heroIntro": "Technical fixes, useful pages and credible references work better when they support the same business goal. I bring technical, on-page and off-page SEO into one focused plan, with clear priorities, implementation ownership and measurement.",
     "problem": [
-      "Most technical problems are invisible from the front end. Pages look fine to visitors while Google wastes crawl budget on parameter URLs, ignores canonicals, or indexes staging pages instead of the real ones.",
-      "The usual audit makes this worse: a 300-row export of warnings with no sense of which ones matter. Technical SEO should end in a short list of changes your developers understand and can ship."
+      "A technically sound site can still answer the wrong questions. A useful page can remain undiscovered if crawling or internal links are broken. References to an unclear offer do not solve the buyer’s decision.",
+      "Holistic SEO connects these dependencies before work is prioritised. Your business goals and current evidence determine the sequence, rather than running three isolated checklists or publishing more content by default."
     ],
     "covers": [
       {
-        "title": "Crawling & indexing",
-        "body": "Robots rules, sitemaps, canonicals, noindex logic, index bloat and the Search Console coverage reports that show what Google kept."
+        "title": "Crawl, indexing and architecture",
+        "body": "Review search access, canonicals, redirects, sitemaps and internal paths to important pages."
       },
       {
-        "title": "Site architecture",
-        "body": "URL structure, click depth, faceted and paginated pages, and how authority flows through navigation and internal links."
+        "title": "Rendering and page experience",
+        "body": "Check representative templates for JavaScript access, mobile usability and Core Web Vitals issues."
       },
       {
-        "title": "Rendering & JavaScript SEO",
-        "body": "Checking what Googlebot actually sees on React, Next.js, Vue and other JavaScript-heavy sites."
+        "title": "Buyer intent and page roles",
+        "body": "Map useful queries to service, product and resource pages with distinct jobs."
       },
       {
-        "title": "Core Web Vitals",
-        "body": "LCP, INP and CLS diagnosis with specific fixes for images, fonts, scripts and layout shifts."
+        "title": "Content, titles and headings",
+        "body": "Improve the actual answer, supporting evidence, readable structure and descriptive search snippets."
       },
       {
-        "title": "Structured data",
-        "body": "Schema that matches visible content — Organization, Product, Article, FAQ, Breadcrumb and more — validated and monitored."
+        "title": "Contextual internal linking",
+        "body": "Connect guides, commercial pages and genuine proof with clear links and relevant destinations."
       },
       {
-        "title": "Migrations & redesigns",
-        "body": "Redirect mapping, pre-launch checks and post-launch monitoring so a new site doesn't reset years of rankings."
+        "title": "References and relevant authority",
+        "body": "Assess existing links, partner opportunities and resources that real readers would want to reference."
       }
     ],
     "process": [
       {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where technical health fits into them."
+        "title": "Define the business goal",
+        "body": "Identify priority services or products, target buyers and what a qualified action looks like. Agree the implementation scope, access and responsibilities before work starts."
       },
       {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
+        "title": "Establish the baseline",
+        "body": "Review Search Console, analytics, important templates and recent releases. Record relevant page groups, current query coverage and the contact or purchase path."
       },
       {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
+        "title": "Find the connected constraints",
+        "body": "Compare crawl and indexing evidence with page intent, useful content and relevant references. Separate confirmed defects from hypotheses and low-impact tool warnings."
       },
       {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
+        "title": "Build the delivery roadmap",
+        "body": "Choose the work that best addresses the constraint. Give tasks an owner, affected URLs, dependencies and acceptance checks so development and editorial work stay coordinated."
+      },
+      {
+        "title": "Implement and validate",
+        "body": "Ship the agreed technical fixes, page improvements and reference-worthy resources. Verify the deployed HTML, links and user journey before treating a task as complete."
+      },
+      {
+        "title": "Measure and refine",
+        "body": "Review the changed page groups and qualified actions against the baseline. Account for seasonality, tracking and other releases, then use the evidence to choose the next priorities."
       }
     ],
     "deliverables": [
-      "Prioritised technical audit with impact and effort for each issue",
-      "Developer-ready tickets with acceptance criteria",
-      "Crawl and index coverage analysis",
-      "Core Web Vitals report with page-template level fixes",
-      "Schema implementation plan",
-      "Post-fix validation and monitoring"
+      "Business and organic-search baseline for agreed page groups",
+      "Connected technical, content and authority findings with supporting evidence",
+      "Prioritised roadmap with impact, effort, dependencies and owners",
+      "Keyword-to-page map for the priority buying journeys",
+      "Page briefs covering content, headings, titles and internal links",
+      "Developer-ready tickets and template acceptance checks",
+      "Relevant backlink review and reference-building opportunities",
+      "Qualified-action measurement plan and reporting definitions",
+      "Post-release validation and a next-step review"
     ],
     "commonProblems": [
-      "Pages marked 'Crawled – currently not indexed' in Search Console",
-      "Duplicate URLs from filters, parameters or trailing slashes",
-      "Traffic drop after a redesign, migration or CMS change",
-      "JavaScript content that Google renders late or not at all",
-      "Slow templates failing Core Web Vitals on mobile"
+      "Important pages are missing from search or affected by a migration",
+      "Useful impressions are not becoming relevant clicks or enquiries",
+      "Several pages overlap while important buying questions remain unanswered",
+      "Content, development and authority work are planned in isolation",
+      "Your strongest references point to pages with no clear buyer next step",
+      "You cannot tell which search pages generate valuable enquiries or sales"
     ],
     "whoFor": [
-      "Sites with thousands of URLs where small technical issues compound",
-      "Teams planning a migration, replatform or redesign",
-      "JavaScript-framework sites that aren't ranking as they should",
-      "Businesses whose content is strong but traffic has plateaued"
+      "Businesses with an established offer and a website that needs a connected SEO plan",
+      "SaaS and technology teams aligning product content, technical delivery and buyer evaluation",
+      "E-commerce and service brands reviewing both discovery and the path to a purchase or enquiry",
+      "Teams with developers or writers who need a clear, prioritised implementation roadmap"
     ],
     "useCases": [
       {
-        "title": "Pre-migration planning",
-        "body": "Mapping every URL that earns traffic or links before a CMS move, then checking redirects and indexing daily after launch."
+        "title": "A redesign has disrupted discovery",
+        "body": "Start with redirects, canonicals and template access, then verify that retained commercial pages still answer the intended queries. Coordinate recovery with current offers and enquiry tracking."
       },
       {
-        "title": "Index bloat cleanup",
-        "body": "Reducing thousands of thin or duplicate URLs so Google spends its crawl on the pages that make money."
+        "title": "A service site gets visits but weak enquiries",
+        "body": "Review the buyer intent and contact path before expanding traffic. Improve scope, relevant evidence and useful internal links while checking that the page is technically accessible."
+      },
+      {
+        "title": "A SaaS team has an underused resource library",
+        "body": "Connect accurate guides to product use cases and integrations. Improve the page architecture and relevant references without forcing a product pitch into every informational answer."
+      },
+      {
+        "title": "A store’s catalogue has grown faster than its structure",
+        "body": "Review category intent, filter rules and product facts together. Coordinate template fixes and useful category content with inventory and organic order reporting."
       }
     ],
     "faqs": [
       {
-        "q": "How long does a technical SEO audit take?",
-        "a": "For most sites, two to four weeks from access to a prioritised roadmap. Very large or JavaScript-heavy sites take longer because rendering and log analysis need more time."
+        "q": "What is holistic SEO?",
+        "a": "Holistic SEO treats technical access, useful page content, relevant references and the user’s next step as one connected system. The work is prioritised around business goals and evidence instead of treating each discipline as an isolated checklist."
       },
       {
-        "q": "Do you implement the fixes or just recommend them?",
-        "a": "Both are possible. I write developer-ready tickets and work with your team, and I can implement directly on platforms like WordPress, Shopify and Webflow."
+        "q": "Does this include technical, on-page and off-page SEO?",
+        "a": "Yes. These three disciplines are brought into one plan. The proposal defines the pages, templates, deliverables and implementation responsibilities included, so the scope fits the constraint rather than assuming every possible SEO task is needed."
       },
       {
-        "q": "Will fixing technical issues increase traffic on its own?",
-        "a": "Sometimes significantly — especially when pages weren't being indexed. More often, technical work removes a ceiling so content and authority work can deliver results."
+        "q": "Where do we start if our website has several problems?",
+        "a": "Start with the issues affecting important buying pages and qualified actions. Crawl or indexing barriers may need attention before a content release; unclear intent or a broken enquiry path may matter more than acquiring additional references. The baseline guides the order."
+      },
+      {
+        "q": "Do you implement changes or work with our team?",
+        "a": "Both arrangements can be discussed. I can provide writer-ready briefs and developer tickets, collaborate with your existing team or implement within an agreed platform scope. Ownership, approval and post-release checks are defined before the work begins."
+      },
+      {
+        "q": "How is holistic SEO different from a one-off audit?",
+        "a": "An audit diagnoses the current situation and recommends priorities. A holistic engagement can also coordinate implementation, validate releases and review outcomes over time. The proposal makes clear whether you are buying analysis, implementation support or ongoing review."
+      },
+      {
+        "q": "How long does it take to see SEO results?",
+        "a": "There is no fixed ranking or lead timeline. Scope, competition, site history and implementation speed matter. First confirm that the work is shipped and accessible, then review meaningful periods of relevant queries and qualified actions with seasonality and other changes in view."
+      },
+      {
+        "q": "What affects the cost of holistic SEO?",
+        "a": "The number of pages and templates, research depth, editorial needs, development requirements and reporting scope affect cost. Share your URL, priorities and available team for a scoped proposal. Extra production, third-party fees and specialist review are not assumed to be included."
+      },
+      {
+        "q": "Do you buy backlinks or guarantee rankings?",
+        "a": "No ranking position or lead volume is guaranteed. Off-page work focuses on relevant editorial references, useful resources and genuine partner opportunities. Paid ranking schemes and fabricated proof are not part of the plan."
+      },
+      {
+        "q": "How do you measure whether the work is helping?",
+        "a": "Track the agreed landing-page groups, relevant query visibility, qualified enquiries or sales and the specific defects addressed. Keep a release log and reporting baseline. Explain attribution limits instead of claiming every business change was caused by SEO."
+      },
+      {
+        "q": "What do you need before we discuss a plan?",
+        "a": "Your website URL, priority products or services, target market and main growth constraint are enough for an initial discussion. Search Console, analytics, CMS access and a developer or editorial contact help once the project scope is agreed."
       }
     ],
     "relatedIndustries": [
       "saas",
-      "ecommerce",
-      "technology"
-    ],
-    "relatedPosts": [
-      "technical-seo-audit"
-    ],
-    "ctaLine": "Have technical issues blocking growth?"
-  },
-  {
-    "slug": "on-page-seo",
-    "name": "On-Page SEO",
-    "summary": "Search intent, keyword mapping, content optimisation, metadata and internal links — making each page the best answer for the query it targets.",
-    "seoTitle": "On-Page SEO Services",
-    "heroTitle": "On-page SEO that matches each page to what searchers actually want.",
-    "heroIntro": "Rankings are won page by page. I align every important page with one clear search intent, tighten the content around it, and connect it to the rest of your site so Google understands where it fits.",
-    "problem": [
-      "Many sites target the same keyword with three different pages, or target a commercial keyword with an informational article. Both confuse Google and split your ranking potential.",
-      "On-page SEO is not stuffing keywords into headings. It's making sure the page answers the query better, more clearly and more completely than what currently ranks."
-    ],
-    "covers": [
-      {
-        "title": "Search intent analysis",
-        "body": "Reading the current results to understand what format, depth and angle Google rewards for each query."
-      },
-      {
-        "title": "Keyword mapping",
-        "body": "One primary topic per page, supporting terms mapped, and cannibalisation removed."
-      },
-      {
-        "title": "Content optimisation",
-        "body": "Restructuring sections, filling topical gaps and improving clarity without rewriting what already works."
-      },
-      {
-        "title": "Titles & meta descriptions",
-        "body": "Written to earn the click, not just include the keyword."
-      },
-      {
-        "title": "Headings & structure",
-        "body": "A heading hierarchy that mirrors how people scan and how search engines extract answers."
-      },
-      {
-        "title": "Internal linking",
-        "body": "Contextual links that pass relevance and authority to the pages that need it."
-      }
-    ],
-    "process": [
-      {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where each page's search intent fits into them."
-      },
-      {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
-      },
-      {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
-      },
-      {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
-      }
-    ],
-    "deliverables": [
-      "Keyword-to-URL map for priority pages",
-      "Page-level optimisation briefs",
-      "Rewritten titles and meta descriptions",
-      "Cannibalisation report with merge/redirect decisions",
-      "Internal linking recommendations"
-    ],
-    "commonProblems": [
-      "Several pages competing for the same keyword",
-      "Pages ranking on page two that never break through",
-      "High impressions but low click-through rate",
-      "Service pages written for the business, not the searcher",
-      "Content that covers a topic thinly compared with competitors"
-    ],
-    "whoFor": [
-      "Sites with existing content that underperforms",
-      "Service businesses whose core pages don't rank",
-      "Teams publishing regularly without a keyword map"
-    ],
-    "useCases": [
-      {
-        "title": "Page-two to page-one pushes",
-        "body": "Using Search Console to find pages ranking in positions 8–20 and improving them before creating anything new."
-      },
-      {
-        "title": "Service page rewrites",
-        "body": "Restructuring service pages around the questions buyers ask before they enquire."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Is on-page SEO still important?",
-        "a": "Yes. Links and technical health matter, but the page itself still has to be the most relevant answer. On-page work is often the fastest lever because you control it completely."
-      },
-      {
-        "q": "Will you rewrite all our content?",
-        "a": "Rarely. Most gains come from targeted changes — structure, intent alignment, missing sections and better titles — on the pages with the most potential."
-      },
-      {
-        "q": "How do you choose which pages to optimise first?",
-        "a": "Pages with existing impressions and rankings close to page one usually come first, weighted by how close each page sits to revenue."
-      }
-    ],
-    "relatedIndustries": [
-      "saas",
+      "technology",
       "legal-tech",
+      "health-tech",
+      "ecommerce",
+      "design",
+      "logistics",
       "local-services"
     ],
-    "relatedPosts": [
-      "internal-linking-strategy"
+    "relatedServices": [
+      "content-seo",
+      "local-seo",
+      "seo-for-home-service-providers",
+      "ecommerce-seo"
     ],
-    "ctaLine": "Pages ranking, but not high enough?"
+    "ctaLine": "Give your SEO work one direction and a clear next step.",
+    "engagement": {
+      "title": "How connected SEO work looks in practice",
+      "intro": "The first priority is the constraint holding back your important pages. The next priority is the dependency that makes the improvement useful for a buyer.",
+      "priorities": [
+        {
+          "title": "Make the page accessible",
+          "body": "Confirm the preferred URL, crawl access, rendered information and internal path. Fix the technical blocker before asking the content or outreach team to build on it."
+        },
+        {
+          "title": "Make the answer useful",
+          "body": "Improve the page around its audience and task, with approved evidence, clear scope and an appropriate next action. Useful detail matters more than a target word count."
+        },
+        {
+          "title": "Make the destination worth referencing",
+          "body": "Connect relevant resources and genuine partner opportunities to pages that serve readers. Editorial coverage is another organisation’s decision, not a deliverable that can be guaranteed."
+        }
+      ],
+      "example": {
+        "title": "Example: a service page gets impressions but few useful enquiries",
+        "body": "An illustrative workflow starts by checking the page’s status, canonical and rendered content. Next, review whether the queries match the offer and whether scope, trust information and contact details answer the buying decision. Improve the relevant internal paths and reference-worthy supporting resources, then compare qualified actions after release."
+      },
+      "measurement": "Review technical completion, relevant page-group visibility and qualified actions together. Search Console provides query and landing-page context; analytics and sales feedback help assess enquiry relevance. Keep releases, campaigns and seasonal demand beside the reporting baseline, and distinguish observed change from a claim of direct causation.",
+      "preparation": [
+        "Website URL, priority offers and target audiences",
+        "Search Console and analytics access when scope is agreed",
+        "CMS or developer contact, editorial capacity and approved evidence"
+      ]
+    }
   },
   {
     "slug": "content-seo",
     "name": "Content SEO",
-    "summary": "Content strategy, topical authority, briefs and SERP analysis — publishing what your market searches for, in an order that builds authority.",
+    "summary": "Content SEO strategy, topic maps, writer-ready briefs and targeted refreshes. Build useful pages around buyer questions and commercial priorities.",
     "seoTitle": "Content SEO & Content Strategy",
-    "heroTitle": "Content that's planned around search demand, not the editorial calendar.",
+    "heroTitle": "Content SEO planned around buyer questions and search demand.",
     "heroIntro": "Publishing more doesn't build authority. Publishing the right topics, in the right order, connected in the right way, does. I build content strategies your team can execute and briefs your writers can actually use.",
     "problem": [
       "A lot of company blogs are a list of unrelated posts. Each one gets a burst of social traffic and then nothing, because none of them build towards a topic Google trusts the site on.",
@@ -256,20 +232,20 @@
     ],
     "process": [
       {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where content fits into them."
+        "title": "Inventory content and buyer questions",
+        "body": "Review existing pages, sales questions and search data. Classify useful material, coverage gaps and pages that overlap or need a factual update."
       },
       {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
+        "title": "Plan topic and page roles",
+        "body": "Choose which topics belong in guides, use-case pages or comparisons. Set priorities around the product and the team’s capacity to deliver useful content."
       },
       {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
+        "title": "Brief, review and publish",
+        "body": "Prepare outlines, evidence requirements, internal links and review responsibilities. Check accuracy and the reader’s next step before publication."
       },
       {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
+        "title": "Maintain and measure the library",
+        "body": "Track new and refreshed pages separately. Update information when the offer or evidence changes and review the qualified actions the content supports."
       }
     ],
     "deliverables": [
@@ -294,7 +270,7 @@
     "useCases": [
       {
         "title": "Building a topic cluster",
-        "body": "A pillar page supported by focused articles, all linked, so the whole cluster ranks rather than a single post."
+        "body": "A useful hub supported by focused articles with clear page roles and relevant links. Each page still needs to answer a distinct question; linking a cluster does not guarantee rankings."
       },
       {
         "title": "Decay recovery",
@@ -323,122 +299,46 @@
     "relatedPosts": [
       "saas-keyword-research-by-intent"
     ],
-    "ctaLine": "Publishing content that isn't moving the numbers?"
-  },
-  {
-    "slug": "off-page-seo",
-    "name": "Off-Page SEO",
-    "summary": "Digital PR, link acquisition, backlink analysis and authority building — earning the signals that make Google trust your site.",
-    "seoTitle": "Off-Page SEO & Link Building",
-    "heroTitle": "Authority that comes from being worth linking to.",
-    "heroIntro": "Links still shape how much Google trusts a site. I focus on earning relevant links from real publications and partners, and on making sure the authority you already have reaches the pages that need it.",
-    "problem": [
-      "Cheap link packages create risk and rarely move rankings in competitive markets. What moves them is relevance: links from sites your audience reads, pointing to pages that deserve them.",
-      "Before building anything, it's worth knowing the gap. Sometimes a site doesn't need more links — it needs its existing authority routed to money pages."
-    ],
-    "covers": [
-      {
-        "title": "Backlink analysis",
-        "body": "Profile quality, anchor distribution, lost links and any risky patterns."
+    "ctaLine": "Publishing content that isn't moving the numbers?",
+    "engagement": {
+      "title": "From content inventory to a publishable editorial plan",
+      "intro": "The first decision is often whether to improve an existing page, combine overlapping material or create something that is genuinely missing.",
+      "priorities": [
+        {
+          "title": "Give every topic a job",
+          "body": "Separate educational guidance from comparison, use-case and service content. A brief records the intended audience, question, page format and relevant commercial next step."
+        },
+        {
+          "title": "Build in original evidence",
+          "body": "Identify the product screenshots, interviews, practical examples or first-hand observations that make a page useful. Sensitive topics need an appropriate subject reviewer before publication."
+        },
+        {
+          "title": "Plan maintenance as well as publishing",
+          "body": "Record who owns each topic and what would trigger an update. Preserve useful URLs and check links before merging or removing pages with traffic or backlinks."
+        }
+      ],
+      "example": {
+        "title": "Example: a SaaS blog attracts readers outside its market",
+        "body": "Instead of adding another broad article, I map customer questions to existing guides and product use cases. A refreshed guide can explain a real workflow and link to the product feature that supports it, while a separate comparison page answers the purchase decision."
       },
-      {
-        "title": "Competitor link gap",
-        "body": "Which sites link to your competitors and not to you — and why."
-      },
-      {
-        "title": "Digital PR",
-        "body": "Data, stories and expert commentary that journalists and industry sites want to cite."
-      },
-      {
-        "title": "Linkable assets",
-        "body": "Tools, research and guides designed to earn links naturally."
-      },
-      {
-        "title": "Partnerships & mentions",
-        "body": "Integration partners, associations, directories that matter, and unlinked brand mentions."
-      },
-      {
-        "title": "Authority routing",
-        "body": "Internal links that pass earned authority to commercial pages."
-      }
-    ],
-    "process": [
-      {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where authority fits into them."
-      },
-      {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
-      },
-      {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
-      },
-      {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
-      }
-    ],
-    "deliverables": [
-      "Backlink audit and risk review",
-      "Competitor link-gap analysis",
-      "Link acquisition plan and outreach targets",
-      "Linkable asset concepts",
-      "Monthly link and mention reporting"
-    ],
-    "commonProblems": [
-      "Competitors outrank you with weaker content",
-      "A backlink profile built on low-quality directories",
-      "New site with good content but no authority",
-      "Great links pointing only to the homepage"
-    ],
-    "whoFor": [
-      "Businesses in competitive SERPs where content alone isn't enough",
-      "New domains that need to build trust",
-      "Brands with newsworthy data or expertise that isn't being used"
-    ],
-    "useCases": [
-      {
-        "title": "Integration-partner links",
-        "body": "For SaaS companies, securing listings and links from integration partners' marketplaces and docs."
-      },
-      {
-        "title": "Expert commentary",
-        "body": "Positioning founders or specialists as sources for industry publications."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Do you buy links?",
-        "a": "No. Paid link schemes break Google's guidelines and create long-term risk. I focus on links that would make sense even if search engines didn't exist."
-      },
-      {
-        "q": "How many links do we need?",
-        "a": "It depends entirely on the competition. A link-gap analysis against the sites currently ranking gives a realistic target."
-      },
-      {
-        "q": "How long before links affect rankings?",
-        "a": "Usually weeks to a few months after a link is discovered and crawled. Effects are cumulative and more visible in competitive terms."
-      }
-    ],
-    "relatedIndustries": [
-      "saas",
-      "legal-tech",
-      "ecommerce"
-    ],
-    "relatedPosts": [
-      "internal-linking-strategy"
-    ],
-    "ctaLine": "Outranked by competitors with weaker content?"
+      "measurement": "Review relevant query coverage, organic landing-page visits and the actions those pages assist. Keep new pages and refreshed pages separate in reporting. Editorial output is a delivery measure; qualified product or service interest is the business measure.",
+      "preparation": [
+        "Content inventory and product or service priorities",
+        "Access to writers and subject-matter reviewers",
+        "Customer questions, approved examples and publishing capacity"
+      ]
+    },
+    "relatedServices": [
+      "Holistic-SEO"
+    ]
   },
   {
     "slug": "local-seo",
     "name": "Local SEO",
-    "summary": "Google Business Profile, local landing pages, citations, reviews and local keyword strategy — visibility in the map pack and local results.",
+    "summary": "Local SEO for eligible Business Profiles, service pages and real coverage areas. Improve local discovery and measure qualified calls and enquiries.",
     "seoTitle": "Local SEO Services",
     "heroTitle": "Local SEO for businesses that win customers nearby.",
-    "heroIntro": "When someone searches for a service near them, the map pack decides who gets the call. I optimise the signals that influence local rankings: your Business Profile, location pages, reviews, citations and local relevance.",
+    "heroIntro": "Local customers discover businesses through Maps and organic search. I improve eligible Business Profiles, useful service and area pages, business information and the mobile contact path, with reporting focused on qualified enquiries.",
     "problem": [
       "Local rankings depend on proximity, relevance and prominence. You can't move your address, but you can control how relevant and prominent your business looks to Google.",
       "Many businesses have an incomplete Business Profile, inconsistent contact details across the web, and one generic service page trying to rank in every area they serve."
@@ -446,7 +346,7 @@
     "covers": [
       {
         "title": "Google Business Profile",
-        "body": "Categories, services, attributes, photos, posts and Q&A set up to match how customers search."
+        "body": "Eligible profile setup, accurate categories, services, attributes, hours and imagery. Available profile features are reviewed for your business and market."
       },
       {
         "title": "Local landing pages",
@@ -471,20 +371,20 @@
     ],
     "process": [
       {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where local visibility fits into them."
+        "title": "Confirm eligibility and coverage",
+        "body": "Review the real operating model, customer contact details, hours and served areas before changing Business Profile or website information."
       },
       {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
+        "title": "Audit the local discovery path",
+        "body": "Compare profile details, service and area pages, customer-location results and the mobile enquiry experience. Identify inconsistent or missing information."
       },
       {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
+        "title": "Improve profiles and priority pages",
+        "body": "Apply agreed profile changes, strengthen useful service pages and establish an honest review request process. Keep website and business details aligned."
       },
       {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
+        "title": "Measure qualified local actions",
+        "body": "Review calls, forms and relevant local page performance. Compare visibility across customer areas while accounting for distance and attribution limits."
       }
     ],
     "deliverables": [
@@ -520,11 +420,11 @@
     "faqs": [
       {
         "q": "Do I need a physical address for local SEO?",
-        "a": "Service-area businesses can rank without showing an address, but Google Business Profile requires a real location where you serve customers. Virtual offices usually violate the guidelines."
+        "a": "Eligible service-area businesses that travel to customers can hide their address. They still need a genuine operating base and must meet Google’s in-person service rules. Online-only businesses and virtual-office setups do not qualify simply because they target a city."
       },
       {
         "q": "How important are reviews?",
-        "a": "Very. Review count, recency and response quality all affect local visibility and click-through. The key is a steady, genuine flow rather than bursts."
+        "a": "Google says review count and positive ratings can help local ranking. Helpful replies support customer trust; reply quality is not presented as a guaranteed ranking factor. Ask genuine customers for honest feedback without incentives or review gating."
       },
       {
         "q": "Should I create a page for every city I serve?",
@@ -539,14 +439,47 @@
     "relatedPosts": [
       "google-business-profile-optimization"
     ],
-    "ctaLine": "Missing from the map pack in your area?"
+    "ctaLine": "Missing from the map pack in your area?",
+    "engagement": {
+      "title": "A local SEO plan that reflects how the business operates",
+      "intro": "The website and Business Profile should tell the same accurate story about services, contact details and where customers can actually receive them.",
+      "priorities": [
+        {
+          "title": "Confirm profile eligibility and details",
+          "body": "Check the actual business model, categories and customer-facing information. Storefronts and service-area businesses have different setups; a fabricated office is not a shortcut to local visibility."
+        },
+        {
+          "title": "Improve useful service and area pages",
+          "body": "Explain coverage, availability and the booking process. Add local experience only where it is real, and connect area pages to the relevant services instead of duplicating the same text."
+        },
+        {
+          "title": "Make contact easy to complete",
+          "body": "Test mobile call links, quote forms, opening hours and directions where relevant. Request honest reviews after genuine experiences without incentives or filtering for positive feedback."
+        }
+      ],
+      "example": {
+        "title": "Example: a contractor appears near its base but needs better website enquiries",
+        "body": "I separate map visibility from organic service-page discovery. The plan may improve the main profile, clarify coverage and strengthen a service page for a town already served. Changing the service-area setting does not remove Google’s distance factor."
+      },
+      "measurement": "Track Business Profile interactions, organic visits to local pages, qualified calls and completed forms where measurement is available. Review visibility from relevant customer locations rather than relying on one ranking at the business address.",
+      "preparation": [
+        "Business Profile manager access",
+        "Actual service areas, opening hours and business details",
+        "Website analytics and a practical definition of a qualified enquiry"
+      ]
+    },
+    "relatedServices": [
+      "seo-for-home-service-providers",
+      "Holistic-SEO",
+      "content-seo"
+    ]
   },
   {
     "slug": "seo-for-home-service-providers",
     "name": "SEO for Home Service Providers",
-    "summary": "SEO for plumbers, HVAC, roofing, septic and other home service providers. Improve local visibility and turn relevant searches into calls and enquiries.",
-    "seoTitle": "SEO for Home Service Providers | Local Leads & Growth",
-    "heroTitle": "Be found when homeowners need your services.",
+    "summary": "SEO for plumbers, HVAC, roofing and septic providers. Improve service and area pages, local discovery and qualified calls or quote requests.",
+    "seoTitle": "SEO for Home Service Providers",
+    "heroTitle": "SEO for home service providers when homeowners need your expertise.",
     "heroIntro": "Homeowners search when a pipe leaks, the AC stops working or a roof needs replacing. I help home service providers show up for the right services in the areas they actually serve, with a website that makes it easy to call, request a quote and book the next job.",
     "problem": [
       "A good reputation offline does not always translate into visibility online. If competitors appear for your core services while your website relies on one generic page, homeowners may never discover your business.",
@@ -680,15 +613,48 @@
     "relatedPosts": [
       "google-business-profile-optimization"
     ],
-    "ctaLine": "Ready to turn local searches into your next booked job?"
+    "ctaLine": "Ready to turn local searches into your next booked job?",
+    "engagement": {
+      "title": "Turn service demand into enquiries your team can fulfil",
+      "intro": "A useful lead is a job your team can serve. The plan weighs job type, location, urgency, seasonal demand and the capacity to respond.",
+      "priorities": [
+        {
+          "title": "Separate urgent and planned work",
+          "body": "Emergency repair pages need truthful availability and a direct mobile call path. Installation and replacement pages need assessment details, decision guidance and a clear quote process."
+        },
+        {
+          "title": "Show the work behind the offer",
+          "body": "Use authorised job photos, accurate service scope and genuine customer feedback. Explain what an assessment covers and which details are needed before an estimate can be given."
+        },
+        {
+          "title": "Match coverage to operations",
+          "body": "Prioritise towns and neighbourhoods the team reliably serves. Use dispatch boundaries and job records to guide area pages, rather than creating pages for every nearby place."
+        }
+      ],
+      "example": {
+        "title": "Example: a septic provider wants more replacement requests",
+        "body": "A replacement page can explain assessment, access requirements and how a homeowner requests a quote. It should distinguish replacement from routine pumping and repair, then connect those related services. Photos and project details must come from real authorised work."
+      },
+      "measurement": "Review qualified enquiries by service and area, with booked jobs or job value where available. Exclude spam and requests outside coverage. Annotate busy seasons and staffing constraints so more search traffic is not mistaken for greater booking capacity.",
+      "preparation": [
+        "Core services, profitable job types and coverage boundaries",
+        "Real project photos and approved business credentials",
+        "Call and form data, response hours and seasonal priorities"
+      ]
+    },
+    "relatedServices": [
+      "local-seo",
+      "Holistic-SEO",
+      "content-seo"
+    ]
   },
   {
     "slug": "ecommerce-seo",
     "name": "E-commerce SEO",
-    "summary": "Category and product optimisation, faceted navigation, product schema and internal linking for online stores of every size.",
+    "summary": "E-commerce SEO for categories, products and catalogue indexing. Improve shopping pages, filter handling and markup with organic sales reporting.",
     "seoTitle": "E-commerce SEO Services",
     "heroTitle": "E-commerce SEO built around how shoppers search.",
-    "heroIntro": "Online stores rank through category pages more than products, and they lose rankings through technical sprawl more than anything else. I help stores structure categories around demand and keep their catalogue crawlable.",
+    "heroIntro": "E-commerce SEO connects category and product pages to shopping intent. I improve catalogue structure, useful product information, filter handling and internal links, then review organic orders and revenue alongside indexing.",
     "problem": [
       "Filters and sorting options can turn a 500-product store into 500,000 URLs. Google spends its time crawling duplicates while new products wait to be indexed.",
       "Meanwhile the category pages that should rank for high-intent searches often have no copy, weak internal links and titles generated by the platform."
@@ -704,7 +670,7 @@
       },
       {
         "title": "Faceted navigation",
-        "body": "Deciding which filter combinations deserve indexable pages and which should be blocked or canonicalised."
+        "body": "Selecting useful filter landing pages and aligning crawl, canonical and indexing rules for the rest. Blocking crawling and excluding a page from indexing are different decisions."
       },
       {
         "title": "Product schema",
@@ -721,20 +687,20 @@
     ],
     "process": [
       {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where the catalogue fits into them."
+        "title": "Review shopping paths and stock",
+        "body": "Start with priority categories, product demand, inventory and sales data. Identify where catalogue structure fails to match how customers shop."
       },
       {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
+        "title": "Map category and filter decisions",
+        "body": "Select useful category opportunities and define handling for filters, variants and pagination. Test crawl and indexing rules before a wider rollout."
       },
       {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
+        "title": "Improve templates and product facts",
+        "body": "Update category context, unique product information and relevant markup. Check that price, availability and offer details match the live catalogue."
       },
       {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
+        "title": "Validate and review organic sales",
+        "body": "Retest indexable paths and structured data, then review category and product landing-page orders and revenue with stock and promotion context."
       }
     ],
     "deliverables": [
@@ -784,310 +750,38 @@
       "ecommerce",
       "design"
     ],
-    "ctaLine": "Catalogue growing faster than your organic traffic?"
-  },
-  {
-    "slug": "seo-audits",
-    "name": "SEO Audits",
-    "summary": "A full-site review of technical health, content, authority and competitors — ending in a prioritised roadmap, not a spreadsheet of warnings.",
-    "seoTitle": "SEO Audit Services",
-    "heroTitle": "An SEO audit that ends with decisions, not a list of warnings.",
-    "heroIntro": "An audit should tell you three things: what's holding growth back, what to do first, and what it's likely to be worth. I review technical health, content, authority and competition together, because the answers usually sit between them.",
-    "problem": [
-      "Automated audits flag everything equally. A missing alt tag sits next to a broken canonical on your top category, and teams burn weeks fixing the wrong things.",
-      "A useful audit starts from business goals and search data, then works backwards to the few changes that matter most."
-    ],
-    "covers": [
-      {
-        "title": "Technical review",
-        "body": "Crawling, indexing, rendering, speed, architecture and structured data."
+    "ctaLine": "Catalogue growing faster than your organic traffic?",
+    "engagement": {
+      "title": "Catalogue SEO that keeps shopping and indexing aligned",
+      "intro": "Category, product and filter pages have different jobs. The right plan makes high-demand shopping paths discoverable without filling search with duplicates.",
+      "priorities": [
+        {
+          "title": "Prioritise categories with a clear shopping need",
+          "body": "Review demand, available stock and existing sales before adding categories. Keep helpful copy close to the product grid without obstructing browsing or replacing product information."
+        },
+        {
+          "title": "Define filter and variant rules",
+          "body": "Decide which combinations deserve stable landing pages. Align canonical, crawl and indexing rules; a crawler cannot read a noindex instruction on a URL blocked by robots.txt."
+        },
+        {
+          "title": "Keep product facts consistent",
+          "body": "Check specifications, availability and price against the live catalogue. Product and offer markup should describe the visible product, while reviews must reflect genuine review content."
+        }
+      ],
+      "example": {
+        "title": "Example: material filters create duplicate category URLs",
+        "body": "A store might have useful demand for linen shirts but dozens of low-value sort and filter combinations. I map the genuine shopping intent to a stable category, link it from relevant navigation and test how the remaining combinations are handled before wider rollout."
       },
-      {
-        "title": "Content review",
-        "body": "Intent alignment, cannibalisation, gaps, thin content and decay."
-      },
-      {
-        "title": "Authority review",
-        "body": "Backlink profile, link gaps and internal link distribution."
-      },
-      {
-        "title": "Competitor review",
-        "body": "Who's winning your most valuable searches and what they do differently."
-      },
-      {
-        "title": "Analytics & tracking",
-        "body": "Whether organic performance and conversions are measured correctly."
-      }
-    ],
-    "process": [
-      {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where the whole site fits into them."
-      },
-      {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
-      },
-      {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
-      },
-      {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
-      }
-    ],
-    "deliverables": [
-      "Executive summary for decision-makers",
-      "Prioritised roadmap (impact × effort)",
-      "Detailed findings with evidence",
-      "Developer and content tickets",
-      "Walkthrough call with your team"
-    ],
-    "commonProblems": [
-      "Traffic declining without an obvious cause",
-      "Previous audits never implemented",
-      "Unclear where to invest SEO budget",
-      "New in-house team needing a starting point"
-    ],
-    "whoFor": [
-      "Businesses about to invest seriously in SEO",
-      "Teams after a traffic drop or algorithm update",
-      "Companies evaluating an existing agency's work"
-    ],
-    "useCases": [
-      {
-        "title": "Traffic drop diagnosis",
-        "body": "Separating algorithm impact, technical issues, seasonality and competition to find the actual cause."
-      },
-      {
-        "title": "Investment planning",
-        "body": "Giving leadership a clear view of where SEO can grow the business and what it will take."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "What access do you need?",
-        "a": "Search Console, analytics and ideally CMS access. Log files and a staging environment help for larger technical reviews."
-      },
-      {
-        "q": "How is this different from a free audit tool?",
-        "a": "Tools find symptoms. An audit connects them to your data and goals, filters out noise and decides what to do first."
-      },
-      {
-        "q": "Can you help implement the roadmap?",
-        "a": "Yes. Many audits turn into ongoing work, but the roadmap is written so your team can execute it independently too."
-      }
-    ],
-    "relatedIndustries": [
-      "saas",
-      "ecommerce",
-      "technology"
-    ],
-    "relatedPosts": [
-      "technical-seo-audit"
-    ],
-    "ctaLine": "Not sure what's holding your SEO back?"
-  },
-  {
-    "slug": "keyword-research",
-    "name": "Keyword Research",
-    "summary": "Mapping the searches your buyers make at every stage, sized by demand and ranked by business value and difficulty.",
-    "seoTitle": "Keyword Research Services",
-    "heroTitle": "Keyword research that starts with your buyers, not a volume column.",
-    "heroIntro": "The keywords worth targeting are the ones that bring the right people at the right moment. I map searches across the buyer journey and prioritise them by intent, business value and how realistically you can rank.",
-    "problem": [
-      "High-volume keywords are tempting and usually the wrong place to start. They're competitive, vague in intent and often far from a purchase.",
-      "Low-volume, high-intent searches — comparisons, alternatives, specific use cases — frequently convert far better and are more winnable."
-    ],
-    "covers": [
-      {
-        "title": "Seed discovery",
-        "body": "From sales calls, support tickets, product language and competitor pages — not just tools."
-      },
-      {
-        "title": "Intent classification",
-        "body": "Informational, commercial, transactional and navigational, mapped to funnel stage."
-      },
-      {
-        "title": "Opportunity scoring",
-        "body": "Demand, difficulty, business value and current position combined into a priority."
-      },
-      {
-        "title": "Clustering",
-        "body": "Grouping keywords that one page can rank for together."
-      },
-      {
-        "title": "Keyword-to-page mapping",
-        "body": "Which existing pages to optimise and which new pages to create."
-      }
-    ],
-    "process": [
-      {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where search demand fits into them."
-      },
-      {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
-      },
-      {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
-      },
-      {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
-      }
-    ],
-    "deliverables": [
-      "Keyword universe with intent and priority",
-      "Keyword clusters",
-      "Keyword-to-URL map",
-      "Content and page recommendations"
-    ],
-    "commonProblems": [
-      "Traffic that doesn't convert",
-      "Targeting keywords you can't realistically rank for",
-      "Missing bottom-of-funnel searches entirely",
-      "No shared keyword map across the team"
-    ],
-    "whoFor": [
-      "New sites and product launches",
-      "Teams planning content or site restructures",
-      "Businesses entering a new market or category"
-    ],
-    "useCases": [
-      {
-        "title": "Launch planning",
-        "body": "Defining the pages a new product or service site needs before it's built."
-      },
-      {
-        "title": "Funnel gap analysis",
-        "body": "Finding the commercial searches competitors rank for that you don't."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Is search volume reliable?",
-        "a": "It's an estimate, often rounded and lagging. I use it for relative sizing and combine it with Search Console data, which reflects real impressions."
-      },
-      {
-        "q": "Should we target zero-volume keywords?",
-        "a": "Sometimes. Tools under-report niche B2B searches. If sales conversations show people ask it, it's worth a page."
-      },
-      {
-        "q": "How often should keyword research be updated?",
-        "a": "Revisit priorities quarterly and do a full refresh yearly or when the product or market changes."
-      }
-    ],
-    "relatedIndustries": [
-      "saas",
-      "legal-tech",
-      "health-tech"
-    ],
-    "relatedPosts": [
-      "saas-keyword-research-by-intent"
-    ],
-    "ctaLine": "Getting traffic that doesn't convert?"
-  },
-  {
-    "slug": "competitor-research",
-    "name": "Competitor SEO Research",
-    "summary": "Understanding who wins your most valuable searches, how they do it, and where the openings are for you.",
-    "seoTitle": "Competitor SEO Analysis",
-    "heroTitle": "Competitor research that finds the openings, not just the gaps.",
-    "heroIntro": "Your search competitors aren't always your business competitors. I identify who actually ranks for the searches that matter, break down why, and find the angles where you can win.",
-    "problem": [
-      "Copying a competitor's content plan puts you permanently one step behind. The goal is to understand their strengths well enough to find what they're missing.",
-      "Often the real competition is a publisher, marketplace or review site — which changes the strategy entirely."
-    ],
-    "covers": [
-      {
-        "title": "Search competitor mapping",
-        "body": "Who ranks across your priority keyword set, including non-obvious competitors."
-      },
-      {
-        "title": "Content gap analysis",
-        "body": "Topics and page types they cover that you don't."
-      },
-      {
-        "title": "Link gap analysis",
-        "body": "Where their authority comes from and what's replicable."
-      },
-      {
-        "title": "SERP feature analysis",
-        "body": "Snippets, local packs, product grids and AI Overviews that change the click landscape."
-      },
-      {
-        "title": "Positioning opportunities",
-        "body": "Angles, formats and depth where you can do better."
-      }
-    ],
-    "process": [
-      {
-        "title": "Discover",
-        "body": "Understand the business model, audience and revenue goals, then look at where competitors fits into them."
-      },
-      {
-        "title": "Diagnose",
-        "body": "Audit what's there now against search data, competitors and how Google is actually treating the site."
-      },
-      {
-        "title": "Prioritise",
-        "body": "Turn findings into a roadmap ranked by impact, effort and business value — not by how many issues a tool flags."
-      },
-      {
-        "title": "Implement & measure",
-        "body": "Ship the work with your team, then track rankings, traffic, conversions and leads to decide what comes next."
-      }
-    ],
-    "deliverables": [
-      "Competitor landscape report",
-      "Content and keyword gap list",
-      "Link gap targets",
-      "Opportunity roadmap"
-    ],
-    "commonProblems": [
-      "A competitor pulling ahead in organic traffic",
-      "Unclear why others outrank you",
-      "Entering a crowded market",
-      "Marketplaces or aggregators dominating results"
-    ],
-    "whoFor": [
-      "Businesses in crowded categories",
-      "Startups entering established markets",
-      "Teams preparing an SEO investment case"
-    ],
-    "useCases": [
-      {
-        "title": "Alternative pages",
-        "body": "Finding '[competitor] alternative' searches and building honest comparison pages that convert."
-      },
-      {
-        "title": "Aggregator strategy",
-        "body": "Deciding when to compete with review sites and when to get listed on them instead."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Who counts as an SEO competitor?",
-        "a": "Any site ranking for the searches you want — including publishers, directories and marketplaces, not just direct business rivals."
-      },
-      {
-        "q": "Is it okay to create comparison pages about competitors?",
-        "a": "Yes, if they're accurate and fair. Honest comparisons build trust and convert well; misleading ones backfire."
-      },
-      {
-        "q": "How often should competitors be reviewed?",
-        "a": "Keep light monitoring monthly and do a deeper review every six months or after big market changes."
-      }
-    ],
-    "relatedIndustries": [
-      "saas",
-      "ecommerce",
-      "logistics"
-    ],
-    "ctaLine": "Watching a competitor pull ahead?"
+      "measurement": "Measure category and product landing-page revenue, orders and relevant organic visits. Check priority product indexing and structured-data errors. Stock changes, discounts and checkout changes belong in the report because they can affect conversion independently of SEO.",
+      "preparation": [
+        "Catalogue, platform and inventory information",
+        "Search Console and ecommerce analytics access",
+        "Top categories, margin priorities and planned promotions"
+      ]
+    },
+    "relatedServices": [
+      "Holistic-SEO",
+      "content-seo"
+    ]
   }
 ]

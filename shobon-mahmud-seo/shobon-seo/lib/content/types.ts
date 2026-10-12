@@ -7,6 +7,15 @@
 export type FAQ = { q: string; a: string };
 export type Point = { title: string; body: string };
 
+export type Engagement = {
+  title: string;
+  intro: string;
+  priorities: Point[];
+  example: Point;
+  measurement: string;
+  preparation: string[];
+};
+
 export type Service = {
   slug: string;
   name: string;
@@ -25,6 +34,8 @@ export type Service = {
   faqs: FAQ[];
   relatedIndustries: string[];
   relatedPosts?: string[];
+  relatedServices?: string[];
+  engagement?: Engagement;
   /** Contextual CTA line shown mid-page. */
   ctaLine: string;
 };
@@ -44,6 +55,7 @@ export type Industry = {
   exampleStrategy: string[];
   relatedServices: string[];
   faqs: FAQ[];
+  engagement?: Engagement;
 };
 
 export type Location = {

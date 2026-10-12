@@ -7,6 +7,7 @@ import { CaseStudyCard } from "@/components/cards/CaseStudyCard";
 import { BlogCard } from "@/components/cards/BlogCard";
 import { ServiceCard } from "@/components/cards/ServiceCard";
 import { Arrow } from "@/components/ui/Arrow";
+import { cn } from "@/lib/utils";
 
 function Head({ title, href, linkLabel }: { title: string; href?: string; linkLabel?: string }) {
   return (
@@ -50,7 +51,7 @@ export function RelatedServices({ items, title = pageCopy.text_005 }: { items: S
   return (
     <div>
       <Head title={title} href={pageCopy.text_006} linkLabel="All services" />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className={cn("grid gap-4", items.length > 1 && "sm:grid-cols-2", items.length > 3 ? "lg:grid-cols-4" : items.length === 3 && "lg:grid-cols-3", items.length === 1 && "max-w-2xl")}>
         {items.map((s) => <ServiceCard key={s.slug} service={s} />)}
       </div>
     </div>

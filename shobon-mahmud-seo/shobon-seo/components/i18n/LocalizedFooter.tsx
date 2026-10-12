@@ -3,11 +3,9 @@ import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
 import { SocialLinks } from "@/components/layout/SocialLinks";
 export const nativeServices = {
+  "Holistic-SEO": { ar: "السيو الشامل", bn: "হলিস্টিক এসইও" },
   "local-seo": { ar: "السيو المحلي", bn: "লোকাল এসইও" },
-  "technical-seo": { ar: "السيو التقني", bn: "টেকনিক্যাল এসইও" },
-  "on-page-seo": { ar: "تحسين الصفحات", bn: "অন-পেজ এসইও" },
   "content-seo": { ar: "المحتوى والسيو", bn: "কনটেন্ট এসইও" },
-  "keyword-research": { ar: "بحث الكلمات المفتاحية", bn: "কিওয়ার্ড গবেষণা" },
 } as const;
 export function LocalizedFooter({ locale }: { locale: "ar" | "bn" }) {
   const ar = locale === "ar";

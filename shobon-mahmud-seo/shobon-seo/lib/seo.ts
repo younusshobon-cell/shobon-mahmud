@@ -6,6 +6,7 @@ type BuildMetaInput = {
   description: string;
   path: string;
   image?: string;
+  imageAlt?: string;
   type?: "website" | "article" | "profile";
   publishedTime?: string;
   modifiedTime?: string;
@@ -19,6 +20,7 @@ export function buildMetadata({
   description,
   path,
   image = "/og-default.jpg",
+  imageAlt,
   type = "website",
   publishedTime,
   modifiedTime,
@@ -37,7 +39,7 @@ export function buildMetadata({
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type,
-      images: [{ url: image, width: 1200, height: 630, alt: `${siteConfig.name} — ${siteConfig.jobTitle}` }],
+      images: [{ url: image, width: 1200, height: 630, alt: imageAlt ?? `${siteConfig.name} — ${siteConfig.jobTitle}` }],
       ...(type === "article" ? { publishedTime, modifiedTime, authors: [siteConfig.name] } : {}),
     },
     twitter: { card: "summary_large_image", title, description, images: [image] },

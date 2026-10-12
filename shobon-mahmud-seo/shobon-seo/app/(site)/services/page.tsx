@@ -1,3 +1,4 @@
+import { SeoSelectionGuide } from "@/components/content/SeoSelectionGuide";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-services-page.json";
 import type { Metadata } from "next";
@@ -59,6 +60,7 @@ export default function ServicesPage() {
         </ol>
       </Section>
 
+      <SeoSelectionGuide kind="service" />
       <SeoBrief
         title={pageCopy.text_011}
         intro={pageCopy.text_012}
@@ -69,7 +71,7 @@ export default function ServicesPage() {
         ]}
       />
       <Section>
-        <FAQ faqs={serviceHubFaqs} />
+        <FAQ faqs={serviceHubFaqs} title="Choosing SEO services: questions and answers" withSchema />
       </Section>
       <FinalCta
         title={pageCopy.text_019}

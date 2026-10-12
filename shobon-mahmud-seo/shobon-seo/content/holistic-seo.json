@@ -1,0 +1,198 @@
+{
+  "definition": {
+    "title": "One strategy. Three connected foundations.",
+    "body": "Holistic SEO brings technical accessibility, on-page relevance and off-page references into the same decision process. It also considers what the visitor needs to do next. The goal is not to complete more isolated tasks; it is to remove the constraints between a relevant search and a useful business action.",
+    "note": "A simple dependency: a crawler needs access, a buyer needs a clear answer, and a reference needs a useful destination. Improving one layer helps most when the other layers support it."
+  },
+  "pillars": [
+    {
+      "id": "technical-seo",
+      "name": "Technical SEO",
+      "intro": "Technical SEO helps search engines access and understand your important pages. I diagnose crawl, indexing, rendering and performance issues, then give your team a prioritised plan with clear validation checks.",
+      "problem": [
+        "Most technical problems are invisible from the front end. Pages look fine to visitors while Google wastes crawl budget on parameter URLs, ignores canonicals, or indexes staging pages instead of the real ones.",
+        "The usual audit makes this worse: a 300-row export of warnings with no sense of which ones matter. Technical SEO should end in a short list of changes your developers understand and can ship."
+      ],
+      "covers": [
+        {
+          "title": "Crawling & indexing",
+          "body": "Robots rules, sitemaps, canonicals, noindex logic, index bloat and the Search Console coverage reports that show what Google kept."
+        },
+        {
+          "title": "Site architecture",
+          "body": "URL structure, click depth, faceted and paginated pages, and how authority flows through navigation and internal links."
+        },
+        {
+          "title": "Rendering & JavaScript SEO",
+          "body": "Checking what Googlebot actually sees on React, Next.js, Vue and other JavaScript-heavy sites."
+        },
+        {
+          "title": "Core Web Vitals",
+          "body": "LCP, INP and CLS diagnosis with specific fixes for images, fonts, scripts and layout shifts."
+        },
+        {
+          "title": "Structured data",
+          "body": "Schema that matches visible content — Organization, Product, Article, FAQ, Breadcrumb and more — validated and monitored."
+        },
+        {
+          "title": "Migrations & redesigns",
+          "body": "Redirect mapping, pre-launch checks and post-launch monitoring so a new site doesn't reset years of rankings."
+        }
+      ],
+      "priorities": [
+        {
+          "title": "Protect valuable URLs",
+          "body": "Start with pages that attract enquiries or sales. Compare their status codes, crawl access, canonical signals and internal links before spending time on low-impact warnings."
+        },
+        {
+          "title": "Test the template, not just one URL",
+          "body": "Check representative service, category and article pages on desktop and mobile. Separate a recurring template defect from an isolated content or configuration mistake."
+        },
+        {
+          "title": "Validate after deployment",
+          "body": "Retest the live response and rendered HTML, then use Search Console to observe crawling and indexing. A successful release is evidence of a fix, not an immediate ranking guarantee."
+        }
+      ]
+    },
+    {
+      "id": "on-page-seo",
+      "name": "On-Page SEO",
+      "intro": "On-page SEO makes each important page easier to understand, discover and use. I align content with the buyer’s task, improve titles and headings, and add relevant internal links and a clear next step.",
+      "problem": [
+        "Some sites have several pages answering the same task while leaving important buyer questions uncovered. Other pages use a format that does not match the search intent. I review query and URL evidence before deciding whether to improve, separate or consolidate them.",
+        "On-page SEO is not stuffing keywords into headings. It's making sure the page answers the query better, more clearly and more completely than what currently ranks."
+      ],
+      "covers": [
+        {
+          "title": "Search intent analysis",
+          "body": "Reading the current results to understand what format, depth and angle Google rewards for each query."
+        },
+        {
+          "title": "Keyword mapping",
+          "body": "A clear page role, supporting terms and evidence-based decisions about overlapping intent. Sharing a keyword alone does not prove cannibalisation."
+        },
+        {
+          "title": "Content optimisation",
+          "body": "Restructuring sections, filling topical gaps and improving clarity without rewriting what already works."
+        },
+        {
+          "title": "Titles & meta descriptions",
+          "body": "Written to earn the click, not just include the keyword."
+        },
+        {
+          "title": "Headings & structure",
+          "body": "A heading hierarchy that mirrors how people scan and how search engines extract answers."
+        },
+        {
+          "title": "Internal linking",
+          "body": "Contextual links that pass relevance and authority to the pages that need it."
+        }
+      ],
+      "priorities": [
+        {
+          "title": "Resolve overlapping intent",
+          "body": "Compare queries and ranking URLs before merging anything. Two pages can serve different audiences even when they share a phrase; consolidation needs evidence, relevant redirects and preserved useful content."
+        },
+        {
+          "title": "Answer the next buyer question",
+          "body": "Check whether scope, fit, process, deliverables and the next step are visible. Add specific answers from your team rather than lengthening copy with repeated keywords."
+        },
+        {
+          "title": "Connect supporting pages",
+          "body": "Use descriptive contextual links from relevant guides, industry pages and case studies. Keep the destination aligned with the promise in the anchor text."
+        }
+      ]
+    },
+    {
+      "id": "off-page-seo",
+      "name": "Off-Page SEO",
+      "intro": "Relevant editorial references can support discovery and credibility. I review the links you already have, plan useful resources and partner opportunities, and connect those resources to relevant service or product pages.",
+      "problem": [
+        "Cheap link packages create risk and rarely move rankings in competitive markets. What moves them is relevance: links from sites your audience reads, pointing to pages that deserve them.",
+        "Before building anything, it's worth knowing the gap. Sometimes a site doesn't need more links — it needs its existing authority routed to money pages."
+      ],
+      "covers": [
+        {
+          "title": "Backlink analysis",
+          "body": "Profile quality, anchor distribution, lost links and any risky patterns."
+        },
+        {
+          "title": "Competitor link gap",
+          "body": "Which sites link to your competitors and not to you — and why."
+        },
+        {
+          "title": "Digital PR",
+          "body": "Data, stories and expert commentary that journalists and industry sites want to cite."
+        },
+        {
+          "title": "Linkable assets",
+          "body": "Tools, research and guides designed to earn links naturally."
+        },
+        {
+          "title": "Partnerships & mentions",
+          "body": "Integration partners, associations, directories that matter, and unlinked brand mentions."
+        },
+        {
+          "title": "Authority routing",
+          "body": "Internal links that pass earned authority to commercial pages."
+        }
+      ],
+      "priorities": [
+        {
+          "title": "Assess relevance before metrics",
+          "body": "Review the publication, audience and editorial context. A high third-party authority score is not a substitute for a real readership or a relevant reference."
+        },
+        {
+          "title": "Prepare something worth citing",
+          "body": "Choose an original resource, expert explanation or useful partner page. Agree the supporting evidence and ownership before pitching it; publication remains the editor’s decision."
+        },
+        {
+          "title": "Separate promotion from ranking manipulation",
+          "body": "Legitimate sponsorships and advertising need appropriate link attributes. Avoid purchased ranking links, automated placements and reciprocal schemes created primarily to manipulate search."
+        }
+      ]
+    }
+  ],
+  "trustPrinciples": [
+    {
+      "title": "Evidence before recommendations",
+      "body": "Findings include the affected page or template, the supporting observation and a validation check. Tool scores provide context; they do not decide the roadmap by themselves."
+    },
+    {
+      "title": "Clear responsibility and handoff",
+      "body": "You know which tasks I own, which need your developer or writer, and who approves sensitive claims. Scope and reporting expectations are discussed before implementation."
+    },
+    {
+      "title": "Accurate claims and genuine references",
+      "body": "Use real business information, approved product facts and authorised examples. No invented results, fabricated reviews or promise of a search ranking replaces useful work."
+    }
+  ],
+  "measurementCards": [
+    {
+      "title": "Technical completion",
+      "body": "Are the agreed defects resolved on the live site? Review priority URL access, template acceptance checks and relevant field performance where data exists."
+    },
+    {
+      "title": "Relevant search discovery",
+      "body": "Are the changed page groups attracting suitable queries and clicks? Review query mix and landing-page trends instead of treating one average ranking as the result."
+    },
+    {
+      "title": "Qualified business actions",
+      "body": "Are the visits leading to appropriate enquiries, trials or orders? Check lead or sale quality with your team, while noting attribution limits and other changes."
+    }
+  ],
+  "scoping": [
+    {
+      "title": "A focused starting scope",
+      "body": "We identify priority page groups, platform constraints and the team available to implement changes. The first phase can target a specific bottleneck instead of rebuilding the whole site."
+    },
+    {
+      "title": "A practical implementation rhythm",
+      "body": "Agree owners, approvals and release checkpoints. Technical work and editorial work can have different dependencies; the roadmap makes their sequence and validation visible."
+    },
+    {
+      "title": "A realistic reporting period",
+      "body": "Publication and crawling are checkpoints, not proof of a ranking gain. We review an appropriate period for your demand and buying cycle rather than promising a fixed delivery date for traffic."
+    }
+  ]
+}

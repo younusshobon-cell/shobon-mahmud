@@ -361,20 +361,20 @@ background:#f6f8f5}
 
 /* Small, progressive motion across public pages. Content is never hidden while waiting. */
 @media (prefers-reduced-motion: no-preference) {
-  .location-motion .location-section-nav a,
-  .location-motion section .grid > a,
-  .location-motion section ul.grid > li {
+  .page-motion .location-section-nav a,
+  .page-motion section .grid > a,
+  .page-motion section ul.grid > li {
     transition: translate .25s var(--ease-out-soft), box-shadow .25s, border-color .25s;
   }
-  .location-motion .location-section-nav a:focus-visible,
-  .location-motion section .grid > a:focus-visible {
+  .page-motion .location-section-nav a:focus-visible,
+  .page-motion section .grid > a:focus-visible {
     translate: 0 -3px;
   }
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .location-motion .location-section-nav a:hover,
-  .location-motion section .grid > a:hover,
-  .location-motion section ul.grid > li:hover {
+  .page-motion .location-section-nav a:hover,
+  .page-motion section .grid > a:hover,
+  .page-motion section ul.grid > li:hover {
     translate: 0 -3px;
   }
 }
@@ -850,3 +850,44 @@ background:#f6f8f5}
 html[lang="bn"] .localized-page :is(p,li,summary) { line-height: 1.8; }
 html[dir="rtl"] .localized-page :is(summary,.text-left) { text-align: start; }
 html[dir="rtl"] .localized-page .tracking-wider { letter-spacing: normal; }
+
+/* Lightweight service/industry motion: visible content, no scroll listeners. */
+.delivery-card { overflow: hidden; }
+.delivery-card::before { content: ""; display: block; height: 2px; margin-bottom: 1.5rem; background: var(--color-link); transform-origin: left; transform: scaleX(.2); }
+@media (prefers-reduced-motion: no-preference) {
+  .page-motion .delivery-card { transition: translate .25s var(--ease-out-soft), border-color .25s, box-shadow .25s; }
+  .page-motion .delivery-card::before { transition: transform .4s var(--ease-out-soft); }
+  .page-motion .page-contents a { transition: translate .2s, background-color .2s, border-color .2s; }
+  .page-motion .page-contents a:focus-visible { translate: 0 -2px; }
+  .page-motion .delivery-card:focus-within::before { transform: scaleX(1); }
+  .page-motion details[open] > p { animation: goal-enter .25s ease-out; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .page-motion .delivery-card:hover { translate: 0 -4px; border-color: var(--color-link); box-shadow: 0 12px 30px -24px rgba(15,26,43,.4); }
+  .page-motion .delivery-card:hover::before { transform: scaleX(1); }
+  .page-motion .page-contents a:hover { translate: 0 -2px; background: var(--color-paper-2); border-color: var(--color-link); }
+}
+
+/* Holistic SEO master page: navy foundations with clear, high-contrast actions. */
+.holistic-page .holistic-hero { background-color: #16263a; background-image: radial-gradient(ellipse at 85% 25%, rgba(65,92,184,.3), transparent 60%), linear-gradient(120deg,#16263a,#1c3150); background-size: auto; }
+.holistic-page .holistic-system { background: linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025)); box-shadow: 0 28px 65px -40px rgba(0,0,0,.65); }
+.holistic-page .holistic-cta { color: #0f1a2b; background-color: #ffe36e; border: 1px solid #ffe36e; font-weight: 650; box-shadow: 0 10px 28px -14px rgba(255,227,110,.6), inset 0 -2px 0 rgba(15,26,43,.12); }
+.holistic-page .holistic-cta:hover { background-color: #ffed9f; border-color: #ffed9f; color: #0f1a2b; }
+.holistic-page .holistic-cta:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.holistic-page .on-night .holistic-cta:focus-visible { outline-color: #fff; }
+.holistic-page .page-contents a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (min-width: 1024px) {
+  .holistic-page .page-contents { position: sticky; top: 4.5rem; z-index: 20; background: #fafaf7; box-shadow: 0 8px 20px -20px rgba(15,26,43,.4); }
+  #main .holistic-page :is(h2[id],div[id],section[id]) { scroll-margin-top: 6.5rem; }
+}
+@media (max-width: 639px) {
+  .holistic-page .holistic-cta { width: 100%; }
+  .holistic-page .page-contents > div { gap: .5rem; }
+  .holistic-page .page-contents a { padding-inline: .9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .holistic-system-step { animation: goal-enter .65s var(--ease-out-soft) backwards; }
+  .holistic-system-step:nth-child(1) { animation-delay: .12s; }
+  .holistic-system-step:nth-child(2) { animation-delay: .22s; }
+  .holistic-system-step:nth-child(3) { animation-delay: .32s; }
+}

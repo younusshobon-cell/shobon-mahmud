@@ -2,7 +2,7 @@
   {
     "slug": "saas",
     "name": "SaaS",
-    "summary": "Product discovery, comparison and alternative searches, integration pages and content that moves trial and demo signups.",
+    "summary": "SaaS SEO consulting for use cases, comparisons and integrations. Connect useful product content to qualified trials, demos and buyer evaluation.",
     "seoTitle": "SaaS SEO Consultant",
     "heroTitle": "SaaS SEO that reaches buyers before they book a demo with someone else.",
     "heroIntro": "SaaS buyers research heavily before they talk to sales. They search for the problem, then solutions, then comparisons, then alternatives. SEO lets you be present at each of those moments — and the later ones are worth far more than their search volume suggests.",
@@ -40,7 +40,10 @@
       {
         "stage": "Solution aware",
         "intent": "Looking for types of solution",
-        "examples": ["churn prediction software", "invoice automation tools"]
+        "examples": [
+          "churn prediction software",
+          "invoice automation tools"
+        ]
       },
       {
         "stage": "Comparing",
@@ -53,7 +56,10 @@
       {
         "stage": "Switching",
         "intent": "Replacing a current tool",
-        "examples": ["[competitor] alternatives", "migrate from [competitor]"]
+        "examples": [
+          "[competitor] alternatives",
+          "migrate from [competitor]"
+        ]
       },
       {
         "stage": "Deciding",
@@ -67,7 +73,7 @@
     "opportunities": [
       {
         "title": "Alternative & comparison pages",
-        "body": "Honest, detailed pages for searches like '[competitor] alternative' — often the highest-converting organic pages a SaaS site has."
+        "body": "Accurate comparisons for buyers evaluating alternatives, with supported product facts, limitations and a relevant next step."
       },
       {
         "title": "Integration pages",
@@ -94,30 +100,68 @@
       "Measure by trials, demos and pipeline from organic, not just sessions."
     ],
     "relatedServices": [
-      "keyword-research",
       "content-seo",
-      "technical-seo",
-      "competitor-research"
+      "Holistic-SEO"
     ],
     "faqs": [
       {
         "q": "How long does SaaS SEO take to show results?",
-        "a": "Bottom-of-funnel pages can start contributing within a few months. Building topical authority in a competitive category is usually a 6–12 month effort."
+        "a": "Timing depends on the category, starting site, implementation speed and sales cycle. Validate publication and indexing first, then review relevant trials, demos and pipeline over the following months. A fixed ranking or lead timeline cannot be guaranteed."
       },
       {
         "q": "Should SaaS companies focus on blog content?",
-        "a": "Only as part of the picture. Comparison, alternative, integration and use-case pages usually drive more pipeline than general blog posts."
+        "a": "Blog content is one part of the journey. Comparison, integration and use-case pages answer evaluation questions; educational guides support discovery. Prioritise the mix using your product, buyer needs and first-party conversion evidence."
       },
       {
         "q": "How do you measure SaaS SEO?",
         "a": "By organic signups, demo requests and influenced pipeline, alongside rankings and traffic for the pages that feed them."
+      },
+      {
+        "q": "Do integration pages need their own content?",
+        "a": "Yes, when the integration is supported and has a distinct use case. Explain the workflow, prerequisites, limitations and setup path. Do not create pages for integrations that do not exist just to capture searches."
+      },
+      {
+        "q": "How do you avoid misleading SaaS comparisons?",
+        "a": "Use verifiable product information, identify the review date and explain meaningful trade-offs. Have the product team check claims before publishing and update the comparison when material details change."
+      },
+      {
+        "q": "What do you need from our product team?",
+        "a": "A walkthrough, supported workflows, audience priorities and approved product facts. Sales objections and trial or demo data help connect the content plan to evaluation and activation."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "Build SaaS SEO around product evaluation",
+      "intro": "A useful search journey connects the problem a buyer recognises to the workflow your product supports, then answers the questions needed to start a trial or speak to sales.",
+      "priorities": [
+        {
+          "title": "Make use cases concrete",
+          "body": "Describe the user, workflow, required inputs and product limits. A page for a specific role needs more than the role name inserted into generic feature copy."
+        },
+        {
+          "title": "Support comparisons with current facts",
+          "body": "Use dated, verifiable information about pricing, supported features and deployment options. Show when a competing product may fit better rather than inventing an advantage."
+        },
+        {
+          "title": "Connect discovery to activation",
+          "body": "Link a relevant guide to a feature, integration or trial path. Keep documentation accessible and check that the promised next step works for new users."
+        }
+      ],
+      "example": {
+        "title": "Example: a workflow tool has broad blog traffic but few demos",
+        "body": "An illustrative plan would review search queries, identify a relevant buyer workflow and improve its use-case page with screenshots and setup requirements. A guide can then link to that page where the product naturally helps; it should still answer the reader’s question fully."
+      },
+      "measurement": "Track demos, trials and activation by organic landing-page group where the data supports it. CRM attribution can show influenced pipeline, but long buying cycles and multiple touchpoints mean it should not be treated as exact causal credit.",
+      "preparation": [
+        "Product walkthrough and supported use cases",
+        "Sales objections and approved competitor facts",
+        "Trial, demo and CRM reporting definitions"
+      ]
+    }
   },
   {
     "slug": "legal-tech",
     "name": "Legal Tech",
-    "summary": "SEO for legal software and legal service platforms — high-trust content, precise terminology and buyers who research carefully.",
+    "summary": "Legal tech SEO for precise solution pages, product evaluation and reviewed resources. Connect buyer searches to approved product and trust information.",
     "seoTitle": "Legal Tech SEO",
     "heroTitle": "SEO for legal tech, where accuracy is part of the ranking strategy.",
     "heroIntro": "Legal technology sells to lawyers, in-house counsel and operations teams who are sceptical by profession. Content has to be precise, well sourced and clearly written by people who understand the practice. That's also what Google looks for in this space.",
@@ -128,7 +172,7 @@
     "challenges": [
       {
         "title": "Trust & expertise signals",
-        "body": "Content without clear authorship or legal review struggles to rank."
+        "body": "Sensitive legal content needs appropriate expertise and review so buyers can assess its accuracy and context."
       },
       {
         "title": "Jurisdiction differences",
@@ -147,7 +191,10 @@
       {
         "stage": "Problem aware",
         "intent": "Operational pain",
-        "examples": ["how to track contract renewals", "legal intake process"]
+        "examples": [
+          "how to track contract renewals",
+          "legal intake process"
+        ]
       },
       {
         "stage": "Solution aware",
@@ -160,12 +207,17 @@
       {
         "stage": "Comparing",
         "intent": "Evaluating vendors",
-        "examples": ["best CLM software for in-house teams"]
+        "examples": [
+          "best CLM software for in-house teams"
+        ]
       },
       {
         "stage": "Deciding",
         "intent": "Risk and compliance checks",
-        "examples": ["[product] security", "[product] SOC 2"]
+        "examples": [
+          "[product] security",
+          "[product] SOC 2"
+        ]
       }
     ],
     "opportunities": [
@@ -194,9 +246,7 @@
     ],
     "relatedServices": [
       "content-seo",
-      "on-page-seo",
-      "keyword-research",
-      "off-page-seo"
+      "Holistic-SEO"
     ],
     "faqs": [
       {
@@ -210,18 +260,58 @@
       {
         "q": "What matters most for legal tech SEO?",
         "a": "Precision. Using the exact language your buyers use, covering jurisdictions correctly, and demonstrating real expertise."
+      },
+      {
+        "q": "Can SEO work certify our legal software as compliant?",
+        "a": "No. Product compliance and legal accuracy need the relevant qualified reviewers and responsible teams. SEO can make approved information clearer and easier to discover; it cannot substantiate a claim on its own."
+      },
+      {
+        "q": "Should legal technology pages target different jurisdictions?",
+        "a": "Only where product support and buyer needs genuinely differ. Explain the market and limitations accurately. Any interpretation of law should be checked by an appropriate reviewer before publication."
+      },
+      {
+        "q": "What should a legal software solution page explain?",
+        "a": "The workflow, intended team, supported integrations, implementation requirements and product limitations. Link to verified security and data-handling information for procurement rather than repeating broad trust claims."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "Make legal technology content precise enough for evaluation",
+      "intro": "Legal technology buyers need clear product information. Legal guidance needs a separate level of review, jurisdictional context and responsibility for accuracy.",
+      "priorities": [
+        {
+          "title": "Separate workflow advice from legal advice",
+          "body": "A matter-management page can explain software capabilities. A page interpreting law or obligations needs appropriate legal review and should identify the jurisdiction and applicable context."
+        },
+        {
+          "title": "Show implementation and data handling",
+          "body": "Document supported integrations, access controls, migration requirements and procurement answers. Security or compliance statements should come from the responsible team and approved evidence."
+        },
+        {
+          "title": "Address each buying role",
+          "body": "Legal operations, practising lawyers and IT teams evaluate different risks. Link practical use cases to product and trust information instead of asking one broad article to serve all of them."
+        }
+      ],
+      "example": {
+        "title": "Example: a contract platform targets legal operations teams",
+        "body": "A workflow page could explain intake, review, approvals and reporting, with actual product limits. It can link to verified security information and relevant integration pages. Any discussion of legal requirements would be reviewed independently of the SEO work."
+      },
+      "measurement": "Measure qualified demos or consultations, relevant product-page queries and engagement with decision resources. Where the sales cycle is long, review lead relevance with the sales team rather than judging the strategy solely by form volume.",
+      "preparation": [
+        "Approved product, security and integration information",
+        "Target jurisdictions and appropriate reviewers",
+        "Buyer roles, procurement questions and demo qualification criteria"
+      ]
+    }
   },
   {
     "slug": "health-tech",
     "name": "Health Tech",
-    "summary": "SEO for digital health and healthcare technology, balancing strict accuracy standards with content that clinicians and patients find useful.",
+    "summary": "Health tech SEO for provider and patient search journeys. Build clear product pages, appropriate content review and privacy-aware lead measurement.",
     "seoTitle": "Health Tech SEO",
     "heroTitle": "Health tech SEO that earns trust from patients, clinicians and search engines.",
-    "heroIntro": "Health is where Google is most careful about who it ranks. Health tech companies need content that's medically accurate, clearly reviewed and genuinely helpful — and a site that makes that expertise visible.",
+    "heroIntro": "Health tech content must serve its audience accurately. I separate provider and patient search journeys, improve product and service information, and build appropriate review and sourcing into health-related content.",
     "landscape": [
-      "Health searches are held to the highest quality bar. Pages without clear expertise, sources and review dates face an uphill battle.",
+      "Health information can affect important decisions. Readers need accurate sources, appropriate expertise and a clear review process to assess what a page says.",
       "Health tech often has two audiences — clinicians or providers who buy, and patients who use — each with very different search behaviour."
     ],
     "challenges": [
@@ -262,12 +352,17 @@
       {
         "stage": "Comparing",
         "intent": "Vendor evaluation",
-        "examples": ["HIPAA compliant telehealth software"]
+        "examples": [
+          "HIPAA compliant telehealth software"
+        ]
       },
       {
         "stage": "Deciding",
         "intent": "Compliance & integration",
-        "examples": ["[product] EHR integration", "[product] HIPAA"]
+        "examples": [
+          "[product] EHR integration",
+          "[product] HIPAA"
+        ]
       }
     ],
     "opportunities": [
@@ -296,9 +391,8 @@
     ],
     "relatedServices": [
       "content-seo",
-      "technical-seo",
-      "local-seo",
-      "keyword-research"
+      "Holistic-SEO",
+      "local-seo"
     ],
     "faqs": [
       {
@@ -311,14 +405,54 @@
       },
       {
         "q": "How often should health content be updated?",
-        "a": "At least annually, and immediately when guidelines or evidence change. Showing review dates helps readers and search engines."
+        "a": "Use a review schedule based on the topic’s risk and rate of change. Update when relevant guidance, evidence or service details change, and identify who reviewed the content. A date alone does not establish accuracy."
+      },
+      {
+        "q": "Should patient and provider content share one page?",
+        "a": "Use separate pages when their tasks differ. A provider evaluates workflows, integrations and procurement; a patient needs clear service access information. Connect the journeys where relevant without mixing clinical guidance and sales promises."
+      },
+      {
+        "q": "Can SEO validate a HIPAA or other compliance claim?",
+        "a": "No. The responsible legal, privacy and security teams must verify the claim for the product and market. SEO work can organise their approved information but does not provide certification."
+      },
+      {
+        "q": "How can health tech lead tracking protect privacy?",
+        "a": "Measure useful actions without adding patient information, medical details or other sensitive data to analytics event names, URLs or payloads. Agree the measurement design with the team responsible for privacy before implementation."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "Different search paths for providers and patients",
+      "intro": "A provider evaluating a platform and a patient researching care need different pages, evidence and next steps. The SEO plan starts by keeping those tasks clear.",
+      "priorities": [
+        {
+          "title": "Define the audience before writing",
+          "body": "Provider pages can explain operational workflows and integrations. Patient-facing pages should make the service, eligibility and next step understandable without implying individual medical advice."
+        },
+        {
+          "title": "Create a review process for health claims",
+          "body": "Use qualified reviewers where clinical accuracy is required, identify sources and update material when relevant evidence changes. SEO work does not certify a medical claim or a product’s compliance."
+        },
+        {
+          "title": "Use verified trust information",
+          "body": "Link to approved privacy, security and product information. Publish compliance claims only when your responsible team has substantiated them for the relevant market and use case."
+        }
+      ],
+      "example": {
+        "title": "Example: a telehealth platform serves clinics and patients",
+        "body": "A clinic solution page can describe scheduling, onboarding and supported integrations. A separate patient page can explain access and service availability. Keeping these intents distinct makes navigation clearer and avoids mixing sales language with clinical guidance."
+      },
+      "measurement": "Separate provider demos from patient enquiries in analytics. Review qualified actions and relevant query groups without sending patient details or sensitive health information to analytics events. Content review dates are an editorial control, not a ranking promise.",
+      "preparation": [
+        "Provider and patient audience definitions",
+        "Approved clinical content and qualified reviewers",
+        "Verified product capabilities and privacy-safe measurement requirements"
+      ]
+    }
   },
   {
     "slug": "logistics",
     "name": "Logistics",
-    "summary": "SEO for freight, 3PL, shipping and supply chain companies — lane, service and location searches with high commercial intent.",
+    "summary": "Logistics SEO for freight, 3PL, lanes and facilities. Explain verified capabilities and connect relevant searches to qualified shipment quote requests.",
     "seoTitle": "Logistics SEO",
     "heroTitle": "Logistics SEO for searches that come with a shipment attached.",
     "heroIntro": "Logistics buyers search with specific intent: a route, a service, a location, a requirement. The companies that rank for those precise searches get quote requests from people who already know what they need.",
@@ -329,7 +463,7 @@
     "challenges": [
       {
         "title": "Generic service pages",
-        "body": "One 'Freight Forwarding' page can't rank for dozens of routes and cargo types."
+        "body": "A broad freight page may not answer route- and cargo-specific requirements well. Create separate pages only when the service and information are genuinely distinct."
       },
       {
         "title": "Scaling location pages without thin content",
@@ -348,7 +482,10 @@
       {
         "stage": "Need identified",
         "intent": "Specific service",
-        "examples": ["LCL shipping from China to UK", "bonded warehouse Dubai"]
+        "examples": [
+          "LCL shipping from China to UK",
+          "bonded warehouse Dubai"
+        ]
       },
       {
         "stage": "Evaluating",
@@ -361,7 +498,10 @@
       {
         "stage": "Deciding",
         "intent": "Quote and trust",
-        "examples": ["freight quote [route]", "[company] reviews"]
+        "examples": [
+          "freight quote [route]",
+          "[company] reviews"
+        ]
       }
     ],
     "opportunities": [
@@ -390,8 +530,7 @@
     ],
     "relatedServices": [
       "local-seo",
-      "on-page-seo",
-      "technical-seo"
+      "Holistic-SEO"
     ],
     "faqs": [
       {
@@ -405,13 +544,53 @@
       {
         "q": "What content works in logistics?",
         "a": "Practical, specific content: documentation guides, customs requirements, transit expectations and industry-specific handling."
+      },
+      {
+        "q": "What makes a useful freight lane page?",
+        "a": "Confirmed origin and destination coverage, transport mode, supported cargo and the information needed for a quote. Include route-specific operational detail when verified; avoid copying the same page for every port."
+      },
+      {
+        "q": "Should we publish exact transit times?",
+        "a": "Only when your operations team can support the information and explain its conditions. Schedules, customs and handling can vary. State what is indicative and how a customer obtains a current estimate."
+      },
+      {
+        "q": "How do you measure the quality of logistics enquiries?",
+        "a": "Group quote requests by supported service, route and cargo requirements. Review them with operations or sales so unsupported shipments and incomplete requests do not inflate the lead count."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "Turn logistics capability into useful service and lane pages",
+      "intro": "A buyer needs to know whether you can handle a shipment, where you operate and what is required for a quote. Those details should guide page structure.",
+      "priorities": [
+        {
+          "title": "Publish only genuine coverage",
+          "body": "Build lane and facility pages for services you actually provide. Include the transport mode, cargo restrictions, locations and the information needed to assess the shipment."
+        },
+        {
+          "title": "Explain quote requirements",
+          "body": "A clear request form can ask for origin, destination, shipment size and timing. Explain which details affect the estimate and avoid unsupported promises about transit or customs clearance."
+        },
+        {
+          "title": "Keep operational details current",
+          "body": "Assign ownership for route changes, facility details and certifications. Link service pages to relevant handling and documentation guidance reviewed by the operations team."
+        }
+      ],
+      "example": {
+        "title": "Example: a freight forwarder wants relevant cold-chain enquiries",
+        "body": "A useful service page could explain supported temperature ranges, packaging requirements and coverage only where those facts are confirmed. A lane page can add route-specific information and a quote path instead of repeating the same service paragraph for every port."
+      },
+      "measurement": "Report quote requests by service, lane and cargo fit where that data exists. Distinguish enquiries the operations team can fulfil from unsupported routes. Review seasonality and capacity alongside visibility so traffic increases do not hide poor lead relevance.",
+      "preparation": [
+        "Active lanes, facilities and supported cargo types",
+        "Operations-reviewed capabilities and quote requirements",
+        "Confirmed certifications and enquiry qualification rules"
+      ]
+    }
   },
   {
     "slug": "design",
     "name": "Design & Creative",
-    "summary": "SEO for design studios, agencies and creative companies whose portfolios are visual but whose buyers still search in words.",
+    "summary": "SEO for design agencies and studios. Improve service pages, written case studies and media performance so suitable clients can discover your work.",
     "seoTitle": "SEO for Design Agencies & Studios",
     "heroTitle": "SEO for design studios whose best work is invisible to search engines.",
     "heroIntro": "Design websites are often beautiful and nearly empty of text. That works for people who already know you, but not for the buyer searching for 'brand identity agency for fintech startups'. SEO for creative businesses is about making the work findable without making the site worse.",
@@ -441,7 +620,10 @@
       {
         "stage": "Need identified",
         "intent": "Service by specialism",
-        "examples": ["brand identity agency", "UX audit services"]
+        "examples": [
+          "brand identity agency",
+          "UX audit services"
+        ]
       },
       {
         "stage": "Evaluating",
@@ -454,7 +636,10 @@
       {
         "stage": "Deciding",
         "intent": "Proof",
-        "examples": ["[studio] case studies", "[studio] reviews"]
+        "examples": [
+          "[studio] case studies",
+          "[studio] reviews"
+        ]
       }
     ],
     "opportunities": [
@@ -482,10 +667,8 @@
       "Earn features from design directories and publications."
     ],
     "relatedServices": [
-      "on-page-seo",
-      "technical-seo",
-      "local-seo",
-      "off-page-seo"
+      "Holistic-SEO",
+      "local-seo"
     ],
     "faqs": [
       {
@@ -499,13 +682,53 @@
       {
         "q": "Should design agencies blog?",
         "a": "Only if there's something genuinely useful to say. Detailed case studies often do more than generic blog posts."
+      },
+      {
+        "q": "What should an SEO-friendly design case study contain?",
+        "a": "The actual brief, audience, constraints, design decisions and approved outcomes. Keep client permissions and confidentiality in view. A concept project should be labelled as a concept rather than presented as a completed client engagement."
+      },
+      {
+        "q": "Can we keep our website animation?",
+        "a": "Yes. Use lightweight, purposeful effects, preserve accessible navigation and honour reduced-motion settings. Check real mobile performance and keep essential copy available without waiting for an animation."
+      },
+      {
+        "q": "Which design services need separate landing pages?",
+        "a": "Services with distinct buyers, deliverables or search intent can justify separate pages, such as brand identity and product UX. Avoid creating many nearly identical pages for every industry without relevant expertise or examples."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "Make portfolio work discoverable without losing the visual experience",
+      "intro": "A prospective client needs to understand what you designed, why it mattered and whether the studio is suited to their project. Images and written context should support the same story.",
+      "priorities": [
+        {
+          "title": "Write the context behind each project",
+          "body": "Explain the brief, audience, constraints and design decisions. Publish outcomes only when approved and supported; attractive mockups should not be presented as measured business results."
+        },
+        {
+          "title": "Clarify service and specialist fit",
+          "body": "Separate branding, product design and website services where the offers differ. Link relevant case studies to the appropriate service rather than relying on a single portfolio gallery."
+        },
+        {
+          "title": "Keep media purposeful and fast",
+          "body": "Use descriptive alt text, appropriately sized images and lightweight animation. Keep essential copy and navigation available before interaction and honour reduced-motion preferences."
+        }
+      ],
+      "example": {
+        "title": "Example: a branding studio has strong work but a vague service page",
+        "body": "The page can explain strategy, identity deliverables, collaboration and handoff, supported by an approved project narrative. A contextual link from that case study gives prospective clients a clear path to the relevant offer without turning the gallery into a wall of keywords."
+      },
+      "measurement": "Review qualified project enquiries by service and portfolio landing page. Annotate referral traffic from awards or features separately from organic discovery. Evaluate media performance and form completion alongside search visibility.",
+      "preparation": [
+        "Service scope and ideal project profiles",
+        "Client-approved case study context and usable imagery",
+        "Enquiry qualification criteria and current portfolio performance"
+      ]
+    }
   },
   {
     "slug": "ecommerce",
     "name": "E-commerce",
-    "summary": "SEO for online stores: categories, products, faceted navigation and technical scale, on Shopify, WooCommerce and headless platforms.",
+    "summary": "E-commerce SEO strategy for shopping intent, categories and product content. Connect a useful catalogue experience to organic orders and revenue.",
     "seoTitle": "E-commerce SEO Consultant",
     "heroTitle": "E-commerce SEO for stores competing with marketplaces.",
     "heroIntro": "Online stores win organic revenue through category pages that match shopping intent, product pages that answer buyers' questions, and a technical setup that keeps the catalogue crawlable as it grows.",
@@ -535,22 +758,32 @@
       {
         "stage": "Browsing",
         "intent": "Category exploration",
-        "examples": ["linen shirts men", "standing desk"]
+        "examples": [
+          "linen shirts men",
+          "standing desk"
+        ]
       },
       {
         "stage": "Narrowing",
         "intent": "Attribute-specific",
-        "examples": ["oak standing desk with drawers"]
+        "examples": [
+          "oak standing desk with drawers"
+        ]
       },
       {
         "stage": "Comparing",
         "intent": "Reviews and alternatives",
-        "examples": ["best standing desk for small spaces"]
+        "examples": [
+          "best standing desk for small spaces"
+        ]
       },
       {
         "stage": "Buying",
         "intent": "Brand + product",
-        "examples": ["[brand] [product] price", "[brand] discount"]
+        "examples": [
+          "[brand] [product] price",
+          "[brand] discount"
+        ]
       }
     ],
     "opportunities": [
@@ -579,13 +812,13 @@
     ],
     "relatedServices": [
       "ecommerce-seo",
-      "technical-seo",
+      "Holistic-SEO",
       "content-seo"
     ],
     "faqs": [
       {
         "q": "Which pages matter most in e-commerce SEO?",
-        "a": "Category pages usually drive the most organic revenue, followed by high-demand product pages and buying guides."
+        "a": "The mix depends on your catalogue and demand. Categories often serve broad shopping searches, products serve item-specific queries and guides support decisions. Use landing-page orders and revenue to prioritise your own store."
       },
       {
         "q": "Can small stores compete with Amazon?",
@@ -594,13 +827,53 @@
       {
         "q": "Does site speed matter for stores?",
         "a": "It affects both rankings and conversion. Heavy apps, images and scripts are common culprits on e-commerce platforms."
+      },
+      {
+        "q": "Do category and product pages need different content?",
+        "a": "Yes. Categories help shoppers choose between products; product pages explain the specific item, fit, specifications and availability. Repeating the same generic paragraph across both misses those different tasks."
+      },
+      {
+        "q": "Should every filtered collection be indexed?",
+        "a": "No. Choose stable combinations with demand, useful inventory and a distinct shopping purpose. The remaining filter and sort URLs need coordinated crawl, canonical and indexing decisions tested on your platform."
+      },
+      {
+        "q": "What happens to SEO when products go out of stock?",
+        "a": "If stock will return, keep useful information available and explain availability honestly. For discontinued items, evaluate relevance, demand and links before choosing alternatives, a relevant redirect or removal. Do not send every old product to the homepage."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "An ecommerce content plan that helps people choose",
+      "intro": "Stores need useful shopping pages before a large publishing calendar. Category and product information should reduce uncertainty about fit, availability and purchase conditions.",
+      "priorities": [
+        {
+          "title": "Organise around real shopping choices",
+          "body": "Use product attributes and demand to identify category opportunities. Avoid creating indexable combinations with little inventory or no distinct shopping purpose."
+        },
+        {
+          "title": "Answer product questions accurately",
+          "body": "Include relevant dimensions, materials, compatibility or care details from verified product data. Make delivery and returns easy to find, and distinguish reviews from marketing copy."
+        },
+        {
+          "title": "Connect guidance to available products",
+          "body": "Buying guides should explain trade-offs and link to suitable categories or items. Review stock and discontinued products so recommendations and next steps remain useful."
+        }
+      ],
+      "example": {
+        "title": "Example: a clothing store wants better category discovery",
+        "body": "A linen-shirt category can explain material, fit and care while keeping the product grid prominent. Product pages provide item-specific size information, and a buying guide links to the category when that material suits the reader’s needs. Each page serves a distinct shopping task."
+      },
+      "measurement": "Compare organic category and product revenue, order volume and conversion rates by landing-page group. Separate branded demand and annotate stock availability, discounts and returns where possible. Additional traffic is valuable only when it fits the catalogue and business economics.",
+      "preparation": [
+        "Current catalogue and verified product attributes",
+        "Priority categories, inventory and promotion calendar",
+        "Ecommerce tracking and store platform access"
+      ]
+    }
   },
   {
     "slug": "technology",
     "name": "Technology",
-    "summary": "SEO for technology companies, developer tools and IT services — technical audiences, technical content and technical websites.",
+    "summary": "SEO for technology companies and developer tools. Connect accurate documentation, technical guides and product pages to useful evaluation paths.",
     "seoTitle": "SEO for Technology Companies",
     "heroTitle": "SEO for technology companies with technical buyers.",
     "heroIntro": "Technical audiences have little patience for vague marketing copy. They search for specifics — protocols, integrations, error messages, architectures — and trust sites that answer with precision.",
@@ -611,7 +884,7 @@
     "challenges": [
       {
         "title": "Docs on a separate subdomain",
-        "body": "Documentation authority doesn't flow to commercial pages."
+        "body": "Separate documentation can leave useful product context disconnected. Crawlable, relevant links can connect documentation and commercial pages across either subdomains or subfolders."
       },
       {
         "title": "Jargon mismatch",
@@ -630,17 +903,26 @@
       {
         "stage": "Technical problem",
         "intent": "Troubleshooting or how-to",
-        "examples": ["how to rotate API keys", "kubernetes cost monitoring"]
+        "examples": [
+          "how to rotate API keys",
+          "kubernetes cost monitoring"
+        ]
       },
       {
         "stage": "Solution search",
         "intent": "Tool category",
-        "examples": ["open source log management", "secrets management tool"]
+        "examples": [
+          "open source log management",
+          "secrets management tool"
+        ]
       },
       {
         "stage": "Evaluation",
         "intent": "Technical fit",
-        "examples": ["[tool] vs [tool] performance", "[tool] self-hosted"]
+        "examples": [
+          "[tool] vs [tool] performance",
+          "[tool] self-hosted"
+        ]
       }
     ],
     "opportunities": [
@@ -668,15 +950,13 @@
       "Fix rendering and crawl issues on framework-based sites."
     ],
     "relatedServices": [
-      "technical-seo",
-      "content-seo",
-      "keyword-research",
-      "seo-audits"
+      "Holistic-SEO",
+      "content-seo"
     ],
     "faqs": [
       {
         "q": "Should documentation be on a subdomain or subfolder?",
-        "a": "Subfolders usually consolidate authority better, but the right choice depends on your docs platform and team. Either can work with strong internal linking."
+        "a": "Both can work. Choose a structure your team can maintain, keep important documentation crawlable and connect it with relevant product pages. A migration needs evidence and a redirect plan; a subfolder does not automatically improve rankings."
       },
       {
         "q": "Do developers use Google or other sources?",
@@ -685,13 +965,53 @@
       {
         "q": "What makes technical content rank?",
         "a": "Accuracy, specificity, working examples and clear structure. Thin summaries rarely hold rankings in technical topics."
+      },
+      {
+        "q": "Do technical tutorials need an update schedule?",
+        "a": "They need an owner and clear triggers for review, including API changes, new releases and deprecated commands. Identify tested versions and prerequisites so readers can judge whether the example applies."
+      },
+      {
+        "q": "Should developer documentation have a sales CTA?",
+        "a": "A relevant product or setup link can help, but the documentation should finish the reader’s task. Use contextual next steps rather than placing a sales gate in front of information needed to implement or troubleshoot."
+      },
+      {
+        "q": "How do you research keywords for engineers?",
+        "a": "Combine documentation queries, support issues, product terminology and live search results. Map error-specific and how-to searches separately from product evaluation and procurement questions."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "Connect technical discovery to a credible product path",
+      "intro": "Engineers need accurate answers they can use. Business buyers also need to understand supported deployments, ownership and how to evaluate the product.",
+      "priorities": [
+        {
+          "title": "Treat documentation as part of the journey",
+          "body": "Keep relevant docs crawlable and linked to product context. Subdomains and subfolders can both work; architecture changes should account for the docs platform, maintainability and existing links."
+        },
+        {
+          "title": "Version technical examples",
+          "body": "Identify the tested version, prerequisites and expected behaviour. Remove obsolete commands and do not imply benchmarks or supported integrations that your team has not verified."
+        },
+        {
+          "title": "Bridge developer and procurement questions",
+          "body": "Use descriptive links from relevant tutorials to setup, deployment and security information. Keep the tutorial useful without forcing a sales action into every answer."
+        }
+      ],
+      "example": {
+        "title": "Example: a developer tool has useful docs but unclear evaluation pages",
+        "body": "A product page can summarise the supported use case and link to a working setup guide. The guide can link back to deployment and integration information where useful. This connects the research path without requiring a disruptive move of the documentation site."
+      },
+      "measurement": "Review relevant documentation queries, product-page visits and qualified signups or demos. Check whether technical examples remain accurate after releases. Documentation engagement and commercial conversion have different roles and should be reported separately.",
+      "preparation": [
+        "Documentation structure and release ownership",
+        "Verified deployment, integration and security details",
+        "Developer questions and signup or demo measurement"
+      ]
+    }
   },
   {
     "slug": "local-services",
     "name": "Local Services",
-    "summary": "SEO for businesses that serve customers in a specific area — clinics, trades, professional services and multi-location brands.",
+    "summary": "SEO for local service businesses with genuine coverage. Improve service pages, eligible profiles and mobile contact paths for qualified bookings.",
     "seoTitle": "SEO for Local Service Businesses",
     "heroTitle": "SEO for local businesses where every search is a potential booking.",
     "heroIntro": "For local service businesses, a handful of searches — '[service] near me', '[service] in [area]' — decide most of the new business. The map pack, reviews and a clear, fast website matter more than anything else.",
@@ -702,7 +1022,7 @@
     "challenges": [
       {
         "title": "Map pack visibility",
-        "body": "Being outside the top three local results means being mostly invisible."
+        "body": "Limited map visibility can reduce discovery for nearby searches. Organic service pages, referrals and other search features still provide routes to customers."
       },
       {
         "title": "Limited service area reach",
@@ -721,17 +1041,26 @@
       {
         "stage": "Urgent need",
         "intent": "Immediate service",
-        "examples": ["emergency plumber near me", "dentist open now"]
+        "examples": [
+          "emergency plumber near me",
+          "dentist open now"
+        ]
       },
       {
         "stage": "Planned service",
         "intent": "Research and compare",
-        "examples": ["best physiotherapist in [area]", "family lawyer [city]"]
+        "examples": [
+          "best physiotherapist in [area]",
+          "family lawyer [city]"
+        ]
       },
       {
         "stage": "Deciding",
         "intent": "Trust and convenience",
-        "examples": ["[business] reviews", "[business] prices"]
+        "examples": [
+          "[business] reviews",
+          "[business] prices"
+        ]
       }
     ],
     "opportunities": [
@@ -760,14 +1089,13 @@
     ],
     "relatedServices": [
       "local-seo",
-      "on-page-seo",
-      "technical-seo",
-      "off-page-seo"
+      "seo-for-home-service-providers",
+      "Holistic-SEO"
     ],
     "faqs": [
       {
         "q": "How quickly does local SEO work?",
-        "a": "Business Profile improvements can show results within weeks. Competitive markets and wider service areas take longer."
+        "a": "Timing depends on starting visibility, competition and how quickly changes are implemented and processed. Verify corrections first, then review qualified actions over a meaningful period without promising a fixed ranking or date."
       },
       {
         "q": "Do I need a website if I have a Business Profile?",
@@ -775,8 +1103,48 @@
       },
       {
         "q": "How do I rank in nearby towns?",
-        "a": "Relevant area pages, local links and reviews mentioning those areas help, though proximity still limits map pack reach."
+        "a": "Create useful pages only for towns you actually serve and support them with accurate coverage and genuine local experience. Organic visibility and map visibility are different; distance still affects Maps. Do not coach customers to insert keywords into reviews."
+      },
+      {
+        "q": "Can an online-only business use Google Business Profile?",
+        "a": "Targeting a city with a website is not enough for eligibility. Business Profiles generally require in-person contact with customers under Google’s rules. Organic search strategy and profile eligibility are separate decisions."
+      },
+      {
+        "q": "How is home service SEO different from other local services?",
+        "a": "Contractors often need pages for repair, installation, replacement and emergency work, with truthful coverage and availability. Our home service SEO service focuses on those job types, seasonality and qualified quote requests."
+      },
+      {
+        "q": "Should we ask only happy customers for reviews?",
+        "a": "No. Request honest feedback from genuine customers without filtering requests for positive experiences, offering incentives or coaching keyword insertion. Helpful responses and accurate service information support buyer trust."
       }
-    ]
+    ],
+    "engagement": {
+      "title": "Local service SEO for real coverage and useful bookings",
+      "intro": "Customers need to know whether you offer the service, can reach them and are available when needed. The website should answer those questions before asking for a call.",
+      "priorities": [
+        {
+          "title": "Start with the service offer",
+          "body": "Explain the work included, common exclusions and the booking or assessment process. Use actual operating hours and availability rather than implying around-the-clock support."
+        },
+        {
+          "title": "Make area pages genuinely local",
+          "body": "Include relevant coverage, directions for a real location or authorised local work. Do not create fake offices or repeat the same description with a different town name."
+        },
+        {
+          "title": "Support trust and contact",
+          "body": "Keep eligible Business Profiles and website details consistent. Make mobile contact simple and ask genuine customers for honest reviews without incentives or review gating."
+        }
+      ],
+      "example": {
+        "title": "Example: a home service company wants better installation enquiries",
+        "body": "A dedicated installation page can explain the assessment, access needs and quotation process. Relevant area pages link to it only for locations the team serves. Repair and emergency searches have separate needs and may deserve their own service pages."
+      },
+      "measurement": "Review qualified calls, forms and bookings by service and coverage area where available. Account for spam, repeat customers and missed calls. Track local visibility from actual customer locations while recognising that distance still constrains map results.",
+      "preparation": [
+        "True coverage boundaries and business hours",
+        "Service details, authorised local examples and profile access",
+        "Booking capacity and lead qualification criteria"
+      ]
+    }
   }
 ]
