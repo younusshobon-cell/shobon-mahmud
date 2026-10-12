@@ -871,9 +871,9 @@ html[dir="rtl"] .localized-page .tracking-wider { letter-spacing: normal; }
 /* Holistic SEO master page: navy foundations with clear, high-contrast actions. */
 .holistic-page .holistic-hero { background-color: #16263a; background-image: radial-gradient(ellipse at 85% 25%, rgba(65,92,184,.3), transparent 60%), linear-gradient(120deg,#16263a,#1c3150); background-size: auto; }
 .holistic-page .holistic-system { background: linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025)); box-shadow: 0 28px 65px -40px rgba(0,0,0,.65); }
-.holistic-page .holistic-cta { color: #0f1a2b; background-color: #ffe36e; border: 1px solid #ffe36e; font-weight: 650; box-shadow: 0 10px 28px -14px rgba(255,227,110,.6), inset 0 -2px 0 rgba(15,26,43,.12); }
-.holistic-page .holistic-cta:hover { background-color: #ffed9f; border-color: #ffed9f; color: #0f1a2b; }
-.holistic-page .holistic-cta:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.holistic-page .site-button.holistic-cta { color: #0f1a2b; background-color: #ffe36e; border: 1px solid #ffe36e; font-weight: 650; box-shadow: 0 10px 28px -14px rgba(255,227,110,.6), inset 0 -2px 0 rgba(15,26,43,.12); }
+.holistic-page .site-button.holistic-cta:hover { background-color: #ffed9f; border-color: #ffed9f; color: #0f1a2b; }
+.holistic-page .site-button.holistic-cta:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 .holistic-page .on-night .holistic-cta:focus-visible { outline-color: #fff; }
 .holistic-page .page-contents a { min-height: 44px; display: inline-flex; align-items: center; }
 @media (min-width: 1024px) {
@@ -881,7 +881,7 @@ html[dir="rtl"] .localized-page .tracking-wider { letter-spacing: normal; }
   #main .holistic-page :is(h2[id],div[id],section[id]) { scroll-margin-top: 6.5rem; }
 }
 @media (max-width: 639px) {
-  .holistic-page .holistic-cta { width: 100%; }
+  .holistic-page .site-button.holistic-cta { width: 100%; }
   .holistic-page .page-contents > div { gap: .5rem; }
   .holistic-page .page-contents a { padding-inline: .9rem; }
 }

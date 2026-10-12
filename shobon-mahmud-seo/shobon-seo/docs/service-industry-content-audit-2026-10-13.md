@@ -79,9 +79,9 @@ Updated every former discipline link in service, industry, location, Arabic loca
 
 ## Verification limits and measurement follow-up
 
-Automated visual browser testing could not run because the Chromium download returned an invalid archive. Desktop/mobile appearance, overflow and visual animation quality therefore still need browser review; HTML and motion lifecycle checks are not a substitute for that review. No Core Web Vitals or Lighthouse score is claimed.
+The local Chromium download returned an invalid archive, so local automated visual testing could not run. After deployment, the master page was inspected in the cloud browser at 1363 × 936: the hero and navigation rendered, no horizontal document overflow was present, section links navigated correctly, and the FAQ opened with the expected answer. Browser logs contained extension-origin errors but no observed site-origin runtime error. Mobile visual appearance and real-device motion still need review. No Core Web Vitals or Lighthouse score is claimed.
 
-Local canonical assertions use the application's local configured origin. Production canonical and social URLs depend on the existing deployment's public site URL configuration; confirm them on the deployed build. No deployment secrets or environment configuration were changed.
+Local canonical assertions use the application's local configured origin. The deployed master page’s canonical was verified as `https://shobon-mahmud.vercel.app/services/Holistic-SEO`. All three former discipline URLs were opened in the live browser and reached that exact master page. Other production metadata uses the same existing public site URL configuration. No deployment secrets or environment configuration were changed.
 
 After deployment, use Search Console and first-party enquiry/order data to record the affected page groups, publication date and baseline. Compare relevant queries and qualified actions over a meaningful period, accounting for seasonality and other changes. Indexing, rankings, rich results and lead volume are not guaranteed by content expansion or schema.
 
