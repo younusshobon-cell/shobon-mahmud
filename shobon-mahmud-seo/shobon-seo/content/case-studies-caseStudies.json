@@ -1,5 +1,40 @@
 [
   {
+    "slug": "retirement-tax-partners-seo-growth",
+    "client": "Retirement Tax Partners (RTP)",
+    "kind": "client",
+    "industry": "financial-services",
+    "filter": "financial-services",
+    "title": "Retirement Tax Partners SEO Case Study: 83% Reported Online Growth",
+    "outcome": "83% online growth reported by Shobon across the engagement.",
+    "summary": "How I connected a new retirement tax website with technical SEO, on-page improvements, off-page work and local search. Engagement began August 2025.",
+    "services": [
+      "Holistic-SEO",
+      "content-seo",
+      "local-seo"
+    ],
+    "timeline": "Engagement began August 2025",
+    "date": "2026-10-20",
+    "featured": true,
+    "situation": "When Retirement Tax Partners came to me in August 2025, they had a completely new website. What they needed next was a way for the right people to find it. The brief was about building an online presence that could support the business, rather than simply getting a website online.",
+    "challenge": "Build relevant organic discovery for a completely new retirement tax website.",
+    "research": [],
+    "strategy": [],
+    "execution": [],
+    "results": [
+      {
+        "label": "Reported online growth",
+        "value": "+83%"
+      },
+      {
+        "label": "Engagement began",
+        "value": "August 2025"
+      }
+    ],
+    "takeaway": "Start with a conversation and a complete diagnosis. Connect the SEO work to the services people actually need.",
+    "draft": false
+  },
+  {
     "slug": "arhq-domain-migration-organic-growth",
     "client": "America’s Retirement Headquarters (ARHQ)",
     "kind": "client",

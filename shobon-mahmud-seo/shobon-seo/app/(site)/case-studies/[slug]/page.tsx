@@ -1,3 +1,4 @@
+import { RtpCaseStudy } from "@/components/sections/RtpCaseStudy";
 import { ArhqCaseStudy } from "@/components/sections/ArhqCaseStudy";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-portfolio-slug-page.json";
@@ -69,6 +70,7 @@ export default async function CaseStudyPage({ params }: Props) {
   const study = getCaseStudy((await params).slug);
   if (!study) notFound();
   if (study.slug === "arhq-domain-migration-organic-growth") return <ArhqCaseStudy study={study} />;
+  if (study.slug === "retirement-tax-partners-seo-growth") return <RtpCaseStudy />;
   const path = `/case-studies/${study.slug}`;
   const industry = getIndustry(study.industry);
   const services = getServices(study.services);

@@ -34,7 +34,7 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
         variant === "wide" && "lg:grid lg:grid-cols-[1fr_1.1fr] lg:gap-12",
       )}
     >
-      {study.kind === "client" && <div className="relative aspect-[16/5] overflow-hidden rounded-xl lg:col-span-2"><Image src="/images/case-studies/arhq-hero.webp" alt="ARHQ website brand imagery" fill sizes="(min-width: 1024px) 1100px, 100vw" className="object-cover" /></div>}
+      {study.kind === "client" && <div className="relative aspect-[16/5] overflow-hidden rounded-xl lg:col-span-2"><Image src={study.slug === "retirement-tax-partners-seo-growth" ? "/images/case-studies/rtp-hero.webp" : "/images/case-studies/arhq-hero.webp"} alt={`${study.client} website imagery`} fill sizes="(min-width: 1024px) 1100px, 100vw" className="object-cover" /></div>}
       <div className="flex flex-col">
         <div className="flex flex-wrap items-center gap-3 text-sm text-muted">
           <span>{industry?.name ?? "Financial Services"}</span><span className="rounded-full bg-link-soft px-2.5 py-1 text-xs text-link">{study.kind === "client" ? "Client engagement" : "Strategy example"}</span>
