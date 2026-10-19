@@ -50,7 +50,7 @@ export function ArhqCaseStudy({ study }: {study: CaseStudy}) {
     <section className="bg-night text-on-night py-12 sm:py-20">
       <Container>
         <nav aria-label="Breadcrumb" className="mb-10 text-sm text-on-night-muted"><Link href="/case-studies" className="hover:underline">Case Studies</Link><span aria-hidden="true"> / </span>ARHQ</nav>
-        <p className="text-xs font-semibold uppercase tracking-[.18em] text-link-night">Client engagement · Financial services · Since July 2025</p>
+        <p className="text-xs font-semibold uppercase tracking-[.18em] text-link-night">Client engagement · Legal Tech · Since July 2025</p>
         <div className="mt-6 grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end">
           <div><h1 className="t-h1 max-w-3xl">A new domain.<br />A connected growth plan.<br /><span className="text-[#b8cbb0]">ARHQ’s next chapter.</span></h1><p className="mt-6 max-w-2xl text-lg leading-8 text-on-night-muted">How I approached a website transition, service-location visibility and the SEO work behind ARHQ’s reported online growth.</p></div>
           <aside className="rounded-3xl border border-night-line bg-night-2 p-8"><p className="text-6xl font-semibold tracking-tight text-[#b8cbb0]">+67%</p><p className="mt-3 text-lg">Reported online growth</p><p className="mt-3 text-sm leading-6 text-on-night-muted">Engagement outcome reported by Shobon. Metric definition and comparison period were not provided for publication.</p></aside>
