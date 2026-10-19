@@ -923,3 +923,9 @@ html[dir="rtl"] .localized-page .tracking-wider { letter-spacing: normal; }
 @media(min-width:1440px) { .growth-hero-grid { gap:88px; } }
 @media(max-width:1023px) { .growth-hero-grid { grid-template-columns:1fr 1fr; gap:32px; } .growth-hero-copy h1 { font-size:clamp(2.25rem,4.2vw,2.75rem); } .growth-framework { left:-12px; width:95%; } }
 @media(max-width:767px) { .growth-hero { padding:20px 0 48px; } .growth-hero-topline { font-size:9px; } .growth-hero-topline > span:last-child { display:none; } .growth-hero-grid { grid-template-columns:1fr; padding-top:32px; gap:32px; } .growth-hero-copy h1 { font-size:clamp(1.875rem,8.7vw,3.25rem); } .growth-hero-intro { font-size:16px; margin:22px 0; } .growth-hero-art { max-width:480px; width:100%; margin:auto; padding-bottom:110px; } .growth-framework { left:12px; width:calc(100% - 24px); } .growth-hero-disciplines { margin-top:24px; padding-top:20px; gap:12px; font-size:10px; } }
+
+/* Reserve reading space for the mobile section picker on detail pages. */
+@media (max-width: 1023px) {
+  body:has(.mobile-section-nav) #main { padding-bottom: 5.5rem; }
+  body:has(.mobile-section-nav) .back-to-top { display: none; }
+}

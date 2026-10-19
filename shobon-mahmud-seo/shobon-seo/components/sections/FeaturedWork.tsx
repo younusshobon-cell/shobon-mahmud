@@ -11,9 +11,9 @@ import { Arrow } from "@/components/ui/Arrow";
 export function FeaturedWork() {
   // Keep this homepage selection explicit: new case studies stay in the full index.
   const homepageSlugs = [
+    "americas-medicare-associates-seo-growth",
     "arhq-domain-migration-organic-growth",
     "retirement-tax-partners-seo-growth",
-    "americas-medicare-associates-seo-growth",
   ];
   const featured = homepageSlugs.flatMap(slug => {
     const study = caseStudies.find(c => c.slug === slug && !c.draft);

@@ -1,3 +1,4 @@
+import { MobileSectionNav } from "@/components/layout/MobileSectionNav";
 import { DocumentLayout } from "@/components/layout/DocumentLayout";
 import { VisitorTracker } from "@/components/layout/VisitorTracker";
 import pageCopy from "@/content/copy-app-layout.json";
@@ -62,6 +63,7 @@ export default function SiteLayout({
           <Footer />
           <SiteMotion />
           <ScrollJourney />
+          <MobileSectionNav key="mobile-section-navigation" />
         </MotionProvider>
         <JsonLd data={[personSchema(), websiteSchema()]} />
         <Analytics />

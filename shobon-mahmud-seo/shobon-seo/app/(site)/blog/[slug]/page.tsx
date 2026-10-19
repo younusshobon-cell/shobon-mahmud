@@ -123,7 +123,7 @@ export default async function ArticlePage({ params }: Props) {
 
       <Container className="pt-12 pb-16 lg:pt-16">
         <div className="grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[240px_minmax(0,720px)_1fr]">
-          <aside>
+          <aside className="hidden lg:block">
             <TableOfContents
               items={post.sections.filter(s=>s.heading).map((s) => ({
                 id: s.id,

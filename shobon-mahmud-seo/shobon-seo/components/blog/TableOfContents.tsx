@@ -49,7 +49,7 @@ export function TableOfContents({ items }: { items: Heading[] }) {
   return (
     <>
       {/* Mobile: collapsible */}
-      <details ref={mobileRef} className="group rounded-[var(--radius-card)] border border-line lg:hidden">
+      <details ref={mobileRef} className="group rounded-[var(--radius-card)] border border-line hidden">
         <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-sm font-medium text-ink [&::-webkit-details-marker]:hidden">
           {pageCopy.text_002}<ChevronDown aria-hidden className="size-4 transition-transform group-open:rotate-180" />
         </summary>
