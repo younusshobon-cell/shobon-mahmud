@@ -1,5 +1,40 @@
 [
   {
+    "slug": "arhq-domain-migration-organic-growth",
+    "client": "America’s Retirement Headquarters (ARHQ)",
+    "kind": "client",
+    "industry": "financial-services",
+    "filter": "financial-services",
+    "title": "ARHQ: connecting a domain transition with 67% reported online growth",
+    "outcome": "67% online growth reported by Shobon across the engagement.",
+    "summary": "A client engagement beginning in July 2025: diagnose the website, plan around a domain transition and connect technical SEO, content and local discovery.",
+    "services": [
+      "Holistic-SEO",
+      "content-seo",
+      "local-seo"
+    ],
+    "timeline": "Engagement began July 2025",
+    "date": "2026-10-19",
+    "featured": true,
+    "situation": "ARHQ needed to move away from an older domain while building organic visibility in the locations it serves. The work began in July 2025 with a conversation about that transition and the growth the business needed from its website.",
+    "challenge": "The central challenge was making a website change support growth. A new domain and a new site can interrupt discovery if the search strategy, content and technical foundations are treated as separate projects.",
+    "research": [],
+    "strategy": [],
+    "execution": [],
+    "results": [
+      {
+        "label": "Reported online growth",
+        "value": "+67%"
+      },
+      {
+        "label": "Engagement began",
+        "value": "July 2025"
+      }
+    ],
+    "takeaway": "A website transition is also a growth decision. Diagnosis comes first; technical work, useful content and location relevance need a shared direction.",
+    "draft": false
+  },
+  {
     "slug": "saas-organic-growth",
     "client": "B2B SaaS acquisition scenario",
     "industry": "saas",

@@ -14,7 +14,7 @@ export default function NotFound() {
         <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
           {[
             ["/services", "Services"],
-            ["/portfolio", "Work"],
+            ["/case-studies", "Work"],
             ["/blog", "Blog"],
             ["/about", "About"],
           ].map(([href, label]) => (

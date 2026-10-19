@@ -4,6 +4,10 @@
     "label": "All"
   },
   {
+    "value": "financial-services",
+    "label": "Financial Services"
+  },
+  {
     "value": "saas",
     "label": "SaaS"
   },

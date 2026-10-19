@@ -15,15 +15,15 @@ import { FinalCta } from "@/components/sections/FinalCta";
 export const metadata: Metadata = buildMetadata({
   title: pageCopy.text_001,
   description: pageCopy.text_002,
-  path: "/portfolio",
+  path: "/case-studies",
 });
 
 export default function PortfolioPage() {
   return (
     <>
-      <PageSchema path={"/portfolio"} />
+      <PageSchema path={"/case-studies"} />
       <PageHero
-        crumbs={[{ name: "Work", href: "/portfolio" }]}
+        crumbs={[{ name: "Case Studies", href: "/case-studies" }]}
         kicker={pageCopy.text_003}
         title={pageCopy.text_004}
         intro={pageCopy.text_005}

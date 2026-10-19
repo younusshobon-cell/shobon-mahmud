@@ -1,3 +1,4 @@
+import { ArhqCaseStudy } from "@/components/sections/ArhqCaseStudy";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-portfolio-slug-page.json";
 import type { Metadata } from "next";
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title: c.title,
     description: c.summary,
-    path: `/portfolio/${c.slug}`,
+    path: `/case-studies/${c.slug}`,
     noindex: c.draft,
   });
 }
@@ -67,7 +68,8 @@ function Block({
 export default async function CaseStudyPage({ params }: Props) {
   const study = getCaseStudy((await params).slug);
   if (!study) notFound();
-  const path = `/portfolio/${study.slug}`;
+  if (study.slug === "arhq-domain-migration-organic-growth") return <ArhqCaseStudy study={study} />;
+  const path = `/case-studies/${study.slug}`;
   const industry = getIndustry(study.industry);
   const services = getServices(study.services);
   const related = caseStudiesFor({ exclude: study.slug, limit: 3 });
@@ -78,7 +80,7 @@ export default async function CaseStudyPage({ params }: Props) {
       <PageHero
         tone="dark"
         crumbs={[
-          { name: "Work", href: "/portfolio" },
+          { name: "Case Studies", href: "/case-studies" },
           { name: study.title, href: path },
         ]}
         kicker={`${industry?.name ?? ""} SEO example strategy`}

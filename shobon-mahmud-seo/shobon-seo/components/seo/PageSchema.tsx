@@ -17,12 +17,12 @@ export function PageSchema({ path }: { path: string }) {
   const location = path.startsWith("/locations/") ? locations.find(l => `seo-consultant-${l.slug}` === slug) : undefined;
   const industry = path.startsWith("/industries/") ? industries.find(i => i.slug === slug) : undefined;
   const post = path.startsWith("/blog/") ? posts.find(p => p.slug === slug) : undefined;
-  const study = path.startsWith("/portfolio/") ? caseStudies.find(s => s.slug === slug) : undefined;
+  const study = path.startsWith("/case-studies/") ? caseStudies.find(s => s.slug === slug) : undefined;
   const custom = customPages.find(p => `/${p.slug}` === path);
   const category = path.startsWith("/blog/category/") ? blogCategories.find(c => c.slug === slug) : undefined;
   const section = sitemapSections.find(s => path === `/${s}`);
   const collection = Boolean(section || category || path.startsWith("/blog/page/"));
-  const names: Record<string, string> = { "/": siteConfig.name, "/about": "About Shobon Mahmud", "/contact": "Contact Shobon Mahmud", "/privacy": "Privacy Policy", "/terms": "Terms of Use", "/services": "Digital Growth Services", "/locations": "Digital Growth Markets", "/industries": "Industries", "/portfolio": "Growth Strategy Examples", "/blog": "Digital Growth Insights" };
+  const names: Record<string, string> = { "/": siteConfig.name, "/about": "About Shobon Mahmud", "/contact": "Contact Shobon Mahmud", "/privacy": "Privacy Policy", "/terms": "Terms of Use", "/services": "Digital Growth Services", "/locations": "Digital Growth Markets", "/industries": "Industries", "/case-studies": "Case Studies", "/blog": "Digital Growth Insights" };
   const name = service?.seoTitle ?? location?.seoTitle ?? industry?.seoTitle ?? post?.title ?? study?.title ?? custom?.title ?? category?.name ?? names[path] ?? (collection ? `Digital Growth Insights — Page ${slug}` : siteConfig.name);
   const description = service?.summary ?? location?.intro ?? industry?.summary ?? post?.description ?? study?.summary ?? custom?.description ?? category?.description;
   let items = section ? entriesFor(section).filter(e => e.path !== path).map(e => e.path) : [];

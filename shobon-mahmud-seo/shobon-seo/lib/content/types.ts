@@ -77,6 +77,7 @@ export type Location = {
 };
 
 export type PortfolioFilter =
+  | "financial-services"
   | "saas"
   | "legal-tech"
   | "health-tech"
@@ -86,6 +87,7 @@ export type PortfolioFilter =
   | "local";
 
 export type CaseStudy = {
+  kind?: "client" | "illustrative";
   slug: string;
   /** Real client name, or a description if under NDA. */
   client: string;

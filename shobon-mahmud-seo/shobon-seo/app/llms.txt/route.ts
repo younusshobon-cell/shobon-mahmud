@@ -13,7 +13,7 @@ export function GET() {
     ...[
       ["About", "/about"], ["Contact", "/contact"], ["Services", "/services"],
       ["Industries", "/industries"], ["Locations", "/locations"],
-      ["Blog", "/blog"], ["Portfolio", "/portfolio"],
+      ["Blog", "/blog"], ["Case Studies", "/case-studies"],
     ].map(([name, path]) => link(name, path)), "",
     "## Official profiles", "",
     ...sameAs.map(href => `- [${new URL(href).hostname}](${href})`), "",

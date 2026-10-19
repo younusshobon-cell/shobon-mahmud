@@ -7,7 +7,7 @@ import { locations } from "@/lib/content/locations";
 import { services } from "@/lib/content/services";
 import { siteConfig } from "@/lib/site";
 
-export const sitemapSections = ["pages", "services", "locations", "industries", "blog", "portfolio"] as const;
+export const sitemapSections = ["pages", "services", "locations", "industries", "blog", "case-studies"] as const;
 export type SitemapSection = (typeof sitemapSections)[number];
 
 type SitemapEntry = { path: string; lastModified?: string };
@@ -36,8 +36,8 @@ export function entriesFor(section: SitemapSection): SitemapEntry[] {
         ...posts.map(({ slug, updated, date }) => ({ path: `/blog/${slug}`, lastModified: updated ?? date })),
       ];
     }
-    case "portfolio":
-      return [{ path: "/portfolio" }, ...caseStudies.filter(({ draft }) => !draft).map(({ slug, date }) => ({ path: `/portfolio/${slug}`, lastModified: date }))];
+    case "case-studies":
+      return [{ path: "/case-studies" }, ...caseStudies.filter(({ draft }) => !draft).map(({ slug, date }) => ({ path: `/case-studies/${slug}`, lastModified: date }))];
   }
 }
 

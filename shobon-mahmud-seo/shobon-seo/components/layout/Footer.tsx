@@ -10,7 +10,7 @@ import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
 
 const siteLinks = [
-  { href: "/portfolio", label: "Work" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/locations", label: "Locations" },

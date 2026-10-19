@@ -53,8 +53,10 @@ const nextConfig: NextConfig = {
         destination: `/locations/seo-consultant-${slug}`,
         permanent: true,
       })),
-      { source: "/work", destination: "/portfolio", permanent: true },
-      { source: "/case-studies", destination: "/portfolio", permanent: true },
+      { source: "/work", destination: "/case-studies", statusCode: 301 },
+      { source: "/portfolio", destination: "/case-studies", statusCode: 301 },
+      { source: "/portfolio/:path+", destination: "/case-studies/:path+", statusCode: 301 },
+      { source: "/sitemaps/portfolio.xml", destination: "/sitemaps/case-studies.xml", statusCode: 301 },
     ];
   },
 };

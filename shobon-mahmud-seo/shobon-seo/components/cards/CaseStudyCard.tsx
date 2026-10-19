@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 import pageCopy from "@/content/copy-components-cards-CaseStudyCard.json";
 import Link from "next/link";
@@ -27,15 +28,16 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
   const services = getServices(study.services);
   return (
     <Link
-      href={`/portfolio/${study.slug}`}
+      href={`/case-studies/${study.slug}`}
       className={cn(
         "interactive-card group flex h-full flex-col gap-6 rounded-[var(--radius-panel)] border border-line bg-paper p-6 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-ink sm:p-8",
         variant === "wide" && "lg:grid lg:grid-cols-[1fr_1.1fr] lg:gap-12",
       )}
     >
+      {study.kind === "client" && <div className="relative aspect-[16/5] overflow-hidden rounded-xl lg:col-span-2"><Image src="/images/case-studies/arhq-hero.webp" alt="ARHQ website brand imagery" fill sizes="(min-width: 1024px) 1100px, 100vw" className="object-cover" /></div>}
       <div className="flex flex-col">
         <div className="flex flex-wrap items-center gap-3 text-sm text-muted">
-          <span>{industry?.name}</span>
+          <span>{industry?.name ?? "Financial Services"}</span><span className="rounded-full bg-link-soft px-2.5 py-1 text-xs text-link">{study.kind === "client" ? "Client engagement" : "Strategy example"}</span>
           {study.draft && <DraftBadge className="text-muted" />}
         </div>
         <h3 className="mt-3 text-xl font-semibold leading-snug tracking-tight text-ink sm:text-2xl">{study.title}</h3>
@@ -44,7 +46,7 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
       </div>
       <dl className={cn("grid content-start gap-5 border-t border-line pt-6 text-[0.9375rem]", variant === "wide" && "lg:border-t-0 lg:pt-0")}>
         <div>
-          <dt className="text-sm text-muted">{pageCopy.text_004}</dt>
+          <dt className="text-sm text-muted">{study.kind === "client" ? "The engagement" : pageCopy.text_004}</dt>
           <dd className="mt-1 text-ink-2">{study.summary}</dd>
         </div>
         <div>
@@ -52,7 +54,7 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
           <dd className="mt-1 text-ink-2">{services.map((s) => s.name).join(" + ")}</dd>
         </div>
         <div>
-          <dt className="text-sm text-muted">{pageCopy.text_006}</dt>
+          <dt className="text-sm text-muted">{study.kind === "client" ? "Reported outcome" : pageCopy.text_006}</dt>
           <dd className="mt-1 font-medium text-ink"><Fill text={study.outcome} /></dd>
         </div>
       </dl>

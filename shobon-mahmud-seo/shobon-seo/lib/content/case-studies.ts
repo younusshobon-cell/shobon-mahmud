@@ -2,7 +2,7 @@ import cms_portfolioFilters from "@/content/case-studies-portfolioFilters.json";
 import cms_caseStudies from "@/content/case-studies-caseStudies.json";
 import type { CaseStudy, PortfolioFilter } from "./types";
 
-/** Complete illustrative strategies. No client performance data or measured outcome is implied. */
+/** Client engagements and illustrative strategies are explicitly distinguished. */
 export const portfolioFilters: {
   value: "all" | PortfolioFilter;
   label: string;
