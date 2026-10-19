@@ -71,7 +71,7 @@ export default function ServicesPage() {
         ]}
       />
       <Section>
-        <FAQ faqs={serviceHubFaqs} title="Choosing SEO services: questions and answers" withSchema />
+        <FAQ faqs={serviceHubFaqs} title="Choosing a digital growth partner: questions and answers" withSchema />
       </Section>
       <FinalCta
         title={pageCopy.text_019}

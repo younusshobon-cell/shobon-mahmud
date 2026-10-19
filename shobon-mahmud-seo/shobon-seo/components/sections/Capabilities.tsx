@@ -1,3 +1,4 @@
+import { services } from "@/lib/content/services";
 
 import pageCopy from "@/content/copy-components-sections-Capabilities.json";
 import Link from "next/link";
@@ -5,14 +6,7 @@ import { Section } from "@/components/content/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Arrow } from "@/components/ui/Arrow";
 
-const capabilities = [
-  { slug: "technical-seo", name: pageCopy.text_001, body: pageCopy.text_002 },
-  { slug: "on-page-seo", name: pageCopy.text_003, body: pageCopy.text_004 },
-  { slug: "content-seo", name: pageCopy.text_005, body: pageCopy.text_006 },
-  { slug: "off-page-seo", name: pageCopy.text_007, body: pageCopy.text_008 },
-  { slug: "local-seo", name: pageCopy.text_009, body: pageCopy.text_010 },
-  { slug: "ecommerce-seo", name: pageCopy.text_011, body: pageCopy.text_012 },
-];
+
 
 export function Capabilities() {
   return (
@@ -29,11 +23,11 @@ export function Capabilities() {
           </Link>
         </div>
         <ul className="border-t border-line">
-          {capabilities.map((c) => (
+          {services.map((c) => (
             <li data-motion-step key={c.slug} className="border-b border-line">
-              <Link href={`/services/${c.slug}`} className="group grid gap-2 py-6 sm:grid-cols-[180px_1fr_auto] sm:items-baseline sm:gap-8">
+              <Link href={`/services/${c.slug}`} className="group grid gap-2 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)_auto] sm:items-baseline sm:gap-8">
                 <h3 className="text-lg font-semibold tracking-tight text-ink transition-colors group-hover:text-link">{c.name}</h3>
-                <p className="leading-relaxed text-muted">{c.body}</p>
+                <p className="leading-relaxed text-muted">{c.summary}</p>
                 <Arrow className="hidden text-muted group-hover:text-link sm:block" />
               </Link>
             </li>

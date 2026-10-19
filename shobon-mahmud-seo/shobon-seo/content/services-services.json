@@ -783,5 +783,268 @@
       "Holistic-SEO",
       "content-seo"
     ]
+  },
+  {
+    "slug": "digital-growth-strategy",
+    "name": "Digital Growth Strategy",
+    "seoTitle": "Digital Growth Strategy & Growth Partner Services",
+    "summary": "A practical digital growth strategy connecting acquisition, content, conversion and measurement with a prioritised 90-day roadmap.",
+    "heroTitle": "A clear growth direction. A plan your team can act on.",
+    "heroIntro": "As your Digital Growth Partner, I help you identify the constraint between being discovered and winning useful business. We connect audience insight, channel priorities, website conversion and measurement in one realistic delivery plan.",
+    "problem": [
+      "You may already invest in a website, content and marketing without knowing which part deserves attention next. More activity can increase cost without improving the customer journey.",
+      "A digital growth strategy starts with your commercial priorities and the evidence you have. Together, we identify where discovery, trust, conversion or measurement is holding progress back, then give the work a clear sequence."
+    ],
+    "covers": [
+      {
+        "title": "Business and customer diagnosis",
+        "body": "Clarify priority offers, target buyers, sales questions and the actions that represent qualified interest."
+      },
+      {
+        "title": "Acquisition and channel priorities",
+        "body": "Review where relevant visitors come from and choose the channels worth testing. SEO is one part of the plan; paid campaign delivery is scoped separately."
+      },
+      {
+        "title": "Website and funnel review",
+        "body": "Connect landing pages, service information, proof and enquiry steps to the needs of your buyers."
+      },
+      {
+        "title": "Content and distribution direction",
+        "body": "Give educational, comparison and commercial content distinct roles, with practical distribution opportunities."
+      },
+      {
+        "title": "Measurement and reporting",
+        "body": "Agree a baseline, event definitions, lead-quality feedback and a review rhythm before judging performance."
+      },
+      {
+        "title": "A prioritised growth roadmap",
+        "body": "Sequence opportunities by expected value, effort, dependencies and the team’s ability to deliver."
+      }
+    ],
+    "process": [
+      {
+        "title": "Understand the business",
+        "body": "Start with a working session on your offer, customers, goals, constraints and current marketing."
+      },
+      {
+        "title": "Review the evidence",
+        "body": "Assess relevant analytics, search data, enquiry paths and customer feedback. Record gaps instead of treating missing data as certainty."
+      },
+      {
+        "title": "Choose the constraint",
+        "body": "Identify the most useful starting point and separate confirmed problems from hypotheses to test."
+      },
+      {
+        "title": "Plan the first 90 days",
+        "body": "Define workstreams, owners, deliverables and review points. Keep the backlog realistic for your resources."
+      },
+      {
+        "title": "Support delivery and learning",
+        "body": "Review implementation and performance at agreed intervals, then adjust the priorities as evidence changes."
+      }
+    ],
+    "deliverables": [
+      "Business and customer discovery summary",
+      "Growth baseline and measurement gaps",
+      "Customer journey and channel opportunity review",
+      "Prioritised 90-day roadmap with owners and dependencies",
+      "Content, conversion and acquisition briefs for agreed priorities",
+      "Reporting framework and review cadence"
+    ],
+    "commonProblems": [
+      "Marketing tasks are disconnected",
+      "Traffic grows without qualified enquiries",
+      "No shared priorities between leadership and delivery teams",
+      "Reports show activity but little business context"
+    ],
+    "whoFor": [
+      "Founders who need a practical growth direction",
+      "Service businesses connecting visibility with enquiries",
+      "Small teams needing senior prioritisation alongside execution",
+      "Businesses preparing a new website or market launch"
+    ],
+    "useCases": [
+      {
+        "title": "A new service business",
+        "body": "Connect the offer, core service pages, local discovery and enquiry measurement before scaling content or campaigns."
+      },
+      {
+        "title": "A business with several marketing suppliers",
+        "body": "Create a shared roadmap so SEO, content, website work and measurement support the same commercial priorities."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is a digital growth partner?",
+        "a": "A digital growth partner helps connect marketing, website conversion and measurement around business growth. In my engagements, that means diagnosing the customer journey, agreeing priorities and supporting a clear plan with defined responsibilities."
+      },
+      {
+        "q": "What does a digital growth strategy include?",
+        "a": "A digital growth strategy includes your audience, business goals, channel priorities, conversion plan, measurement and delivery roadmap. The useful level of detail depends on your starting point, resources and sales cycle."
+      },
+      {
+        "q": "How is a growth partner different from a digital marketing agency?",
+        "a": "A growth partner usually coordinates priorities across the customer journey, while an agency may focus on delivering particular channels or campaigns. The labels vary, so compare the actual scope, ownership and reporting rather than the title alone."
+      },
+      {
+        "q": "How is growth marketing different from digital marketing?",
+        "a": "Digital marketing describes online channels; growth marketing focuses on improving measurable stages of the customer journey through learning and experimentation. They overlap: a growth plan can use SEO, content or other digital channels to address a specific business constraint."
+      },
+      {
+        "q": "Can I start with a one-off growth audit?",
+        "a": "Yes, you can start with a standalone diagnosis and roadmap. We can then agree whether your team implements it or whether ongoing delivery support would help."
+      },
+      {
+        "q": "How long does a digital growth strategy take to show results?",
+        "a": "The timeline depends on the starting point, channel, implementation pace and sales cycle. A 90-day roadmap creates a practical review window, not a promise that a particular growth target will be reached in 90 days."
+      }
+    ],
+    "relatedIndustries": [
+      "saas",
+      "legal-tech",
+      "health-tech"
+    ],
+    "relatedServices": [
+      "conversion-rate-optimization",
+      "Holistic-SEO",
+      "content-seo"
+    ],
+    "ctaLine": "Ready to connect your marketing with a clearer growth plan?"
+  },
+  {
+    "slug": "conversion-rate-optimization",
+    "name": "Conversion Rate Optimization",
+    "seoTitle": "Conversion Rate Optimization Services | Website & Lead Generation",
+    "summary": "Improve the path from website visit to qualified enquiry through conversion research, clearer landing pages, form reviews and evidence-led testing.",
+    "heroTitle": "Help more of the right visitors take the next step.",
+    "heroIntro": "I connect conversion research, landing-page clarity and measurement to your wider growth plan. We find friction in the journey from interest to enquiry, then prioritise improvements your team can implement and evaluate.",
+    "problem": [
+      "A website can attract relevant visitors and still make it difficult to act. An unclear offer, missing proof, a confusing form or the wrong next step can interrupt an otherwise useful journey.",
+      "Conversion rate optimization investigates those barriers. The goal is to help the right visitors complete a meaningful action while keeping lead quality and customer experience in view."
+    ],
+    "covers": [
+      {
+        "title": "Conversion and tracking baseline",
+        "body": "Define the action, denominator, page group and reporting window. Check that events represent useful completions rather than accidental clicks."
+      },
+      {
+        "title": "Landing-page and offer review",
+        "body": "Assess message clarity, audience fit, supporting evidence and the relationship between acquisition intent and the landing page."
+      },
+      {
+        "title": "Forms and enquiry paths",
+        "body": "Review form length, labels, validation, mobile usability and confirmation steps for avoidable friction."
+      },
+      {
+        "title": "Behaviour and customer research",
+        "body": "Combine analytics with available customer feedback and consent-appropriate behaviour insights to develop hypotheses."
+      },
+      {
+        "title": "Prioritised improvement briefs",
+        "body": "Document the problem, supporting evidence, proposed change, owner and acceptance criteria."
+      },
+      {
+        "title": "Testing and outcome review",
+        "body": "Choose an evaluation approach suited to traffic volume. Review qualified actions and guardrail metrics before deciding what to scale."
+      }
+    ],
+    "process": [
+      {
+        "title": "Define a useful conversion",
+        "body": "Agree the primary action and how lead quality or completed purchases will be reviewed."
+      },
+      {
+        "title": "Investigate the journey",
+        "body": "Review priority pages across devices, available analytics and customer objections."
+      },
+      {
+        "title": "Build testable hypotheses",
+        "body": "Connect every proposed change to observed friction and a measurable expected behaviour."
+      },
+      {
+        "title": "Implement the agreed changes",
+        "body": "Prepare copy, layout or form recommendations and coordinate with your team. Development scope is agreed in advance."
+      },
+      {
+        "title": "Evaluate and refine",
+        "body": "Use an appropriate test or structured before-and-after review, accounting for acquisition changes, seasonality and sample size."
+      }
+    ],
+    "deliverables": [
+      "Conversion baseline and tracking review",
+      "Priority landing-page and form audit",
+      "Ranked friction findings with evidence",
+      "Copy, layout and form improvement briefs",
+      "Experiment or evaluation plan",
+      "Outcome review including lead-quality considerations"
+    ],
+    "commonProblems": [
+      "Visitors reach the site but rarely enquire",
+      "Forms lose users on mobile",
+      "Landing pages do not match the promise in the acquisition channel",
+      "No reliable definition of a conversion"
+    ],
+    "whoFor": [
+      "Service businesses seeking qualified enquiries",
+      "SaaS teams reviewing demo and signup journeys",
+      "E-commerce teams investigating product-to-checkout friction",
+      "Teams improving an existing website before increasing acquisition spend"
+    ],
+    "useCases": [
+      {
+        "title": "A service page gets traffic but few enquiries",
+        "body": "Review intent, offer clarity, trust evidence and the contact path, then test the most plausible barrier first."
+      },
+      {
+        "title": "A low-traffic website needs clearer next steps",
+        "body": "Use customer interviews, usability review and obvious friction fixes before committing to an A/B test that cannot reach a useful sample size."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is conversion rate optimization?",
+        "a": "Conversion rate optimization is the process of improving the percentage of visitors who complete a defined action. For a service website, that might be a qualified enquiry or booked consultation rather than simply a button click."
+      },
+      {
+        "q": "How do you calculate conversion rate?",
+        "a": "Divide completed conversions by the relevant visits or users, then multiply by 100. Keep the definition and reporting window consistent; a session-based rate and a user-based rate should not be compared as if they were identical."
+      },
+      {
+        "q": "What is a CRO strategy?",
+        "a": "A CRO strategy defines which customer journey to improve, the evidence to investigate and how changes will be evaluated. It turns isolated website edits into a prioritised learning plan."
+      },
+      {
+        "q": "What is the difference between SEO and CRO?",
+        "a": "SEO helps relevant people discover your website; CRO improves the journey after they arrive. A connected growth plan uses both, so stronger visibility can lead to useful actions."
+      },
+      {
+        "q": "How long does CRO take to show results?",
+        "a": "The timeline depends on traffic, baseline conversion rate, the size of the change and the evaluation method. Simple usability fixes can be released quickly, while a reliable experiment may need substantially more data and time."
+      },
+      {
+        "q": "Can CRO work for a low-traffic website?",
+        "a": "Yes, low-traffic websites can benefit from conversion research and usability improvements. A/B testing may not be practical, so we can prioritise customer feedback, form problems and clear message or navigation issues instead."
+      },
+      {
+        "q": "What is a good website conversion rate?",
+        "a": "A useful conversion rate is one that improves your business outcomes for comparable traffic and lead quality. Industry averages are a rough reference; your offer, audience, conversion definition and sales cycle matter more than a universal target."
+      },
+      {
+        "q": "Does CRO guarantee more sales?",
+        "a": "No, CRO does not guarantee sales or a fixed uplift. We define the outcome, test the strongest hypotheses and review the evidence, including whether additional enquiries are commercially useful."
+      }
+    ],
+    "relatedIndustries": [
+      "saas",
+      "ecommerce",
+      "legal-tech",
+      "health-tech"
+    ],
+    "relatedServices": [
+      "digital-growth-strategy",
+      "Holistic-SEO",
+      "content-seo"
+    ],
+    "ctaLine": "Getting visitors, but losing momentum before the enquiry?"
   }
 ]
