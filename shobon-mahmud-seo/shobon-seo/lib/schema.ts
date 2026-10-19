@@ -17,6 +17,10 @@ export function personSchema() {
     url: url("/"),
     image: url("/og-default.jpg"),
     knowsAbout: [
+      "Digital growth strategy",
+      "Content marketing",
+      "Social media growth",
+      "Conversion strategy",
       "Search engine optimization",
       "Technical SEO",
       "On-page SEO",

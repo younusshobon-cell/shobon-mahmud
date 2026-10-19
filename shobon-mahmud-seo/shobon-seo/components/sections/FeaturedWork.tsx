@@ -27,7 +27,7 @@ export function FeaturedWork() {
         </div>
       </div>
       <div className="mt-10">
-        <ContextCta line="Want a strategy shaped around your website?" action="Discuss my SEO goals" />
+        <ContextCta line="Want a strategy shaped around your website?" action="Discuss my growth goals" />
       </div>
     </Section>
   );

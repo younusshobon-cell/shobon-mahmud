@@ -21,8 +21,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const n = Number((await params).page);
   return buildMetadata({
-    title: `SEO Blog — Page ${n}`,
-    description: `SEO articles, page ${n}.`,
+    title: `Digital Growth Insights — Page ${n}`,
+    description: `Search, content and growth articles, page ${n}.`,
     path: `/blog/page/${n}`,
     noindex: n > totalPages,
   });

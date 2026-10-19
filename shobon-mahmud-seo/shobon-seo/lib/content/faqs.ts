@@ -126,8 +126,8 @@ export function articleFaqs(existing: FAQ[] = [], topic: string): FAQ[] {
       a: "Write primarily for people who need the answer. Clear headings, descriptive links and technically accessible pages help both readers and search engines understand it.",
     },
     {
-      q: "When should I ask an SEO specialist for help?",
-      a: "Get help when important pages are missing from search, a migration is planned, or you cannot tell which technical or content work will affect business goals.",
+      q: "When should I involve a digital growth partner?",
+      a: "Bring in a growth partner when channels feel disconnected, important pages are hard to find or your team needs clear priorities. We connect the diagnosis, delivery responsibilities and measurement around your business goals.",
     },
     {
       q: "Does this advice guarantee a ranking?",

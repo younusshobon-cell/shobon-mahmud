@@ -137,7 +137,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="mt-14">
               <ContextCta
                 line="Need help applying this to your site?"
-                action="Discuss my SEO goals"
+                action="Discuss my growth goals"
               />
             </div>
 

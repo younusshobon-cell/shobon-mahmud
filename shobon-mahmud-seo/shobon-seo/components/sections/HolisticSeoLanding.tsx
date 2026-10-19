@@ -20,7 +20,7 @@ import { FinalCta } from "./FinalCta";
 
 const pillarIcons = [Code2, FileSearch, Link2];
 
-function PlanButton({ label = "Discuss my SEO growth plan" }: { label?: string }) {
+function PlanButton({ label = "Discuss my growth plan" }: { label?: string }) {
   return <ButtonLink href="/contact" className="holistic-cta">{label}<ArrowUpRight aria-hidden="true" className="size-4 shrink-0" /></ButtonLink>;
 }
 

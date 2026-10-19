@@ -22,8 +22,8 @@ export function PageSchema({ path }: { path: string }) {
   const category = path.startsWith("/blog/category/") ? blogCategories.find(c => c.slug === slug) : undefined;
   const section = sitemapSections.find(s => path === `/${s}`);
   const collection = Boolean(section || category || path.startsWith("/blog/page/"));
-  const names: Record<string, string> = { "/": siteConfig.name, "/about": "About Shobon Mahmud", "/contact": "Contact Shobon Mahmud", "/privacy": "Privacy Policy", "/terms": "Terms of Use", "/services": "SEO Services", "/locations": "SEO Consulting Locations", "/industries": "Industries", "/portfolio": "SEO Portfolio", "/blog": "SEO Blog" };
-  const name = service?.seoTitle ?? location?.seoTitle ?? industry?.seoTitle ?? post?.title ?? study?.title ?? custom?.title ?? category?.name ?? names[path] ?? (collection ? `SEO Blog — Page ${slug}` : siteConfig.name);
+  const names: Record<string, string> = { "/": siteConfig.name, "/about": "About Shobon Mahmud", "/contact": "Contact Shobon Mahmud", "/privacy": "Privacy Policy", "/terms": "Terms of Use", "/services": "Digital Growth Services", "/locations": "Digital Growth Markets", "/industries": "Industries", "/portfolio": "Growth Strategy Examples", "/blog": "Digital Growth Insights" };
+  const name = service?.seoTitle ?? location?.seoTitle ?? industry?.seoTitle ?? post?.title ?? study?.title ?? custom?.title ?? category?.name ?? names[path] ?? (collection ? `Digital Growth Insights — Page ${slug}` : siteConfig.name);
   const description = service?.summary ?? location?.intro ?? industry?.summary ?? post?.description ?? study?.summary ?? custom?.description ?? category?.description;
   let items = section ? entriesFor(section).filter(e => e.path !== path).map(e => e.path) : [];
   if (category) items = posts.filter(p => p.category === category.slug).map(p => `/blog/${p.slug}`);

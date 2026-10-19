@@ -26,7 +26,7 @@ export function EngagementDetails({ content, topic }: { content?: Engagement; to
         <div><h3 className="t-h3 text-ink">How we measure {topic}</h3><p className="mt-4 leading-relaxed text-muted">{content.measurement}</p></div>
         <div><h3 className="t-h3 text-ink">What helps us get started</h3><ul className="mt-4 list-disc space-y-3 ps-5 text-muted">{content.preparation.map(item => <li key={item}>{item}</li>)}</ul></div>
       </div>
-      <p className="mt-10 border-t border-line pt-6 text-sm leading-relaxed text-muted">Your SEO plan is led by <a className="link" href="/about">Shobon Mahmud</a>. Scope, responsibilities and reporting are agreed before work starts. <a className="link" href="/contact">Discuss your priorities and implementation needs</a>.</p>
+      <p className="mt-10 border-t border-line pt-6 text-sm leading-relaxed text-muted">Your growth strategy is led by <a className="link" href="/about">Shobon Mahmud</a>. Scope, responsibilities and reporting are agreed before work starts. <a className="link" href="/contact">Discuss your priorities and implementation needs</a>.</p>
     </Section>
   );
 }

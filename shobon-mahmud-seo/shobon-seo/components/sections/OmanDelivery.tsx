@@ -6,10 +6,10 @@ import { ButtonLink } from "@/components/ui/Button";
 export function OmanDelivery() {
   return <>
     <Section labelledBy="oman-fit">
-      <div id="oman-fit"><SectionHeading title="A hands-on SEO specialist, backed by a delivery team." intro="I am Shobon Mahmud. For the last four years, SEO has been my core skill, supported by content writing, social media growth and funnel planning. I connect search strategy with the work your website and marketing team need to deliver." /></div>
+      <div id="oman-fit"><SectionHeading title="Your digital growth partner, backed by a coordinated team." intro="I am Shobon Mahmud, a digital growth partner based in Dubai. I connect SEO, content and conversion planning around your audiences and project priorities, coordinating agreed delivery with my team or yours." /></div>
       <div className="mt-12"><PointGrid points={[
         { title: "Experience across demanding sectors", body: "My team and I have worked across local and home services, financial, legal, health, SaaS, product design, brand design and personal portfolio growth. That experience informs how I research intent, organise content and review conversion journeys." },
-        { title: "One accountable point of contact", body: "I lead the SEO plan and work with my team on agreed content and implementation tasks. Your stakeholders know who owns each decision and what needs their approval." },
+        { title: "One accountable point of contact", body: "I lead the growth strategy and work with my team on agreed content and implementation tasks. Your stakeholders know who owns each decision and what needs their approval." },
         { title: "Evidence you can review", body: "Before engagement, ask for relevant work samples, a walkthrough of my approach and the reporting format. We establish a baseline and define success for your project before proposing growth targets." }
       ]} /></div>
       <div className="mt-8"><ButtonLink href="/about">Meet me and the team</ButtonLink></div>

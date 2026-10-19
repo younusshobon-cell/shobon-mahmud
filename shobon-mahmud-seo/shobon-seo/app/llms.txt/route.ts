@@ -7,7 +7,7 @@ const link = (name: string, path: string) => `- [${name}](${new URL(path, `${sit
 export function GET() {
   const body = [
     `# ${siteConfig.name}`, "",
-    "> Dubai-based SEO specialist for technical, content, local SEO and AI discovery.", "",
+    "> Dubai-based digital growth partner connecting SEO, content, social media and conversion strategy.", "",
     "Location pages describe markets served remotely. Illustrative portfolio drafts are not verified client results.", "",
     "## Website", "",
     ...[
