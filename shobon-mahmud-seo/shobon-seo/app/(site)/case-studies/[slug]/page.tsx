@@ -1,3 +1,4 @@
+import { AmaCaseStudy } from "@/components/sections/AmaCaseStudy";
 import { RtpCaseStudy } from "@/components/sections/RtpCaseStudy";
 import { ArhqCaseStudy } from "@/components/sections/ArhqCaseStudy";
 import { PageSchema } from "@/components/seo/PageSchema";
@@ -71,6 +72,7 @@ export default async function CaseStudyPage({ params }: Props) {
   if (!study) notFound();
   if (study.slug === "arhq-domain-migration-organic-growth") return <ArhqCaseStudy study={study} />;
   if (study.slug === "retirement-tax-partners-seo-growth") return <RtpCaseStudy />;
+  if (study.slug === "americas-medicare-associates-seo-growth") return <AmaCaseStudy />;
   const path = `/case-studies/${study.slug}`;
   const industry = getIndustry(study.industry);
   const services = getServices(study.services);

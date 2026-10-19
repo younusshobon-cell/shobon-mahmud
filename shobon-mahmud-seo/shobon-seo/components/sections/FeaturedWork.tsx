@@ -9,7 +9,16 @@ import { ContextCta } from "@/components/content/ContextCta";
 import { Arrow } from "@/components/ui/Arrow";
 
 export function FeaturedWork() {
-  const featured = caseStudies.filter((c) => c.featured).slice(0, 3);
+  // Keep this homepage selection explicit: new case studies stay in the full index.
+  const homepageSlugs = [
+    "arhq-domain-migration-organic-growth",
+    "retirement-tax-partners-seo-growth",
+    "americas-medicare-associates-seo-growth",
+  ];
+  const featured = homepageSlugs.flatMap(slug => {
+    const study = caseStudies.find(c => c.slug === slug && !c.draft);
+    return study ? [study] : [];
+  });
   const [first, ...rest] = featured;
   if (!first) return null;
   return (

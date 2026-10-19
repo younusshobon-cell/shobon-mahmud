@@ -1,5 +1,40 @@
 [
   {
+    "slug": "americas-medicare-associates-seo-growth",
+    "client": "America’s Medicare Associates (AMA)",
+    "kind": "client",
+    "industry": "financial-services",
+    "filter": "financial-services",
+    "title": "America’s Medicare Associates SEO Case Study: 121% Reported Growth",
+    "outcome": "121% online growth reported by Shobon across the engagement.",
+    "summary": "Trusted with a second project after ARHQ, I partnered with AMA on digital growth through SEO, connecting service content, technical foundations and local discovery.",
+    "services": [
+      "Holistic-SEO",
+      "content-seo",
+      "local-seo"
+    ],
+    "timeline": "Engagement began October 2025",
+    "date": "2026-10-20",
+    "featured": true,
+    "situation": "America’s Medicare Associates came to me through the client behind my ARHQ engagement. They were happy with my work and asked me to take on this Medicare project as well. We started working together in October 2025.",
+    "challenge": "Connect Medicare service discovery, local visibility and a clear path to contacting a specialist.",
+    "research": [],
+    "strategy": [],
+    "execution": [],
+    "results": [
+      {
+        "label": "Reported online growth",
+        "value": "+121%"
+      },
+      {
+        "label": "Engagement began",
+        "value": "October 2025"
+      }
+    ],
+    "takeaway": "Trust earned through ARHQ led to another engagement. Each business still starts with its own diagnosis.",
+    "draft": false
+  },
+  {
     "slug": "retirement-tax-partners-seo-growth",
     "client": "Retirement Tax Partners (RTP)",
     "kind": "client",
@@ -7,7 +42,7 @@
     "filter": "financial-services",
     "title": "Retirement Tax Partners SEO Case Study: 83% Reported Online Growth",
     "outcome": "83% online growth reported by Shobon across the engagement.",
-    "summary": "How I connected a new retirement tax website with technical SEO, on-page improvements, off-page work and local search. Engagement began August 2025.",
+    "summary": "As RTP’s Digital Growth Partner, I used SEO to build digital growth around a new website: diagnose first, then connect technical, on-page, off-page and content work.",
     "services": [
       "Holistic-SEO",
       "content-seo",
@@ -42,7 +77,7 @@
     "filter": "financial-services",
     "title": "ARHQ: connecting a domain transition with 67% reported online growth",
     "outcome": "67% online growth reported by Shobon across the engagement.",
-    "summary": "A client engagement beginning in July 2025: diagnose the website, plan around a domain transition and connect technical SEO, content and local discovery.",
+    "summary": "As ARHQ’s Digital Growth Partner, I used SEO to support a domain transition and digital growth, connecting technical foundations, useful content and local discovery.",
     "services": [
       "Holistic-SEO",
       "content-seo",
@@ -83,7 +118,7 @@
     ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
-    "featured": true,
+    "featured": false,
     "situation": "A product-led software site has strong feature documentation but little visibility for comparison and integration searches.",
     "challenge": "Blog posts attract broad readers while product pages are buried; the site needs a clearer route from search query to demo.",
     "research": [
@@ -149,7 +184,7 @@
     ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
-    "featured": true,
+    "featured": false,
     "situation": "A health technology site serves clinicians and business buyers, but both journeys are mixed into broad product pages.",
     "challenge": "Sensitive topics require accurate, reviewed information; generic articles do not explain the technology or who it helps.",
     "research": [
@@ -215,7 +250,7 @@
     ],
     "timeline": "Scope-dependent",
     "date": "2026-09-29",
-    "featured": true,
+    "featured": false,
     "situation": "A provider handles several freight services and corridors, but one generic page tries to serve every need.",
     "challenge": "Users search by shipment type, route and operational constraint; generic location copy cannot answer those details.",
     "research": [
