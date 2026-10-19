@@ -1,9 +1,16 @@
+import localFont from "next/font/local";
 import pageCopy from "@/content/copy-components-sections-Hero.json";
 import Image from "@/components/content/EditableImage";
 import { ArrowUpRight, Check, MoveDown } from "lucide-react";
 import { photos } from "@/lib/images";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
+
+const manrope = localFont({
+  src: "../../assets/fonts/Manrope-Latin.woff",
+  weight: "200 800",
+  display: "swap",
+});
 
 export function Hero() {
   return (
@@ -12,7 +19,7 @@ export function Hero() {
         <div className="growth-hero-topline"><span><i aria-hidden="true" />{pageCopy.text_001}</span><span>{pageCopy.location}</span></div>
         <div className="growth-hero-grid">
           <div className="growth-hero-copy">
-            <h1 id="growth-hero-title">{pageCopy.text_002.split(". ").map((line, index) => <span key={line} className={index === 2 ? "growth-headline-accent" : "growth-headline-line"}>{line}{index < 2 ? "." : ""}</span>)}</h1>
+            <h1 id="growth-hero-title" className={manrope.className}>{pageCopy.text_002.split(". ").map((line, index) => <span key={line} className={index === 2 ? "growth-headline-accent" : "growth-headline-line"}><span className="growth-headline-text">{line}{index < 2 ? "." : ""}</span></span>)}</h1>
             <p className="growth-hero-intro">{pageCopy.text_003}</p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={pageCopy.text_004}>{pageCopy.text_005}<ArrowUpRight size={18} aria-hidden="true" /></ButtonLink>
