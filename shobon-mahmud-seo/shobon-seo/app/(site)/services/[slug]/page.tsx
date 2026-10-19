@@ -1,3 +1,4 @@
+import { GrowthServiceDepth } from "@/components/sections/GrowthServiceDepth";
 import { EngagementDetails } from "@/components/content/EngagementDetails";
 import { HolisticSeoLanding } from "@/components/sections/HolisticSeoLanding";
 import { PageContents } from "@/components/content/PageContents";
@@ -218,6 +219,8 @@ export default async function ServicePage({ params }: Props) {
           <PointGrid points={service.useCases} columns={2} />
         </div>
       </Section>
+
+      <GrowthServiceDepth slug={service.slug} />
 
       {studies.length > 0 && (
         <Section>

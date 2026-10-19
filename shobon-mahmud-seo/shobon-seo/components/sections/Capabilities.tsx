@@ -8,7 +8,13 @@ import { Arrow } from "@/components/ui/Arrow";
 
 
 
+const homepageServiceSlugs = ["digital-growth-strategy", "conversion-rate-optimization", "Holistic-SEO", "local-seo", "ecommerce-seo"];
+
 export function Capabilities() {
+  const homepageServices = homepageServiceSlugs.flatMap(slug => {
+    const service = services.find(item => item.slug === slug);
+    return service ? [service] : [];
+  });
   return (
     <Section labelledBy="capabilities-heading">
       <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
@@ -23,7 +29,7 @@ export function Capabilities() {
           </Link>
         </div>
         <ul className="border-t border-line">
-          {services.map((c) => (
+          {homepageServices.map((c) => (
             <li data-motion-step key={c.slug} className="border-b border-line">
               <Link href={`/services/${c.slug}`} className="group grid gap-2 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)_auto] sm:items-baseline sm:gap-8">
                 <h3 className="text-lg font-semibold tracking-tight text-ink transition-colors group-hover:text-link">{c.name}</h3>

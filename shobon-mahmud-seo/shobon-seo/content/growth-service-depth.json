@@ -1,0 +1,234 @@
+{
+  "digital-growth-strategy": [
+    {
+      "id": "growth-diagnosis",
+      "title": "Find the constraint before choosing the channel.",
+      "intro": "A useful digital growth strategy explains what is stopping progress and why the proposed work deserves priority. It starts with the business model, not a list of marketing activities.",
+      "points": [
+        [
+          "Start with the offer and the buyer",
+          "We clarify what you sell, who is most likely to benefit and what makes someone a suitable customer. Sales questions, customer objections and the economics of the offer help define what a useful enquiry actually looks like. That makes the roadmap more specific than simply asking for more traffic."
+        ],
+        [
+          "Follow the journey from discovery to decision",
+          "We look at where people find you, which pages they land on, how they evaluate the offer and where they take action. A discovery problem requires different work from a confusing service page or a slow follow-up process. Reviewing the journey helps separate those constraints."
+        ],
+        [
+          "Choose a practical first priority",
+          "Each opportunity is assessed against evidence, expected value, implementation effort and dependencies. If tracking is unreliable, we may need to establish a baseline first. If buyers cannot understand the offer, clearer commercial pages may deserve attention before a larger content programme."
+        ]
+      ]
+    },
+    {
+      "id": "growth-roadmap",
+      "title": "A 90-day growth roadmap with clear decisions.",
+      "intro": "The roadmap is a working sequence of decisions and deliverables. It should tell your team what to do next, what is needed to deliver it and what evidence would justify changing direction.",
+      "points": [
+        [
+          "First: establish direction and a baseline",
+          "Agree the target customer, priority offer, qualified action and available data. Review the website and acquisition activity, record measurement gaps and identify the pages or journeys that matter most. The output is a shared starting point rather than a dashboard without context."
+        ],
+        [
+          "Next: improve the agreed journey",
+          "Turn the priority into specific work: service-page clarity, search access, useful content, conversion improvements or distribution tests. Each task needs an owner, a deliverable and an acceptance check. The pace depends on your team, access and approval process."
+        ],
+        [
+          "Then: review the evidence and choose the next move",
+          "Compare comparable page groups, channels and qualified actions with the baseline. Discuss what changed, what remains uncertain and whether implementation matched the plan. The next cycle follows those findings; a 90-day plan is a review framework, not a guaranteed growth deadline."
+        ]
+      ]
+    },
+    {
+      "id": "growth-measurement",
+      "title": "Measure useful business progress, not activity alone.",
+      "intro": "A growth plan needs a small set of measures that help you make decisions. Publishing volume and completed tasks matter for delivery, but they do not show whether the business is attracting the right demand.",
+      "points": [
+        [
+          "Discovery: are relevant people finding the offer?",
+          "Review the channels, search themes and landing pages bringing people into the journey. Separate priority offers and markets where possible. A rise in broad traffic is less useful if it does not relate to the customers and services you want to grow."
+        ],
+        [
+          "Conversion: can that interest turn into an enquiry?",
+          "Track agreed completion events and inspect the steps before them. Define what counts as a valid submission or booked conversation. Review conversion rate alongside traffic mix so a different audience is not mistaken for a better or worse website."
+        ],
+        [
+          "Quality: are the enquiries commercially relevant?",
+          "Bring sales feedback into the review. Where your records allow, distinguish suitable enquiries, booked consultations and later sales outcomes. If the marketing and sales records cannot be joined reliably, document that gap rather than imply certainty about attribution."
+        ]
+      ]
+    },
+    {
+      "id": "growth-partnership",
+      "title": "How we work together as a growth partnership.",
+      "intro": "You work directly with me on diagnosis, prioritisation and the agreed delivery support. The scope makes ownership visible, so recommendations do not become an unassigned list of work.",
+      "points": [
+        [
+          "Your role",
+          "Bring business context, customer knowledge, access to relevant reports and a decision-maker who can agree priorities. If a developer, writer or sales team needs to contribute, we establish those relationships early."
+        ],
+        [
+          "My role",
+          "Translate the evidence into a connected plan, prepare briefs for the agreed work and review delivery against the intended outcome. SEO, content and conversion recommendations sit within the wider business direction."
+        ],
+        [
+          "A shared review rhythm",
+          "Agree how decisions are recorded, who approves changes and when progress is reviewed. Specialist development, paid campaign execution and third-party costs are included only when explicitly scoped. That keeps the partnership practical and accountable."
+        ]
+      ]
+    },
+    {
+      "id": "growth-example",
+      "title": "What a connected growth plan can look like.",
+      "intro": "Consider a service business receiving website visits but few suitable enquiries. This is an illustrative decision process, not a claimed client result.",
+      "points": [
+        [
+          "Diagnose the mismatch",
+          "Review the search themes, landing pages and recent enquiries. Check whether visitors are researching a general topic or actively comparing the service. Ask the sales team which questions and objections appear repeatedly."
+        ],
+        [
+          "Connect the response",
+          "The plan might prioritise a clearer service page, relevant customer evidence, a shorter enquiry path and a guide addressing a recurring buyer question. Internal links and distribution then help the right readers reach the commercial page."
+        ],
+        [
+          "Evaluate the right outcome",
+          "Review the quality of enquiries from those pages, not only the total number of form submissions. If unsuitable enquiries increase, revisit targeting and offer clarity before treating the activity as a success."
+        ]
+      ]
+    },
+    {
+      "id": "growth-start",
+      "title": "What to bring to our first growth conversation.",
+      "intro": "You do not need a finished brief or a perfect analytics setup. A clear description of the business problem is enough to begin identifying a sensible starting point.",
+      "points": [
+        [
+          "Your website and priority offer",
+          "Share the site, the service or product you want to grow, the customers you want to reach and the markets that matter. Explain any launch, capacity or implementation constraints."
+        ],
+        [
+          "What you have tried",
+          "Bring a short account of recent SEO, content, website or campaign work and what you learned. Existing reports and customer feedback are useful, even if they are incomplete."
+        ],
+        [
+          "What a worthwhile outcome means",
+          "Describe the enquiry, sale or customer action you want more of. We can then discuss whether strategy, focused SEO or conversion work is the best first engagement."
+        ]
+      ]
+    }
+  ],
+  "conversion-rate-optimization": [
+    {
+      "id": "cro-diagnosis",
+      "title": "Where a conversion audit looks for lost momentum.",
+      "intro": "A conversion audit investigates the journey from the visitor’s first impression to a completed action. It combines page-level review with the intent that brought the visitor there.",
+      "points": [
+        [
+          "Message and offer clarity",
+          "Can the visitor quickly understand what you offer, who it is for and why the next step is worthwhile? We review the headline, supporting copy, service details and the match between the landing page and the promise in the acquisition channel."
+        ],
+        [
+          "Evidence and decision support",
+          "Buyers may need examples, process details, scope information or answers to objections before contacting you. The review looks for missing information and places where proof is disconnected from the decision it should support."
+        ],
+        [
+          "Interaction and completion",
+          "We inspect navigation, calls to action, mobile layouts, forms, validation and confirmation states. A meaningful conversion requires a complete journey; a button click is not the same as a successfully received enquiry."
+        ]
+      ]
+    },
+    {
+      "id": "cro-pages",
+      "title": "Landing-page optimization built around the buyer’s task.",
+      "intro": "The purpose of a landing page is to help a suitable visitor make an informed decision and take the relevant next step. More urgency, more buttons or a shorter page are not automatically the right answer.",
+      "points": [
+        [
+          "Make the offer understandable",
+          "Clarify the service, expected deliverable and audience before polishing individual button labels. The information should answer the visitor’s immediate question and lead naturally into the details needed to evaluate the offer."
+        ],
+        [
+          "Place evidence near the decision",
+          "Relevant case studies, examples and process details can support the claims a page makes. We assess whether the evidence is specific, readable and positioned where the visitor needs it. Recommendations use the proof your business actually has."
+        ],
+        [
+          "Choose an appropriate next action",
+          "A consultation, quotation, demo or direct purchase each asks for a different level of commitment. We review whether the call to action matches the visitor’s stage and whether the page explains what happens after they respond."
+        ]
+      ]
+    },
+    {
+      "id": "cro-forms",
+      "title": "Form and mobile conversion improvements.",
+      "intro": "An enquiry path should be clear and usable on the devices your audience uses. The review balances ease of completion with the information your team needs to handle the enquiry properly.",
+      "points": [
+        [
+          "Ask for information with a purpose",
+          "Review each field against its role in qualification or follow-up. Reducing fields can remove friction, but removing necessary context can create unsuitable submissions or extra sales work. We agree the trade-off rather than assume the shortest form is best."
+        ],
+        [
+          "Make mistakes easy to recover from",
+          "Check field labels, required-field guidance, error messages and whether entered information survives a validation error. Completion should be understandable without guessing what went wrong or starting again."
+        ],
+        [
+          "Verify the full mobile journey",
+          "Review touch targets, keyboard behaviour, visible calls to action and the space needed to read and complete the form. The success state and the team’s receipt of the enquiry deserve the same attention as the first screen."
+        ]
+      ]
+    },
+    {
+      "id": "cro-testing",
+      "title": "Choose an evaluation method your traffic can support.",
+      "intro": "Not every website improvement needs an A/B test, and not every website has enough traffic for one. The evaluation method should match the question, available sample and consequences of the change.",
+      "points": [
+        [
+          "When a controlled experiment is practical",
+          "For a test with enough eligible traffic, agree the hypothesis, primary outcome, guardrail measures and decision rule before launch. Check the experiment setup and avoid calling a winner simply because an early result looks encouraging."
+        ],
+        [
+          "When research and usability fixes come first",
+          "On lower-traffic sites, customer conversations, task-based usability checks and obvious defect fixes can be more useful starting points. A broken submit action or unreadable mobile content does not need to remain in place while waiting for a large experiment."
+        ],
+        [
+          "How to interpret a before-and-after review",
+          "Record the release date, affected pages and other changes in acquisition, pricing or seasonality. A before-and-after comparison can suggest a direction, but it does not isolate the effect of the website change as cleanly as a well-run controlled test."
+        ]
+      ]
+    },
+    {
+      "id": "cro-scorecard",
+      "title": "A conversion scorecard that includes lead quality.",
+      "intro": "A higher completion rate is useful only when the action matters to the business. Reporting should keep volume, quality and the visitor experience visible together.",
+      "points": [
+        [
+          "Primary outcome",
+          "Define the completed action: a valid enquiry, booked demo, signup or purchase. Record the denominator and measurement window so the conversion rate remains comparable between reviews."
+        ],
+        [
+          "Quality and commercial context",
+          "Where your systems allow, review suitable enquiries, attendance or later sales stages alongside the website completion event. Avoid optimising for a larger number of low-quality submissions."
+        ],
+        [
+          "Guardrails and confidence",
+          "Check for spam, failed submissions, mobile errors and changes in traffic sources. Record sample size and uncertainty before attributing an improvement to the new page. The purpose is better decisions, not a more impressive headline number."
+        ]
+      ]
+    },
+    {
+      "id": "cro-delivery",
+      "title": "From audit findings to an implementation brief.",
+      "intro": "A useful CRO recommendation explains the problem, the evidence and the intended behaviour change. It should be detailed enough for a writer, designer or developer to act on.",
+      "points": [
+        [
+          "A clear hypothesis",
+          "Describe who encounters the friction, where it occurs and why the proposed change could help. Tie the recommendation to observed behaviour or customer feedback and identify any assumptions that still need checking."
+        ],
+        [
+          "A reviewable change",
+          "Provide the proposed copy, layout direction or interaction requirement for the agreed page. Record implementation ownership, dependencies and acceptance checks. A focused change is easier to review than an unexplained full-page redesign."
+        ],
+        [
+          "A defined follow-up",
+          "Agree what will be measured after release, who checks data quality and when the findings will be discussed. Successful delivery includes a working experience and an honest assessment of what the results can tell us."
+        ]
+      ]
+    }
+  ]
+}
