@@ -5,7 +5,6 @@ import Image from "@/components/content/EditableImage";
 import { photos } from "@/lib/images";
 import { ButtonLink } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
 import growthCopy from "@/content/copy-components-content-ContextCta.json";
 import { GrowthGuide } from "@/components/content/GrowthGuide";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
@@ -25,8 +24,8 @@ import { homeFaqs } from "@/lib/content/faqs";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${siteConfig.name} — Digital Growth Partner | SEO, Content & Conversion`,
-  description: siteConfig.description,
+  title: "Shobon Mahmud | Digital Growth Partner & SEO Consultant",
+  description: "Shobon Mahmud connects SEO, content, and conversion strategy to help businesses attract qualified traffic, generate leads, and grow online across all channels.",
   path: "/",
   absoluteTitle: true,
 });
