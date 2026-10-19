@@ -15,7 +15,7 @@ import { personSchema, websiteSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — SEO Specialist`,
+    default: `${siteConfig.name} — Digital Growth Partner`,
     template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.description,

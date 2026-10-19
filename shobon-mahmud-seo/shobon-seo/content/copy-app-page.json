@@ -1,12 +1,37 @@
 {
   "text_001": "About Shobon",
-  "text_002": "Your business goals shape the search strategy.",
-  "text_003": "I'm Shobon Mahmud, an SEO specialist based in Dubai, working with businesses across the Gulf, US and UK. I connect technical SEO, content and local search to the questions your customers actually ask.",
-  "text_004": "My approach starts with your business, then turns research into clear priorities. You get practical guidance, plain-language updates and a focus on qualified enquiries and sales.",
+  "text_002": "A partner who sees the whole customer journey.",
+  "text_003": "I’m Shobon Mahmud, a digital growth partner based in Dubai. My foundation is SEO, supported by content writing, social media growth and funnel strategy. I bring these disciplines together around how your customers discover, evaluate and choose your business.",
+  "text_004": "You work directly with me on strategy, with coordinated team support for delivery. We agree the priorities, define what progress means and keep the next steps clear.",
   "text_005": "Business-led strategy",
   "text_006": "Evidence-based priorities",
   "text_007": "Clear communication",
   "text_008": "/about",
   "text_009": "More About Me",
-  "text_010": "SEO questions, answered plainly"
+  "text_010": "Working together: your questions, answered",
+  "partner_kicker": "One partner. A connected plan.",
+  "partner_title": "Make your digital presence work as hard as your business.",
+  "partner_intro": "A customer rarely decides in a single click. I help you connect the moments that lead to a confident choice.",
+  "partner_pillars": [
+    {
+      "title": "Be found by the right people",
+      "body": "Align search demand, technical foundations and local visibility with the customers and markets that matter to you.",
+      "tag": "SEO & discovery"
+    },
+    {
+      "title": "Give people a reason to trust you",
+      "body": "Use clear positioning, useful content and consistent social messaging to answer real questions before a sales conversation.",
+      "tag": "Content & social"
+    },
+    {
+      "title": "Make the next step feel clear",
+      "body": "Connect landing pages, offers and calls to action so interested visitors know why and how to get in touch.",
+      "tag": "Funnel & conversion"
+    },
+    {
+      "title": "Know what deserves attention next",
+      "body": "Agree the baseline, track meaningful actions and review the evidence together. Keep decisions grounded in what we can measure.",
+      "tag": "Measurement & direction"
+    }
+  ]
 }

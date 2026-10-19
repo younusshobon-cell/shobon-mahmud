@@ -25,7 +25,7 @@ import { homeFaqs } from "@/lib/content/faqs";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${siteConfig.name} — SEO Specialist | Technical, Content & Local SEO`,
+  title: `${siteConfig.name} — Digital Growth Partner | SEO, Content & Conversion`,
   description: siteConfig.description,
   path: "/",
   absoluteTitle: true,
@@ -37,6 +37,22 @@ export default function HomePage() {
       <PageSchema path={"/"} />
       <Hero />
       <TrustStrip />
+      <Section labelledBy="partnership-heading">
+        <div className="max-w-3xl">
+          <p className="mb-5 text-sm font-medium text-link">{pageCopy.partner_kicker}</p>
+          <h2 id="partnership-heading" className="t-h2">{pageCopy.partner_title}</h2>
+          <p className="t-lead mt-5 text-muted">{pageCopy.partner_intro}</p>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {pageCopy.partner_pillars.map((pillar,index) => (
+            <article key={pillar.tag} className="rounded-[22px] border border-line bg-white p-7">
+              <span className="font-mono text-xs text-link">0{index+1} / {pillar.tag}</span>
+              <h3 className="mt-8 text-xl font-medium leading-tight tracking-tight">{pillar.title}</h3>
+              <p className="mt-4 text-sm leading-7 text-muted">{pillar.body}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
       <Capabilities />
       <Section id="about" labelledBy="home-about-heading">
         <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
