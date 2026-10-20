@@ -16,7 +16,6 @@ import { NinetyDayPlan } from "@/components/sections/NinetyDayPlan";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { GrowthSystem } from "@/components/sections/GrowthSystem";
-import { BlogPreview } from "@/components/sections/BlogPreview";
 import { HomeDepth } from "@/components/sections/HomeDepth";
 import { FAQ } from "@/components/content/FAQ";
 import { Section } from "@/components/content/Section";
@@ -101,7 +100,6 @@ export default function HomePage() {
       <GrowthSystem />
       <GrowthPrompt tone="dark" title={growthCopy.text_021} body={growthCopy.text_022} action={growthCopy.text_023} />
       <HomeDepth />
-      <BlogPreview />
       <Section>
         <FAQ faqs={homeFaqs} title={pageCopy.text_010} />
       </Section>
