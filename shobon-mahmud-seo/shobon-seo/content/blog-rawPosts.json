@@ -2,7 +2,7 @@
   {
     "slug": "technical-seo-audit",
     "title": "How to run a technical SEO audit that ends in decisions",
-    "seoTitle": "Technical SEO Audit: A Practical Process That Prioritises Fixes",
+    "seoTitle": "Technical SEO Audit: Prioritise and Validate Fixes",
     "description": "A practical technical SEO audit process: what to check, in what order, and how to turn findings into a short list your developers will actually ship.",
     "date": "2026-08-18",
     "author": "Shobon Mahmud",
@@ -21,7 +21,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "A crawler will happily give you thousands of warnings. The problem is that it weights a missing alt attribute on a blog image the same way it weights a canonical tag pointing your top category page somewhere else. Teams open the spreadsheet, feel overwhelmed and fix the easy things."
+            "text": "Crawler exports can contain hundreds of findings with very different consequences. A missing image description and a canonical pointing an important service page elsewhere do not deserve the same business priority. The audit needs your judgement about the affected page, the customer journey and the evidence behind the finding."
           },
           {
             "type": "p",
@@ -40,9 +40,9 @@
           {
             "type": "ul",
             "items": [
-              "Large numbers of 'Crawled – currently not indexed' URLs usually point to quality or duplication issues.",
-              "'Duplicate, Google chose different canonical than user' means your canonical signals are being ignored.",
-              "'Discovered – currently not indexed' on important pages can indicate crawl budget or internal linking problems."
+              "Crawled – currently not indexed means Google crawled the URL but has not indexed it. The status alone does not identify the cause; inspect representative pages and their content, purpose and technical signals.",
+              "Duplicate, Google chose different canonical than user means Google selected a different canonical URL. Review the selected page alongside redirects, links, sitemaps and canonical annotations before changing anything.",
+              "Discovered – currently not indexed means Google knows the URL but has not crawled it yet. Investigate discovery paths, site availability and the wider URL pattern rather than assuming a small site has a crawl-budget problem."
             ]
           }
         ]
@@ -86,11 +86,50 @@
         "blocks": [
           {
             "type": "p",
-            "text": "Developers don't need a lecture on canonicals. They need a ticket: what's wrong, on which URLs, what the correct behaviour is, and how to verify it's fixed. Audits written this way get implemented in weeks rather than quarters."
+            "text": "A developer-ready ticket states the defect, representative URLs, expected behaviour, implementation dependencies and a release check. Record what was observed separately from the hypothesis about its business impact. That makes the handover testable and gives the next review something concrete to assess."
           },
           {
             "type": "quote",
             "text": "The output of a technical audit isn't a report. It's a set of changes that ship."
+          }
+        ]
+      },
+      {
+        "id": "audit-decision-table",
+        "heading": "Turn a status label into a testable decision",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Consider an illustrative site with forty service-area pages and a rise in excluded URLs. Do not begin by adding the same paragraph to all forty. Sample an indexed page and an excluded page, compare the customer task and inspect the live responses. A shared template issue needs a template fix; pages answering the same question may need consolidation; useful pages may need better discovery or more specific information."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Observed evidence",
+              "Next investigation",
+              "Release check"
+            ],
+            "rows": [
+              [
+                "Wrong canonical on an important template",
+                "Check how the canonical is generated and linked",
+                "Representative live pages identify the intended destination"
+              ],
+              [
+                "Thin area pages with the same service information",
+                "Review real coverage and distinct customer needs",
+                "Keep or consolidate URLs according to their purpose"
+              ],
+              [
+                "Important page has no contextual links",
+                "Find the relevant service hub and supporting content",
+                "A crawlable link reaches the intended canonical page"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "As a digital growth partner, I use the audit to choose the work that supports the business next. A green tool report is not the outcome. A validated fix, a usable page and a clearer view of qualified actions are more useful evidence."
           }
         ]
       }
@@ -112,12 +151,13 @@
       "saas",
       "ecommerce",
       "technology"
-    ]
+    ],
+    "updated": "2026-10-21"
   },
   {
     "slug": "saas-keyword-research-by-intent",
     "title": "SaaS keyword research: start at the bottom of the funnel",
-    "description": "Why SaaS companies should research and build comparison, alternative and integration pages before broad educational content — and how to find those keywords.",
+    "description": "Map SaaS buying questions to comparison, integration and use-case pages. A practical process for prioritising keywords and measuring qualified demos.",
     "date": "2026-07-29",
     "author": "Shobon Mahmud",
     "category": "content-seo",
@@ -133,11 +173,11 @@
         "blocks": [
           {
             "type": "p",
-            "text": "Most SaaS keyword research starts with the biggest terms in the category. They look impressive in a spreadsheet, but they're dominated by review sites and incumbents, and the people searching them are usually months away from buying."
+            "text": "Search volume tells you how often a query may be searched; it does not tell you whether your product fits the task. Review the actual results and the buyer’s situation before choosing a target. Broad category terms can be useful, but a small team needs a reason to invest in them ahead of more specific product-evaluation questions."
           },
           {
             "type": "p",
-            "text": "The searches closest to revenue are usually small: '[competitor] alternatives', '[tool] vs [tool]', '[your category] for [industry]', '[tool] integration'. Tools often report them as low or zero volume. Your sales team hears them every week."
+            "text": "Sales notes can reveal searches that keyword tools estimate poorly: a supported integration, a particular workflow or a reason to replace an existing tool. Treat these as research inputs, then confirm that the product can answer the question and that a useful page would differ from the pages you already have."
           }
         ]
       },
@@ -180,6 +220,45 @@
             "text": "A comparison page with a few hundred visits a month can generate more demos than a blog post with tens of thousands. Track organic signups and demo requests by landing page so the value of these pages is visible."
           }
         ]
+      },
+      {
+        "id": "brief-before-writing",
+        "heading": "Build a page brief from product facts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Start with one supported buyer task. Ask the product team to demonstrate the workflow and list prerequisites, limits and common setup problems. Then review existing URLs: a deeper section on a strong feature page may serve the task better than a new landing page. New pages should have a distinct reason to exist."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Query pattern",
+              "Page must explain",
+              "First-party input"
+            ],
+            "rows": [
+              [
+                "Alternative to a named tool",
+                "Meaningful differences and switching considerations",
+                "Approved comparison and migration facts"
+              ],
+              [
+                "Integration with a supported tool",
+                "Workflow, prerequisites and limitations",
+                "A working integration walkthrough"
+              ],
+              [
+                "Software for a specific role",
+                "The role’s task and supported outcome",
+                "Product demonstration and customer questions"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Prioritise using product fit, evidence of buyer demand, delivery effort and the value of the next action. Where attribution is available, review qualified demos or trials by landing-page group, then ask sales or product teams what happened after the conversion. A signup that never reaches a supported use case should not be interpreted as the same success as a suitable activated account."
+          }
+        ]
       }
     ],
     "relatedServices": [
@@ -188,12 +267,24 @@
     "relatedIndustries": [
       "saas",
       "technology"
+    ],
+    "updated": "2026-10-21",
+    "seoTitle": "SaaS Keyword Research: Buyer Intent to Page Plan",
+    "faqs": [
+      {
+        "q": "Should every SaaS keyword have its own page?",
+        "a": "No. Group queries by the task they represent. A single useful page can answer related searches; separate pages are justified when the buyer need, workflow or evaluation information is meaningfully different."
+      },
+      {
+        "q": "Should comparison pages always come before educational content?",
+        "a": "No. They are useful when buyers compare viable products and your team can provide accurate information. Prioritisation depends on product maturity, audience demand and the existing site, rather than a universal funnel rule."
+      }
     ]
   },
   {
     "slug": "google-business-profile-optimization",
-    "title": "Google Business Profile optimisation: what actually moves local rankings",
-    "description": "A focused guide to the Google Business Profile settings, habits and signals that influence map pack visibility for local businesses.",
+    "title": "Google Business Profile optimisation: accuracy, relevance and useful enquiries",
+    "description": "Review business information, categories, reviews and website links. Learn how to assess local visibility separately from qualified customer enquiries.",
     "date": "2026-07-08",
     "author": "Shobon Mahmud",
     "category": "local-seo",
@@ -209,21 +300,21 @@
         "blocks": [
           {
             "type": "p",
-            "text": "Google describes local ranking as a combination of relevance, distance and prominence. You can't change distance. You can change how relevant your profile looks for a search, and how prominent your business appears across the web."
+            "text": "Google describes local results as mainly based on relevance, distance and prominence. Complete and accurate information helps Google understand the business, while distance still affects which customers see it. Adding a service area or publishing a neighbourhood page does not relocate the business closer to a searcher."
           }
         ]
       },
       {
         "id": "categories",
-        "heading": "Categories matter more than anything you write",
+        "heading": "Choose categories that accurately describe the business",
         "blocks": [
           {
             "type": "p",
-            "text": "Your primary category is one of the strongest relevance signals you control. Choose the one that best describes your main service, then add secondary categories only where they're genuinely accurate."
+            "text": "Choose the primary category that best represents the core business and add secondary categories only where they fit actual services. Competitor profiles can suggest a category to investigate, but their choice is not evidence that the same category is appropriate for you."
           },
           {
             "type": "p",
-            "text": "Look at which categories competitors in the top three use. If they all share a category you don't, investigate why."
+            "text": "Review eligibility and the real-world business name, address or service-area setup before making optimisation changes. A virtual address or extra city profile should not be used to imply a location that does not qualify."
           }
         ]
       },
@@ -249,7 +340,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "Review quantity, recency and quality all matter. A few reviews every week beats a burst followed by months of silence. Ask at the moment the customer is happiest, make it easy with a direct link, and reply to every review — especially the critical ones."
+            "text": "Make it straightforward for real customers to leave honest reviews, using a direct review link where appropriate. Ask consistently without incentives, review gating or suggested keywords. Respond helpfully and avoid disclosing customer details. Google says review quantity and positive ratings can help local ranking; that is not evidence for a required weekly review quota."
           }
         ]
       },
@@ -262,6 +353,45 @@
             "text": "The page your profile links to should reinforce the same services, location and contact details. Consistent information across your website, profile and major directories makes Google more confident about who you are and where you operate."
           }
         ]
+      },
+      {
+        "id": "local-reporting",
+        "heading": "Separate profile activity from qualified business",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A profile can generate website visits, direction requests and call interactions, but those actions are not interchangeable. Define what the business can observe: a clicked phone number, a connected call, a booking or a suitable quotation request. Keep the reporting labels precise."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Review area",
+              "Check",
+              "Business interpretation"
+            ],
+            "rows": [
+              [
+                "Profile and website",
+                "Services, hours and contact details agree",
+                "The customer can confirm availability"
+              ],
+              [
+                "Contact journey",
+                "The linked page and mobile call path work",
+                "The request reaches the team"
+              ],
+              [
+                "Lead feedback",
+                "Enquiries match coverage and service scope",
+                "Visibility is reaching suitable customers"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "For a service-area business, review where requests come from and whether they can be fulfilled. Use that evidence to improve service detail and coverage information. Avoid expanding city pages solely to increase the number of indexed URLs."
+          }
+        ]
       }
     ],
     "faqs": [
@@ -271,7 +401,7 @@
       },
       {
         "q": "How often should I post on Google Business Profile?",
-        "a": "Weekly or every other week is a good rhythm. Consistency matters more than volume."
+        "a": "Publish when there is useful, accurate information to share, such as a current offer or service update. There is no universal posting frequency that guarantees better rankings. Review expired details and keep core business information correct."
       }
     ],
     "relatedServices": [
@@ -280,7 +410,9 @@
     "relatedIndustries": [
       "local-services",
       "health-tech"
-    ]
+    ],
+    "updated": "2026-10-21",
+    "seoTitle": "Google Business Profile: A Practical Review"
   },
   {
     "slug": "internal-linking-strategy",
@@ -329,7 +461,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "'Click here' tells nobody anything. Descriptive anchors like 'technical SEO audit' help readers and search engines. Vary them naturally — exact-match anchors on every link look unnatural and read badly."
+            "text": "Use concise anchor text that helps a reader predict the destination. A link labelled service-area SEO should lead to the relevant explanation, not an unrelated contact page. Write naturally within the sentence; neither a forced keyword variation nor an exact-match quota makes the link more useful."
           }
         ]
       },
@@ -351,6 +483,49 @@
             "text": "This site is built on the same principle: every service, industry, location, case study and article links to the related ones, so each page supports the others."
           }
         ]
+      },
+      {
+        "id": "link-audit",
+        "heading": "Audit the relationship, not just the link count",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Start with a list of important page roles: a service explains the offer, an industry page adapts it to a buyer, a location page explains genuine market coverage and a case study shows the work. A contextual link should help someone move between those roles when it answers the next question."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Starting page",
+              "Relevant destination",
+              "Why the reader would follow"
+            ],
+            "rows": [
+              [
+                "Service explanation",
+                "A matching client engagement",
+                "To evaluate evidence of the approach"
+              ],
+              [
+                "Technical audit guide",
+                "Holistic SEO service",
+                "To understand implementation support"
+              ],
+              [
+                "Local market page",
+                "Local SEO service",
+                "To understand the relevant workstream"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "After publishing, fetch or crawl the pages and verify that the links are real anchors with usable destinations. Check that the target returns the intended page, the canonical is appropriate and the link does not point through an old redirect without a reason. Then review whether important pages remain orphaned."
+          },
+          {
+            "type": "p",
+            "text": "Avoid adding the same commercial link to every paragraph. The objective is a coherent customer journey and discoverable site structure. Internal links support those goals, but they do not guarantee that Google will index every destination or improve its ranking."
+          }
+        ]
       }
     ],
     "relatedServices": [
@@ -359,12 +534,24 @@
     "relatedIndustries": [
       "saas",
       "ecommerce"
+    ],
+    "updated": "2026-10-21",
+    "seoTitle": "Internal Linking: Page Roles, Anchors & Checks",
+    "faqs": [
+      {
+        "q": "How many internal links should a page contain?",
+        "a": "There is no useful universal quota. Include links that help the reader complete the task or find relevant detail. Review duplicated navigation, unclear anchors and unnecessary links rather than targeting a fixed number."
+      },
+      {
+        "q": "Can internal links guarantee indexing?",
+        "a": "No. They help discovery and explain relationships between pages, but indexing also depends on other signals and Google’s decisions. Inspect the destination and its purpose if an important URL remains excluded."
+      }
     ]
   },
   {
     "slug": "ai-overviews-search-visibility",
     "title": "AI Overviews and search visibility: what changes and what doesn't",
-    "description": "How AI Overviews and AI assistants affect organic search, which queries are most affected, and how to keep your content visible and cited.",
+    "description": "Understand Google’s AI search guidance, improve useful page content and measure business outcomes without relying on special markup or citation promises.",
     "date": "2026-05-27",
     "author": "Shobon Mahmud",
     "category": "ai-and-search",
@@ -380,7 +567,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "For simple informational questions, AI-generated answers can satisfy the searcher without a click. Definitions, quick facts and basic how-tos are the most exposed. Traffic to that kind of content is under pressure, even when rankings hold."
+            "text": "AI features can answer part of a question directly in search results and provide links for further research. The effect on visits varies by query and site. Review your own page groups and conversion evidence before attributing every traffic change to AI answers."
           }
         ]
       },
@@ -390,7 +577,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "Commercial and complex searches still send clicks. Someone comparing software, choosing a provider or buying a product wants to see options and evaluate them. And AI answers are built from sources — well-structured, authoritative pages are what get cited."
+            "text": "People still need dependable information to evaluate products and services. Useful pages explain the offer, provide supporting evidence and give the reader an appropriate next step. Google says established SEO practices remain relevant to its AI features; there is no special schema or AI text file required for inclusion."
           }
         ]
       },
@@ -401,11 +588,11 @@
           {
             "type": "ul",
             "items": [
-              "Shift effort towards commercial, comparison and experience-based content.",
-              "Write clear, direct answers near the top of pages, then add depth.",
-              "Show first-hand experience: examples, data and original insight that summaries can't replace.",
-              "Make authorship and expertise visible and consistent across the site.",
-              "Use structured data that accurately reflects visible content."
+              "Review whether important pages can be crawled, indexed and shown with a snippet.",
+              "Answer the real customer task clearly, then provide the evidence and detail needed to evaluate it.",
+              "Use original product facts, demonstrations, approved examples and relevant first-hand experience.",
+              "Make authorship and responsibility for important claims clear.",
+              "Keep structured data consistent with visible content; do not treat it as a citation guarantee."
             ]
           }
         ]
@@ -416,7 +603,46 @@
         "blocks": [
           {
             "type": "p",
-            "text": "Clicks alone undercount visibility now. Track impressions, branded search growth and conversions from organic alongside traffic, so a fall in low-value clicks isn't mistaken for a fall in business impact."
+            "text": "Review the generative AI reporting available in your Search Console account alongside overall Web performance, qualified actions and landing-page groups. Google’s current guidance points to a Generative AI performance report. Confirm the report’s scope and availability in your property, and keep referral analytics and manual observations separate rather than treating them as a complete citation record."
+          }
+        ]
+      },
+      {
+        "id": "ai-content-review",
+        "heading": "A useful content review starts with a specific question",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For a software comparison, check that differences are current and verifiable. For a service page, check that the reader can understand the scope and assess fit. For a case study, explain what the reported result measures and what evidence is available. These are distinct editorial tasks, not a single AI-optimisation template."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Page type",
+              "Useful improvement",
+              "Evidence to preserve"
+            ],
+            "rows": [
+              [
+                "Product page",
+                "Explain a supported workflow and limitations",
+                "Approved specifications and demonstrations"
+              ],
+              [
+                "Service page",
+                "Clarify fit, responsibilities and next step",
+                "Actual scope and delivery process"
+              ],
+              [
+                "Case study",
+                "Separate project history from measured outcomes",
+                "Source, metric definition and comparison period"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "As a digital growth partner, I connect these content decisions with the business goal. Citation observations may be interesting, but a useful enquiry or suitable product evaluation is a different measure. Keep both in context and do not promise inclusion in a generated answer."
           }
         ]
       }
@@ -428,6 +654,18 @@
     "relatedIndustries": [
       "saas",
       "technology"
+    ],
+    "updated": "2026-10-21",
+    "seoTitle": "AI Search Visibility: Content & Measurement",
+    "faqs": [
+      {
+        "q": "Do I need llms.txt to appear in Google AI features?",
+        "a": "Google’s guidance says new AI text files and special markup are not required, and Google Search does not use llms.txt. Prioritise accessible, useful pages and established search fundamentals."
+      },
+      {
+        "q": "Can an agency guarantee that AI Overviews will cite my page?",
+        "a": "No. Eligibility and useful content do not guarantee crawling, indexing or selection in a generated answer. A responsible plan explains the work and measurement limits without promising a citation."
+      }
     ]
   }
 ]

@@ -18,13 +18,13 @@ function getPage(locale: string, fullSlug: string) {
   const slug = fullSlug.replace(/^seo-consultant-/, "");
   const config = localizedConfig(slug);
   if (!config || config.locale !== locale || fullSlug !== `seo-consultant-${slug}`) notFound();
-  const data = slug === "dhaka" ? { seoTitle: "ঢাকায় এসইও ও ডিজিটাল মার্কেটিং সেবা | শোভন মাহমুদ", intro: "ঢাকার ক্লিনিক ও স্থানীয় ব্যবসার জন্য এসইও, ফেসবুক মার্কেটিং ও ডিজিটাল ক্যাম্পেইন। ১৫,০০০ টাকায় স্টার্টার ওয়েবসাইট। আপনার পরিকল্পনা নিয়ে আলোচনা করুন।" } : arabic[slug as keyof typeof arabic];
+  const data = slug === "dhaka" ? { seoTitle: "ঢাকার ব্যবসার ডিজিটাল গ্রোথ পার্টনার | শোভন মাহমুদ", intro: "ঢাকার ব্যবসার জন্য বাংলা ও ইংরেজি কনটেন্ট, লোকাল সার্চ ও ইনকোয়ারির পরিকল্পনা। দুবাই থেকে শোভন মাহমুদের সঙ্গে দূর থেকে কাজ করুন।" } : arabic[slug as keyof typeof arabic];
   return { slug, config, data, path: locationPath(slug, config.locale) };
 }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const page = getPage(locale, slug);
-  const metadata = buildMetadata({ title: page.data.seoTitle, description: page.data.intro, path: page.path, absoluteTitle: true });
+  const metadata = buildMetadata({ title: page.data.seoTitle, description: "metaDescription" in page.data ? page.data.metaDescription : page.data.intro, path: page.path, absoluteTitle: true });
   return { ...metadata, alternates: { ...metadata.alternates, languages: locationAlternates(page.slug, siteConfig.url) }, openGraph: { ...metadata.openGraph, locale: page.config.languageTag.replace("-", "_"), alternateLocale: ["en"], images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: page.data.seoTitle }] } };
 }
 export default async function LocalizedLocationPage({ params }: Props) {

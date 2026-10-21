@@ -1,3 +1,4 @@
+import { CaseGrowthNote } from "@/components/content/CaseGrowthNote";
 import Image from "next/image";
 import Link from "next/link";
 import type { CaseStudy } from "@/lib/content/types";
@@ -98,6 +99,6 @@ export function ArhqCaseStudy({ study }: {study: CaseStudy}) {
         <article>{chapters.map((chapter,index)=><section key={chapter.title} aria-labelledby={`arhq-${index}`} className="border-t border-line py-9 first:pt-0 first:border-0"><p className="mb-3 font-mono text-xs text-link">0{index+1}</p><h2 id={`arhq-${index}`} className="text-2xl font-semibold leading-snug tracking-tight">{chapter.title}</h2>{chapter.paragraphs.map(p=><p key={p} className="mt-5 text-base leading-8 text-muted">{p}</p>)}</section>)}<div className="rounded-2xl border border-line bg-paper-2 p-6 text-sm leading-7 text-muted"><strong className="text-ink">Source note.</strong> Engagement details and the 67% outcome were provided by Shobon Mahmud. Business identity and imagery are from <a href="https://arhq.com/" className="text-link underline">arhq.com</a>. Supplied Google Search Console, Localo and Google Business Profile screenshots are shown above with their visible context. The separate 67% growth figure still has no underlying analytics export, metric definition or comparison dates; no verified revenue figures are included.</div></article>
       </div>
     </Container>
-    <FinalCta title="Changing your website? Let’s protect the bigger picture." body="Tell me what is changing and where you need growth. We’ll start with the business problem, diagnose the website and identify the priorities that deserve attention." />
+    <CaseGrowthNote slug="arhq-domain-migration-organic-growth" /><FinalCta title="Changing your website? Let’s protect the bigger picture." body="Tell me what is changing and where you need growth. We’ll start with the business problem, diagnose the website and identify the priorities that deserve attention." />
   </>;
 }

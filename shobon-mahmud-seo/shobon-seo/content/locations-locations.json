@@ -23,7 +23,8 @@
       "local-seo",
       "Holistic-SEO"
     ],
-    "faqs": []
+    "faqs": [],
+    "metaDescription": "Digital growth support for Dhaka businesses: connect Bangla and English content, local search and enquiry paths. Work remotely with Shobon Mahmud."
   },
   {
     "slug": "san-francisco",
@@ -98,7 +99,8 @@
         "q": "What kind of San Francisco businesses do you help?",
         "a": "Mostly SaaS, technology, health tech and legal tech companies, plus local service businesses that depend on neighbourhood search."
       }
-    ]
+    ],
+    "metaDescription": "Digital growth strategy for San Francisco teams. Connect product evaluation pages, search and qualified demos with remote partner Shobon Mahmud."
   },
   {
     "slug": "new-york",
@@ -173,7 +175,8 @@
         "q": "Do you work remotely with New York clients?",
         "a": "Yes. I work remotely and schedule calls to overlap with Eastern Time."
       }
-    ]
+    ],
+    "metaDescription": "Connect New York service discovery with qualified enquiries. Shobon Mahmud plans useful local pages, trusted content and clearer conversion paths."
   },
   {
     "slug": "austin",
@@ -244,7 +247,8 @@
         "q": "Is your work remote?",
         "a": "Yes. I work remotely with Austin teams and overlap with Central Time for calls."
       }
-    ]
+    ],
+    "metaDescription": "Grow the right Austin enquiries with service-area SEO, product content and conversion planning. Work remotely with digital growth partner Shobon Mahmud."
   },
   {
     "slug": "dubai",
@@ -319,7 +323,8 @@
         "q": "Are you based in Dubai?",
         "a": "Yes. I'm based in Dubai and can work with UAE teams on market research, organic growth and search visibility. Project meetings and delivery can also happen remotely."
       }
-    ]
+    ],
+    "metaDescription": "Work with Dubai-based digital growth partner Shobon Mahmud on Arabic and English search, useful content and a clearer path to qualified enquiries."
   },
   {
     "slug": "london",
@@ -394,7 +399,8 @@
         "q": "Do you work remotely with London teams?",
         "a": "Yes. I work remotely and schedule calls within UK working hours."
       }
-    ]
+    ],
+    "metaDescription": "Digital growth planning for London teams: UK-focused content, relevant search visibility and useful conversion paths with Shobon Mahmud."
   },
   {
     "slug": "saudi-arabia",
@@ -455,7 +461,8 @@
       "local-seo",
       "content-seo"
     ],
-    "faqs": []
+    "faqs": [],
+    "metaDescription": "Digital growth support for Saudi Arabia: Arabic and English content, relevant service pages and qualified enquiries. Remote delivery from Dubai."
   },
   {
     "slug": "oman",
@@ -516,6 +523,7 @@
       "content-seo",
       "local-seo"
     ],
-    "faqs": []
+    "faqs": [],
+    "metaDescription": "Digital growth strategy for Oman property and project teams. Connect approved project content, search and enquiry quality with Shobon Mahmud."
   }
 ]

@@ -1,4 +1,6 @@
 import { AmaCaseStudy } from "@/components/sections/AmaCaseStudy";
+import { CaseGrowthNote } from "@/components/content/CaseGrowthNote";
+import caseNotes from "@/content/case-growth-notes.json";
 import { RtpCaseStudy } from "@/components/sections/RtpCaseStudy";
 import { ArhqCaseStudy } from "@/components/sections/ArhqCaseStudy";
 import { PageSchema } from "@/components/seo/PageSchema";
@@ -16,8 +18,6 @@ import { getIndustry } from "@/lib/content/industries";
 import { getServices } from "@/lib/content/services";
 import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
-import { FAQ } from "@/components/content/FAQ";
-import { portfolioFaqs } from "@/lib/content/faqs";
 import { Fill } from "@/components/ui/Fill";
 
 import { RelatedCaseStudies } from "@/components/related/Related";
@@ -34,10 +34,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = getCaseStudy((await params).slug);
   if (!c) return {};
+  const note = caseNotes[c.slug as keyof typeof caseNotes];
   // These completed pages clearly identify scenarios as illustrative, not measured client results.
   return buildMetadata({
-    title: c.title,
-    description: c.summary,
+    title: note && "seoTitle" in note ? note.seoTitle : c.title,
+    description: note && "metaDescription" in note ? note.metaDescription : c.summary,
     path: `/case-studies/${c.slug}`,
     noindex: c.draft,
   });
@@ -228,9 +229,7 @@ export default async function CaseStudyPage({ params }: Props) {
         </Block>
       </Section>
 
-      <Section>
-        <FAQ faqs={portfolioFaqs} title={pageCopy.text_014} />
-      </Section>
+      <CaseGrowthNote slug={study.slug} />
       <Section tone="muted">
         <RelatedCaseStudies items={related} title={pageCopy.text_015} />
       </Section>

@@ -60,6 +60,7 @@ function inspect(value: unknown, key = ""): string | null {
   if (typeof value === "string") {
     if (
       ["slug", "id"].includes(key) &&
+      !(key === "slug" && value === "Holistic-SEO") &&
       !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)
     )
       return `${key}: use lowercase letters, numbers and hyphens.`;

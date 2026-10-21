@@ -1,4 +1,5 @@
 import { EngagementDetails } from "@/components/content/EngagementDetails";
+import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { PageContents } from "@/components/content/PageContents";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-industries-slug-page.json";
@@ -37,8 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!i) return {};
   return buildMetadata({
     title: i.seoTitle,
-    description: i.summary,
-    imageAlt: "Shobon Mahmud — industry SEO consulting",
+    description: i.metaDescription ?? i.summary,
+    imageAlt: `Shobon Mahmud — ${i.name} digital growth strategy`,
     path: `/industries/${i.slug}`,
   });
 }
@@ -58,7 +59,7 @@ export default async function IndustryPage({ params }: Props) {
           { name: "Industries", href: "/industries" },
           { name: `${industry.name} SEO`, href: path },
         ]}
-        kicker={`${industry.name} SEO`}
+        kicker={`${industry.name} digital growth`}
         title={industry.heroTitle}
         intro={industry.heroIntro}
       >
@@ -170,6 +171,7 @@ export default async function IndustryPage({ params }: Props) {
       </Section>
 
       <EngagementDetails content={industry.engagement} topic={`${industry.name} SEO`} />
+      <PageGrowthGuide path={path} />
 
       <Section id="industry-services">
         <RelatedServices

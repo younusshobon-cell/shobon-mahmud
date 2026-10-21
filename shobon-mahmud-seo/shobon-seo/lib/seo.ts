@@ -29,7 +29,7 @@ export function buildMetadata({
 }: BuildMetaInput): Metadata {
   const url = new URL(path, siteConfig.url).toString();
   return {
-    title: absoluteTitle ? { absolute: title } : title,
+    title: absoluteTitle || title.includes(siteConfig.name) ? { absolute: title } : title,
     description,
     alternates: { canonical: url },
     openGraph: {

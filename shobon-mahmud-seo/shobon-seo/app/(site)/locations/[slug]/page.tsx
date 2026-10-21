@@ -1,4 +1,5 @@
 import { LanguageSwitch } from "@/components/i18n/LanguageSwitch";
+import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { locationAlternates } from "@/lib/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import { PageSchema } from "@/components/seo/PageSchema";
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (l.slug === "dhaka") {
     const metadata = buildMetadata({
       title: l.seoTitle,
-      description: l.intro,
+      description: l.metaDescription ?? l.intro,
       path: "/locations/seo-consultant-dhaka",
       absoluteTitle: true,
     });
@@ -57,8 +58,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const metadata = buildMetadata({
     title: l.seoTitle,
-    description: l.intro.slice(0, 158),
+    description: l.metaDescription ?? l.intro,
     path: `/locations/seo-consultant-${l.slug}`,
+    absoluteTitle: true,
   });
   return { ...metadata, alternates: { ...metadata.alternates, languages: locationAlternates(l.slug, siteConfig.url) } };
 }
@@ -193,7 +195,7 @@ export default async function LocationPage({ params }: Props) {
       <Section labelledBy="sectors">
         <div id="sectors">
           <SectionHeading
-            title={loc.slug === "oman" ? "SEO for Oman’s public projects and property sector" : `Priority sectors to watch through 2030 in ${loc.city}`}
+            title={loc.slug === "oman" ? "Search priorities for Oman’s projects and property sector" : `Customer journeys that shape the ${loc.city} growth plan`}
             intro={pageCopy.text_013}
           />
         </div>
@@ -224,6 +226,7 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </Section>
       {loc.slug === "oman" && <OmanDelivery />}
+      <PageGrowthGuide path={path} />
       <Section id={loc.slug === "london" ? "london-services" : "location-services"}>
         <RelatedServices
           items={getServices(loc.relatedServices)}
@@ -243,7 +246,7 @@ export default async function LocationPage({ params }: Props) {
         <LocalMap lat={loc.coords.lat} lng={loc.coords.lng} label={loc.city} />
       </Section>
       <Section id={loc.slug === "london" ? "london-faqs" : "location-faqs"}>
-        <FAQ faqs={extra.faqs} title={`Organic growth in ${loc.city}: FAQs`} />
+        <FAQ faqs={[...loc.faqs, ...extra.faqs].filter((faq, index, all) => all.findIndex(item => item.q.toLowerCase().trim() === faq.q.toLowerCase().trim()) === index)} title={`Digital growth in ${loc.city}: FAQs`} withSchema />
       </Section>
       <FinalCta
         title={loc.slug === "oman" ? "Give your Oman project a clearer path from discovery to action." : `Reach more customers in ${loc.city} through search.`}

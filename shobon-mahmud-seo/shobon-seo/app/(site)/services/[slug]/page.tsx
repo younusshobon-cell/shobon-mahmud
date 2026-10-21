@@ -1,4 +1,5 @@
 import { GrowthServiceDepth } from "@/components/sections/GrowthServiceDepth";
+import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { EngagementDetails } from "@/components/content/EngagementDetails";
 import { HolisticSeoLanding } from "@/components/sections/HolisticSeoLanding";
 import { PageContents } from "@/components/content/PageContents";
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title: s.seoTitle,
     description: s.summary,
-    imageAlt: "Shobon Mahmud — SEO services",
+    imageAlt: `Shobon Mahmud — ${s.name}`,
     path: `/services/${s.slug}`,
   });
 }
@@ -221,6 +222,7 @@ export default async function ServicePage({ params }: Props) {
       </Section>
 
       <GrowthServiceDepth slug={service.slug} />
+      <PageGrowthGuide path={path} />
 
       {studies.length > 0 && (
         <Section>
@@ -234,9 +236,7 @@ export default async function ServicePage({ params }: Props) {
           faqs={[
             ...service.faqs,
             ...(serviceSearchFaqs[service.slug] ?? []),
-            { q: `What affects the cost of ${service.name.toLowerCase()}?`, a: "Scope depends on the number of pages or templates, research depth, implementation needs and review requirements. Share your URL and priorities for a scoped proposal. Audit, content production and implementation responsibilities are agreed before work starts." },
-            { q: `What is outside a ${service.name.toLowerCase()} engagement?`, a: "The proposal defines the pages, deliverables, access and responsibilities included. Additional development, paid campaigns, third-party fees or specialist legal and clinical review are not assumed to be included. Ranking positions and a fixed number of leads are not guaranteed." },
-          ].slice(0, 10)}
+          ].filter((faq, index, all) => all.findIndex(item => item.q.toLowerCase().trim() === faq.q.toLowerCase().trim()) === index)}
         />
       </Section>
       {articles.length > 0 && (

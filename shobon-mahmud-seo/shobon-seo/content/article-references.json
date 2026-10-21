@@ -1,0 +1,19 @@
+{
+  "technical-seo-audit": [
+    { "label": "Google: understand the Page indexing report", "href": "https://support.google.com/webmasters/answer/7440203" },
+    { "label": "Google: canonicalisation and duplicate URLs", "href": "https://developers.google.com/search/docs/crawling-indexing/canonicalization" }
+  ],
+  "saas-keyword-research-by-intent": [
+    { "label": "Google: creating helpful, reliable, people-first content", "href": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" }
+  ],
+  "google-business-profile-optimization": [
+    { "label": "Google: improve your local ranking", "href": "https://support.google.com/business/answer/7091" },
+    { "label": "Google: tips for genuine customer reviews", "href": "https://support.google.com/business/answer/3474122" }
+  ],
+  "internal-linking-strategy": [
+    { "label": "Google: crawlable links and descriptive anchor text", "href": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable" }
+  ],
+  "ai-overviews-search-visibility": [
+    { "label": "Google: optimising for generative AI features in Search", "href": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" }
+  ]
+}

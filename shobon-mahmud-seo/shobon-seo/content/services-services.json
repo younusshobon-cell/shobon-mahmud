@@ -2,9 +2,9 @@
   {
     "slug": "Holistic-SEO",
     "name": "Holistic SEO",
-    "seoTitle": "Holistic SEO Services | Technical, On-Page & Off-Page",
+    "seoTitle": "Holistic SEO & Digital Growth Planning",
     "summary": "Holistic SEO connects technical health, on-page content and relevant authority in one prioritised plan. Improve discovery and qualified enquiries.",
-    "heroTitle": "Search expertise, connected to your wider growth plan.",
+    "heroTitle": "Holistic SEO for a connected digital growth plan.",
     "heroIntro": "As your digital growth partner, I bring technical health, useful content and relevant authority into one prioritised SEO plan. We agree what to change, who will deliver it and how it supports the journey from discovery to enquiry.",
     "problem": [
       "A technically sound site can still answer the wrong questions. A useful page can remain undiscovered if crawling or internal links are broken. References to an unclear offer do not solve the buyer’s decision.",
@@ -145,6 +145,10 @@
       {
         "q": "What do you need before we discuss a plan?",
         "a": "Your website URL, priority products or services, target market and main growth constraint are enough for an initial discussion. Search Console, analytics, CMS access and a developer or editorial contact help once the project scope is agreed."
+      },
+      {
+        "q": "How are technical, content and authority tasks prioritised?",
+        "a": "I compare their effect on important buyer journeys, the evidence for the issue and delivery dependencies. A broken commercial template can come before new content; a technically healthy site may need a clearer offer or stronger service pages instead."
       }
     ],
     "relatedIndustries": [
@@ -197,8 +201,8 @@
     "slug": "content-seo",
     "name": "Content SEO",
     "summary": "Content SEO strategy, topic maps, writer-ready briefs and targeted refreshes. Build useful pages around buyer questions and commercial priorities.",
-    "seoTitle": "Content SEO & Content Strategy",
-    "heroTitle": "Content that helps the right customers understand and decide.",
+    "seoTitle": "Content SEO Strategy, Briefs & Page Improvement",
+    "heroTitle": "Content SEO that supports the buying decision.",
     "heroIntro": "I connect search demand, buyer questions and your expertise in a practical content plan. Clear briefs, agreed reviewers and purposeful internal links help your team publish useful pages and assess their contribution to enquiries.",
     "problem": [
       "A lot of company blogs are a list of unrelated posts. Each one gets a burst of social traffic and then nothing, because none of them build towards a topic Google trusts the site on.",
@@ -289,6 +293,10 @@
       {
         "q": "Can AI-written content rank?",
         "a": "Content ranks when it's useful, accurate and original enough to add something. How it's produced matters less than whether it has real expertise and a reason to exist."
+      },
+      {
+        "q": "What information makes a content brief specific to my business?",
+        "a": "Customer questions, sales objections, your actual process and approved product or service facts. I use these inputs to define what the page must explain and what evidence the writer needs, rather than setting a generic word target."
       }
     ],
     "relatedIndustries": [
@@ -336,8 +344,8 @@
     "slug": "local-seo",
     "name": "Local SEO",
     "summary": "Local SEO for eligible Business Profiles, service pages and real coverage areas. Improve local discovery and measure qualified calls and enquiries.",
-    "seoTitle": "Local SEO Services",
-    "heroTitle": "Local discovery that supports a clearer path to contact.",
+    "seoTitle": "Local SEO & Google Business Profile Support",
+    "heroTitle": "Local SEO built around real service coverage.",
     "heroIntro": "As part of your growth plan, I connect eligible Business Profiles, accurate service pages and an easy mobile contact journey. We work around your actual coverage and review relevant calls, forms and booking enquiries.",
     "problem": [
       "Local rankings depend on proximity, relevance and prominence. You can't move your address, but you can control how relevant and prominent your business looks to Google.",
@@ -429,6 +437,10 @@
       {
         "q": "Should I create a page for every city I serve?",
         "a": "Only where you have something specific to say. Thin city pages can hurt more than help. Fewer, better location pages usually win."
+      },
+      {
+        "q": "Will a page for each neighbourhood extend my Google Maps reach?",
+        "a": "A website page does not move your business closer to a searcher. Local pages can explain real coverage and help customers evaluate services, but map visibility also depends on location and other local factors. We assess website discovery and map results separately."
       }
     ],
     "relatedIndustries": [
@@ -478,8 +490,8 @@
     "slug": "seo-for-home-service-providers",
     "name": "SEO for Home Service Providers",
     "summary": "SEO for plumbers, HVAC, roofing and septic providers. Improve service and area pages, local discovery and qualified calls or quote requests.",
-    "seoTitle": "SEO for Home Service Providers",
-    "heroTitle": "Help homeowners find your service and request the right help.",
+    "seoTitle": "SEO for Home Services & Qualified Job Enquiries",
+    "heroTitle": "SEO for home service providers, from search to booked work.",
     "heroIntro": "I connect local search, useful service information and quotation journeys around the work you actually provide. As your growth partner, I prioritise clear coverage, trustworthy project details and the steps needed to turn interest into a qualified enquiry.",
     "problem": [
       "A good reputation offline does not always translate into visibility online. If competitors appear for your core services while your website relies on one generic page, homeowners may never discover your business.",
@@ -605,6 +617,10 @@
       {
         "q": "What do you need to get started?",
         "a": "Your website URL, core services, coverage areas and growth priorities are enough for an initial discussion. For the audit, access to Search Console, analytics and Google Business Profile helps identify the most useful next steps."
+      },
+      {
+        "q": "Can the strategy focus on more profitable job types?",
+        "a": "Yes. Share the services, coverage, crew capacity and job types you want to prioritise. The page plan and lead review can then distinguish a suitable installation or repair enquiry from unavailable work and low-fit requests."
       }
     ],
     "relatedIndustries": [
@@ -652,8 +668,8 @@
     "slug": "ecommerce-seo",
     "name": "E-commerce SEO",
     "summary": "E-commerce SEO for categories, products and catalogue indexing. Improve shopping pages, filter handling and markup with organic sales reporting.",
-    "seoTitle": "E-commerce SEO Services",
-    "heroTitle": "Make products easier to discover and buying decisions easier to make.",
+    "seoTitle": "E-commerce SEO for Categories, Products & Growth",
+    "heroTitle": "E-commerce SEO that connects discovery with confident purchases.",
     "heroIntro": "I connect shopping intent, catalogue structure and useful product information within your wider growth plan. Work is prioritised around technical access and customer decisions, with organic orders, revenue and attribution limits reviewed together.",
     "problem": [
       "Filters and sorting options can turn a 500-product store into 500,000 URLs. Google spends its time crawling duplicates while new products wait to be indexed.",
@@ -744,6 +760,10 @@
       {
         "q": "Is Shopify good for SEO?",
         "a": "It's a solid foundation with some fixed URL patterns and duplicate-path quirks. Most issues can be managed with templates, apps used carefully and good internal linking."
+      },
+      {
+        "q": "How do you decide which filter pages should be indexable?",
+        "a": "We review whether the combination has a distinct shopping purpose, reliable inventory and enough useful information to justify a landing page. Development then implements consistent crawl, canonical and linking rules for the agreed catalogue structure."
       }
     ],
     "relatedIndustries": [
@@ -787,9 +807,9 @@
   {
     "slug": "digital-growth-strategy",
     "name": "Digital Growth Strategy",
-    "seoTitle": "Digital Growth Strategy & Growth Partner Services",
+    "seoTitle": "Digital Growth Strategy & Partner Support",
     "summary": "A practical digital growth strategy connecting acquisition, content, conversion and measurement with a prioritised 90-day roadmap.",
-    "heroTitle": "A clear growth direction. A plan your team can act on.",
+    "heroTitle": "Your digital growth strategy, from diagnosis to delivery.",
     "heroIntro": "As your Digital Growth Partner, I help you identify the constraint between being discovered and winning useful business. We connect audience insight, channel priorities, website conversion and measurement in one realistic delivery plan.",
     "problem": [
       "You may already invest in a website, content and marketing without knowing which part deserves attention next. More activity can increase cost without improving the customer journey.",
@@ -897,6 +917,10 @@
       {
         "q": "How long does a digital growth strategy take to show results?",
         "a": "The timeline depends on the starting point, channel, implementation pace and sales cycle. A 90-day roadmap creates a practical review window, not a promise that a particular growth target will be reached in 90 days."
+      },
+      {
+        "q": "What decision should the growth roadmap help us make first?",
+        "a": "It should identify the main constraint between your priority customer and a valuable business action. The first workstream follows that evidence, with an owner, scope and validation plan rather than a fixed allocation of tasks across every channel."
       }
     ],
     "relatedIndustries": [
@@ -914,9 +938,9 @@
   {
     "slug": "conversion-rate-optimization",
     "name": "Conversion Rate Optimization",
-    "seoTitle": "Conversion Rate Optimization Services | Website & Lead Generation",
+    "seoTitle": "Conversion Rate Optimization & Customer Journey Review",
     "summary": "Improve the path from website visit to qualified enquiry through conversion research, clearer landing pages, form reviews and evidence-led testing.",
-    "heroTitle": "Help more of the right visitors take the next step.",
+    "heroTitle": "Conversion rate optimization for the right customer actions.",
     "heroIntro": "I connect conversion research, landing-page clarity and measurement to your wider growth plan. We find friction in the journey from interest to enquiry, then prioritise improvements your team can implement and evaluate.",
     "problem": [
       "A website can attract relevant visitors and still make it difficult to act. An unclear offer, missing proof, a confusing form or the wrong next step can interrupt an otherwise useful journey.",
@@ -1032,6 +1056,10 @@
       {
         "q": "Does CRO guarantee more sales?",
         "a": "No, CRO does not guarantee sales or a fixed uplift. We define the outcome, test the strongest hypotheses and review the evidence, including whether additional enquiries are commercially useful."
+      },
+      {
+        "q": "What if our traffic is too low for a useful A/B test?",
+        "a": "We can still review the journey, correct tracking defects, resolve confirmed usability issues and improve missing decision information. Results are described as observational when there is not enough traffic for a defensible experiment."
       }
     ],
     "relatedIndustries": [

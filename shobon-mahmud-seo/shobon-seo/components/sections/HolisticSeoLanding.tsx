@@ -17,6 +17,7 @@ import { PageSchema } from "@/components/seo/PageSchema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { RelatedServices } from "@/components/related/Related";
 import { FinalCta } from "./FinalCta";
+import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 
 const pillarIcons = [Code2, FileSearch, Link2];
 
@@ -92,6 +93,7 @@ export function HolisticSeoLanding({ service }: { service: Service }) {
 
     <Section tone="muted" labelledBy="industries"><div id="industries"><SectionHeading kicker="Apply the plan to your market" title="Your buyers decide what the pages need to answer." intro="The foundations stay connected, but the terminology, proof and next step change by industry. Explore the approach that fits your audience." /></div><div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{getIndustries(service.relatedIndustries).map(industry => <a key={industry.slug} href={`/industries/${industry.slug}`} className="interactive-card flex items-center justify-between gap-3 rounded-xl border border-line bg-white p-5 text-sm font-semibold text-ink">{industry.name} SEO<ArrowUpRight aria-hidden="true" className="size-4 shrink-0 text-link" /></a>)}</div></Section>
 
+    <PageGrowthGuide path="/services/Holistic-SEO" />
     <Section id="service-faqs"><FAQ title="Holistic SEO: questions before you start" faqs={service.faqs} withSchema /></Section>
     <Section tone="muted"><RelatedServices items={getServices(service.relatedServices ?? [])} title="Focused services for specific priorities" /></Section>
     <FinalCta title="Give your SEO work one direction and a clear next step." body="Share your website, the customers you want to reach and the constraint you want to solve. We will discuss a focused plan, delivery responsibilities and how to measure progress." actionTitle="Talk through my SEO priorities" actionClassName="holistic-cta" />

@@ -45,6 +45,7 @@ export type Industry = {
   name: string;
   summary: string;
   seoTitle: string;
+  metaDescription?: string;
   heroTitle: string;
   heroIntro: string;
   landscape: string[];
@@ -64,6 +65,7 @@ export type Location = {
   region: string;
   country: string;
   seoTitle: string;
+  metaDescription?: string;
   heroTitle: string;
   intro: string;
   /** Map center */

@@ -514,5 +514,23 @@
     "label": "Page images",
     "group": "Media",
     "path": "content/page-images.json"
+  },
+  {
+    "id": "page-growth-guides",
+    "label": "Page Growth Guides",
+    "group": "Pages",
+    "path": "content/page-growth-guides.json"
+  },
+  {
+    "id": "case-growth-notes",
+    "label": "Case Study Growth Notes",
+    "group": "Portfolio",
+    "path": "content/case-growth-notes.json"
+  },
+  {
+    "id": "article-references",
+    "label": "Article References",
+    "group": "Blog",
+    "path": "content/article-references.json"
   }
 ]

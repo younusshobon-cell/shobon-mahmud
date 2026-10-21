@@ -1,0 +1,715 @@
+{
+  "/services/Holistic-SEO": {
+    "title": "Start with the search journey, then fix its weakest link.",
+    "intro": "A website can have good articles and still lose enquiries because service pages are buried, a release changes canonical URLs or the offer is hard to understand. I review those connections before recommending more publishing. The first deliverable is a prioritised explanation of the constraint, supported by affected URLs and a way to validate the fix.",
+    "body": "As your digital growth partner, I coordinate search priorities with content and development decisions. The plan distinguishes work needed for access from work needed for buyer confidence, so an indexing repair and a service-page rewrite each have a clear purpose.",
+    "headers": [
+      "Starting evidence",
+      "Priority decision",
+      "What to validate"
+    ],
+    "rows": [
+      [
+        "Important pages cannot be found",
+        "Check response codes, crawl access and canonical selection",
+        "Fetch the deployed page and inspect representative URLs"
+      ],
+      [
+        "Several pages serve the same task",
+        "Decide whether to separate their intent or consolidate",
+        "Check the page map, internal links and redirect destinations"
+      ],
+      [
+        "Relevant visits produce weak enquiries",
+        "Review the offer, evidence and contact journey",
+        "Compare qualified enquiries by landing-page group"
+      ]
+    ],
+    "link": {
+      "href": "/services/digital-growth-strategy",
+      "label": "See how a wider digital growth strategy sets the priorities"
+    }
+  },
+  "/services/content-seo": {
+    "title": "Choose the page the buyer needs before choosing the word count.",
+    "intro": "A useful content plan starts with questions your customers actually ask. A service comparison, implementation guide and pricing explanation do different jobs. I map those jobs to existing URLs, identify the evidence each page needs and decide what to improve before commissioning new articles.",
+    "body": "You receive briefs that explain the audience, decision, supporting facts, internal links and next step. Subject experts supply the details that generic research cannot: product limitations, real processes, original examples and common objections. That is how content becomes specific to your business.",
+    "headers": [
+      "Starting evidence",
+      "Priority decision",
+      "What to validate"
+    ],
+    "rows": [
+      [
+        "An existing page nearly answers the task",
+        "Improve its missing explanation and evidence",
+        "Check relevant queries and qualified actions"
+      ],
+      [
+        "Two articles compete for the same reader",
+        "Compare intent and merge only when the jobs overlap",
+        "Retain useful material and update internal links"
+      ],
+      [
+        "A buying question has no useful answer",
+        "Create a scoped brief with first-party inputs",
+        "Confirm the page can be reached from related services"
+      ]
+    ],
+    "link": {
+      "href": "/services/conversion-rate-optimization",
+      "label": "Connect useful content with the next customer action"
+    }
+  },
+  "/services/local-seo": {
+    "title": "Connect a local search with a service you can actually deliver.",
+    "intro": "Local visibility has two related surfaces: your website and eligible business listings. I review them together, starting with the services, address or service area, opening hours and contact route that a customer needs to verify. A page for an area deserves its own explanation only when the business can serve it and has useful detail to add.",
+    "body": "The growth plan follows the full enquiry journey. A profile visit is different from a completed booking, and a call click does not prove a conversation happened. We agree which actions can be measured and use your team’s feedback to understand whether enquiries match the services you want to grow.",
+    "headers": [
+      "Starting evidence",
+      "Priority decision",
+      "What to validate"
+    ],
+    "rows": [
+      [
+        "Business Profile information is incomplete",
+        "Review eligibility and accurate business details",
+        "Check the live profile and website agree"
+      ],
+      [
+        "Location pages only swap place names",
+        "Add actual coverage, service differences and relevant proof",
+        "Review whether each page answers a distinct local task"
+      ],
+      [
+        "Calls are increasing but quality is unclear",
+        "Separate call clicks, connected calls and booked jobs",
+        "Review available call outcomes with your team"
+      ]
+    ],
+    "link": {
+      "href": "/services/seo-for-home-service-providers",
+      "label": "Explore the service-area approach for home service providers"
+    }
+  },
+  "/services/seo-for-home-service-providers": {
+    "title": "Build the page around the job a homeowner needs done.",
+    "intro": "An urgent repair and a planned installation require different information. Someone with an immediate problem needs to confirm coverage and a working contact route. Someone comparing a larger project needs scope, qualifications, process and realistic expectations. I organise service pages around those decisions instead of treating every visit as the same lead.",
+    "body": "Your team’s delivery capacity shapes the plan. We identify the jobs you want, where crews can travel and what the enquiry form must capture. That helps avoid attracting requests for unavailable work or publishing dozens of suburb pages with no operational difference.",
+    "headers": [
+      "Starting evidence",
+      "Priority decision",
+      "What to validate"
+    ],
+    "rows": [
+      [
+        "Urgent repair enquiry",
+        "Confirm the service, coverage and current contact method",
+        "Mobile call path and enquiry response process"
+      ],
+      [
+        "Planned replacement or installation",
+        "Explain assessment, project stages and what affects scope",
+        "Suitable quotation requests and booked assessments"
+      ],
+      [
+        "Expansion into a new service area",
+        "Verify crew coverage and useful area-specific detail",
+        "Requests inside the real operating area"
+      ]
+    ],
+    "link": {
+      "href": "/services/local-seo",
+      "label": "See how local search supports service-area discovery"
+    }
+  },
+  "/services/ecommerce-seo": {
+    "title": "Give every indexable catalogue page a reason to exist.",
+    "intro": "A product catalogue can create more URLs than useful buying journeys. Filters, variants and sorting options need different handling from categories that meet a distinct shopping need. I review the catalogue with inventory and merchandising context before deciding what search engines should discover and which pages deserve editorial work.",
+    "body": "The content should help shoppers choose: sizing, compatibility, materials, delivery conditions and genuine product differences. Your growth roadmap connects these decisions with technical delivery and order measurement, so success is judged beyond a rise in category impressions.",
+    "headers": [
+      "Starting evidence",
+      "Priority decision",
+      "What to validate"
+    ],
+    "rows": [
+      [
+        "A category serves a distinct shopping need",
+        "Improve selection guidance and useful product links",
+        "Relevant organic orders and category entry paths"
+      ],
+      [
+        "Filters create repetitive URL combinations",
+        "Agree crawl and indexing rules with development",
+        "Representative responses, canonicals and internal links"
+      ],
+      [
+        "A product is unavailable or replaced",
+        "Choose a useful status and replacement path",
+        "Stock accuracy, valid destinations and customer experience"
+      ]
+    ],
+    "link": {
+      "href": "/services/conversion-rate-optimization",
+      "label": "Review the buying journey beyond the search result"
+    }
+  },
+  "/services/digital-growth-strategy": {
+    "title": "One commercial objective. A sequence your team can deliver.",
+    "intro": "A growth strategy makes choices. We clarify the offer, priority customer and valuable action, then review how search, content and the website currently support them. The roadmap addresses the constraint that matters most; it does not assign equal effort to every channel simply because the channel exists.",
+    "body": "As your digital growth partner, I turn the diagnosis into decisions your team can use: the first page group to improve, the evidence required, who owns delivery and what we will review after release. New findings can change the sequence, but each task stays connected to the agreed business goal.",
+    "headers": [
+      "Starting evidence",
+      "Priority decision",
+      "What to validate"
+    ],
+    "rows": [
+      [
+        "Discovery is the main constraint",
+        "Prioritise relevant search coverage and clear page roles",
+        "Qualified new visitors reaching suitable offers"
+      ],
+      [
+        "Visitors arrive but do not understand the offer",
+        "Improve positioning, service detail and evidence",
+        "Suitable enquiries and customer objections"
+      ],
+      [
+        "Several teams ship disconnected work",
+        "Define owners, dependencies and acceptance checks",
+        "Completed priorities and the results of released changes"
+      ]
+    ],
+    "link": {
+      "href": "/services/Holistic-SEO",
+      "label": "See the connected SEO work behind the strategy"
+    }
+  },
+  "/services/conversion-rate-optimization": {
+    "title": "Find the point where a useful visit stops becoming progress.",
+    "intro": "Conversion work begins with a trustworthy definition of the action. A form start, completed enquiry and qualified opportunity are different events. I review tracking and the actual customer journey before suggesting a shorter form, a new headline or an experiment.",
+    "body": "The goal is to help suitable customers act with confidence. We examine message clarity, missing decision information, mobile friction and the follow-up handover. When traffic supports an experiment, we agree the hypothesis, primary measure and guardrails; when it does not, we use evidence-led improvements without claiming statistical proof.",
+    "headers": [
+      "Starting evidence",
+      "Priority decision",
+      "What to validate"
+    ],
+    "rows": [
+      [
+        "The offer is unclear",
+        "Explain who the service fits, scope and next steps",
+        "Qualified completion rate and enquiry quality"
+      ],
+      [
+        "The contact path has friction",
+        "Check errors, mobile fields and confirmation behaviour",
+        "Completed submissions and successful handover"
+      ],
+      [
+        "A change needs an experiment",
+        "Define the hypothesis, sample requirements and guardrails",
+        "Primary action with enough evidence to interpret"
+      ]
+    ],
+    "link": {
+      "href": "/services/digital-growth-strategy",
+      "label": "Put conversion improvements inside the wider growth plan"
+    }
+  },
+  "/industries/saas": {
+    "title": "SaaS growth strategy: connect evaluation with activation.",
+    "intro": "A demo request is only useful when the buyer and use case fit. I connect search pages with the product workflows a prospect needs to evaluate, then review what happens after the signup or sales handover.",
+    "body": "The first-party inputs are often already inside the business: product demonstrations, integration constraints, support questions and reasons trials do not activate. We use them to build a buying journey that a generic list of SaaS keywords would miss.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Use-case search",
+        "Explain the workflow and prerequisites",
+        "Relevant trial or demo"
+      ],
+      [
+        "Integration evaluation",
+        "Confirm supported behaviour and limits",
+        "Setup or product walkthrough"
+      ],
+      [
+        "Competitor comparison",
+        "Use dated, verifiable differences",
+        "A fit-based evaluation decision"
+      ]
+    ],
+    "link": {
+      "href": "/services/digital-growth-strategy",
+      "label": "Explore Digital Growth Strategy"
+    }
+  },
+  "/industries/legal-tech": {
+    "title": "Legal technology growth needs precise product boundaries.",
+    "intro": "A law firm choosing software needs to understand the practice workflow, data handling and implementation effort. A consumer seeking legal advice has a different task. I separate these audiences before planning pages or judging lead quality.",
+    "body": "We work from approved product facts and appropriate subject review. The content should distinguish software functionality from professional legal advice and explain which jurisdictions, users and workflows the product actually supports.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Practice workflow",
+        "Describe the supported task and user role",
+        "Relevant product enquiry"
+      ],
+      [
+        "Security evaluation",
+        "Publish approved data and access details",
+        "A qualified procurement conversation"
+      ],
+      [
+        "Implementation planning",
+        "Explain migration inputs and responsibilities",
+        "A realistic onboarding discussion"
+      ]
+    ],
+    "link": {
+      "href": "/services/content-seo",
+      "label": "Explore Content SEO"
+    }
+  },
+  "/industries/health-tech": {
+    "title": "Health technology pages should clarify who the product serves.",
+    "intro": "A clinician evaluating a platform, a practice selecting software and a patient seeking care need different evidence. I give each audience a clear path, with product information separated from clinical education and service enquiries.",
+    "body": "Approved product documentation and appropriate expert review guide the content. We do not infer health outcomes from a software feature. Measurement focuses on the intended audience and action, with sensitive information excluded from public reports.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Provider evaluation",
+        "Explain workflow, capabilities and limitations",
+        "Suitable demo requests"
+      ],
+      [
+        "Patient-facing explanation",
+        "Use understandable reviewed information",
+        "The appropriate care or support route"
+      ],
+      [
+        "Procurement research",
+        "State approved deployment and integration facts",
+        "Qualified institutional enquiries"
+      ]
+    ],
+    "link": {
+      "href": "/services/Holistic-SEO",
+      "label": "Explore Holistic SEO"
+    }
+  },
+  "/industries/logistics": {
+    "title": "Logistics growth starts with the shipment you can support.",
+    "intro": "A freight enquiry needs more context than a contact email. Buyers compare origin and destination, transport mode, cargo type, handling needs and realistic coverage. I organise discovery and quotation pages around those operational facts.",
+    "body": "The roadmap separates route information from broad industry education. Useful pages answer what your team can move and what is needed for a quotation, while avoiding unsupported transit promises or pages for lanes you do not serve.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Route or lane search",
+        "Confirm origins, destinations and coverage",
+        "A serviceable shipment enquiry"
+      ],
+      [
+        "Specialist cargo",
+        "Explain handling capabilities and exclusions",
+        "A suitable operational discussion"
+      ],
+      [
+        "Quotation request",
+        "Collect the shipment details the team needs",
+        "A complete quote brief"
+      ]
+    ],
+    "link": {
+      "href": "/services/digital-growth-strategy",
+      "label": "Explore Digital Growth Strategy"
+    }
+  },
+  "/industries/design": {
+    "title": "Design agency growth depends on demonstrating the right expertise.",
+    "intro": "An impressive portfolio does not automatically explain why a founder should hire your team. I connect service positioning with project stories that show the brief, your actual role, the constraints and the decisions behind the work.",
+    "body": "Search pages should help clients choose the right engagement. We distinguish a visual refresh from a full identity system or product design programme, and link relevant case studies where they answer a real evaluation question.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Service comparison",
+        "Explain scope, fit and delivery responsibilities",
+        "A relevant project brief"
+      ],
+      [
+        "Portfolio discovery",
+        "Describe the problem, role and design decisions",
+        "A visit to the matching service"
+      ],
+      [
+        "Agency evaluation",
+        "Show process and relevant completed work",
+        "A qualified introductory conversation"
+      ]
+    ],
+    "link": {
+      "href": "/services/content-seo",
+      "label": "Explore Content SEO"
+    }
+  },
+  "/industries/ecommerce": {
+    "title": "Retail growth needs merchandising and search to work together.",
+    "intro": "The right category structure reflects how customers shop and what your store can supply. I connect search demand with assortment, product facts and conversion paths, so discovery leads to a relevant selection rather than an empty filter page.",
+    "body": "Commercial interpretation matters. We review organic orders with stock, returns, discounting and landing-page context where those data are available. More traffic to an unavailable range is not the same as healthier customer acquisition.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Category discovery",
+        "Explain the range and buying differences",
+        "Relevant product exploration"
+      ],
+      [
+        "Product evaluation",
+        "Clarify fit, materials or compatibility",
+        "A confident purchase decision"
+      ],
+      [
+        "Post-purchase questions",
+        "Make delivery and returns information accessible",
+        "Fewer avoidable pre-purchase doubts"
+      ]
+    ],
+    "link": {
+      "href": "/services/ecommerce-seo",
+      "label": "Explore E-commerce SEO"
+    }
+  },
+  "/industries/technology": {
+    "title": "Technology growth requires information buyers can validate.",
+    "intro": "Technical buyers need to see what a solution does, where it fits and what implementation requires. I connect application pages, documentation and commercial next steps without hiding important limitations behind broad innovation language.",
+    "body": "Your engineers and product team provide the facts: supported environments, integration methods, prerequisites and deployment boundaries. The content plan turns those facts into useful evaluation paths while keeping documentation and marketing claims consistent.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Application research",
+        "Describe a specific problem and supported solution",
+        "A relevant use-case page"
+      ],
+      [
+        "Technical validation",
+        "Link approved specifications and documentation",
+        "A feasible implementation discussion"
+      ],
+      [
+        "Commercial evaluation",
+        "Explain scope and the assessment process",
+        "A qualified sales enquiry"
+      ]
+    ],
+    "link": {
+      "href": "/services/Holistic-SEO",
+      "label": "Explore Holistic SEO"
+    }
+  },
+  "/industries/local-services": {
+    "title": "Local service growth is a discovery and booking problem.",
+    "intro": "Customers need to know that you offer the right service, cover their area and can be contacted through a working route. I align website pages and eligible business listings around those facts before expanding local content.",
+    "body": "Your operations team helps define a valuable enquiry. The plan can distinguish availability questions from suitable bookings and identify where missing service details, unclear coverage or a broken mobile form create avoidable friction.",
+    "headers": [
+      "Buyer task",
+      "Information the page needs",
+      "Useful next step"
+    ],
+    "rows": [
+      [
+        "Nearby service search",
+        "Confirm service, hours and real coverage",
+        "A relevant call or booking"
+      ],
+      [
+        "Provider comparison",
+        "Explain process and use genuine evidence",
+        "A suitable customer enquiry"
+      ],
+      [
+        "Contact or appointment",
+        "Make the next step clear on mobile",
+        "A completed and received request"
+      ]
+    ],
+    "link": {
+      "href": "/services/local-seo",
+      "label": "Explore Local SEO"
+    }
+  },
+  "/locations/seo-consultant-dhaka": {
+    "title": "A growth plan for how Dhaka customers discover and contact you.",
+    "intro": "For a Dhaka service business, a customer may discover an offer on social media, confirm details on Google and contact the team through a phone call or message. I review those steps together so prices, service descriptions and contact information do not contradict each other.",
+    "body": "The first priorities come from the business: the services you want to grow, the neighbourhoods you can actually cover and the questions your team repeatedly answers. Bangla and English pages should each explain the offer naturally, with an appropriate reviewer checking important service details.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Clinic appointment",
+        "Service, practitioner information and appointment route",
+        "Suitable appointment enquiries"
+      ],
+      [
+        "Local service request",
+        "Actual neighbourhood coverage and assessment process",
+        "Requests inside your operating area"
+      ],
+      [
+        "Social-to-website visit",
+        "Consistent offer details and a clear contact step",
+        "Completed enquiries, with source context"
+      ]
+    ],
+    "link": {
+      "href": "/services/digital-growth-strategy",
+      "label": "Plan the next step with Digital Growth Strategy"
+    }
+  },
+  "/locations/seo-consultant-san-francisco": {
+    "title": "Separate Bay Area discovery from a global product market.",
+    "intro": "A San Francisco software team may sell worldwide, while a local practice needs enquiries from a specific service area. The growth strategy starts by separating those markets. I do not assume a city keyword is useful for every product page just because the company is based in the Bay Area.",
+    "body": "For product businesses, we prioritise supported use cases, integrations and comparisons with facts your product team can verify. For local services, we confirm genuine neighbourhood coverage and a practical enquiry route. Remote delivery from Dubai uses agreed review windows and written implementation notes.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Global software evaluation",
+        "Supported workflows, integrations and product limits",
+        "Qualified demos or trials"
+      ],
+      [
+        "Bay Area service comparison",
+        "Actual coverage and relevant service detail",
+        "Suitable local enquiries"
+      ],
+      [
+        "Technical implementation",
+        "Accessible product pages and consistent canonical URLs",
+        "Deployed pages that can be crawled and used"
+      ]
+    ],
+    "link": {
+      "href": "/services/content-seo",
+      "label": "Plan the next step with Content SEO"
+    }
+  },
+  "/locations/seo-consultant-new-york": {
+    "title": "Make New York service pages useful before expanding their coverage.",
+    "intro": "A Manhattan office address does not explain whether a business serves a customer in Brooklyn or Queens. I start with actual coverage, the service being requested and the information needed to assess fit. A borough page needs a distinct customer purpose, not a different place name in the same paragraph.",
+    "body": "For specialist services, we make the audience, scope and appropriate professional review clear. For stores selling beyond the city, category and product discovery may matter more than local keywords. The plan distinguishes those journeys and measures enquiries or purchases in the right context.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Borough-level service enquiry",
+        "True coverage, service scope and contact route",
+        "Requests your team can fulfil"
+      ],
+      [
+        "Professional-service evaluation",
+        "Approved explanations, credentials and process",
+        "Qualified consultations"
+      ],
+      [
+        "National retail purchase",
+        "Relevant categories and complete product facts",
+        "Organic orders by landing-page group"
+      ]
+    ],
+    "link": {
+      "href": "/services/local-seo",
+      "label": "Plan the next step with Local SEO"
+    }
+  },
+  "/locations/seo-consultant-austin": {
+    "title": "Plan Austin growth around service capacity and buyer intent.",
+    "intro": "A service-area business and a software company should not inherit the same Austin SEO plan. For local operators, I verify which jobs and surrounding areas the team can support. For product teams, the focus is the customer problem, evaluation pages and the path into a trial or demo.",
+    "body": "An area such as Round Rock or Cedar Park belongs in the plan only when coverage is real and the page adds useful information. We use enquiry feedback and operational constraints to decide where to deepen an existing page and where a separate landing page is justified.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Home service enquiry",
+        "Job type, coverage and assessment requirements",
+        "Serviceable quote requests"
+      ],
+      [
+        "Software comparison",
+        "Product fit and verifiable differences",
+        "Suitable trial or demo requests"
+      ],
+      [
+        "Service-area expansion",
+        "Delivery capacity and distinct customer information",
+        "Qualified requests from supported areas"
+      ]
+    ],
+    "link": {
+      "href": "/services/seo-for-home-service-providers",
+      "label": "Plan the next step with SEO for Home Service Providers"
+    }
+  },
+  "/locations/seo-consultant-dubai": {
+    "title": "Connect Dubai discovery with the language and service customers need.",
+    "intro": "I am based in Dubai. For UAE businesses, I connect search research with the actual offer: who it serves, which language the customer uses and how an enquiry reaches the team. Arabic and English pages should be written for their readers rather than treated as interchangeable keyword containers.",
+    "body": "District terms such as Business Bay or JLT are useful when they help a customer understand real availability. Wider Gulf expansion requires a separate review of service scope, market information and language versions. We agree these boundaries before creating more location URLs.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Dubai service comparison",
+        "Accurate coverage and an understandable offer",
+        "Relevant consultation or booking"
+      ],
+      [
+        "Arabic or English research",
+        "Natural language and consistent service facts",
+        "A clear next step in that language"
+      ],
+      [
+        "UAE or wider Gulf enquiry",
+        "Actual market availability and delivery conditions",
+        "An enquiry routed to the right team"
+      ]
+    ],
+    "link": {
+      "href": "/services/digital-growth-strategy",
+      "label": "Plan the next step with Digital Growth Strategy"
+    }
+  },
+  "/locations/seo-consultant-london": {
+    "title": "Give London buyers an answer that fits the UK offer.",
+    "intro": "UK service language, currency and delivery details should reflect what your business actually provides. I review the offer and customer questions before adapting pages, so a London version does more than change spelling or insert a borough name.",
+    "body": "The growth plan separates local availability from national or international services. Where a borough-specific page is useful, it should explain genuine coverage or a different customer need. I work remotely from Dubai, with written priorities and review sessions arranged around your team.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Local professional-service search",
+        "Coverage, scope and relevant UK terminology",
+        "Suitable consultation requests"
+      ],
+      [
+        "National product evaluation",
+        "UK availability and approved product facts",
+        "Qualified commercial enquiries"
+      ],
+      [
+        "Borough-specific research",
+        "Useful area detail where the service differs",
+        "Requests within actual coverage"
+      ]
+    ],
+    "link": {
+      "href": "/services/content-seo",
+      "label": "Plan the next step with Content SEO"
+    }
+  },
+  "/locations/seo-consultant-saudi-arabia": {
+    "title": "Give Saudi buyers a clear path from research to a relevant enquiry.",
+    "intro": "For a business serving Saudi Arabia, I start by identifying whether the audience is a consumer, project team or procurement buyer. Arabic and English research can reveal different questions; the content should explain the real service and the information required to take the next step.",
+    "body": "A country-level strategy should not imply offices or availability in every city. Riyadh, Jeddah and other locations enter the page plan only when the offer and supporting information justify it. I work remotely from Dubai and coordinate content review with your team before publication.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Arabic service research",
+        "Clear localised scope and an appropriate contact route",
+        "A relevant customer enquiry"
+      ],
+      [
+        "B2B evaluation",
+        "Capabilities, requirements and approved project evidence",
+        "Qualified sales conversations"
+      ],
+      [
+        "Multi-city coverage",
+        "Confirmed availability and useful differences",
+        "Requests for supported services"
+      ]
+    ],
+    "link": {
+      "href": "/services/Holistic-SEO",
+      "label": "Plan the next step with Holistic SEO"
+    }
+  },
+  "/locations/seo-consultant-oman": {
+    "title": "Help Oman project buyers understand capability before they enquire.",
+    "intro": "For an Oman property or project business, a useful enquiry often starts with detailed evaluation. A buyer needs to understand the location, project status, service scope and the team’s actual capabilities. I organise discovery pages around those questions rather than relying on broad property or construction keywords.",
+    "body": "Arabic and English content should preserve the same approved project facts while reading naturally in each language. I work remotely from Dubai and use your team’s supplied information to build page briefs, improve the enquiry route and distinguish early research from a suitable project conversation.",
+    "headers": [
+      "Customer situation",
+      "Page priority",
+      "What we review"
+    ],
+    "rows": [
+      [
+        "Property project evaluation",
+        "Approved location, status and availability details",
+        "A relevant property enquiry"
+      ],
+      [
+        "Contractor or supplier assessment",
+        "Capabilities, coverage and quotation requirements",
+        "A complete project brief"
+      ],
+      [
+        "Arabic or English comparison",
+        "Consistent facts and accessible contact information",
+        "An enquiry with useful context"
+      ]
+    ],
+    "link": {
+      "href": "/services/digital-growth-strategy",
+      "label": "Plan the next step with Digital Growth Strategy"
+    }
+  }
+}

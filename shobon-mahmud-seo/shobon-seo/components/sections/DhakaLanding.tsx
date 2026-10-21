@@ -1,5 +1,6 @@
 
 import englishCopy from "@/content/copy-components-sections-DhakaLanding.json";
+import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { MapPin, Search, Megaphone, Globe, MessageCircle, BarChart3, ArrowUpRight, Check, Stethoscope, Store, CalendarDays } from "lucide-react";
 import { HeroImageLayout } from "@/components/content/EditableImage";
 import { Container } from "@/components/ui/Container";
@@ -95,6 +96,7 @@ const steps = [
       </section>
 
       <div className="location-content" data-location="dhaka">
+      {locale === "en" && <PageGrowthGuide path="/locations/seo-consultant-dhaka" />}
       <Section labelledBy="dhaka-context">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <div>

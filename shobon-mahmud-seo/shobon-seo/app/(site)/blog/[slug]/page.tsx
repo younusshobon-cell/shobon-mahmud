@@ -1,4 +1,5 @@
 import { PageSchema } from "@/components/seo/PageSchema";
+import references from "@/content/article-references.json";
 import pageCopy from "@/content/copy-app-blog-slug-page.json";
 import { heroTheme } from "@/lib/hero-theme";
 import type { Metadata } from "next";
@@ -18,7 +19,6 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { TableOfContents } from "@/components/blog/TableOfContents";
 import { ArticleBody } from "@/components/blog/ArticleBody";
-import { articleFaqs } from "@/lib/content/faqs";
 import { FAQ } from "@/components/content/FAQ";
 import { ContextCta } from "@/components/content/ContextCta";
 import { Section } from "@/components/content/Section";
@@ -54,6 +54,7 @@ export default async function ArticlePage({ params }: Props) {
   const path = `/blog/${post.slug}`;
   const cat = getCategory(post.category);
   const services = getServices(post.relatedServices);
+  const sources = references[post.slug as keyof typeof references] ?? [];
   let related = postsFor({ category: post.category, exclude: post.slug });
   if (related.length < 3)
     related = [
@@ -133,6 +134,10 @@ export default async function ArticlePage({ params }: Props) {
           </aside>
           <div className="min-w-0 max-w-[720px]">
             <ArticleBody post={post} />
+            {sources.length > 0 && <aside className="mt-10 rounded-2xl border border-line bg-paper-2 p-6" aria-label="Article references">
+              <h2 className="text-lg font-semibold text-ink">Official guidance and further reading</h2>
+              <ul className="mt-4 space-y-3">{sources.map(source => <li key={source.href}><a href={source.href} className="text-sm text-link underline underline-offset-4">{source.label}</a></li>)}</ul>
+            </aside>}
 
             <div className="mt-14">
               <ContextCta
@@ -192,7 +197,7 @@ export default async function ArticlePage({ params }: Props) {
       </Container>
 
       <Section tone="muted">
-        <FAQ faqs={articleFaqs(post.faqs, post.title)} />
+        <FAQ faqs={post.faqs ?? []} title="Questions about this guide" withSchema />
       </Section>
       <Section>
         <RelatedArticles items={related} title={pageCopy.text_012} />

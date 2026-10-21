@@ -10,7 +10,14 @@ export type CustomPage = {
     updated: string;
 };
 export function slugify(text: string) { return text.normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 100); }
-export function toMarkdown(sections:Post['sections']) {return sections.map(s=>`## ${s.heading}\n\n`+s.blocks.map(b=>b.type==='ul'||b.type==='ol'?b.items.map((x,i)=>`${b.type==='ul'?'-':`${i+1}.`} ${x}`).join('\n'):b.type==='heading'?`${'#'.repeat(b.level)} ${b.text}`:b.type==='image'?b.caption||b.alt:b.type==='table'?[b.headers,...b.rows].map(row=>row.join(' | ')).join('\n'):b.type==='h3'?`### ${b.text}`:b.type==='quote'?`> ${b.text}`:b.text).join('\n\n')).join('\n\n');}
+function markdownTable(headers: string[], rows: string[][]) {
+    const row = (cells: string[]) => '| ' + cells.map(cell => cell.replace(/\|/g, '\\|')).join(' | ') + ' |';
+    return [row(headers), row(headers.map(() => '---')), ...rows.map(row)].join('\n');
+}
+function tableCells(line: string) {
+    return line.trim().replace(/^\|/, '').replace(/\|$/, '').split(/(?<!\\)\|/).map(cell => cell.trim().replace(/\\\|/g, '|'));
+}
+export function toMarkdown(sections:Post['sections']) {return sections.map(s=>`## ${s.heading}\n\n`+s.blocks.map(b=>b.type==='ul'||b.type==='ol'?b.items.map((x,i)=>`${b.type==='ul'?'-':`${i+1}.`} ${x}`).join('\n'):b.type==='heading'?`${'#'.repeat(b.level)} ${b.text}`:b.type==='image'?b.caption||b.alt:b.type==='table'?markdownTable(b.headers,b.rows):b.type==='h3'?`### ${b.text}`:b.type==='quote'?`> ${b.text}`:b.text).join('\n\n')).join('\n\n');}
 export function parseMarkdown(body: string, previous: Post["sections"] = []): Post['sections'] {
     const sections: Post['sections'] = [];
     let section: Post['sections'][number] = { id: 'introduction', heading: 'Introduction', blocks: [] };
@@ -21,9 +28,22 @@ export function parseMarkdown(body: string, previous: Post["sections"] = []): Po
     } };
     const finish = () => { flush(); if (section.blocks.length)
         sections.push(section); };
-    for (const raw of body.replace(/\r/g, '').split('\n')) {
+    const lines = body.replace(/\r/g, '').split('\n');
+    for (let index = 0; index < lines.length; index++) {
+        const raw = lines[index];
         const line = raw.trim();
-        if (line.startsWith('## ')) {
+        const delimiter = lines[index + 1]?.trim();
+        if (line.includes('|') && delimiter?.includes('|') && tableCells(delimiter).every(cell => /^:?-{3,}:?$/.test(cell))) {
+            flush();
+            const headers = tableCells(line);
+            const rows: string[][] = [];
+            index++;
+            while (index + 1 < lines.length && lines[index + 1].trim().includes('|')) {
+                rows.push(tableCells(lines[++index]));
+            }
+            section.blocks.push({ type: 'table', headers, rows });
+        }
+        else if (line.startsWith('## ')) {
             finish();
             section = { id: `section-${sections.length + 1}`, heading: line.slice(3), blocks: [] };
         }
