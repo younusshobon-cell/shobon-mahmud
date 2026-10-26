@@ -9,7 +9,7 @@ import { Search } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 import { getIndustry, industries } from "@/lib/content/industries";
 import { getServices } from "@/lib/content/services";
-import { caseStudiesFor } from "@/lib/content/case-studies";
+import { publishedCaseStudies } from "@/lib/content/case-studies";
 import { postsFor } from "@/lib/content/blog";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { PageHero } from "@/components/content/PageHero";
@@ -48,7 +48,7 @@ export default async function IndustryPage({ params }: Props) {
   const industry = getIndustry((await params).slug);
   if (!industry) notFound();
   const path = `/industries/${industry.slug}`;
-  const studies = caseStudiesFor({ industry: industry.slug });
+  const studies = publishedCaseStudies;
   const articles = postsFor({ industry: industry.slug });
 
   return (
@@ -187,7 +187,7 @@ export default async function IndustryPage({ params }: Props) {
       </Section>
       {studies.length > 0 && (
         <Section tone="muted">
-          <RelatedCaseStudies items={studies} title={`${industry.name} work`} />
+          <RelatedCaseStudies items={studies} title="Selected client work" />
         </Section>
       )}
       <Section id="industry-faqs">

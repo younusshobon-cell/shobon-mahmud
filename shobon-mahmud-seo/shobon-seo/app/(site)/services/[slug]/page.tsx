@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/seo";
 import { serviceSchema } from "@/lib/schema";
 import { getService, getServices, services } from "@/lib/content/services";
 import { getIndustries } from "@/lib/content/industries";
-import { caseStudiesFor } from "@/lib/content/case-studies";
+import { publishedCaseStudies } from "@/lib/content/case-studies";
 import { postsFor } from "@/lib/content/blog";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { PageHero } from "@/components/content/PageHero";
@@ -55,7 +55,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
   if (service.slug === "Holistic-SEO") return <HolisticSeoLanding service={service} />;
   const path = `/services/${service.slug}`;
-  const studies = caseStudiesFor({ service: service.slug });
+  const studies = publishedCaseStudies;
   const articles = postsFor({ service: service.slug });
   const others = getServices(
     service.relatedServices ?? services.filter((s) => s.slug !== service.slug).map((s) => s.slug),

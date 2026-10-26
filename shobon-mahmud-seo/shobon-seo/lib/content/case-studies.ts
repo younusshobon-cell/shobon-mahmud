@@ -13,6 +13,8 @@ export const portfolioFilters: {
 
 export const caseStudies: CaseStudy[] = cms_caseStudies as CaseStudy[];
 
+export const publishedCaseStudies = caseStudies.filter((study) => !study.draft);
+
 export const getCaseStudy = (slug: string) =>
   caseStudies.find((c) => c.slug === slug);
 
