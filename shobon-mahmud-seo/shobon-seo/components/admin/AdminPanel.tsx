@@ -3,7 +3,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Eye,
-  BarChart3,
   Search,
   Globe,
   FileText,
@@ -17,7 +16,6 @@ import {
   Save,
   Plus,
   Download,
-  LayoutDashboard,
   CheckCircle2,
   Trash2,
   Menu,
@@ -32,19 +30,16 @@ import {
   type Value,
 } from "./FormEditor";
 import { EnquiryInbox } from "./EnquiryInbox";
-import { AnalyticsDashboard } from "./AnalyticsDashboard";
 import { VisualEditor } from "./VisualEditor";
 import { ContentStudio } from "./ContentStudio";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
 const navigation = [
-  { label: "WORKSPACE", items: ["Overview", "Analytics", "Enquiries"] },
-  { label: "PUBLISHING", items: ["Blog", "Pages", "Live editor", "Services", "Industries", "Locations", "Portfolio", "FAQs", "Media"] },
-  { label: "ADMINISTRATION", items: ["Site settings", "Page copy"] },
+  { label: "WORKSPACE", items: ["Enquiries"] },
+  { label: "PUBLISHING", items: ["Blog", "Pages", "Media"] },
+  { label: "ADMINISTRATION", items: ["Site settings"] },
 ];
 const icons: Record<string, typeof Globe> = {
-  Overview: LayoutDashboard,
-  Analytics: BarChart3,
   Enquiries: FileText,
   "Live editor": Eye,
   Pages: FileText,
@@ -72,7 +67,7 @@ export function AdminPanel({
   publishing: boolean;
 }) {
   const router = useRouter(),
-    [group, setGroup] = useState("Overview"),
+    [group, setGroup] = useState("Enquiries"),
     [visualPage, setVisualPage] = useState("/"),
     [visualImages, setVisualImages] = useState(false),
     [active, setActive] = useState<Entry | null>(null),
@@ -235,7 +230,7 @@ export function AdminPanel({
                 onClick={() => navigate(g)}
               >
                 <Icon size={18} />
-                <span>{g}</span>
+                <span>{g === "Enquiries" ? "Form submissions" : g === "Site settings" ? "Settings" : g}</span>
                 {!["Overview","Media","Analytics","Enquiries","Live editor","Pages"].includes(g) && (
                   <small>{manifest.filter((x) => x.group === g).length}</small>
                 )}
@@ -280,7 +275,7 @@ export function AdminPanel({
           <div>
             <span>Workspace</span>
             <span className="admin-slash">/</span>
-            {group}
+            {group === "Enquiries" ? "Form submissions" : group === "Site settings" ? "Settings" : group}
           </div>
           <button className="admin-small" onClick={() => navigate("Live editor")} aria-label="Open live page editor"><Eye size={16}/> Live editor</button>
           <a
@@ -317,17 +312,10 @@ export function AdminPanel({
               </span>
             </div>
           )}
-          {group === "Overview" ? (
-            <>
-              <div className="admin-command-bar"><div><p className="admin-eyebrow">SHOBON MAHMUD / WORKSPACE</p><h2>Workspace overview</h2><p className="admin-muted">Track website performance, manage enquiries and publish content.</p></div><div className="admin-heading-actions"><button className="admin-primary" onClick={()=>navigate("Enquiries")}>Manage enquiries <ArrowUpRight size={16}/></button><button className="admin-secondary" onClick={()=>navigate("Pages")}>Edit pages</button><button className="admin-secondary" onClick={()=>navigate("Blog")}>Manage blog</button></div></div>
-              <AnalyticsDashboard onDirty={setStudioDirty}/>
-            </>
+          {group === "Enquiries" ? (
+            <EnquiryWorkspace onDirty={setStudioDirty}/>
           ) : group === "Live editor" ? (
             <VisualEditor initialImages={visualImages} initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
-          ) : group === "Enquiries" ? (
-            <EnquiryWorkspace onDirty={setStudioDirty}/>
-          ) : group === "Analytics" ? (
-            <AnalyticsDashboard onDirty={setStudioDirty}/>
           ) : (group === "Blog" || group === "Pages") && !active && !studioAdvanced ? (
             <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onLiveEditor={(path, images) => navigate("Live editor", path, images)} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
           ) : group === "Media" ? (
@@ -576,7 +564,7 @@ export function AdminPanel({
             </>
           )}
           <footer className="admin-footer">
-            Shobon Mahmud · Private growth workspace<span>Content, performance & enquiries</span>
+            Shobon Mahmud · Private growth workspace<span>Content & form submissions</span>
           </footer>
         </div>
       </div>
@@ -770,5 +758,5 @@ function EnquiryWorkspace({onDirty}:{onDirty:(dirty:boolean)=>void}){
  const reportDirty=useCallback((v:boolean)=>{setDirty(v);onDirty(v);},[onDirty]);
  function canReload(){return !dirty || window.confirm('Discard unsaved enquiry notes and reload?');}
  const [days,setDays]=useState(28),[refresh,setRefresh]=useState(0);
- return <><div className="admin-page-heading"><div><p className="admin-eyebrow">RELATIONSHIPS & FOLLOW-UP</p><h1>Enquiries</h1><p className="admin-muted">Keep every submitted detail and next step in one place.</p></div><div className="admin-heading-actions"><select aria-label="Enquiry date range" value={days} onChange={e=>{if(canReload())setDays(Number(e.target.value));}}><option value={7}>Last 7 days</option><option value={28}>Last 28 days</option><option value={90}>Last 90 days</option></select><button className="admin-secondary" onClick={()=>{if(canReload())setRefresh(n=>n+1);}}>Refresh</button></div></div><EnquiryInbox days={days} refresh={refresh} onDirty={reportDirty}/></>;
+ return <><div className="admin-page-heading"><div><p className="admin-eyebrow">CONTACT FORM</p><h1>Form submissions</h1><p className="admin-muted">Keep every submitted detail and next step in one place.</p></div><div className="admin-heading-actions"><select aria-label="Enquiry date range" value={days} onChange={e=>{if(canReload())setDays(Number(e.target.value));}}><option value={7}>Last 7 days</option><option value={28}>Last 28 days</option><option value={90}>Last 90 days</option></select><button className="admin-secondary" onClick={()=>{if(canReload())setRefresh(n=>n+1);}}>Refresh</button></div></div><EnquiryInbox days={days} refresh={refresh} onDirty={reportDirty}/></>;
 }
