@@ -100,5 +100,11 @@
     "key": "[\"/images/about/photo-4.svg\",\"Photo space: Working together\"]",
     "src": "/uploads/d87dee12-7acf-47ec-b19e-69b1f76dfdd6.jpg",
     "alt": "Photo space: Working together"
+  },
+  {
+    "page": "/about",
+    "key": "[\"/_next/static/immutable/media/portrait-outdoor.0adwpkvmqt_20.jpg\",\"Shobon Mahmud standing on a tree-lined road in a white shirt\"]",
+    "src": "/uploads/f0aef658-ec94-429d-9fc2-b954b7e1c3a6.jpg",
+    "alt": "Shobon Mahmud standing on a tree-lined road in a white shirt"
   }
 ]
