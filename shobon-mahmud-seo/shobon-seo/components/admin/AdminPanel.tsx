@@ -32,6 +32,7 @@ import {
 import { EnquiryInbox } from "./EnquiryInbox";
 import { VisualEditor } from "./VisualEditor";
 import { ContentStudio } from "./ContentStudio";
+import { PageDirectory } from "./PageDirectory";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
 const navigation = [
@@ -85,7 +86,8 @@ export function AdminPanel({
     [mobile, setMobile] = useState(false),
     [studioDirty, setStudioDirty] = useState(false),
     [studioBusy, setStudioBusy] = useState(false),
-    [studioAdvanced, setStudioAdvanced] = useState(false);
+    [studioAdvanced, setStudioAdvanced] = useState(false),
+    [customPages, setCustomPages] = useState(false);
   const loadId = useRef(0),
     dirty = studioDirty || (doc !== null && JSON.stringify(draft) !== JSON.stringify(doc.data));
   useEffect(() => {
@@ -137,6 +139,7 @@ export function AdminPanel({
     if (next === "Live editor") {setVisualPage(path); setVisualImages(images);}
     setStudioDirty(false);
     setStudioAdvanced(false);
+    setCustomPages(false);
     setActive(null);
     setDoc(null);
     setDraft(null);
@@ -315,6 +318,8 @@ export function AdminPanel({
             <EnquiryWorkspace onDirty={setStudioDirty}/>
           ) : group === "Live editor" ? (
             <VisualEditor initialImages={visualImages} initialPage={visualPage} manifest={manifest} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy}/>
+          ) : group === "Pages" && !customPages && !active && !studioAdvanced ? (
+            <PageDirectory onEdit={(path) => navigate("Live editor", path)} onCustom={() => setCustomPages(true)}/>
           ) : (group === "Blog" || group === "Pages") && !active && !studioAdvanced ? (
             <ContentStudio key={group} kind={group === "Blog" ? "blog" : "pages"} publishing={publishing} onDirty={setStudioDirty} onBusy={setStudioBusy} onLiveEditor={(path, images) => navigate("Live editor", path, images)} onAdvanced={() => {if(discard()) {setStudioDirty(false); setStudioAdvanced(true);}}}/>
           ) : group === "Media" ? (

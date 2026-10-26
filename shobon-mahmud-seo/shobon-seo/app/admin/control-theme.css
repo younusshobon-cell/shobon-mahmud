@@ -63,3 +63,10 @@
 .visual-controls button[aria-pressed=true],.visual-inspector-tabs button[aria-pressed=true] { background:#f3f4ec; border-color:#c7cba9; color:#333823; }
 .visual-controls>label { flex:1; min-width:180px; }
 .visual-controls>label select { width:100%; max-width:360px; }
+
+.page-directory-search { margin-top:20px; }
+.page-directory-row { display:flex; align-items:center; gap:16px; padding:18px 22px; }
+.page-directory-row>div { flex:1; min-width:0; }
+.page-directory-row strong { display:block; font-size:14px; }
+.page-directory-row small { display:block; color:var(--a-muted); overflow-wrap:anywhere; margin-top:4px; }
+@media(max-width:650px) { .page-directory-row{flex-wrap:wrap;padding:16px;gap:12px} .page-directory-row>div{flex-basis:calc(100% - 40px)} }
