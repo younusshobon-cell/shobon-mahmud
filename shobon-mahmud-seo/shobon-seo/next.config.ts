@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import locations from "./content/locations-locations.json";
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -36,27 +35,6 @@ const nextConfig: NextConfig = {
           { key: "X-Robots-Tag", value: "noindex, nofollow" },
         ],
       },
-    ];
-  },
-  async redirects() {
-    // Friendly aliases that match the navigation label "Work"
-    return [
-      { source: "/services/international-seo", destination: "/services", permanent: true },
-      ...["technical-seo", "on-page-seo", "off-page-seo"].map((slug) => ({
-        source: `/services/${slug}`, destination: "/services/Holistic-SEO", permanent: true,
-      })),
-      ...["seo-audits", "keyword-research", "competitor-research"].map((slug) => ({
-        source: `/services/${slug}`, destination: "/services", permanent: true,
-      })),
-      ...locations.map(({ slug }) => ({
-        source: `/locations/${slug}`,
-        destination: `/locations/seo-consultant-${slug}`,
-        permanent: true,
-      })),
-      { source: "/work", destination: "/case-studies", statusCode: 301 },
-      { source: "/portfolio", destination: "/case-studies", statusCode: 301 },
-      { source: "/portfolio/:path+", destination: "/case-studies/:path+", statusCode: 301 },
-      { source: "/sitemaps/portfolio.xml", destination: "/sitemaps/case-studies.xml", statusCode: 301 },
     ];
   },
 };
