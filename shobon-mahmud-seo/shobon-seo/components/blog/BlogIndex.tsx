@@ -72,7 +72,7 @@ export function BlogIndex({
     <Container className="pb-20 lg:pb-28">
       {featured && (
         <article className="interactive-card group relative mt-12 grid gap-8 rounded-[var(--radius-panel)] border border-line p-5 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12">
-          <PostCover category={getCategory(featured.category)?.name ?? ""} image={featured.image} className="aspect-[16/10]" priority />
+          <PostCover category={getCategory(featured.category)?.name ?? ""} image={featured.image} imageAlt={featured.imageAlt} className="aspect-video" priority />
           <div>
             <p className="text-sm text-link">{pageCopy.text_004}{getCategory(featured.category)?.name}</p>
             <h2 className="mt-3 text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl">
@@ -109,7 +109,7 @@ export function BlogIndex({
           ))}
         </nav>
       )}
-      <div className="mt-20 border-t border-line pt-16"><FAQ faqs={blogFaqs} title={pageCopy.text_013} /></div>
+      {!activeCategory && <div className="mt-20 border-t border-line pt-16"><FAQ faqs={blogFaqs} title={pageCopy.text_013} /></div>}
     </Container>
     <FinalCta title="Put these SEO insights to work on your website." />
     </>

@@ -16,12 +16,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = getCategory((await params).category);
   if (!c) return {};
   const count = posts.filter((p) => p.category === c.slug).length;
-  // Empty categories stay live for navigation but are kept out of the index.
+  // Single-article filters help navigation but do not yet offer a distinct search landing page.
   return buildMetadata({
     title: `${c.name} Articles`,
     description: c.description,
     path: `/blog/category/${c.slug}`,
-    noindex: count === 0,
+    noindex: count < 2,
   });
 }
 

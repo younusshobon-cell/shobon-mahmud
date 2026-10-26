@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/blog/${p.slug}`,
     type: "article",
     image: p.image,
+    imageAlt: p.imageAlt,
     publishedTime: p.date,
     modifiedTime: p.updated ?? p.date,
   });
@@ -133,7 +134,10 @@ export default async function ArticlePage({ params }: Props) {
             />
           </aside>
           <div className="min-w-0 max-w-[720px]">
+            {post.image && <figure className="mb-8"><Image src={post.image} alt={post.imageAlt ?? post.title} width={1200} height={675} sizes="(min-width: 1024px) 720px, 100vw" className="h-auto w-full rounded-2xl" /><figcaption className="mt-2 text-xs text-muted">Custom editorial illustration; not a client result or product screenshot.</figcaption></figure>}
+            <details className="mb-8 rounded-xl border border-line p-4 lg:hidden"><summary className="cursor-pointer font-medium">In this guide</summary><nav aria-label="Article sections"><ol className="mt-4 space-y-3">{post.sections.filter(s => s.heading).map(s => <li key={s.id}><a className="text-link underline underline-offset-4" href={`#${s.id}`}>{s.heading}</a></li>)}</ol></nav></details>
             <ArticleBody post={post} />
+            {post.editorialNote && <p className="mt-8 border-l-2 border-line-strong pl-4 text-sm leading-relaxed text-muted">{post.editorialNote}</p>}
             {sources.length > 0 && <aside className="mt-10 rounded-2xl border border-line bg-paper-2 p-6" aria-label="Article references">
               <h2 className="text-lg font-semibold text-ink">Official guidance and further reading</h2>
               <ul className="mt-4 space-y-3">{sources.map(source => <li key={source.href}><a href={source.href} className="text-sm text-link underline underline-offset-4">{source.label}</a></li>)}</ul>

@@ -16,6 +16,20 @@
     "featured": true,
     "sections": [
       {
+        "id": "start-here",
+        "heading": "Start with the decision your audit needs to support",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A technical SEO audit checks whether the pages your business needs can be discovered, accessed and understood, then turns the findings into work someone can ship. This guide is for site owners and marketing teams preparing a development brief. You do not need an enterprise tool subscription to begin, but you do need access to the website and, ideally, its Search Console property."
+          },
+          {
+            "type": "p",
+            "text": "Before crawling, write down the site’s purpose, its important page types and the event that prompted the audit. A migration, a sudden traffic loss and a routine quarterly review need different starting points. For a lead-generation site, include the service pages and the contact journey. For a store, include categories, products, filters and checkout entry points. Preserve a dated baseline before making changes."
+          }
+        ]
+      },
+      {
         "id": "why-audits-fail",
         "heading": "Why most technical audits don't get implemented",
         "blocks": [
@@ -26,6 +40,24 @@
           {
             "type": "p",
             "text": "A useful audit starts from a different question: which technical issues are costing this site visibility on pages that matter to the business? Everything else is secondary."
+          }
+        ]
+      },
+      {
+        "id": "evidence-kit",
+        "heading": "Build an evidence kit before interpreting warnings",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Create a worksheet with one row per issue, not one row per URL. Record a representative URL, the affected template, the observed response, the expected behaviour, the likely owner and a repeatable check. Attach the crawl or inspection date. Grouping the same bug across a template keeps a thousand identical warnings from hiding a single high-impact fix."
+          },
+          {
+            "type": "p",
+            "text": "Use a crawler to discover linked URLs, an XML sitemap to identify the URLs you submit, and Search Console to inspect what Google reports. These lists answer different questions. A URL in a sitemap can still be inaccessible; a URL missing from the crawl may simply have no internal links. If you lack Search Console access, label indexing as unverified instead of inferring it from a browser visit."
+          },
+          {
+            "type": "p",
+            "text": "Inspect representative mobile pages yourself. Read the title, main heading and visible content. Follow the primary navigation and enquiry link. Compare initial HTML with rendered content when the site depends on JavaScript. A crawler warning becomes actionable only when you understand what a visitor or search engine actually encounters."
           }
         ]
       },
@@ -62,6 +94,34 @@
         ]
       },
       {
+        "id": "triage-example",
+        "heading": "Worked example: an important service page disappears",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Consider an illustrative site where a service page stops receiving enquiries after a redesign. First confirm that the URL returns the expected page. A successful HTTP response containing an error message is not a healthy landing page. Then check its robots directive, canonical destination, sitemap entry and links from the services hub. Use URL Inspection to distinguish a live accessibility test from the last indexed version."
+          },
+          {
+            "type": "p",
+            "text": "Suppose the page now declares the homepage as canonical. The development task is not “improve SEO”. It is “make the service template declare the intended service URL as canonical, and verify the rendered output on each service page”. Keep the previous configuration available for rollback. After deployment, repeat the HTTP and HTML checks, inspect the URL in Search Console and monitor the affected page group. Do not promise an immediate indexing or ranking recovery."
+          }
+        ]
+      },
+      {
+        "id": "performance-budget",
+        "heading": "Check the experience on the templates that matter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Performance investigations should start with the pages people use to make decisions. Test a representative service page, article and contact page on mobile. Separate field data from a one-off lab test: a test run helps diagnose a problem, while observed visitor data describes the experience over time. Keep device, connection and test conditions consistent when comparing releases."
+          },
+          {
+            "type": "p",
+            "text": "Look for oversized images, layout shifts caused by missing image dimensions and scripts that delay interaction. A compressed image still needs an appropriate display size. A fast homepage does not prove that a gallery or embedded booking tool works well. Give each proposed fix an acceptance check, such as a correctly sized responsive image or a form that remains usable while other resources load."
+          }
+        ]
+      },
+      {
         "id": "prioritise",
         "heading": "Prioritise by impact, not by count",
         "blocks": [
@@ -77,20 +137,6 @@
               "Performance problems on high-traffic templates follow.",
               "Cosmetic warnings go into a backlog, not the roadmap."
             ]
-          }
-        ]
-      },
-      {
-        "id": "write-tickets",
-        "heading": "Write tickets, not findings",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "A developer-ready ticket states the defect, representative URLs, expected behaviour, implementation dependencies and a release check. Record what was observed separately from the hypothesis about its business impact. That makes the handover testable and gives the next review something concrete to assess."
-          },
-          {
-            "type": "quote",
-            "text": "The output of a technical audit isn't a report. It's a set of changes that ship."
           }
         ]
       },
@@ -132,6 +178,34 @@
             "text": "As a digital growth partner, I use the audit to choose the work that supports the business next. A green tool report is not the outcome. A validated fix, a usable page and a clearer view of qualified actions are more useful evidence."
           }
         ]
+      },
+      {
+        "id": "write-tickets",
+        "heading": "Write tickets, not findings",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A developer-ready ticket states the defect, representative URLs, expected behaviour, implementation dependencies and a release check. Record what was observed separately from the hypothesis about its business impact. That makes the handover testable and gives the next review something concrete to assess."
+          },
+          {
+            "type": "quote",
+            "text": "The output of a technical audit isn't a report. It's a set of changes that ship."
+          }
+        ]
+      },
+      {
+        "id": "handoff",
+        "heading": "Turn the findings into an implementation ticket",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Use this ticket format: affected template; reproducible example; business consequence; proposed change; dependencies; owner; acceptance check; rollback approach. Keep evidence and assumptions separate. If an issue is only suspected, assign an investigation rather than prescribing an unverified fix."
+          },
+          {
+            "type": "p",
+            "text": "For the first release, choose a small set of issues whose outcomes can be checked independently. Re-crawl the changed templates and test their links, metadata and enquiry paths. Keep a release log beside your reporting so that later traffic changes can be considered alongside seasonality, content changes and other events. Closing a ticket means the intended behaviour is verified; it does not mean a search engine has rewarded the change."
+          }
+        ]
       }
     ],
     "faqs": [
@@ -152,11 +226,14 @@
       "ecommerce",
       "technology"
     ],
-    "updated": "2026-10-21"
+    "updated": "2026-10-27",
+    "image": "/images/blog/technical-seo-audit.webp",
+    "imageAlt": "Technical SEO Audit editorial cover with a highlighted website access path",
+    "editorialNote": "Practical guidance with illustrative examples, not a report of a client experiment. Official references are listed below; no ranking or indexing outcome is guaranteed."
   },
   {
     "slug": "saas-keyword-research-by-intent",
-    "title": "SaaS keyword research: start at the bottom of the funnel",
+    "title": "SaaS keyword research: turn buyer intent into a page plan",
     "description": "Map SaaS buying questions to comparison, integration and use-case pages. A practical process for prioritising keywords and measuring qualified demos.",
     "date": "2026-07-29",
     "author": "Shobon Mahmud",
@@ -168,6 +245,20 @@
     ],
     "sections": [
       {
+        "id": "research-outcome",
+        "heading": "What SaaS keyword research should produce",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "SaaS keyword research connects the language of a buyer’s problem with a page that helps them evaluate your product. The useful output is a keyword-to-page plan, not a large export. This guide is for founders, content leads and small marketing teams deciding what to publish next. Start with a product you understand well enough to explain its limits as well as its strengths."
+          },
+          {
+            "type": "p",
+            "text": "Bottom-of-funnel research is a useful starting point when you have a viable product and a clear buyer. It is not a rule that every company must publish comparison pages first. A new category may need education; an established product may need integration and migration information. Choose the work that removes the next obstacle for a suitable buyer."
+          }
+        ]
+      },
+      {
         "id": "volume-trap",
         "heading": "The search volume trap",
         "blocks": [
@@ -178,6 +269,24 @@
           {
             "type": "p",
             "text": "Sales notes can reveal searches that keyword tools estimate poorly: a supported integration, a particular workflow or a reason to replace an existing tool. Treat these as research inputs, then confirm that the product can answer the question and that a useful page would differ from the pages you already have."
+          }
+        ]
+      },
+      {
+        "id": "customer-language",
+        "heading": "Collect customer language before opening a keyword tool",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Write down the user, the buyer and the job they need to finish. They may be different people. An operations manager can search for scheduling software while an IT reviewer searches for access controls and an administrator looks for import instructions. A generic product description hides these separate needs."
+          },
+          {
+            "type": "p",
+            "text": "Build a seed list from questions in product demonstrations, support requests and sales conversations you are authorised to use. Remove customer identifiers. For each question, record the task, current workaround, desired outcome and product capability that addresses it. If the product cannot support the task, do not build an acquisition page that implies otherwise."
+          },
+          {
+            "type": "p",
+            "text": "Then expand the phrases with a keyword tool and current search results. Treat volume and difficulty as estimates, especially for narrow B2B searches. A repeated customer question can justify a useful page even when a tool reports little demand. It still needs an identifiable reader and a clear role in your acquisition or support journey."
           }
         ]
       },
@@ -198,6 +307,20 @@
         ]
       },
       {
+        "id": "serp-worksheet",
+        "heading": "Read the SERP as a page-format brief",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Search a candidate query in the market and language you serve. Note whether the results are product pages, review lists, tutorials, documentation or community discussions. Open several relevant results and record what readers are expected to know, what evidence appears and what decision the page helps them make. Ads and a familiar competitor name do not establish organic intent by themselves."
+          },
+          {
+            "type": "p",
+            "text": "If a search for “team scheduling software” returns product category lists, a broad essay about workplace productivity is unlikely to satisfy the same task. If “how to import shifts from a spreadsheet” returns help documentation, a pricing page will leave the user without an answer. Mixed results mean you should describe the ambiguity and choose the audience you can serve convincingly."
+          }
+        ]
+      },
+      {
         "id": "page-types",
         "heading": "Map keywords to page types",
         "blocks": [
@@ -212,12 +335,20 @@
         ]
       },
       {
-        "id": "measure",
-        "heading": "Measure pipeline, not sessions",
+        "id": "mapping-example",
+        "heading": "Worked example: map one workflow without creating duplicate pages",
         "blocks": [
           {
             "type": "p",
-            "text": "A comparison page with a few hundred visits a month can generate more demos than a blog post with tens of thousands. Track organic signups and demo requests by landing page so the value of these pages is visible."
+            "text": "Imagine a fictional scheduling product for small field-service teams. It supports recurring jobs and CSV imports but does not support payroll. This is an illustrative planning exercise, not a claim about a client or a measured campaign."
+          },
+          {
+            "type": "p",
+            "text": "“Scheduling software for cleaning teams” may belong on a use-case page explaining recurring visits, team assignments and a relevant demonstration. “How to import a cleaning rota” belongs in a practical help guide with file requirements and error handling. “Cleaning payroll software” should not become a product promise when payroll is unsupported. It may be excluded entirely."
+          },
+          {
+            "type": "p",
+            "text": "Group synonyms when they lead to the same task and the same useful answer. Split pages when the workflow, buyer or required evidence changes. Before adding a new URL, inspect existing pages to decide whether an update would serve the query better. Record a primary destination for each cluster so future writers do not recreate it."
           }
         ]
       },
@@ -259,6 +390,30 @@
             "text": "Prioritise using product fit, evidence of buyer demand, delivery effort and the value of the next action. Where attribution is available, review qualified demos or trials by landing-page group, then ask sales or product teams what happened after the conversion. A signup that never reaches a supported use case should not be interpreted as the same success as a suitable activated account."
           }
         ]
+      },
+      {
+        "id": "brief-and-review",
+        "heading": "Write a brief that a product expert can review",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A practical brief names the reader, their question, the intended page type, supported capabilities, limitations, evidence needed and next action. Include a short product walkthrough or a documented example where it helps evaluation. Comparison claims need current facts and a review date; avoid declaring competitors inferior without evidence."
+          },
+          {
+            "type": "p",
+            "text": "After publishing, review query relevance and landing-page behaviour before judging the topic by traffic. Where tracking allows, connect a trial or demo request to qualification and activation. A keyword that generates many unsuitable requests may reveal a misleading promise. Revisit the brief when the product changes, when sales hears new objections or when the search results shift to a different task."
+          }
+        ]
+      },
+      {
+        "id": "measure",
+        "heading": "Measure pipeline, not sessions",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A comparison page with a few hundred visits a month can generate more demos than a blog post with tens of thousands. Track organic signups and demo requests by landing page so the value of these pages is visible."
+          }
+        ]
       }
     ],
     "relatedServices": [
@@ -268,7 +423,7 @@
       "saas",
       "technology"
     ],
-    "updated": "2026-10-21",
+    "updated": "2026-10-27",
     "seoTitle": "SaaS Keyword Research: Buyer Intent to Page Plan",
     "faqs": [
       {
@@ -279,7 +434,10 @@
         "q": "Should comparison pages always come before educational content?",
         "a": "No. They are useful when buyers compare viable products and your team can provide accurate information. Prioritisation depends on product maturity, audience demand and the existing site, rather than a universal funnel rule."
       }
-    ]
+    ],
+    "image": "/images/blog/saas-keyword-research-by-intent.webp",
+    "imageAlt": "SaaS Keyword Research editorial cover with queries leading to a software page",
+    "editorialNote": "Practical guidance with illustrative examples, not a report of a client experiment. Official references are listed below; no ranking or indexing outcome is guaranteed."
   },
   {
     "slug": "google-business-profile-optimization",
@@ -295,12 +453,44 @@
     ],
     "sections": [
       {
+        "id": "starting-point",
+        "heading": "Optimise for the customer trying to reach you",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Google Business Profile optimisation means maintaining an accurate, eligible business listing and making the path from discovery to contact dependable. This guide is for owners and marketers of businesses that meet customers in person or travel to them. An online-only service should check eligibility before treating a profile as a marketing requirement."
+          },
+          {
+            "type": "p",
+            "text": "Start by searching for the business and reviewing the profile as a customer. Can you recognise the business, confirm the service, understand where it operates and contact the right team? Capture the current details before editing. If someone else manages the listing, establish authorised access instead of creating a competing duplicate."
+          }
+        ]
+      },
+      {
         "id": "three-factors",
         "heading": "The three things Google weighs",
         "blocks": [
           {
             "type": "p",
             "text": "Google describes local results as mainly based on relevance, distance and prominence. Complete and accurate information helps Google understand the business, while distance still affects which customers see it. Adding a service area or publishing a neighbourhood page does not relocate the business closer to a searcher."
+          }
+        ]
+      },
+      {
+        "id": "profile-workflow",
+        "heading": "Review the profile in a useful order",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "First check ownership, eligibility and the real-world name. Next review the business category, address or service-area arrangement, opening hours and phone number. Finally assess services, photos, website links and other fields available for that type of business. Feature availability can change, so use the current interface and official guidance rather than an old screenshot."
+          },
+          {
+            "type": "p",
+            "text": "Use categories to describe what the business is, not every phrase it would like to rank for. A clear category and accurate service list are easier for a customer to interpret than a business name padded with city and service keywords. Keep a change log so a later edit or rejected field can be investigated."
+          },
+          {
+            "type": "p",
+            "text": "For a business that travels to customers and does not receive them at its address, check Google’s service-area requirements and address-display rules. Do not imply a staffed branch merely because you accept enquiries from a city. Coverage information should match the jobs the team can actually fulfil."
           }
         ]
       },
@@ -335,6 +525,20 @@
         ]
       },
       {
+        "id": "photos-and-proof",
+        "heading": "Use photographs to answer practical questions",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Choose real photographs that help someone recognise the entrance, understand the service or assess relevant work. Obtain permission for identifiable people and customer premises. A useful caption or surrounding description should explain what the image shows without claiming a result that the image cannot establish."
+          },
+          {
+            "type": "p",
+            "text": "Website illustrations can explain a process, but they should not impersonate completed jobs, a physical office or real team photographs. Keep those roles separate. Replace outdated images when premises or services change, and review whether an important detail is visible at mobile size."
+          }
+        ]
+      },
+      {
         "id": "reviews",
         "heading": "Build a steady review habit",
         "blocks": [
@@ -351,6 +555,24 @@
           {
             "type": "p",
             "text": "The page your profile links to should reinforce the same services, location and contact details. Consistent information across your website, profile and major directories makes Google more confident about who you are and where you operate."
+          }
+        ]
+      },
+      {
+        "id": "service-area-example",
+        "heading": "Worked example: a contractor getting unsuitable enquiries",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Suppose a fictional maintenance company receives calls outside its operating area and requests for work it does not provide. More profile views would not solve that problem. Compare its listed services and coverage with the website, then listen to how the enquiry team describes the recurring mismatch. Use only authorised, anonymised records."
+          },
+          {
+            "type": "p",
+            "text": "Make the service description specific enough to distinguish repair from installation or planned maintenance. On the linked website page, explain coverage, what information is needed for a quote and how a customer can contact the team. Do not advertise emergency availability unless the business can provide it. A short, accurate expectation can be more useful than an aggressive promise."
+          },
+          {
+            "type": "p",
+            "text": "Check the phone link and enquiry form on a real mobile device. Verify that the submitted details reach the correct recipient. Keep an email or other practical alternative available if the customer cannot call. Review completed jobs or suitable requests separately from taps on a phone number."
           }
         ]
       },
@@ -392,6 +614,20 @@
             "text": "For a service-area business, review where requests come from and whether they can be fulfilled. Use that evidence to improve service detail and coverage information. Avoid expanding city pages solely to increase the number of indexed URLs."
           }
         ]
+      },
+      {
+        "id": "maintenance-routine",
+        "heading": "Set a maintenance routine around business changes",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Assign one person to check opening hours before holidays, review new customer feedback, remove expired offers and confirm that contact details still work. Keep profile edits aligned with the website. The schedule should reflect how often the business changes; publishing a post every day is not a substitute for accurate core information."
+          },
+          {
+            "type": "p",
+            "text": "Maintain a simple monthly record of profile interactions, website enquiries and the number of suitable requests your team can verify. Note closures, capacity constraints and promotions. If enquiries improve, investigate which changes plausibly contributed rather than attributing everything to a single profile edit. Local visibility and commercial fit are related, but they are not the same measure."
+          }
+        ]
       }
     ],
     "faqs": [
@@ -411,13 +647,16 @@
       "local-services",
       "health-tech"
     ],
-    "updated": "2026-10-21",
-    "seoTitle": "Google Business Profile: A Practical Review"
+    "updated": "2026-10-27",
+    "seoTitle": "Google Business Profile: A Practical Review",
+    "image": "/images/blog/google-business-profile-optimization.webp",
+    "imageAlt": "Local Search Visibility editorial cover with a map marker and profile card",
+    "editorialNote": "Practical guidance with illustrative examples, not a report of a client experiment. Official references are listed below; no ranking or indexing outcome is guaranteed."
   },
   {
     "slug": "internal-linking-strategy",
-    "title": "Internal linking: the SEO lever you fully control",
-    "description": "How to design an internal linking system that helps search engines understand your site and sends authority to the pages that need it.",
+    "title": "Internal linking strategy: build useful paths between your pages",
+    "description": "Plan internal links by page purpose, find orphan pages, write clear anchors and validate your changes with a practical workflow and worked example.",
     "date": "2026-06-16",
     "author": "Shobon Mahmud",
     "category": "seo-strategy",
@@ -428,12 +667,40 @@
     ],
     "sections": [
       {
+        "id": "linking-plan",
+        "heading": "What an internal linking strategy actually decides",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An internal linking strategy decides which pages should connect, why a reader would follow each connection and how those links will be maintained. It is useful when a site has valuable pages that are hard to find, several articles covering similar questions or navigation that has grown without a plan. Start with page purpose before choosing anchor text."
+          },
+          {
+            "type": "p",
+            "text": "This guide is for owners, editors and marketers who can change their website content. You can begin with a spreadsheet and a manual review of your important pages. A crawler becomes useful as the site grows, especially for checking broken destinations and comparing discovered URLs with your inventory."
+          }
+        ]
+      },
+      {
         "id": "why",
         "heading": "Why internal links matter",
         "blocks": [
           {
             "type": "p",
             "text": "Internal links do three jobs at once. They help search engines discover pages, they signal which pages are most important, and they describe what each page is about through anchor text. Unlike backlinks, every one of them is under your control."
+          }
+        ]
+      },
+      {
+        "id": "inventory",
+        "heading": "Make a page inventory with one job for each URL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "List the canonical URL, page type, primary audience, question answered and intended next step. A service hub helps someone compare options. A service detail page explains scope and fit. A guide teaches a task. A case study provides project evidence. The same topic can appear on all four without making the pages interchangeable."
+          },
+          {
+            "type": "p",
+            "text": "Mark pages that appear to answer the same question for the same reader. Review their content before adding more links. Two near-identical guides may need a clearer division of purpose or consolidation, while a tutorial and a service offer may both be useful. Do not remove a page solely because its title shares words with another."
           }
         ]
       },
@@ -466,6 +733,24 @@
         ]
       },
       {
+        "id": "journey-example",
+        "heading": "Worked example: connect a guide to a buying decision",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On this site, a reader of a technical SEO audit guide may next need help implementing the findings. A contextual link to Holistic SEO explains the broader work. A case study can then show how a particular engagement was approached, and the contact page lets the reader discuss their own situation. Each destination answers a different question."
+          },
+          {
+            "type": "p",
+            "text": "Write the link where that next question naturally occurs. “See the scope of Holistic SEO support” is clearer than “click here” and more honest than “download an audit checklist” when the target is a service page. If the reader needs another educational explanation first, link to that instead of forcing every path toward a contact form."
+          },
+          {
+            "type": "p",
+            "text": "A useful test is to read the paragraph without looking at the link destination. Can a reader predict what they will find? Then follow the link on mobile. Confirm that the target delivers the promise and that the back button returns them to a sensible place."
+          }
+        ]
+      },
+      {
         "id": "find-opportunities",
         "heading": "Finding quick wins",
         "blocks": [
@@ -481,6 +766,20 @@
           {
             "type": "p",
             "text": "This site is built on the same principle: every service, industry, location, case study and article links to the related ones, so each page supports the others."
+          }
+        ]
+      },
+      {
+        "id": "orphan-check",
+        "heading": "Find orphan pages and distinguish navigation from context",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Compare the pages discovered from the homepage with your intended indexable URL list. A page appearing only in a sitemap may be missing from the reader’s journey. Before calling it orphaned, account for pagination, language versions and links that your crawler may not have rendered. Confirm the finding in the browser or HTML."
+          },
+          {
+            "type": "p",
+            "text": "Navigation and footer links help people move around the site, but a relevant sentence can explain a relationship more clearly. Use both deliberately. Do not paste the same list of destinations into every section to inflate link counts. On a large site, maintain related-content rules and periodically check that they still select useful pages."
           }
         ]
       },
@@ -526,6 +825,24 @@
             "text": "Avoid adding the same commercial link to every paragraph. The objective is a coherent customer journey and discoverable site structure. Internal links support those goals, but they do not guarantee that Google will index every destination or improve its ranking."
           }
         ]
+      },
+      {
+        "id": "release-checks",
+        "heading": "Validate changes without inventing a link quota",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "After editing, check that important destinations return the intended content, that anchors are real links and that old redirects have not been left in the path. Review links to unpublished content and external domains separately. If a destination is intentionally unavailable, remove or replace the recommendation rather than leaving a dead end."
+          },
+          {
+            "type": "p",
+            "text": "Track the changed source pages and destinations in a dated log. Look for better discovery and relevant visitor journeys, while keeping ranking claims cautious. Internal link changes often happen alongside content improvements; that makes a simple before-and-after comparison insufficient to prove causation."
+          },
+          {
+            "type": "p",
+            "text": "There is no useful universal target for links per thousand words. Add a link when it gives the reader needed detail, evidence or a next action. Remove it when the destination no longer fulfils that role. That editorial rule is easier to maintain than a formula and works across service pages, articles and case studies."
+          }
+        ]
       }
     ],
     "relatedServices": [
@@ -535,7 +852,7 @@
       "saas",
       "ecommerce"
     ],
-    "updated": "2026-10-21",
+    "updated": "2026-10-27",
     "seoTitle": "Internal Linking: Page Roles, Anchors & Checks",
     "faqs": [
       {
@@ -546,7 +863,10 @@
         "q": "Can internal links guarantee indexing?",
         "a": "No. They help discovery and explain relationships between pages, but indexing also depends on other signals and Google’s decisions. Inspect the destination and its purpose if an important URL remains excluded."
       }
-    ]
+    ],
+    "image": "/images/blog/internal-linking-strategy.webp",
+    "imageAlt": "Internal Linking editorial cover showing connected page outlines",
+    "editorialNote": "Practical guidance with illustrative examples, not a report of a client experiment. Official references are listed below; no ranking or indexing outcome is guaranteed."
   },
   {
     "slug": "ai-overviews-search-visibility",
@@ -561,6 +881,20 @@
       "search visibility"
     ],
     "sections": [
+      {
+        "id": "scope",
+        "heading": "What this guide can help you decide",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "AI Overviews are generated responses within Google Search that can include links to supporting pages. For a business owner, the practical question is how to keep useful content accessible and credible while understanding changes in discovery. This guide separates established search requirements, editorial decisions and measurement limits. It does not offer a formula for being cited."
+          },
+          {
+            "type": "p",
+            "text": "A citation, a website visit and a qualified enquiry are different outcomes. Decide which one matters to the business before investing in a new reporting tool or rewriting the site. A consultancy may value a small number of suitable conversations more than frequent appearances for broad informational questions."
+          }
+        ]
+      },
       {
         "id": "what-changes",
         "heading": "What changes",
@@ -582,6 +916,24 @@
         ]
       },
       {
+        "id": "diagnose-first",
+        "heading": "Investigate the traffic change before blaming AI",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Choose a stable group of pages and compare equivalent periods, keeping seasonality and recent releases in mind. Separate branded and non-branded queries where the reporting permits it. Check whether the change affects one page type, one market or the whole site. Review indexing and technical changes before assuming that a new search feature is responsible."
+          },
+          {
+            "type": "p",
+            "text": "Manually inspect representative queries and record the date, market, language and observed result format. These observations are samples, not a complete record of every user’s experience. A different account or later search may show a different answer. Keep screenshots of what you actually observed rather than reconstructing an imagined result."
+          },
+          {
+            "type": "p",
+            "text": "If impressions remain stable while clicks fall, that is a reason to investigate the result page and your listing, not proof of a single cause. If qualified enquiries are stable, the business impact differs from a situation where both visits and suitable leads decline. Reporting should preserve that distinction."
+          }
+        ]
+      },
+      {
         "id": "how-to-adapt",
         "heading": "How to adapt",
         "blocks": [
@@ -594,16 +946,6 @@
               "Make authorship and responsibility for important claims clear.",
               "Keep structured data consistent with visible content; do not treat it as a citation guarantee."
             ]
-          }
-        ]
-      },
-      {
-        "id": "measure",
-        "heading": "Measure differently",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Review the generative AI reporting available in your Search Console account alongside overall Web performance, qualified actions and landing-page groups. Google’s current guidance points to a Generative AI performance report. Confirm the report’s scope and availability in your property, and keep referral analytics and manual observations separate rather than treating them as a complete citation record."
           }
         ]
       },
@@ -645,6 +987,66 @@
             "text": "As a digital growth partner, I connect these content decisions with the business goal. Citation observations may be interesting, but a useful enquiry or suitable product evaluation is a different measure. Keep both in context and do not promise inclusion in a generated answer."
           }
         ]
+      },
+      {
+        "id": "evidence-example",
+        "heading": "Worked example: make a service explanation worth visiting",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Imagine a buyer researching whether an SEO audit includes implementation. A generic page may say that an audit identifies issues. A useful service explanation states what is delivered, what access is needed, who fixes the issues, how changes are checked and which work requires a separate agreement. These details help a person evaluate the offer even if a search answer has already explained the definition."
+          },
+          {
+            "type": "p",
+            "text": "For a software page, the equivalent evidence might be a supported workflow and its limits. For a case study, it might be a dated result with a defined metric and a description of the work. Use information the business can verify. Do not invent a study, customer quote or performance chart to make an article look experienced."
+          },
+          {
+            "type": "p",
+            "text": "A conceptual illustration can improve readability, but it is not evidence. Label it accordingly. Where a screenshot or demonstration would support a factual claim, use an authentic capture with permission and enough context to interpret it. If the evidence is unavailable, narrow the claim rather than decorating it."
+          }
+        ]
+      },
+      {
+        "id": "content-decisions",
+        "heading": "Decide whether to update, combine or leave a page alone",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Start with the reader’s unanswered question. Update a page when facts or product capabilities have changed. Combine overlapping material when two pages compete to solve the same task and neither has a distinct purpose. Leave a useful page alone when the proposed change would merely add generic paragraphs or repeat its existing answer."
+          },
+          {
+            "type": "p",
+            "text": "Keep headings descriptive and make definitions easy to find, but do not force every section into an identical question-and-answer format. Some tasks need a procedure, others a comparison or a worked example. Readability should follow the decision the visitor needs to make."
+          },
+          {
+            "type": "p",
+            "text": "Before adding a new AI-focused service claim, describe the actual work you can deliver. Content review, technical accessibility and reporting are concrete services. Guaranteed placement in a generated answer is not an outcome you control."
+          }
+        ]
+      },
+      {
+        "id": "measure",
+        "heading": "Measure differently",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Review the generative AI reporting available in your Search Console account alongside overall Web performance, qualified actions and landing-page groups. Google’s current guidance points to a Generative AI performance report. Confirm the report’s scope and availability in your property, and keep referral analytics and manual observations separate rather than treating them as a complete citation record."
+          }
+        ]
+      },
+      {
+        "id": "reporting-plan",
+        "heading": "Build a reporting note that admits what is unknown",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A useful monthly note records the page group reviewed, the changes shipped, the reports consulted and the business actions observed. Put sampled citation observations in a separate section. State when a tool cannot identify the source of a visit or distinguish a search feature. Missing attribution should remain missing rather than being assigned to AI by assumption."
+          },
+          {
+            "type": "p",
+            "text": "Ask the sales or enquiry team whether visitors are better informed and whether the requests fit the offer. Treat that feedback as qualitative evidence, with its limitations. Combine it with measured actions and search reporting to decide the next improvement. The goal is a more useful acquisition journey, not an unsupported claim that every content change has improved AI visibility."
+          }
+        ]
       }
     ],
     "relatedServices": [
@@ -655,7 +1057,7 @@
       "saas",
       "technology"
     ],
-    "updated": "2026-10-21",
+    "updated": "2026-10-27",
     "seoTitle": "AI Search Visibility: Content & Measurement",
     "faqs": [
       {
@@ -666,6 +1068,9 @@
         "q": "Can an agency guarantee that AI Overviews will cite my page?",
         "a": "No. Eligibility and useful content do not guarantee crawling, indexing or selection in a generated answer. A responsible plan explains the work and measurement limits without promising a citation."
       }
-    ]
+    ],
+    "image": "/images/blog/ai-overviews-search-visibility.webp",
+    "imageAlt": "AI Search Visibility editorial cover with an answer and supporting sources",
+    "editorialNote": "Practical guidance with illustrative examples, not a report of a client experiment. Official references are listed below; no ranking or indexing outcome is guaranteed."
   }
 ]

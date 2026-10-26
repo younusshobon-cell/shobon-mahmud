@@ -1,5 +1,136 @@
 [
   {
+    "slug": "digital-growth-strategy",
+    "name": "Digital Growth Strategy",
+    "seoTitle": "Digital Growth Strategy & Partner Support",
+    "summary": "A practical digital growth strategy connecting acquisition, content, conversion and measurement with a prioritised 90-day roadmap.",
+    "heroTitle": "Your digital growth strategy, from diagnosis to delivery.",
+    "heroIntro": "As your Digital Growth Partner, I help you identify the constraint between being discovered and winning useful business. We connect audience insight, channel priorities, website conversion and measurement in one realistic delivery plan.",
+    "problem": [
+      "You may already invest in a website, content and marketing without knowing which part deserves attention next. More activity can increase cost without improving the customer journey.",
+      "A digital growth strategy starts with your commercial priorities and the evidence you have. Together, we identify where discovery, trust, conversion or measurement is holding progress back, then give the work a clear sequence."
+    ],
+    "covers": [
+      {
+        "title": "Business and customer diagnosis",
+        "body": "Clarify priority offers, target buyers, sales questions and the actions that represent qualified interest."
+      },
+      {
+        "title": "Acquisition and channel priorities",
+        "body": "Review where relevant visitors come from and choose the channels worth testing. SEO is one part of the plan; paid campaign delivery is scoped separately."
+      },
+      {
+        "title": "Website and funnel review",
+        "body": "Connect landing pages, service information, proof and enquiry steps to the needs of your buyers."
+      },
+      {
+        "title": "Content and distribution direction",
+        "body": "Give educational, comparison and commercial content distinct roles, with practical distribution opportunities."
+      },
+      {
+        "title": "Measurement and reporting",
+        "body": "Agree a baseline, event definitions, lead-quality feedback and a review rhythm before judging performance."
+      },
+      {
+        "title": "A prioritised growth roadmap",
+        "body": "Sequence opportunities by expected value, effort, dependencies and the team’s ability to deliver."
+      }
+    ],
+    "process": [
+      {
+        "title": "Understand the business",
+        "body": "Start with a working session on your offer, customers, goals, constraints and current marketing."
+      },
+      {
+        "title": "Review the evidence",
+        "body": "Assess relevant analytics, search data, enquiry paths and customer feedback. Record gaps instead of treating missing data as certainty."
+      },
+      {
+        "title": "Choose the constraint",
+        "body": "Identify the most useful starting point and separate confirmed problems from hypotheses to test."
+      },
+      {
+        "title": "Plan the first 90 days",
+        "body": "Define workstreams, owners, deliverables and review points. Keep the backlog realistic for your resources."
+      },
+      {
+        "title": "Support delivery and learning",
+        "body": "Review implementation and performance at agreed intervals, then adjust the priorities as evidence changes."
+      }
+    ],
+    "deliverables": [
+      "Business and customer discovery summary",
+      "Growth baseline and measurement gaps",
+      "Customer journey and channel opportunity review",
+      "Prioritised 90-day roadmap with owners and dependencies",
+      "Content, conversion and acquisition briefs for agreed priorities",
+      "Reporting framework and review cadence"
+    ],
+    "commonProblems": [
+      "Marketing tasks are disconnected",
+      "Traffic grows without qualified enquiries",
+      "No shared priorities between leadership and delivery teams",
+      "Reports show activity but little business context"
+    ],
+    "whoFor": [
+      "Founders who need a practical growth direction",
+      "Service businesses connecting visibility with enquiries",
+      "Small teams needing senior prioritisation alongside execution",
+      "Businesses preparing a new website or market launch"
+    ],
+    "useCases": [
+      {
+        "title": "A new service business",
+        "body": "Connect the offer, core service pages, local discovery and enquiry measurement before scaling content or campaigns."
+      },
+      {
+        "title": "A business with several marketing suppliers",
+        "body": "Create a shared roadmap so SEO, content, website work and measurement support the same commercial priorities."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is a digital growth partner?",
+        "a": "A digital growth partner helps connect marketing, website conversion and measurement around business growth. In my engagements, that means diagnosing the customer journey, agreeing priorities and supporting a clear plan with defined responsibilities."
+      },
+      {
+        "q": "What does a digital growth strategy include?",
+        "a": "A digital growth strategy includes your audience, business goals, channel priorities, conversion plan, measurement and delivery roadmap. The useful level of detail depends on your starting point, resources and sales cycle."
+      },
+      {
+        "q": "How is a growth partner different from a digital marketing agency?",
+        "a": "A growth partner usually coordinates priorities across the customer journey, while an agency may focus on delivering particular channels or campaigns. The labels vary, so compare the actual scope, ownership and reporting rather than the title alone."
+      },
+      {
+        "q": "How is growth marketing different from digital marketing?",
+        "a": "Digital marketing describes online channels; growth marketing focuses on improving measurable stages of the customer journey through learning and experimentation. They overlap: a growth plan can use SEO, content or other digital channels to address a specific business constraint."
+      },
+      {
+        "q": "Can I start with a one-off growth audit?",
+        "a": "Yes, you can start with a standalone diagnosis and roadmap. We can then agree whether your team implements it or whether ongoing delivery support would help."
+      },
+      {
+        "q": "How long does a digital growth strategy take to show results?",
+        "a": "The timeline depends on the starting point, channel, implementation pace and sales cycle. A 90-day roadmap creates a practical review window, not a promise that a particular growth target will be reached in 90 days."
+      },
+      {
+        "q": "What decision should the growth roadmap help us make first?",
+        "a": "It should identify the main constraint between your priority customer and a valuable business action. The first workstream follows that evidence, with an owner, scope and validation plan rather than a fixed allocation of tasks across every channel."
+      }
+    ],
+    "relatedIndustries": [
+      "saas",
+      "legal-tech",
+      "health-tech"
+    ],
+    "relatedServices": [
+      "conversion-rate-optimization",
+      "Holistic-SEO",
+      "content-seo"
+    ],
+    "ctaLine": "Ready to connect your marketing with a clearer growth plan?"
+  },
+  {
     "slug": "Holistic-SEO",
     "name": "Holistic SEO",
     "seoTitle": "Holistic SEO & Digital Growth Planning",
@@ -803,137 +934,6 @@
       "Holistic-SEO",
       "content-seo"
     ]
-  },
-  {
-    "slug": "digital-growth-strategy",
-    "name": "Digital Growth Strategy",
-    "seoTitle": "Digital Growth Strategy & Partner Support",
-    "summary": "A practical digital growth strategy connecting acquisition, content, conversion and measurement with a prioritised 90-day roadmap.",
-    "heroTitle": "Your digital growth strategy, from diagnosis to delivery.",
-    "heroIntro": "As your Digital Growth Partner, I help you identify the constraint between being discovered and winning useful business. We connect audience insight, channel priorities, website conversion and measurement in one realistic delivery plan.",
-    "problem": [
-      "You may already invest in a website, content and marketing without knowing which part deserves attention next. More activity can increase cost without improving the customer journey.",
-      "A digital growth strategy starts with your commercial priorities and the evidence you have. Together, we identify where discovery, trust, conversion or measurement is holding progress back, then give the work a clear sequence."
-    ],
-    "covers": [
-      {
-        "title": "Business and customer diagnosis",
-        "body": "Clarify priority offers, target buyers, sales questions and the actions that represent qualified interest."
-      },
-      {
-        "title": "Acquisition and channel priorities",
-        "body": "Review where relevant visitors come from and choose the channels worth testing. SEO is one part of the plan; paid campaign delivery is scoped separately."
-      },
-      {
-        "title": "Website and funnel review",
-        "body": "Connect landing pages, service information, proof and enquiry steps to the needs of your buyers."
-      },
-      {
-        "title": "Content and distribution direction",
-        "body": "Give educational, comparison and commercial content distinct roles, with practical distribution opportunities."
-      },
-      {
-        "title": "Measurement and reporting",
-        "body": "Agree a baseline, event definitions, lead-quality feedback and a review rhythm before judging performance."
-      },
-      {
-        "title": "A prioritised growth roadmap",
-        "body": "Sequence opportunities by expected value, effort, dependencies and the team’s ability to deliver."
-      }
-    ],
-    "process": [
-      {
-        "title": "Understand the business",
-        "body": "Start with a working session on your offer, customers, goals, constraints and current marketing."
-      },
-      {
-        "title": "Review the evidence",
-        "body": "Assess relevant analytics, search data, enquiry paths and customer feedback. Record gaps instead of treating missing data as certainty."
-      },
-      {
-        "title": "Choose the constraint",
-        "body": "Identify the most useful starting point and separate confirmed problems from hypotheses to test."
-      },
-      {
-        "title": "Plan the first 90 days",
-        "body": "Define workstreams, owners, deliverables and review points. Keep the backlog realistic for your resources."
-      },
-      {
-        "title": "Support delivery and learning",
-        "body": "Review implementation and performance at agreed intervals, then adjust the priorities as evidence changes."
-      }
-    ],
-    "deliverables": [
-      "Business and customer discovery summary",
-      "Growth baseline and measurement gaps",
-      "Customer journey and channel opportunity review",
-      "Prioritised 90-day roadmap with owners and dependencies",
-      "Content, conversion and acquisition briefs for agreed priorities",
-      "Reporting framework and review cadence"
-    ],
-    "commonProblems": [
-      "Marketing tasks are disconnected",
-      "Traffic grows without qualified enquiries",
-      "No shared priorities between leadership and delivery teams",
-      "Reports show activity but little business context"
-    ],
-    "whoFor": [
-      "Founders who need a practical growth direction",
-      "Service businesses connecting visibility with enquiries",
-      "Small teams needing senior prioritisation alongside execution",
-      "Businesses preparing a new website or market launch"
-    ],
-    "useCases": [
-      {
-        "title": "A new service business",
-        "body": "Connect the offer, core service pages, local discovery and enquiry measurement before scaling content or campaigns."
-      },
-      {
-        "title": "A business with several marketing suppliers",
-        "body": "Create a shared roadmap so SEO, content, website work and measurement support the same commercial priorities."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "What is a digital growth partner?",
-        "a": "A digital growth partner helps connect marketing, website conversion and measurement around business growth. In my engagements, that means diagnosing the customer journey, agreeing priorities and supporting a clear plan with defined responsibilities."
-      },
-      {
-        "q": "What does a digital growth strategy include?",
-        "a": "A digital growth strategy includes your audience, business goals, channel priorities, conversion plan, measurement and delivery roadmap. The useful level of detail depends on your starting point, resources and sales cycle."
-      },
-      {
-        "q": "How is a growth partner different from a digital marketing agency?",
-        "a": "A growth partner usually coordinates priorities across the customer journey, while an agency may focus on delivering particular channels or campaigns. The labels vary, so compare the actual scope, ownership and reporting rather than the title alone."
-      },
-      {
-        "q": "How is growth marketing different from digital marketing?",
-        "a": "Digital marketing describes online channels; growth marketing focuses on improving measurable stages of the customer journey through learning and experimentation. They overlap: a growth plan can use SEO, content or other digital channels to address a specific business constraint."
-      },
-      {
-        "q": "Can I start with a one-off growth audit?",
-        "a": "Yes, you can start with a standalone diagnosis and roadmap. We can then agree whether your team implements it or whether ongoing delivery support would help."
-      },
-      {
-        "q": "How long does a digital growth strategy take to show results?",
-        "a": "The timeline depends on the starting point, channel, implementation pace and sales cycle. A 90-day roadmap creates a practical review window, not a promise that a particular growth target will be reached in 90 days."
-      },
-      {
-        "q": "What decision should the growth roadmap help us make first?",
-        "a": "It should identify the main constraint between your priority customer and a valuable business action. The first workstream follows that evidence, with an owner, scope and validation plan rather than a fixed allocation of tasks across every channel."
-      }
-    ],
-    "relatedIndustries": [
-      "saas",
-      "legal-tech",
-      "health-tech"
-    ],
-    "relatedServices": [
-      "conversion-rate-optimization",
-      "Holistic-SEO",
-      "content-seo"
-    ],
-    "ctaLine": "Ready to connect your marketing with a clearer growth plan?"
   },
   {
     "slug": "conversion-rate-optimization",

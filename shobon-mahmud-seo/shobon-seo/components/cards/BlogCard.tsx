@@ -12,7 +12,7 @@ export function BlogCard({ post, priority }: { post: PostWithMeta; priority?: bo
   const cat = getCategory(post.category);
   return (
     <article className="interactive-card group relative flex h-full flex-col">
-      <PostCover title={post.title} category={cat?.name ?? ""} image={post.image} className="aspect-[16/10]" priority={priority} />
+      <PostCover title={post.title} category={cat?.name ?? ""} image={post.image} imageAlt={post.imageAlt} className="aspect-video" priority={priority} />
       <p className="mt-5 text-sm text-link">{cat?.name}</p>
       <h3 className="mt-2 text-lg font-semibold leading-snug tracking-tight text-ink">
         <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0 group-hover:underline decoration-1 underline-offset-4">

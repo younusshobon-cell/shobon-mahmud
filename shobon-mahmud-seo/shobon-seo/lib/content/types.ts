@@ -129,6 +129,8 @@ export type Block =
   | { type: "quote"; text: string };
 
 export type Post = {
+  imageAlt?: string;
+  editorialNote?: string;
   status?: "draft" | "published";
   slug: string;
   title: string;

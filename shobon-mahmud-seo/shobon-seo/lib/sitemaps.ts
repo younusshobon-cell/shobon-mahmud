@@ -32,7 +32,7 @@ export function entriesFor(section: SitemapSection): SitemapEntry[] {
       return [
         { path: "/blog" },
         ...Array.from({ length: Math.max(0, pageCount - 1) }, (_, i) => ({ path: `/blog/page/${i + 2}` })),
-        ...blogCategories.filter(({ slug }) => posts.some((post) => post.category === slug)).map(({ slug }) => ({ path: `/blog/category/${slug}` })),
+        ...blogCategories.filter(({ slug }) => posts.filter((post) => post.category === slug).length >= 2).map(({ slug }) => ({ path: `/blog/category/${slug}` })),
         ...posts.map(({ slug, updated, date }) => ({ path: `/blog/${slug}`, lastModified: updated ?? date })),
       ];
     }

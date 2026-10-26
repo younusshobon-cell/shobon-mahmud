@@ -1,5 +1,4 @@
 
-import pageCopy from "@/content/copy-components-cards-PostCover.json";
 import Image from "@/components/content/EditableImage";
 import { cn } from "@/lib/utils";
 
@@ -8,11 +7,11 @@ import { cn } from "@/lib/utils";
  * a stylised search-results page for the article's category.
  * Set `image` on a post to use a real featured image instead.
  */
-export function PostCover({ category, image, className, priority }: { title?: string; category: string; image?: string; className?: string; priority?: boolean }) {
+export function PostCover({ category, image, imageAlt, className, priority }: { title?: string; category: string; image?: string; imageAlt?: string; className?: string; priority?: boolean }) {
   if (image) {
     return (
       <div className={cn("relative overflow-hidden rounded-[var(--radius-card)] bg-paper-2", className)}>
-        <Image src={image} alt={pageCopy.text_001} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover" priority={priority} />
+        <Image src={image} alt={imageAlt ?? ""} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover" priority={priority} />
       </div>
     );
   }

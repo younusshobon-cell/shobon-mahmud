@@ -1,0 +1,612 @@
+{
+  "page_count": 50,
+  "issues": [],
+  "duplicate_fields": {
+    "title": [],
+    "description": [],
+    "h1": []
+  },
+  "similarity_review": [],
+  "pages": [
+    {
+      "path": "/industries",
+      "words": 979,
+      "title": "Digital Growth Strategy by Industry | Shobon Mahmud",
+      "h1": [
+        "Growth planning starts with how your buyer decides."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries",
+      "description": "Explore how digital growth partner Shobon Mahmud connects search, content and conversion for SaaS, technology, professional services and local businesses.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/services",
+      "words": 1264,
+      "title": "Digital Growth Services | SEO, Content & Conversion — Shobon Mahmud",
+      "h1": [
+        "Choose the work that moves your business forward."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services",
+      "description": "Build a connected growth plan with Shobon Mahmud. SEO expertise, content strategy and conversion planning shaped around your customers and business priorities.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/privacy",
+      "words": 406,
+      "title": "Privacy Policy — Shobon Mahmud",
+      "h1": [
+        "Privacy Policy"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/privacy",
+      "description": "How Shobon Mahmud collects and uses information on this website.",
+      "robots": null,
+      "schema_count": 4
+    },
+    {
+      "path": "/about",
+      "words": 1532,
+      "title": "About Shobon Mahmud | Digital Growth Partner",
+      "h1": [
+        "Your digital growth partner. A clear direction, followed through."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/about",
+      "description": "Meet Shobon Mahmud, a digital growth partner connecting SEO, content, social media and conversion strategy with coordinated team delivery.",
+      "robots": null,
+      "schema_count": 4
+    },
+    {
+      "path": "/contact",
+      "words": 506,
+      "title": "Contact Your Digital Growth Partner | Shobon Mahmud",
+      "h1": [
+        "Tell me where your next stage of growth is getting stuck."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/contact",
+      "description": "Discuss your website, priority customers and next growth challenge with Shobon Mahmud. Start a conversation about SEO, content and conversion.",
+      "robots": null,
+      "schema_count": 4
+    },
+    {
+      "path": "/",
+      "words": 2519,
+      "title": "Shobon Mahmud | Digital Growth Partner & SEO Consultant",
+      "h1": [
+        "You’re building something great.Let’s help more people find it."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app",
+      "description": "Shobon Mahmud connects SEO, content, and conversion strategy to help businesses attract qualified traffic, generate leads, and grow online across all channels.",
+      "robots": null,
+      "schema_count": 3
+    },
+    {
+      "path": "/locations",
+      "words": 775,
+      "title": "Digital Growth Partner for Dubai, the Gulf, US & UK — Shobon Mahmud",
+      "h1": [
+        "A growth strategy shaped around the market you actually serve."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations",
+      "description": "Work with Shobon Mahmud on SEO, content and conversion priorities shaped around your market. Based in Dubai, collaborating remotely across regions.",
+      "robots": null,
+      "schema_count": 4
+    },
+    {
+      "path": "/blog",
+      "words": 552,
+      "title": "Digital Growth Insights | SEO, Content & Conversion — Shobon Mahmud",
+      "h1": [
+        "Practical answers for better digital growth decisions."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog",
+      "description": "Practical writing from Shobon Mahmud on search, content and conversion: the decisions behind a connected digital growth strategy.",
+      "robots": null,
+      "schema_count": 4
+    },
+    {
+      "path": "/terms",
+      "words": 306,
+      "title": "Terms of Use — Shobon Mahmud",
+      "h1": [
+        "Terms of Use"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/terms",
+      "description": "Terms for using the Shobon Mahmud website.",
+      "robots": null,
+      "schema_count": 4
+    },
+    {
+      "path": "/case-studies",
+      "words": 671,
+      "title": "Case Studies | Digital Growth Strategy & SEO — Shobon Mahmud",
+      "h1": [
+        "The business challenge. The decisions. The evidence."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/case-studies",
+      "description": "Explore client engagements and strategy examples from digital growth partner Shobon Mahmud, covering domain changes, new websites and local discovery.",
+      "robots": null,
+      "schema_count": 4
+    },
+    {
+      "path": "/blog/ai-overviews-search-visibility",
+      "words": 1645,
+      "title": "AI Search Visibility: Content & Measurement — Shobon Mahmud",
+      "h1": [
+        "AI Overviews and search visibility: what changes and what doesn't"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/ai-overviews-search-visibility",
+      "description": "Understand Google’s AI search guidance, improve useful page content and measure business outcomes without relying on special markup or citation promises.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/blog/google-business-profile-optimization",
+      "words": 1644,
+      "title": "Google Business Profile: A Practical Review — Shobon Mahmud",
+      "h1": [
+        "Google Business Profile optimisation: accuracy, relevance and useful enquiries"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/google-business-profile-optimization",
+      "description": "Review business information, categories, reviews and website links. Learn how to assess local visibility separately from qualified customer enquiries.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/blog/technical-seo-audit",
+      "words": 1933,
+      "title": "Technical SEO Audit: Prioritise and Validate Fixes — Shobon Mahmud",
+      "h1": [
+        "How to run a technical SEO audit that ends in decisions"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/technical-seo-audit",
+      "description": "A practical technical SEO audit process: what to check, in what order, and how to turn findings into a short list your developers will actually ship.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/blog/internal-linking-strategy",
+      "words": 1680,
+      "title": "Internal Linking: Page Roles, Anchors & Checks — Shobon Mahmud",
+      "h1": [
+        "Internal linking strategy: build useful paths between your pages"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/internal-linking-strategy",
+      "description": "Plan internal links by page purpose, find orphan pages, write clear anchors and validate your changes with a practical workflow and worked example.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/blog/saas-keyword-research-by-intent",
+      "words": 1728,
+      "title": "SaaS Keyword Research: Buyer Intent to Page Plan — Shobon Mahmud",
+      "h1": [
+        "SaaS keyword research: turn buyer intent into a page plan"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/saas-keyword-research-by-intent",
+      "description": "Map SaaS buying questions to comparison, integration and use-case pages. A practical process for prioritising keywords and measuring qualified demos.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/locations/seo-consultant-oman",
+      "words": 1801,
+      "title": "SEO Consultant for Oman | Shobon Mahmud",
+      "h1": [
+        "SEO consulting for Oman’s project and property businesses."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-oman",
+      "description": "Work with Shobon Mahmud on SEO for Oman. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/locations/seo-consultant-london",
+      "words": 1291,
+      "title": "SEO Consultant for London | Shobon Mahmud",
+      "h1": [
+        "SEO consulting for London businesses and UK buyers."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-london",
+      "description": "Work with Shobon Mahmud on SEO for London. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/locations/seo-consultant-dhaka",
+      "words": 2232,
+      "title": "SEO Consultant for Dhaka | Shobon Mahmud",
+      "h1": [
+        "SEO consulting for Dhaka businesses, with a practical plan for enquiries."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-dhaka",
+      "description": "Work with Shobon Mahmud on SEO for Dhaka. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/locations/seo-consultant-new-york",
+      "words": 1338,
+      "title": "SEO Consultant for New York | Shobon Mahmud",
+      "h1": [
+        "SEO consulting for New York’s local and national markets."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-new-york",
+      "description": "Work with Shobon Mahmud on SEO for New York. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/locations/seo-consultant-austin",
+      "words": 1280,
+      "title": "SEO Consultant for Austin | Shobon Mahmud",
+      "h1": [
+        "SEO consulting for Austin businesses and service areas."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-austin",
+      "description": "Work with Shobon Mahmud on SEO for Austin. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/locations/seo-consultant-dubai",
+      "words": 1350,
+      "title": "SEO Consultant in Dubai | Shobon Mahmud",
+      "h1": [
+        "SEO consultant in Dubai for English and Arabic search."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-dubai",
+      "description": "Work with Shobon Mahmud on SEO for Dubai. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/locations/seo-consultant-san-francisco",
+      "words": 1396,
+      "title": "SEO Consultant for San Francisco | Shobon Mahmud",
+      "h1": [
+        "SEO consulting for San Francisco product and growth teams."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-san-francisco",
+      "description": "Work with Shobon Mahmud on SEO for San Francisco. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/locations/seo-consultant-saudi-arabia",
+      "words": 1260,
+      "title": "SEO Consultant for Saudi Arabia | Shobon Mahmud",
+      "h1": [
+        "SEO consulting for Saudi Arabia’s Arabic and English audiences."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/locations/seo-consultant-saudi-arabia",
+      "description": "Work with Shobon Mahmud on SEO for Saudi Arabia. Review search demand, relevant pages and the enquiry journey with a scope shaped around your market.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/local-services",
+      "words": 1434,
+      "title": "Local Services SEO Strategy & Consulting — Shobon Mahmud",
+      "h1": [
+        "SEO for local service businesses and real service coverage."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/local-services",
+      "description": "Connect real service coverage, local discovery and a working booking journey. Digital growth planning for local service businesses with Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/health-tech",
+      "words": 1404,
+      "title": "Health Tech SEO Strategy & Consulting — Shobon Mahmud",
+      "h1": [
+        "Health tech SEO with clear, reviewable product information."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/health-tech",
+      "description": "Health technology growth planning with clear audience paths, reviewed product content and qualified enquiries. Work with Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/technology",
+      "words": 1420,
+      "title": "Technology SEO Strategy & Consulting — Shobon Mahmud",
+      "h1": [
+        "SEO for technology companies and technical buyers."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/technology",
+      "description": "Help technical buyers evaluate applications, specifications and implementation needs. Digital growth strategy for technology teams with Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/saas",
+      "words": 1578,
+      "title": "SaaS SEO Strategy & Consulting — Shobon Mahmud",
+      "h1": [
+        "SaaS SEO that helps buyers evaluate your product."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/saas",
+      "description": "SaaS growth planning that connects use cases, comparisons and integrations with qualified trials and demos. Work with digital growth partner Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/legal-tech",
+      "words": 1303,
+      "title": "Legal Tech SEO Strategy & Consulting — Shobon Mahmud",
+      "h1": [
+        "Legal tech SEO for careful software evaluation."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/legal-tech",
+      "description": "Connect legal technology workflows, approved product facts and buyer evaluation with relevant enquiries. Digital growth planning with Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/design",
+      "words": 1328,
+      "title": "SEO for design agencies — Shobon Mahmud",
+      "h1": [
+        "SEO for design agencies: make your work and specialism discoverable."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/design",
+      "description": "Digital growth for design agencies: connect service positioning and specific project stories with better-fit enquiries. Work with Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/logistics",
+      "words": 1316,
+      "title": "Logistics SEO Strategy & Consulting — Shobon Mahmud",
+      "h1": [
+        "Logistics SEO built around routes, cargo and capability."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/logistics",
+      "description": "Connect route coverage, logistics capabilities and quotation pages with suitable shipment enquiries. Digital growth planning with Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/industries/ecommerce",
+      "words": 1400,
+      "title": "E-commerce SEO Strategy & Consulting — Shobon Mahmud",
+      "h1": [
+        "E-commerce SEO for useful category and product journeys."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/industries/ecommerce",
+      "description": "Connect e-commerce search, merchandising and the buying journey. Plan category, product and conversion priorities with Shobon Mahmud.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/case-studies/americas-medicare-associates-seo-growth",
+      "words": 2058,
+      "title": "America’s Medicare Associates: SEO Case Study — Shobon Mahmud",
+      "h1": [
+        "Trust earned at ARHQ.A new chapter with AMA."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/case-studies/americas-medicare-associates-seo-growth",
+      "description": "A referral-led SEO engagement for America’s Medicare Associates. Explore the diagnosis, local discovery work and 121% reported growth with context.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/case-studies/retirement-tax-partners-seo-growth",
+      "words": 1870,
+      "title": "Retirement Tax Partners: SEO Case Study — Shobon Mahmud",
+      "h1": [
+        "A new website.A clearer route to discovery."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/case-studies/retirement-tax-partners-seo-growth",
+      "description": "How Shobon Mahmud connected a new retirement tax website with search and local discovery. Explore the work, supplied evidence and 83% reported growth.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/case-studies/arhq-domain-migration-organic-growth",
+      "words": 1877,
+      "title": "ARHQ: Domain Migration & SEO Case Study — Shobon Mahmud",
+      "h1": [
+        "A new domain.A connected growth plan.ARHQ’s next chapter."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/case-studies/arhq-domain-migration-organic-growth",
+      "description": "ARHQ’s domain transition and SEO engagement: diagnosis, service-location discovery and 67% reported online growth, with supplied evidence and context.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/services/seo-for-home-service-providers",
+      "words": 2017,
+      "title": "SEO for Home Services & Qualified Job Enquiries — Shobon Mahmud",
+      "h1": [
+        "SEO for home service providers, from search to booked work."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services/seo-for-home-service-providers",
+      "description": "SEO for plumbers, HVAC, roofing and septic providers. Improve service and area pages, local discovery and qualified calls or quote requests.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/services/local-seo",
+      "words": 1711,
+      "title": "Local SEO & Google Business Profile Support — Shobon Mahmud",
+      "h1": [
+        "Local SEO built around real service coverage."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services/local-seo",
+      "description": "Local SEO for eligible Business Profiles, service pages and real coverage areas. Improve local discovery and measure qualified calls and enquiries.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/services/ecommerce-seo",
+      "words": 1541,
+      "title": "E-commerce SEO for Categories, Products & Growth — Shobon Mahmud",
+      "h1": [
+        "E-commerce SEO that connects discovery with confident purchases."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services/ecommerce-seo",
+      "description": "E-commerce SEO for categories, products and catalogue indexing. Improve shopping pages, filter handling and markup with organic sales reporting.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/services/conversion-rate-optimization",
+      "words": 2453,
+      "title": "Conversion Rate Optimization & Customer Journey Review — Shobon Mahmud",
+      "h1": [
+        "Conversion rate optimization for the right customer actions."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services/conversion-rate-optimization",
+      "description": "Improve the path from website visit to qualified enquiry through conversion research, clearer landing pages, form reviews and evidence-led testing.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/services/content-seo",
+      "words": 1667,
+      "title": "Content SEO Strategy, Briefs & Page Improvement — Shobon Mahmud",
+      "h1": [
+        "Content SEO that supports the buying decision."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services/content-seo",
+      "description": "Content SEO strategy, topic maps, writer-ready briefs and targeted refreshes. Build useful pages around buyer questions and commercial priorities.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/services/Holistic-SEO",
+      "words": 3264,
+      "title": "Holistic SEO & Digital Growth Planning — Shobon Mahmud",
+      "h1": [
+        "Holistic SEO for a connected digital growth plan."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services/Holistic-SEO",
+      "description": "Holistic SEO connects technical health, on-page content and relevant authority in one prioritised plan. Improve discovery and qualified enquiries.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/services/digital-growth-strategy",
+      "words": 2473,
+      "title": "Digital Growth Strategy & Partner Support — Shobon Mahmud",
+      "h1": [
+        "Your digital growth strategy, from diagnosis to delivery."
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/services/digital-growth-strategy",
+      "description": "A practical digital growth strategy connecting acquisition, content, conversion and measurement with a prioritised 90-day roadmap.",
+      "robots": null,
+      "schema_count": 6
+    },
+    {
+      "path": "/blog/category/seo-strategy",
+      "words": 124,
+      "title": "SEO Strategy Articles — Shobon Mahmud",
+      "h1": [
+        "SEO Strategy"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/category/seo-strategy",
+      "description": "Planning, prioritising and measuring SEO as a growth channel.",
+      "robots": "noindex, follow",
+      "schema_count": 4
+    },
+    {
+      "path": "/blog/category/local-seo",
+      "words": 120,
+      "title": "Local SEO Articles — Shobon Mahmud",
+      "h1": [
+        "Local SEO"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/category/local-seo",
+      "description": "Map pack visibility, Business Profiles, reviews and location pages.",
+      "robots": "noindex, follow",
+      "schema_count": 4
+    },
+    {
+      "path": "/blog/category/content-seo",
+      "words": 121,
+      "title": "Content SEO Articles — Shobon Mahmud",
+      "h1": [
+        "Content SEO"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/category/content-seo",
+      "description": "Keyword research, topical authority, briefs and content strategy.",
+      "robots": "noindex, follow",
+      "schema_count": 4
+    },
+    {
+      "path": "/blog/category/technical-seo",
+      "words": 127,
+      "title": "Technical SEO Articles — Shobon Mahmud",
+      "h1": [
+        "Technical SEO"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/category/technical-seo",
+      "description": "Crawling, indexing, rendering, speed and site architecture.",
+      "robots": "noindex, follow",
+      "schema_count": 4
+    },
+    {
+      "path": "/blog/category/ai-and-search",
+      "words": 127,
+      "title": "AI & Search Articles — Shobon Mahmud",
+      "h1": [
+        "AI & Search"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/blog/category/ai-and-search",
+      "description": "AI Overviews, AI assistants and how search visibility is changing.",
+      "robots": "noindex, follow",
+      "schema_count": 4
+    },
+    {
+      "path": "/ar/locations/seo-consultant-oman",
+      "words": 1194,
+      "title": "استشاري تحسين محركات البحث في عُمان | شوبون محمود",
+      "h1": [
+        "استشارات تحسين محركات البحث للشركات في عُمان"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/ar/locations/seo-consultant-oman",
+      "description": "خطة نمو رقمي للعقارات والمشاريع في عُمان: محتوى معتمد وبحث ومسار واضح للاستفسارات. تعاون عن بُعد مع شوبون محمود من دبي.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/ar/locations/seo-consultant-dubai",
+      "words": 824,
+      "title": "استشاري تحسين محركات البحث في دبي | شوبون محمود",
+      "h1": [
+        "استشارات تحسين محركات البحث للشركات في دبي"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/ar/locations/seo-consultant-dubai",
+      "description": "شريك نمو رقمي مقيم في دبي يربط البحث بالعربية والإنجليزية بالمحتوى ومسار الاستفسار. خطط عملية للشركات في الإمارات مع شوبون محمود.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/ar/locations/seo-consultant-saudi-arabia",
+      "words": 782,
+      "title": "استشاري تحسين محركات البحث في السعودية | شوبون محمود",
+      "h1": [
+        "استشارات تحسين محركات البحث للشركات في السعودية"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/ar/locations/seo-consultant-saudi-arabia",
+      "description": "نمو رقمي للسوق السعودي يجمع المحتوى العربي والإنجليزي وصفحات الخدمات والاستفسارات المناسبة. تعاون عن بُعد من دبي مع شوبون محمود.",
+      "robots": null,
+      "schema_count": 5
+    },
+    {
+      "path": "/bn/locations/seo-consultant-dhaka",
+      "words": 1889,
+      "title": "ঢাকার ব্যবসার SEO কনসালট্যান্ট | শোভন মাহমুদ",
+      "h1": [
+        "ঢাকার ব্যবসার জন্য SEO কনসালটিং ও ইনকোয়ারির কার্যকর পরিকল্পনা।"
+      ],
+      "canonical": "https://shobon-mahmud.vercel.app/bn/locations/seo-consultant-dhaka",
+      "description": "ঢাকার ব্যবসার জন্য বাংলা ও ইংরেজি কনটেন্ট, লোকাল সার্চ ও ইনকোয়ারির পরিকল্পনা। দুবাই থেকে শোভন মাহমুদের সঙ্গে দূর থেকে কাজ করুন।",
+      "robots": null,
+      "schema_count": 4
+    }
+  ]
+}

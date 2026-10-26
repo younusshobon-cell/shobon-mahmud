@@ -18,7 +18,7 @@ function getPage(locale: string, fullSlug: string) {
   const slug = fullSlug.replace(/^seo-consultant-/, "");
   const config = localizedConfig(slug);
   if (!config || config.locale !== locale || fullSlug !== `seo-consultant-${slug}`) notFound();
-  const data = slug === "dhaka" ? { seoTitle: "ঢাকার ব্যবসার ডিজিটাল গ্রোথ পার্টনার | শোভন মাহমুদ", intro: "ঢাকার ব্যবসার জন্য বাংলা ও ইংরেজি কনটেন্ট, লোকাল সার্চ ও ইনকোয়ারির পরিকল্পনা। দুবাই থেকে শোভন মাহমুদের সঙ্গে দূর থেকে কাজ করুন।" } : arabic[slug as keyof typeof arabic];
+  const data = slug === "dhaka" ? { seoTitle: "ঢাকার ব্যবসার SEO কনসালট্যান্ট | শোভন মাহমুদ", intro: "ঢাকার ব্যবসার জন্য বাংলা ও ইংরেজি কনটেন্ট, লোকাল সার্চ ও ইনকোয়ারির পরিকল্পনা। দুবাই থেকে শোভন মাহমুদের সঙ্গে দূর থেকে কাজ করুন।" } : arabic[slug as keyof typeof arabic];
   return { slug, config, data, path: locationPath(slug, config.locale) };
 }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

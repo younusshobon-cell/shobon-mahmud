@@ -1,9 +1,9 @@
 "use client";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { useId } from "react";
 import pageCopy from "@/content/copy-components-sections-FinalCta.json";
 import Image from "@/components/content/EditableImage";
-import { ArrowUpRight, Mail } from "lucide-react";
-import { siteConfig } from "@/lib/site";
+import { ArrowUpRight } from "lucide-react";
 import { photos } from "@/lib/images";
 import pageImages from "@/content/page-images.json";
 
@@ -32,7 +32,7 @@ export function FinalCta({
             <Image src={footerPhoto?.src ?? photos.casual.src} alt={footerPhoto?.alt || pageCopy.text_003} unoptimized={Boolean(footerPhoto)} width={640} height={360} sizes="(min-width: 1024px) 360px, 90vw" className="aspect-[16/9] w-full rounded-[16px] object-cover" />
             <div className="mt-6 flex flex-col gap-3">
               <ButtonLink href={pageCopy.text_004} className={actionClassName}>{actionTitle}<ArrowUpRight aria-hidden className="size-4 shrink-0" /></ButtonLink>
-              {siteConfig.email ? <ButtonLink href={`mailto:${siteConfig.email}`} variant="secondary"><Mail aria-hidden className="size-4 shrink-0" />{pageCopy.text_006}</ButtonLink> : null}
+              <WhatsAppLink />
             </div>
             <p className="mt-5 text-sm leading-relaxed text-muted">{pageCopy.text_007}</p>
           </div>

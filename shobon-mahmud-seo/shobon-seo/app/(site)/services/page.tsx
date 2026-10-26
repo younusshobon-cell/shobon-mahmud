@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { SeoSelectionGuide } from "@/components/content/SeoSelectionGuide";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-services-page.json";
@@ -31,7 +32,7 @@ export default function ServicesPage() {
         title={pageCopy.text_004}
         intro={pageCopy.text_005}
       >
-        <ButtonLink href={pageCopy.text_006}>{pageCopy.text_007}</ButtonLink>
+        <div className="flex flex-wrap gap-3"><ButtonLink href={pageCopy.text_006}>{pageCopy.text_007}</ButtonLink><WhatsAppLink subject="the right service for my business" /></div>
       </PageHero>
 
       <Section className="pt-0 sm:pt-0 lg:pt-0">

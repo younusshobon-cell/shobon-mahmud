@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import localFont from "next/font/local";
 import pageCopy from "@/content/copy-components-sections-Hero.json";
 import Image from "@/components/content/EditableImage";
@@ -23,9 +24,9 @@ export function Hero() {
             <p className="growth-hero-intro">{pageCopy.text_003}</p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={pageCopy.text_004}>{pageCopy.text_005}<ArrowUpRight size={18} aria-hidden="true" /></ButtonLink>
-              <ButtonLink href={pageCopy.text_006} variant="secondary">{pageCopy.text_007}</ButtonLink>
+              <WhatsAppLink />
             </div>
-            <p className="growth-hero-note">{pageCopy.text_008}</p>
+            <p className="growth-hero-note">{pageCopy.text_008} <a className="underline underline-offset-4" href="/case-studies">Explore client work</a>.</p>
             <div className="growth-hero-disciplines"><span>SEO & discovery</span><span>Content & trust</span><span>Conversion & growth</span></div>
           </div>
           <div className="growth-hero-art">

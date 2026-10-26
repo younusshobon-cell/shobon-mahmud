@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-contact-page.json";
 import { heroTheme } from "@/lib/hero-theme";
@@ -36,6 +37,7 @@ export default function ContactPage() {
               <p className="t-lead mt-6 max-w-xl text-muted">
                 {pageCopy.text_007}
               </p>
+              <div className="mt-7"><WhatsAppLink /><p className="mt-3 text-sm text-muted">Prefer a quick conversation? Send your website and goal on WhatsApp, or use the form below for a detailed project brief.</p></div>
               <div className="mt-12">
                 <ContactForm fallbackEmail={contactEmail} />
               </div>
