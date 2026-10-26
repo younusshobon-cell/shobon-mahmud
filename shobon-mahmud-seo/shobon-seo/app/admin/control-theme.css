@@ -56,3 +56,10 @@
 @media(max-width:1150px) { .admin-sidebar{width:220px;padding-inline:12px} .admin-main{margin-left:220px;width:calc(100% - 220px)} .admin-content{padding:28px 25px 20px} .admin-topbar{padding-inline:25px} }
 @media(max-width:760px) { .admin-sidebar{width:248px} .admin-main{margin-left:0;width:100%} .admin-content{padding:25px 18px 15px} .admin-topbar{min-height:58px;padding:12px 18px} .admin-command-bar h2{font-size:28px} .admin-command-bar{padding:0} .admin-heading-actions{justify-content:flex-start} .admin-heading-actions button{white-space:normal} .admin-mobile-menu,.admin-mobile-close{color:#686d75} .admin-backdrop{background:#20212455} .admin-login-card{padding:29px} }
 @media(prefers-reduced-motion:reduce) { .admin-app *, .admin-app *::before, .admin-app *::after { scroll-behavior:auto!important; transition:none!important; } }
+
+.visual-quick-guide { padding:12px 16px; margin:0 0 16px; border:1px solid #e5e6d6; border-radius:8px; background:#fafbf2; color:#626638; font-size:13px; line-height:1.6; }
+.visual-advanced { margin-top:24px; border-top:1px solid var(--a-line); padding-top:16px; }
+.visual-advanced>summary { cursor:pointer; font-size:13px; font-weight:600; color:#484d54; padding:8px 0; }
+.visual-controls button[aria-pressed=true],.visual-inspector-tabs button[aria-pressed=true] { background:#f3f4ec; border-color:#c7cba9; color:#333823; }
+.visual-controls>label { flex:1; min-width:180px; }
+.visual-controls>label select { width:100%; max-width:360px; }

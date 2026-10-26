@@ -36,7 +36,7 @@ type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
 const navigation = [
   { label: "WORKSPACE", items: ["Enquiries"] },
-  { label: "PUBLISHING", items: ["Blog", "Pages", "Media"] },
+  { label: "PUBLISHING", items: ["Live editor", "Blog", "Pages", "Media"] },
   { label: "ADMINISTRATION", items: ["Site settings"] },
 ];
 const icons: Record<string, typeof Globe> = {
@@ -277,7 +277,6 @@ export function AdminPanel({
             <span className="admin-slash">/</span>
             {group === "Enquiries" ? "Form submissions" : group === "Site settings" ? "Settings" : group}
           </div>
-          <button className="admin-small" onClick={() => navigate("Live editor")} aria-label="Open live page editor"><Eye size={16}/> Live editor</button>
           <a
             href="https://shobon-mahmud.vercel.app"
             target="_blank"
