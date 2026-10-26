@@ -33,6 +33,7 @@ import { EnquiryInbox } from "./EnquiryInbox";
 import { VisualEditor } from "./VisualEditor";
 import { ContentStudio } from "./ContentStudio";
 import { PageDirectory } from "./PageDirectory";
+import { MediaThumbnail } from "./MediaThumbnail";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
 const navigation = [
@@ -728,10 +729,10 @@ function MediaManager() {
         </section>
         <section className="admin-card">
           <h2>Website images</h2>
-          <div className="admin-media-list">
+          <div className="admin-media-gallery">
             {images.map((x) => (
-              <div key={x.path}>
-                <ImagePlus size={17} />
+              <div className="media-gallery-item" key={x.path}>
+                <MediaThumbnail path={x.path} url={x.url}/>
                 <div>
                   <strong>{x.path.split("/").pop()}</strong>
                   <small>{x.url ?? "Original portrait asset"}</small>
