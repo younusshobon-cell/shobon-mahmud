@@ -37,7 +37,11 @@ import { VisualEditor } from "./VisualEditor";
 import { ContentStudio } from "./ContentStudio";
 type Entry = { id: string; label: string; group: string; path: string };
 type Document = { id: string; sha: string; data: Value };
-const groups = ["Overview","Analytics","Enquiries","Live editor","Pages","Blog","Services","Industries","Locations","Portfolio","FAQs","Media","Site settings","Page copy"];
+const navigation = [
+  { label: "WORKSPACE", items: ["Overview", "Analytics", "Enquiries"] },
+  { label: "PUBLISHING", items: ["Blog", "Pages", "Live editor", "Services", "Industries", "Locations", "Portfolio", "FAQs", "Media"] },
+  { label: "ADMINISTRATION", items: ["Site settings", "Page copy"] },
+];
 const icons: Record<string, typeof Globe> = {
   Overview: LayoutDashboard,
   Analytics: BarChart3,
@@ -219,9 +223,9 @@ export function AdminPanel({
             <X size={18} />
           </button>
         </div>
-        <p className="admin-nav-label">WORKSPACE</p>
+        <div className="admin-workspace-switch"><span className="admin-workspace-icon"><Globe size={18}/></span><div>Shobon Mahmud<small>Website workspace</small></div><span className="admin-workspace-badge">SITE</span></div>
         <nav aria-label="Admin navigation">
-          {groups.map((g) => {
+          {navigation.map((section) => <div className="admin-nav-section" key={section.label}><p className="admin-nav-label">{section.label}</p>{section.items.map((g) => {
             const Icon = icons[g];
             return (
               <button
@@ -237,7 +241,7 @@ export function AdminPanel({
                 )}
               </button>
             );
-          })}
+          })}</div>)}
         </nav>
         <div className="admin-sidebar-bottom">
           <a href="/" target="_blank" rel="noopener noreferrer">
@@ -315,7 +319,7 @@ export function AdminPanel({
           )}
           {group === "Overview" ? (
             <>
-              <div className="admin-command-bar"><div><p className="admin-eyebrow">SHOBON MAHMUD / WORKSPACE</p><h2>Grow. Follow up. Publish.</h2><p className="admin-muted">Start with performance, then take the next action.</p></div><div className="admin-heading-actions"><button className="admin-primary" onClick={()=>navigate("Enquiries")}>Manage enquiries <ArrowUpRight size={16}/></button><button className="admin-secondary" onClick={()=>navigate("Pages")}>Edit pages</button><button className="admin-secondary" onClick={()=>navigate("Blog")}>Manage blog</button></div></div>
+              <div className="admin-command-bar"><div><p className="admin-eyebrow">SHOBON MAHMUD / WORKSPACE</p><h2>Workspace overview</h2><p className="admin-muted">Track website performance, manage enquiries and publish content.</p></div><div className="admin-heading-actions"><button className="admin-primary" onClick={()=>navigate("Enquiries")}>Manage enquiries <ArrowUpRight size={16}/></button><button className="admin-secondary" onClick={()=>navigate("Pages")}>Edit pages</button><button className="admin-secondary" onClick={()=>navigate("Blog")}>Manage blog</button></div></div>
               <AnalyticsDashboard onDirty={setStudioDirty}/>
             </>
           ) : group === "Live editor" ? (
