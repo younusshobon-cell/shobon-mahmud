@@ -98,11 +98,11 @@ export function Navbar({ locale = "en" }: { locale?: "en" | "ar" | "bn" } = {}) 
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => (
               <li key={item.href}>
-                {item.href === "/resources" ? <details ref={resourcesRef} className="group relative" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node)) event.currentTarget.removeAttribute("open"); }}>
+                {item.href === "/resources" ? <details ref={resourcesRef} className="group relative" onPointerEnter={(event) => { if (event.pointerType === "mouse") event.currentTarget.open = true; }} onPointerLeave={(event) => { if (event.pointerType === "mouse" && !event.currentTarget.contains(document.activeElement)) event.currentTarget.open = false; }} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node)) event.currentTarget.removeAttribute("open"); }}>
                   <summary className={cn("flex min-h-11 cursor-pointer list-none items-center gap-1.5 rounded-full px-3.5 py-2 text-[0.9375rem] [&::-webkit-details-marker]:hidden", resourceLinks.some(link => isActive(link.href)) || isActive("/resources") ? "text-ink" : "text-muted hover:text-ink")}>
                     Resources <ChevronDown aria-hidden className="size-4 transition-transform group-open:rotate-180" />
                   </summary>
-                  <ul className="absolute start-0 top-full z-50 mt-2 w-72 rounded-2xl border border-line bg-paper p-2 shadow-xl">
+                  <ul className="absolute start-0 top-full z-50 w-72 rounded-2xl border border-line bg-paper p-2 shadow-xl">
                     {resourceLinks.map(link => <li key={link.href}><Link href={link.href} aria-current={isActive(link.href) ? "page" : undefined} onClick={() => resourcesRef.current?.removeAttribute("open")} className="block rounded-xl px-4 py-3 hover:bg-paper-2 focus-visible:bg-paper-2"><span className="block font-medium text-ink">{link.label}</span><span className="mt-1 block text-sm leading-relaxed text-muted">{link.description}</span></Link></li>)}
                   </ul>
                 </details> : <Link
