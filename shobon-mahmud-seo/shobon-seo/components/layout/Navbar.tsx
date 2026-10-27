@@ -4,8 +4,9 @@ import pageCopy from "@/content/copy-components-layout-Navbar.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import { resourceLinks } from "@/lib/resources";
 import { mainNav } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
@@ -19,6 +20,15 @@ export function Navbar({ locale = "en" }: { locale?: "en" | "ar" | "bn" } = {}) 
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const resourcesRef = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    const close = (event: PointerEvent) => { if (!resourcesRef.current?.contains(event.target as Node)) resourcesRef.current?.removeAttribute("open"); };
+    const escape = (event: KeyboardEvent) => { if (event.key === "Escape" && resourcesRef.current?.open) { resourcesRef.current.removeAttribute("open"); resourcesRef.current.querySelector("summary")?.focus(); } };
+    document.addEventListener("pointerdown", close);
+    document.addEventListener("keydown", escape);
+    return () => { document.removeEventListener("pointerdown", close); document.removeEventListener("keydown", escape); };
+  }, []);
+  useEffect(() => { resourcesRef.current?.removeAttribute("open"); }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -88,7 +98,14 @@ export function Navbar({ locale = "en" }: { locale?: "en" | "ar" | "bn" } = {}) 
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => (
               <li key={item.href}>
-                <Link
+                {item.href === "/resources" ? <details ref={resourcesRef} className="group relative" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node)) event.currentTarget.removeAttribute("open"); }}>
+                  <summary className={cn("flex min-h-11 cursor-pointer list-none items-center gap-1.5 rounded-full px-3.5 py-2 text-[0.9375rem] [&::-webkit-details-marker]:hidden", resourceLinks.some(link => isActive(link.href)) || isActive("/resources") ? "text-ink" : "text-muted hover:text-ink")}>
+                    Resources <ChevronDown aria-hidden className="size-4 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <ul className="absolute start-0 top-full z-50 mt-2 w-72 rounded-2xl border border-line bg-paper p-2 shadow-xl">
+                    {resourceLinks.map(link => <li key={link.href}><Link href={link.href} aria-current={isActive(link.href) ? "page" : undefined} onClick={() => resourcesRef.current?.removeAttribute("open")} className="block rounded-xl px-4 py-3 hover:bg-paper-2 focus-visible:bg-paper-2"><span className="block font-medium text-ink">{link.label}</span><span className="mt-1 block text-sm leading-relaxed text-muted">{link.description}</span></Link></li>)}
+                  </ul>
+                </details> : <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={cn(
@@ -100,7 +117,7 @@ export function Navbar({ locale = "en" }: { locale?: "en" | "ar" | "bn" } = {}) 
                   {isActive(item.href) && (
                     <motion.span aria-hidden layoutId="nav-underline" className="absolute inset-x-3.5 -bottom-0.5 h-px bg-link" />
                   )}
-                </Link>
+                </Link>}
               </li>
             ))}
           </ul>
@@ -153,14 +170,14 @@ export function Navbar({ locale = "en" }: { locale?: "en" | "ar" | "bn" } = {}) 
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.03 * i, duration: 0.25 }}
                   >
-                    <Link
+                    {item.href === "/resources" ? <div className="py-4"><p className="text-2xl font-medium tracking-tight text-ink">Resources</p><ul className="mt-2 grid gap-1">{resourceLinks.map(link => <li key={link.href}><Link href={link.href} onClick={() => setOpen(false)} aria-current={isActive(link.href) ? "page" : undefined} className={cn("flex min-h-12 items-center rounded-xl px-4 text-lg hover:bg-paper-2", isActive(link.href) ? "text-link" : "text-muted")}>{link.label}</Link></li>)}</ul></div> : <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
                       aria-current={isActive(item.href) ? "page" : undefined}
                       className={cn("flex items-center justify-between py-4 text-2xl font-medium tracking-tight", isActive(item.href) ? "text-link" : "text-ink")}
                     >
                       {navLabels[item.label] ?? item.label}
-                    </Link>
+                    </Link>}
                   </motion.li>
                 ))}
               </ul>

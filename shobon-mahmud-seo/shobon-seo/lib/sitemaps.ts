@@ -20,7 +20,7 @@ const escapeXml = (value: string) => value.replace(/[&<>"']/g, (char) => ({
 export function entriesFor(section: SitemapSection): SitemapEntry[] {
   switch (section) {
     case "pages":
-      return [...["/", "/about", "/contact", "/privacy", "/terms"].map((path) => ({ path })), ...customPages.map(p => ({path: `/${p.slug}`, lastModified:p.updated}))];
+      return [...["/", "/about", "/contact", "/privacy", "/terms", "/resources"].map((path) => ({ path })), ...customPages.map(p => ({path: `/${p.slug}`, lastModified:p.updated}))];
     case "services":
       return [{ path: "/services" }, ...services.map(({ slug }) => ({ path: `/services/${slug}` }))];
     case "locations":

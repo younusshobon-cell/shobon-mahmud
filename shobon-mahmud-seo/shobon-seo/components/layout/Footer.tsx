@@ -14,7 +14,10 @@ const siteLinks = [
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/locations", label: "Locations" },
+  { href: "/resources", label: "Resources" },
   { href: "/blog", label: "Blog" },
+  { href: "/insights", label: "Insights" },
+  { href: "/free-tools", label: "Free Tools" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

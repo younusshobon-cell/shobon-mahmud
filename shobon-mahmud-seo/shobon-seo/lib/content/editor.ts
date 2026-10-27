@@ -1,5 +1,5 @@
 import type { Block, Post } from './types';
-export const reservedSlugs = new Set(['admin', 'api', 'blog', 'services', 'industries', 'locations', 'portfolio', 'about', 'contact', 'privacy', 'terms', 'sitemaps', 'sitemap', 'robots', 'uploads', 'assets', 'icon']);
+export const reservedSlugs = new Set(['admin', 'api', 'resources', 'insights', 'free-tools', 'blog', 'services', 'industries', 'locations', 'portfolio', 'about', 'contact', 'privacy', 'terms', 'sitemaps', 'sitemap', 'robots', 'uploads', 'assets', 'icon']);
 export type CustomPage = {
     slug: string;
     title: string;
