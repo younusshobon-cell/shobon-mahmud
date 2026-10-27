@@ -1,3 +1,4 @@
+import { FloatingWhatsApp } from "@/components/ui/WhatsAppLink";
 import { MobileSectionNav } from "@/components/layout/MobileSectionNav";
 import { DocumentLayout } from "@/components/layout/DocumentLayout";
 import { VisitorTracker } from "@/components/layout/VisitorTracker";
@@ -59,7 +60,7 @@ export default function SiteLayout({
           <Navbar />
           <main id="main" tabIndex={-1} className="min-w-0 flex-1">
             {children}
-          </main>
+          <FloatingWhatsApp /></main>
           <Footer />
           <SiteMotion />
           <ScrollJourney />

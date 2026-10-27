@@ -1,3 +1,4 @@
+import { LocalSeoLanding } from "@/components/sections/LocalSeoLanding";
 import { GrowthServiceDepth } from "@/components/sections/GrowthServiceDepth";
 import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { EngagementDetails } from "@/components/content/EngagementDetails";
@@ -53,6 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ServicePage({ params }: Props) {
   const service = getService((await params).slug);
   if (!service) notFound();
+  if (service.slug === "local-seo") return <LocalSeoLanding service={service} />;
   if (service.slug === "Holistic-SEO") return <HolisticSeoLanding service={service} />;
   const path = `/services/${service.slug}`;
   const studies = publishedCaseStudies;
