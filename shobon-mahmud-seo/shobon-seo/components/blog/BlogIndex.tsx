@@ -1,10 +1,9 @@
+import { ExperienceHero } from "@/components/content/ExperienceHero";
 
 import pageCopy from "@/content/copy-components-blog-BlogIndex.json";
-import { heroTheme } from "@/lib/hero-theme";
 import Link from "next/link";
 import { blogCategories, getCategory, posts, type PostWithMeta } from "@/lib/content/blog";
 import { Container } from "@/components/ui/Container";
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { BlogCard } from "@/components/cards/BlogCard";
 import { PostCover } from "@/components/cards/PostCover";
 import { BlogSearch } from "./BlogSearch";
@@ -41,17 +40,8 @@ export function BlogIndex({
 
   return (
     <>
-      <section className="hero-surface" style={heroTheme(basePath)}>
-        <Container className="pt-10 pb-10 sm:pt-14 lg:pb-14">
-          <Breadcrumbs items={crumbs} />
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <h1 className="t-h1 text-ink">{title}</h1>
-              <p className="t-lead mt-5 text-muted">{intro}</p>
-            </div>
-            <BlogSearch index={index} />
-          </div>
-
+      <ExperienceHero crumbs={crumbs} kicker="The growth journal" title={title} intro={intro}/>
+      <section className="border-b border-line bg-paper"><Container className="py-8"><BlogSearch index={index}/>
           <nav aria-label={pageCopy.text_001} className="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
             <ul className="flex gap-2 pb-1">
               <li>

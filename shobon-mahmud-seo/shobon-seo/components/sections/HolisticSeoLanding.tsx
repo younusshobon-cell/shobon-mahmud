@@ -1,4 +1,6 @@
-import { ArrowUpRight, Check, Code2, FileSearch, Link2, ShieldCheck } from "lucide-react";
+import { showcaseCaseStudies } from "@/lib/content/case-studies";
+import { ExperienceHero } from "@/components/content/ExperienceHero";
+import { ArrowUpRight, Check, Code2, FileSearch, Link2 } from "lucide-react";
 import content from "@/content/holistic-seo.json";
 import type { Service } from "@/lib/content/types";
 import { getIndustries } from "@/lib/content/industries";
@@ -12,10 +14,9 @@ import { PointGrid } from "@/components/content/PointGrid";
 import { PageContents } from "@/components/content/PageContents";
 import { EngagementDetails } from "@/components/content/EngagementDetails";
 import { FAQ } from "@/components/content/FAQ";
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PageSchema } from "@/components/seo/PageSchema";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { RelatedServices } from "@/components/related/Related";
+import { RelatedServices, RelatedCaseStudies } from "@/components/related/Related";
 import { FinalCta } from "./FinalCta";
 import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 
@@ -29,30 +30,7 @@ export function HolisticSeoLanding({ service }: { service: Service }) {
   const path = "/services/Holistic-SEO";
   return <div className="holistic-page">
     <PageSchema path={path} />
-    <section className="hero-surface hero-surface--dark holistic-hero on-night" aria-labelledby="holistic-title">
-      <Container className="relative z-10 pt-10 pb-16 sm:pt-14 lg:pb-24">
-        <Breadcrumbs tone="dark" items={[{ name: "Services", href: "/services" }, { name: "Holistic SEO", href: path }]} />
-        <div className="mt-10 grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
-          <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[.18em] text-link-night">Technical + on-page + off-page SEO</p>
-            <h1 id="holistic-title" className="t-h1 text-on-night">{service.heroTitle}</h1>
-            <p className="t-lead mt-6 max-w-2xl text-on-night-muted">{service.heroIntro}</p>
-            <div className="mt-8 flex flex-wrap gap-3"><PlanButton /><ButtonLink href="#deliverables" variant="outline-light">See what is included</ButtonLink></div>
-            <p className="mt-4 text-sm leading-relaxed text-on-night-muted">Share your site and priorities. We will discuss scope, responsibilities and a practical next step.</p>
-            <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-on-night">{["Clear scope before work", "Evidence-led priorities", "Qualified-action measurement"].map(label => <li key={label} className="flex items-center gap-2"><Check aria-hidden="true" className="size-4 shrink-0 text-[#ffe36e]" />{label}</li>)}</ul>
-          </div>
-          <div className="hero-media holistic-system rounded-[28px] border border-white/15 p-5 sm:p-8">
-            <div className="mb-7 flex items-center justify-between gap-4"><p className="text-xs font-semibold uppercase tracking-[.16em] text-link-night">One connected SEO plan</p><ShieldCheck aria-hidden="true" className="size-5 text-link-night" /></div>
-            <ol className="space-y-3">{[
-              { title: "Technical foundation", text: "Make valuable pages accessible", Icon: Code2 },
-              { title: "On-page relevance", text: "Answer the buyer’s real question", Icon: FileSearch },
-              { title: "Relevant authority", text: "Build resources worth referencing", Icon: Link2 },
-            ].map(({ title, text, Icon }, index) => <li key={title} className="holistic-system-step flex items-center gap-4 rounded-2xl border border-white/15 bg-white/[.04] p-4 sm:p-5"><span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-link-night"><Icon aria-hidden="true" className="size-5" /></span><div className="min-w-0"><h2 className="text-base font-semibold text-on-night">{title}</h2><p className="mt-1 text-sm text-on-night-muted">{text}</p></div><span aria-hidden="true" className="ms-auto text-xs tabular-nums text-link-night">0{index + 1}</span></li>)}</ol>
-            <div className="mt-7 border-t border-white/15 pt-6"><p className="text-xs uppercase tracking-wider text-link-night">The shared objective</p><p className="mt-2 text-xl font-semibold leading-snug text-on-night">Useful discovery.<br />A clearer path to an enquiry.</p><p className="mt-3 text-sm text-on-night-muted">Measure the journey, then refine the priorities.</p></div>
-          </div>
-        </div>
-      </Container>
-    </section>
+    <ExperienceHero crumbs={[{name:"Services",href:"/services"},{name:"Holistic SEO",href:path}]} kicker="Technical + on-page + off-page SEO" title={service.heroTitle} intro={service.heroIntro}/>
 
     <PageContents label="Holistic SEO page sections" items={[{ id: "foundations", label: "The three foundations" }, { id: "process", label: "How it works" }, { id: "deliverables", label: "What you receive" }, { id: "delivery-details", label: "The work in practice" }, { id: "measurement", label: "Measurement" }, { id: "scope", label: "Scope & timing" }, { id: "service-faqs", label: "FAQs" }]} />
 
@@ -85,7 +63,7 @@ export function HolisticSeoLanding({ service }: { service: Service }) {
 
     <Section tone="muted" labelledBy="fit"><div id="fit"><SectionHeading kicker="When a connected plan makes sense" title="Is holistic SEO the right next step for your site?" intro="It is a useful approach when several parts of the search journey need coordination. A focused issue may still call for a smaller first scope." /></div><div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16"><div><h3 className="t-h3 text-ink">Signals worth reviewing</h3><ul className="mt-5 space-y-3">{service.commonProblems.map(item => <li key={item} className="rounded-xl border border-line bg-white px-5 py-4 text-ink-2">{item}</li>)}</ul></div><div><h3 className="t-h3 text-ink">Teams this can support</h3><ul className="mt-5 list-disc space-y-4 ps-5 leading-relaxed text-muted">{service.whoFor.map(item => <li key={item}>{item}</li>)}</ul><p className="mt-7 leading-relaxed text-muted">For specialised needs, explore <a className="link" href="/services/content-seo">content SEO strategy</a>, <a className="link" href="/services/local-seo">local SEO</a> or <a className="link" href="/services/ecommerce-seo">e-commerce SEO</a>. These offers can complement the connected plan where the scope calls for them.</p></div></div></Section>
 
-    <Section labelledBy="trust"><div id="trust"><SectionHeading kicker="Trust through the way we work" title="Clear evidence. Clear responsibilities. Honest expectations." intro="Your plan is led by Shobon Mahmud. Before work starts, you should understand what is being recommended, who will implement it and how completion will be checked." /></div><div className="mt-10"><PointGrid points={content.trustPrinciples} /></div><div className="mt-8 flex flex-wrap gap-x-6 gap-y-3"><a className="link" href="/about">Meet Shobon and review his approach</a><a className="link" href="/case-studies">Explore illustrative SEO strategies</a><a className="link" href="/contact">Discuss your project and scope</a></div></Section>
+    <Section labelledBy="trust"><div id="trust"><SectionHeading kicker="Trust through the way we work" title="Clear evidence. Clear responsibilities. Honest expectations." intro="Your plan is led by Shobon Mahmud. Before work starts, you should understand what is being recommended, who will implement it and how completion will be checked." /></div><div className="mt-10"><PointGrid points={content.trustPrinciples} /></div><div className="mt-8 flex flex-wrap gap-x-6 gap-y-3"><a className="link" href="/about">Meet Shobon and review his approach</a><a className="link" href="/case-studies">Explore client SEO case studies</a><a className="link" href="/contact">Discuss your project and scope</a></div></Section>
 
     <Section tone="muted" labelledBy="usecases"><div id="usecases"><SectionHeading kicker="Illustrative situations" title="Different websites. The same connected decision process." intro="These examples explain possible workflows; they do not represent claimed client results or promised performance." /></div><div className="mt-10"><PointGrid points={service.useCases} columns={2} /></div></Section>
 
@@ -93,6 +71,7 @@ export function HolisticSeoLanding({ service }: { service: Service }) {
 
     <Section tone="muted" labelledBy="industries"><div id="industries"><SectionHeading kicker="Apply the plan to your market" title="Your buyers decide what the pages need to answer." intro="The foundations stay connected, but the terminology, proof and next step change by industry. Explore the approach that fits your audience." /></div><div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{getIndustries(service.relatedIndustries).map(industry => <a key={industry.slug} href={`/industries/${industry.slug}`} className="interactive-card flex items-center justify-between gap-3 rounded-xl border border-line bg-white p-5 text-sm font-semibold text-ink">{industry.name} SEO<ArrowUpRight aria-hidden="true" className="size-4 shrink-0 text-link" /></a>)}</div></Section>
 
+    <Section tone="muted"><RelatedCaseStudies items={showcaseCaseStudies} title="See the work behind the approach"/></Section>
     <PageGrowthGuide path="/services/Holistic-SEO" />
     <Section id="service-faqs"><FAQ title="Holistic SEO: questions before you start" faqs={service.faqs} withSchema /></Section>
     <Section tone="muted"><RelatedServices items={getServices(service.relatedServices ?? [])} title="Focused services for specific priorities" /></Section>

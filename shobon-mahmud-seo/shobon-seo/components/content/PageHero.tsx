@@ -1,3 +1,4 @@
+import { ExperienceHero } from "./ExperienceHero";
 import { HeroImageLayout } from "./EditableImage";
 
 import pageCopy from "@/content/copy-components-content-PageHero.json";
@@ -26,6 +27,10 @@ export function PageHero({
   tone?: "light" | "dark";
   theme?: string;
 }) {
+  const path = crumbs.at(-1)?.href ?? "/";
+  if (/^\/(services|industries|locations)(\/|$)/.test(path) || ["/about", "/case-studies", "/resources", "/free-tools"].includes(path)) {
+    return <ExperienceHero crumbs={crumbs} kicker={kicker} title={title} intro={intro} />;
+  }
   const dark = tone === "dark";
   return (
     <section className={cn("hero-surface", dark && pageCopy.text_001)} data-hero-theme={theme} style={dark || theme ? undefined : heroTheme(crumbs.at(-1)?.href ?? "/")}>

@@ -1,9 +1,6 @@
 import { buildMetadata } from "@/lib/seo";
-import { PageHero } from "@/components/content/PageHero";
-import { Section } from "@/components/content/Section";
-import { ButtonLink } from "@/components/ui/Button";
-export const metadata = buildMetadata({ title: "Free Tools", description: "Practical tools to help you review your website and plan your next marketing move.", path: "/free-tools", noindex: true });
-export default function Page() {
-  return <><PageHero crumbs={[{name: "Resources", href: "/resources"}, {name: "Free Tools", href: "/free-tools"}]} kicker="Resources" title="Free Tools" intro="Practical tools to help you review your website and plan your next marketing move." />
-    <Section className="pt-0 sm:pt-0 lg:pt-0"><div className="max-w-3xl rounded-3xl border border-line bg-paper-2 p-8 sm:p-12"><p className="text-sm font-medium text-link">Coming soon</p><h2 className="t-h2 mt-4 text-ink">A home for useful, free tools.</h2><p className="mt-5 leading-relaxed text-muted">Free tools will appear here as they become available. For now, the blog offers guides you can use to review and improve your website.</p><div className="mt-7 flex flex-wrap gap-3"><ButtonLink href="/blog">Explore the blog</ButtonLink><ButtonLink href="/resources" variant="secondary">All resources</ButtonLink></div></div></Section></>;
-}
+import { Container } from "@/components/ui/Container";
+import { PageSchema } from "@/components/seo/PageSchema";
+import { SeoToolkit } from "@/components/tools/SeoToolkit";
+export const metadata=buildMetadata({title:"5 Free SEO Tools: Metadata, Headings, Links, Images & JSON-LD",description:"Check your page HTML with five free SEO tools. Review metadata, heading structure, links, image alt attributes and JSON-LD syntax. No sign-up required.",path:"/free-tools"});
+export default function Page(){return <><PageSchema path="/free-tools"/><section className="bg-[#162d20] py-16 text-white sm:py-24"><Container><p className="text-xs tracking-[.18em] text-[#d3edb0]">THE SEO WORKBENCH</p><h1 className="mt-6 max-w-4xl text-4xl leading-[1.05] tracking-[-.045em] sm:text-6xl">Less guesswork.<br/><span className="text-[#d3edb0]">Five free ways to check your page.</span></h1><p className="mt-7 max-w-2xl text-base leading-8 text-[#c1d2c2]">Inspect the foundations you can control: titles, headings, links, images and structured data. Get specific findings you can act on—without an account.</p><a href="#seo-toolkit" className="mt-8 inline-flex min-h-12 items-center rounded-full bg-[#d3edb0] px-6 py-3 font-semibold text-[#183720]">Open the free tools ↓</a></Container></section><Container><SeoToolkit/></Container></>}

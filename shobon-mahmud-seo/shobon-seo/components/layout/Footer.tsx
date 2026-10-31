@@ -1,3 +1,4 @@
+import "./footer.css";
 
 import pageCopy from "@/content/copy-components-layout-Footer.json";
 import Link from "next/link";
@@ -42,10 +43,11 @@ function Column({ title, links }: { title: string; links: { href: string; label:
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="on-night bg-night text-on-night">
+    <footer className="site-footer on-night bg-night text-on-night">
       <Container className="pt-16 pb-10 lg:pt-20">
+        <div className="footer-invitation"><div><p>LET’S BUILD WHAT COMES NEXT</p><h2>Good growth starts<br />with a conversation.</h2></div><Link href="/contact" className="footer-contact" aria-label="Contact Shobon about your project">Let’s talk <span aria-hidden="true">↗</span></Link></div>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div className="max-w-sm">
+          <div className="footer-profile max-w-sm">
             <Logo tone="dark" />
             <p className="mt-5 text-[0.9375rem] leading-relaxed text-on-night-muted">{siteConfig.shortTagline}</p>
             <div className="mt-6 grid gap-2.5">
@@ -64,6 +66,7 @@ export function Footer() {
           <Column title={pageCopy.text_009} links={services.slice(0, 7).map((s) => ({ href: `/services/${s.slug}`, label: s.name }))} />
           <Column title={pageCopy.text_010} links={industries.map((i) => ({ href: `/industries/${i.slug}`, label: i.name }))} />
         </div>
+        <div className="footer-wordmark" aria-hidden="true">SHOBON MAHMUD<span>GROWTH PARTNER</span></div>
         <div className="mt-16 flex flex-col gap-4 border-t border-night-line pt-6 text-sm text-on-night-muted sm:flex-row sm:items-center sm:justify-between">
           <p>{pageCopy.text_011}{year} {siteConfig.name}{pageCopy.text_012}</p>
           <ul className="flex gap-5">

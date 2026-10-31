@@ -1,13 +1,13 @@
+import { showcaseCaseStudies } from "@/lib/content/case-studies";
+import { RelatedCaseStudies } from "@/components/related/Related";
+import { ExperienceHero } from "@/components/content/ExperienceHero";
 
 import englishCopy from "@/content/copy-components-sections-DhakaLanding.json";
 import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { MapPin, Search, Megaphone, Globe, MessageCircle, BarChart3, ArrowUpRight, Check, Stethoscope, Store, CalendarDays } from "lucide-react";
-import { HeroImageLayout } from "@/components/content/EditableImage";
-import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/content/Section";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { ButtonLink } from "@/components/ui/Button";
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { FAQ } from "@/components/content/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
@@ -70,30 +70,8 @@ const steps = [
   };
   return (
     <div lang={locale}>
-      <section className="hero-surface relative overflow-hidden" data-hero-theme="dhaka">
-        <Container className="relative pt-10 pb-16 sm:pt-14 lg:pb-24">
-          <Breadcrumbs homeLabel={locale === "bn" ? "হোম" : "Home"} label={locale === "bn" ? "পেজের অবস্থান" : undefined} items={[{ name: locale === "bn" ? "লোকেশন" : "Locations", href: "/locations" }, { name: locale === "bn" ? "ঢাকা" : "Dhaka", href: path }]} />
-          <HeroImageLayout
-            alt={locale === "bn" ? "ঢাকা শহরের ব্যবসা ও ডিজিটাল মার্কেটিং" : "Dhaka location hero image"}
-            aside={
-              <div aria-hidden="true" className="aspect-[4/3] w-full rounded-[28px] border border-dashed border-[#b8d1c4] bg-[#e4efe8]" />
-            }
-          >
-            <div>
-              <p className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-link"><MapPin className="size-4" aria-hidden /> {pageCopy.text_069}</p>
-              <h1 className="t-h1 text-ink">{pageCopy.text_070}</h1>
-              <p className="t-lead mt-6 text-ink-2">{pageCopy.text_071}</p>
-              <p className="mt-4 leading-relaxed text-muted">{pageCopy.text_072}<strong className="text-ink">{pageCopy.text_073}</strong>{pageCopy.text_074}</p>
-              <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href={pageCopy.text_075}>{pageCopy.text_076}</ButtonLink><ButtonLink href={pageCopy.text_077} variant="secondary">{pageCopy.text_078}</ButtonLink></div>
-              <p className="mt-4 text-sm text-muted">{pageCopy.text_079}</p>
-            </div>
+      <ExperienceHero locale={locale} crumbs={[{name:locale==="bn"?"ঢাকা":"Dhaka",href:"/locations/seo-consultant-dhaka"}]} kicker={pageCopy.text_069} title={pageCopy.text_070} intro={pageCopy.text_071}/>
 
-          </HeroImageLayout>
-          <nav aria-label={pageCopy.text_092} className="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-line-strong pt-6 text-sm font-medium text-link">
-            <a href={pageCopy.text_093}>{pageCopy.text_094}</a><a href={pageCopy.text_095}>{pageCopy.text_096}</a><a href={pageCopy.text_097}>{pageCopy.text_098}</a><a href={pageCopy.text_099}>{pageCopy.text_100}</a><a href={pageCopy.text_101}>{pageCopy.text_102}</a>
-          </nav>
-        </Container>
-      </section>
 
       <div className="location-content" data-location="dhaka">
       {locale === "en" && <PageGrowthGuide path="/locations/seo-consultant-dhaka" />}
@@ -146,6 +124,7 @@ const steps = [
 
       <Section labelledBy="dhaka-reporting"><div className="grid gap-10 lg:grid-cols-2 lg:gap-20"><div><h2 id="dhaka-reporting" className="t-h2 text-ink">{pageCopy.text_177}</h2><p className="mt-5 leading-relaxed text-muted">{pageCopy.text_178}</p></div><ul className="space-y-4">{[pageCopy.text_179, pageCopy.text_180, pageCopy.text_181, pageCopy.text_182].map(text => <li key={text} className="flex gap-3 rounded-xl border border-line bg-[#f3f7f5] p-4"><BarChart3 className="mt-1 size-5 shrink-0 text-[#14604b]" aria-hidden />{text}</li>)}</ul></div></Section>
 
+      <Section><RelatedCaseStudies items={showcaseCaseStudies} title={locale==="bn"?"আমার কাজের উদাহরণ":"Selected client work"}/></Section>
       <Section id="dhaka-faq" tone="muted"><FAQ faqs={faqs} title={pageCopy.text_183} /></Section>
 
       <Section tone="dark" labelledBy="dhaka-contact"><div className="max-w-3xl"><p className="mb-4 text-sm text-[#bbdfce]">{pageCopy.text_184}</p><h2 id="dhaka-contact" className="t-h2 text-on-night">{pageCopy.text_185}</h2><p className="t-lead mt-6 text-on-night-muted">{pageCopy.text_186}</p><div className="mt-8 flex flex-wrap gap-3"><ButtonLink href={pageCopy.text_187} variant="light">{pageCopy.text_188}</ButtonLink>{siteConfig.email && <ButtonLink href={"mailto:" + siteConfig.email} variant="outline-light">{pageCopy.text_189}</ButtonLink>}</div></div></Section>

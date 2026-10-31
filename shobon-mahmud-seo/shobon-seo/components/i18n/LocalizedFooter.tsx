@@ -1,3 +1,4 @@
+import "@/components/layout/footer.css";
 import { siteConfig } from "@/lib/site";
 import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
@@ -10,7 +11,7 @@ export const nativeServices = {
 export function LocalizedFooter({ locale }: { locale: "ar" | "bn" }) {
   const ar = locale === "ar";
   const nav = ar ? ["الأعمال", "الخدمات", "القطاعات", "المناطق", "المقالات", "عنّي", "تواصل"] : ["কাজ", "সেবা", "ইন্ডাস্ট্রি", "লোকেশন", "ব্লগ", "আমার সম্পর্কে", "যোগাযোগ"];
-  return <footer className="on-night bg-night text-on-night"><Container className="pt-16 pb-10">
+  return <footer className="site-footer on-night bg-night text-on-night"><Container className="pt-16 pb-10"><div className="footer-invitation"><div><p>{ar ? "خطوتك التالية" : "আপনার পরবর্তী পদক্ষেপ"}</p><h2>{ar ? "نمو أفضل يبدأ بمحادثة." : "ভালো গ্রোথের শুরু হোক একটি আলোচনা দিয়ে।"}</h2></div><a href="/contact" className="footer-contact">{ar ? "تواصل معي" : "যোগাযোগ করুন"}<span aria-hidden="true">↗</span></a></div>
     <div className="grid gap-10 md:grid-cols-3"><div><Logo tone="dark" /><p className="mt-5 leading-relaxed text-on-night-muted">{ar ? "سيو ومحتوى واستراتيجية نمو تساعد عملاءك على اكتشاف أعمالك واتخاذ الخطوة التالية." : "এসইও, কনটেন্ট ও গ্রোথ পরিকল্পনার মাধ্যমে গ্রাহককে আপনার ব্যবসা খুঁজে পেতে এবং যোগাযোগ করতে সাহায্য করি।"}</p><a className="mt-6 block" href={`mailto:${siteConfig.email}`}>{ar ? "راسلني بالبريد" : "ইমেইল করুন"}: <bdi>{siteConfig.email}</bdi></a><a className="mt-4 block" href="https://wa.me/8801309580863" target="_blank" rel="noopener noreferrer">{ar ? "تواصل عبر واتساب" : "হোয়াটসঅ্যাপে কথা বলুন"}</a><SocialLinks tone="dark" iconOnly className="mt-5" /></div>
     <nav aria-label={ar ? "روابط الموقع" : "সাইট লিংক"}><h2 className="font-semibold">{ar ? "الموقع" : "সাইট"}</h2><ul className="mt-5 space-y-3">{["case-studies", "services", "industries", "locations", "blog", "about", "contact"].map((slug,i) => <li key={slug}><a href={`/${slug}`} className="text-on-night-muted hover:underline">{nav[i]}</a></li>)}</ul></nav>
     <nav aria-label={ar ? "خدمات السيو" : "এসইও সেবা"}><h2 className="font-semibold">{ar ? "الخدمات" : "সেবা"}</h2><ul className="mt-5 space-y-3">{Object.entries(nativeServices).map(([slug,label]) => <li key={slug}><a href={`/services/${slug}`} className="text-on-night-muted hover:underline">{label[locale]}</a></li>)}</ul></nav></div>
