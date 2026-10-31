@@ -1,7 +1,7 @@
 
 import pageCopy from "@/content/copy-components-sections-FeaturedWork.json";
 import Link from "next/link";
-import { caseStudies } from "@/lib/content/case-studies";
+import { showcaseCaseStudies } from "@/lib/content/case-studies";
 import { Section } from "@/components/content/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CaseStudyCard } from "@/components/cards/CaseStudyCard";
@@ -9,16 +9,7 @@ import { ContextCta } from "@/components/content/ContextCta";
 import { Arrow } from "@/components/ui/Arrow";
 
 export function FeaturedWork() {
-  // Keep this homepage selection explicit: new case studies stay in the full index.
-  const homepageSlugs = [
-    "americas-medicare-associates-seo-growth",
-    "arhq-domain-migration-organic-growth",
-    "retirement-tax-partners-seo-growth",
-  ];
-  const featured = homepageSlugs.flatMap(slug => {
-    const study = caseStudies.find(c => c.slug === slug && !c.draft);
-    return study ? [study] : [];
-  });
+  const featured = showcaseCaseStudies;
   const [first, ...rest] = featured;
   if (!first) return null;
   return (

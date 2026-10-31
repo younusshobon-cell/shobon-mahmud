@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getLocation, locations } from "@/lib/content/locations";
 import { getServices, getService } from "@/lib/content/services";
 import { getIndustries } from "@/lib/content/industries";
-import { publishedCaseStudies } from "@/lib/content/case-studies";
+import { showcaseCaseStudies } from "@/lib/content/case-studies";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
@@ -70,7 +70,7 @@ export default async function LocationPage({ params }: Props) {
   if (!loc) notFound();
   if (loc.slug === "dhaka") return <><LanguageSwitch slug="dhaka" /><PageSchema path="/locations/seo-consultant-dhaka" /><DhakaLanding /></>;
   const path = `/locations/seo-consultant-${loc.slug}`;
-  const studies = publishedCaseStudies;
+  const studies = showcaseCaseStudies;
   const localSeo = getService("local-seo");
   const extra = locationExtras[loc.slug];
 

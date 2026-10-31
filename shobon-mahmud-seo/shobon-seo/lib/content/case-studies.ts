@@ -15,6 +15,14 @@ export const caseStudies: CaseStudy[] = cms_caseStudies as CaseStudy[];
 
 export const publishedCaseStudies = caseStudies.filter((study) => !study.draft);
 
+/** Curated order shared by every public showcase; other case-study URLs remain available. */
+export const showcaseCaseStudies = [
+  "wolfpixel-seo-growth",
+  "americas-medicare-associates-seo-growth",
+  "arhq-domain-migration-organic-growth",
+].flatMap(slug => publishedCaseStudies.filter(study => study.slug === slug));
+
+
 export const getCaseStudy = (slug: string) =>
   caseStudies.find((c) => c.slug === slug);
 
@@ -24,7 +32,7 @@ export const caseStudiesFor = (opts: {
   exclude?: string;
   limit?: number;
 }) => {
-  const list = caseStudies.filter(
+  const list = showcaseCaseStudies.filter(
     (c) =>
       c.slug !== opts.exclude &&
       (!opts.industry || c.industry === opts.industry) &&

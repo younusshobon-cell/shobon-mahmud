@@ -1,3 +1,4 @@
+import { CaseStudyHero } from "./CaseStudyHero";
 import { CaseGrowthNote } from "@/components/content/CaseGrowthNote";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,21 +49,9 @@ const chapters = [
 export function ArhqCaseStudy({ study }: {study: CaseStudy}) {
   return <>
     <PageSchema path={`/case-studies/${study.slug}`} />
-    <section className="bg-night text-on-night py-12 sm:py-20">
-      <Container>
-        <nav aria-label="Breadcrumb" className="mb-10 text-sm text-on-night-muted"><Link href="/case-studies" className="hover:underline">Case Studies</Link><span aria-hidden="true"> / </span>ARHQ</nav>
-        <p className="text-xs font-semibold uppercase tracking-[.18em] text-link-night">Client engagement · Legal Tech · Since July 2025</p>
-        <div className="mt-6 grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end">
-          <div><h1 className="t-h1 max-w-3xl">A new domain.<br />A connected growth plan.<br /><span className="text-[#b8cbb0]">ARHQ’s next chapter.</span></h1><p className="mt-6 max-w-2xl text-lg leading-8 text-on-night-muted">How I approached a website transition, service-location visibility and the SEO work behind ARHQ’s reported online growth.</p></div>
-          <aside className="rounded-3xl border border-night-line bg-night-2 p-8"><p className="text-6xl font-semibold tracking-tight text-[#b8cbb0]">+67%</p><p className="mt-3 text-lg">Reported online growth</p><p className="mt-3 text-sm leading-6 text-on-night-muted">Engagement outcome reported by Shobon. Metric definition and comparison period were not provided for publication.</p></aside>
-        </div>
-      </Container>
-    </section>
+    <CaseStudyHero project="arhq" />
     <Container>
-      <figure className="my-10 overflow-hidden rounded-3xl border border-line bg-white">
-        <div className="relative aspect-[1600/622]"><Image src="/images/case-studies/arhq-hero.webp" alt="Retired couple pictured in ARHQ’s website hero imagery" fill priority sizes="(min-width: 1240px) 1160px, 100vw" className="object-cover" /></div>
-        <figcaption className="flex flex-wrap items-center justify-between gap-5 px-6 py-5"><Image src="/images/case-studies/arhq-logo.webp" alt="America’s Retirement Headquarters" width={242} height={40} className="h-auto w-48" /><a href="https://arhq.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-link underline">View the client’s website ↗</a><span className="text-xs text-muted">Brand imagery sourced from ARHQ’s website.</span></figcaption>
-      </figure>
+
       <section aria-labelledby="growth-partnership" className="my-12 rounded-3xl border border-line bg-paper-2 p-7 sm:p-9"><p className="text-xs font-semibold uppercase tracking-wider text-link">The growth partnership</p><h2 id="growth-partnership" className="mt-4 text-2xl font-semibold">SEO in service of digital growth.</h2><p className="mt-5 max-w-3xl text-base leading-8 text-muted">I worked with ARHQ as a Digital Growth Partner, using SEO to support the wider goal of digital growth through a website transition. Technical foundations, service content, local relevance and off-page work were connected around that business need.</p><p className="mt-4 max-w-3xl text-base leading-8 text-muted">If your business needs the same kind of direction, explore <Link href="/" className="text-link underline underline-offset-4">a connected approach to digital growth</Link> to see how I connect diagnosis, priorities and execution.</p></section>
       <dl className="mb-12 grid gap-6 rounded-3xl bg-paper-2 p-7 sm:grid-cols-2 lg:grid-cols-4">{[['Client','America’s Retirement Headquarters'],['Work began','July 2025'],['Core challenge','Domain transition + local organic growth'],['Scope','Technical, on-page, off-page & content']].map(([label,value])=><div key={label}><dt className="text-xs uppercase tracking-wider text-muted">{label}</dt><dd className="mt-2 text-sm font-medium leading-6">{value}</dd></div>)}</dl>
       <section aria-labelledby="organic-evidence" className="mb-16 border-t border-line pt-12">
