@@ -13,3 +13,6 @@ No invented keyword examples, rank positions, traffic, revenue, technical interv
 - ClientMind original: https://cdn.prod.website-files.com/6887bbbd362fae74a6532869/6a3e1cca0f46133177f242eb_clientmind%20landingpage.avif
 
 Retrieved at the user's explicit request from Wolfpixel's public site. Locally optimized WebP derivatives retain image content. 1400×847 (~81 KB) and 780×860 (~46 KB). Caption on ClientMind makes clear any numbers in the design do not describe this SEO engagement.
+
+## Homepage screenshot update
+The user supplied image(20261031-095638).png to replace the portfolio banner as the main image and card preview. Optimized as wolfpixel-homepage.webp, 1381×753; displayed at its full aspect ratio.
