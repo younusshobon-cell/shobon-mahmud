@@ -30,6 +30,21 @@ const chapters: [string, string[]][] = [
     "I describe these as potential call bookings because a booking is an opportunity to discuss a project. It is not the same as a completed call, a qualified sales opportunity or a signed client. No revenue or close-rate figure is included in this case study.",
     "These figures are my account of the engagement as of 31 October 2026. A keyword export, ranking-position breakdown and booking-attribution report are not published here. The numbers should therefore be read as reported outcomes, not independently audited measurements or a promise of the same results for another business."
   ]],
+  ["What SEO team leadership means for a potential client.", [
+    "My position as SEO Team Lead gives this story a wider context than a one-off website task. I have worked within Wolfpixel since April 2025, contributed to SEO for its clients and then taken on a leadership role. The three-month website result sits within that continuing relationship.",
+    "For someone considering working with me, the relevant question is what that experience brings to a business discussion. I can speak from working on both an agency’s own search presence and projects for the businesses it serves. Those are different situations: the offer, the customer and the route to an enquiry all need to be understood on their own terms.",
+    "I also want to give proper credit to the people behind that development. Khondokar Asiful Islam guided my SEO learning, and Wolfpixel is a team environment. This is my account of my SEO contribution; the agency’s design portfolio and wider delivery capability belong to the people who created them. Clear ownership is part of presenting a trustworthy case study."
+  ]],
+  ["How I would evaluate the next growth opportunity.", [
+    "For a similar service-business project, I would begin by discussing the work you want to win. Which services are commercially important? Who normally buys them? What does a useful enquiry look like? Those answers give an SEO plan a business direction before we decide which pages deserve attention.",
+    "Next, I would review the relationship between search intent and the existing website. A service page should answer a buyer’s service-specific questions, while an educational article should help someone understand a problem. I would look for gaps between those roles and whether a visitor can move naturally from relevant information to a suitable service.",
+    "I would then agree a baseline and a practical way to review progress. Keyword coverage, visits to important pages and enquiries answer different questions. Recording them separately makes it easier to see whether discovery is improving and whether that attention is turning into useful conversations. This describes how I would frame a new engagement, rather than an unpublished checklist of changes made to Wolfpixel."
+  ]],
+  ["Is this case study relevant to your business?", [
+    "The closest fit is an agency or service business with a clear offer but limited organic discovery. You may already have a good portfolio and capable delivery team, yet still rely heavily on referrals or outbound activity. In that situation, the question is how search can help potential buyers find the services you already provide.",
+    "It is also relevant if your website attracts visitors but your important service pages are difficult to find. That calls for a closer look at the audience and intent behind the traffic. More visits to unrelated topics may not address the gap between an interested reader and someone ready to discuss a project.",
+    "Wolfpixel’s reported progress provides one example, not a forecast for another site. Your competition, existing visibility, service demand and website condition would shape the priorities. The useful starting point is a review of your own situation and agreement on what a worthwhile outcome would look like."
+  ]],
   ["What this project says about my approach to growth.", [
     "This case connects three parts of my work: learning under experienced guidance, contributing to different client projects and taking responsibility for the agency’s own organic growth. The progression matters, but the business outcome needs its own clear definition.",
     "For Wolfpixel, the useful connection is between relevant search visibility, pages that describe services and potential buyers booking a conversation. That is why I look beyond the headline keyword total when discussing this project. Discovery has a practical purpose when it helps the right person take the next step.",
@@ -44,7 +59,7 @@ export function WolfpixelCaseStudy() {
       <nav aria-label="Breadcrumb" className="mb-10 text-sm text-on-night-muted"><Link href="/case-studies" className="underline">Case Studies</Link> / Wolfpixel</nav>
       <p className="text-xs uppercase tracking-widest text-link-night">Agency SEO · Team leadership · Digital growth</p>
       <div className="mt-6 grid gap-10 lg:grid-cols-[1.5fr_1fr]">
-        <div><h1 className="t-h1">Wolfpixel SEO:<br />From zero visibility to buyer conversations.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-on-night-muted">My journey from learning SEO at Wolfpixel to leading the team—and a focused three-month phase that brought the agency visibility for 500+ relevant keywords.</p></div>
+        <div><h1 className="t-h1">Wolfpixel SEO case study:<br />500+ keywords. More buyer conversations.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-on-night-muted">How my SEO work for a product and brand design agency connects relevant keyword visibility, buying-intent service pages and 5–10 potential call bookings per month.</p><p className="mt-5 text-sm text-on-night-muted">By Shobon Mahmud · Digital Growth Partner &amp; Wolfpixel SEO Team Lead · Updated 31 October 2026</p></div>
         <aside className="rounded-3xl border border-night-line bg-night-2 p-8"><p className="text-6xl font-semibold text-[#b8cbb0]">500+</p><p className="mt-3 text-lg">Relevant ranking keywords</p><p className="mt-5 text-4xl font-semibold text-[#b8cbb0]">5–10</p><p className="mt-3 text-lg">Potential call bookings per month</p><p className="mt-5 text-xs leading-6 text-on-night-muted">Engagement results reported by Shobon Mahmud · October 2026</p></aside>
       </div>
     </Container></section>
@@ -60,6 +75,6 @@ export function WolfpixelCaseStudy() {
         </article>
       </div>
     </Container>
-    <FinalCta title="Turn relevant discovery into a business conversation." body="Tell me which services you want to grow and where your website stands today. We can identify the search opportunities that fit your business." />
+    <FinalCta title="Have a strong service, but too few organic enquiries?" body="Send me your website, the services you want to grow and the kind of clients you want to attract. We can discuss where discovery is falling short and whether an SEO-led growth plan fits your business." />
   </>;
 }
