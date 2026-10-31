@@ -1,3 +1,4 @@
+import { WolfpixelCaseStudy } from "@/components/sections/WolfpixelCaseStudy";
 import { AmaCaseStudy } from "@/components/sections/AmaCaseStudy";
 import { CaseGrowthNote } from "@/components/content/CaseGrowthNote";
 import caseNotes from "@/content/case-growth-notes.json";
@@ -71,6 +72,7 @@ function Block({
 export default async function CaseStudyPage({ params }: Props) {
   const study = getCaseStudy((await params).slug);
   if (!study) notFound();
+  if (study.slug === "wolfpixel-seo-growth") return <WolfpixelCaseStudy />;
   if (study.slug === "arhq-domain-migration-organic-growth") return <ArhqCaseStudy study={study} />;
   if (study.slug === "retirement-tax-partners-seo-growth") return <RtpCaseStudy />;
   if (study.slug === "americas-medicare-associates-seo-growth") return <AmaCaseStudy />;

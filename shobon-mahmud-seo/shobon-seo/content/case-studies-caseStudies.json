@@ -1,5 +1,45 @@
 [
   {
+    "slug": "wolfpixel-seo-growth",
+    "client": "Wolfpixel",
+    "kind": "client",
+    "industry": "design",
+    "filter": "design",
+    "title": "Wolfpixel SEO Case Study: 500+ Keywords & 5–10 Monthly Call Bookings",
+    "outcome": "From zero to 500+ relevant ranking keywords, with 5–10 potential call bookings per month reported by Shobon.",
+    "summary": "From joining Wolfpixel in April 2025 to leading its SEO team: a three-month focus on the agency’s own search visibility and buying-intent service pages.",
+    "services": [
+      "Holistic-SEO",
+      "content-seo",
+      "digital-growth-strategy"
+    ],
+    "timeline": "Joined 12 April 2025 · Three-month website growth phase",
+    "date": "2026-10-31",
+    "featured": true,
+    "situation": "I joined Wolfpixel on 12 April 2025, learned SEO under Khondokar Asiful Islam and worked on SEO for multiple agency clients.",
+    "challenge": "Turn organic discovery into relevant enquiries for Wolfpixel’s own services.",
+    "research": [],
+    "strategy": [],
+    "execution": [],
+    "results": [
+      {
+        "label": "Relevant ranking keywords (reported)",
+        "value": "500+"
+      },
+      {
+        "label": "Potential call bookings per month (reported)",
+        "value": "5–10"
+      },
+      {
+        "label": "Focused website SEO phase",
+        "value": "3 months"
+      }
+    ],
+    "takeaway": "Relevant visibility matters most when it connects potential buyers with services and a conversation.",
+    "image": "/images/case-studies/wolfpixel-portfolio.webp",
+    "draft": false
+  },
+  {
     "slug": "americas-medicare-associates-seo-growth",
     "client": "America’s Medicare Associates (AMA)",
     "kind": "client",
