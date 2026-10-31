@@ -16,3 +16,9 @@ Retrieved at the user's explicit request from Wolfpixel's public site. Locally o
 
 ## Homepage screenshot update
 The user supplied image(20261031-095638).png to replace the portfolio banner as the main image and card preview. Optimized as wolfpixel-homepage.webp, 1381×753; displayed at its full aspect ratio.
+
+## Supplied performance evidence update
+User clarified overall keyword count as 585+ (rounded to around 600, not a claim of over 600). Personally handles SEO audits, authoritative intent/business-potential-led blog writing, on-page, off-page and technical SEO plus team leadership. Recently began founder and co-founder personal portfolio work; no results claimed for those sites.
+
+Six supplied screenshots preserved as WebP references: GSC three-month totals 790 clicks / 148K impressions / 0.5% CTR / position 38.6; query table with impressions and clicks; Semrush US desktop 495 keywords dated 30 October 2026; desktop PSI 77/93/100/100; audit summary and details dated 31 October 2026 with 97% health, 86% AI health, 115 pages, 0 errors, 30 warnings. US database count distinguished from reported overall count; no arithmetic summing country counts.
+PageSpeed URL supplied: https://pagespeed.web.dev/analysis/https-www-wolfpixel-agency/yyuykf13zq?form_factor=desktop&hl=en — direct retrieval unavailable in web tool; published numbers are attributed to supplied screenshot, not a fresh live run.
