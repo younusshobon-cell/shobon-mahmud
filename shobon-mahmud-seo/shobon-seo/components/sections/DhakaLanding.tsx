@@ -1,13 +1,15 @@
 import { showcaseCaseStudies } from "@/lib/content/case-studies";
 import { RelatedCaseStudies } from "@/components/related/Related";
-import { ExperienceHero } from "@/components/content/ExperienceHero";
 
 import englishCopy from "@/content/copy-components-sections-DhakaLanding.json";
 import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { MapPin, Search, Megaphone, Globe, MessageCircle, BarChart3, ArrowUpRight, Check, Stethoscope, Store, CalendarDays } from "lucide-react";
+import { HeroImageLayout } from "@/components/content/EditableImage";
+import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/content/Section";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { ButtonLink } from "@/components/ui/Button";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { FAQ } from "@/components/content/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
@@ -70,7 +72,30 @@ const steps = [
   };
   return (
     <div lang={locale}>
-      <ExperienceHero locale={locale} crumbs={[{name:locale==="bn"?"ঢাকা":"Dhaka",href:"/locations/seo-consultant-dhaka"}]} kicker={pageCopy.text_069} title={pageCopy.text_070} intro={pageCopy.text_071}/>
+      <section className="hero-surface relative overflow-hidden" data-hero-theme="dhaka">
+        <Container className="relative pt-10 pb-16 sm:pt-14 lg:pb-24">
+          <Breadcrumbs homeLabel={locale === "bn" ? "হোম" : "Home"} label={locale === "bn" ? "পেজের অবস্থান" : undefined} items={[{ name: locale === "bn" ? "লোকেশন" : "Locations", href: "/locations" }, { name: locale === "bn" ? "ঢাকা" : "Dhaka", href: path }]} />
+          <HeroImageLayout
+            alt={locale === "bn" ? "ঢাকা শহরের ব্যবসা ও ডিজিটাল মার্কেটিং" : "Dhaka location hero image"}
+            aside={
+              <div aria-hidden="true" className="aspect-[4/3] w-full rounded-[28px] border border-dashed border-[#b8d1c4] bg-[#e4efe8]" />
+            }
+          >
+            <div>
+              <p className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-link"><MapPin className="size-4" aria-hidden /> {pageCopy.text_069}</p>
+              <h1 className="t-h1 text-ink">{pageCopy.text_070}</h1>
+              <p className="t-lead mt-6 text-ink-2">{pageCopy.text_071}</p>
+              <p className="mt-4 leading-relaxed text-muted">{pageCopy.text_072}<strong className="text-ink">{pageCopy.text_073}</strong>{pageCopy.text_074}</p>
+              <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href={pageCopy.text_075}>{pageCopy.text_076}</ButtonLink><ButtonLink href={pageCopy.text_077} variant="secondary">{pageCopy.text_078}</ButtonLink></div>
+              <p className="mt-4 text-sm text-muted">{pageCopy.text_079}</p>
+            </div>
+
+          </HeroImageLayout>
+          <nav aria-label={pageCopy.text_092} className="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-line-strong pt-6 text-sm font-medium text-link">
+            <a href={pageCopy.text_093}>{pageCopy.text_094}</a><a href={pageCopy.text_095}>{pageCopy.text_096}</a><a href={pageCopy.text_097}>{pageCopy.text_098}</a><a href={pageCopy.text_099}>{pageCopy.text_100}</a><a href={pageCopy.text_101}>{pageCopy.text_102}</a>
+          </nav>
+        </Container>
+      </section>
 
 
       <div className="location-content" data-location="dhaka">

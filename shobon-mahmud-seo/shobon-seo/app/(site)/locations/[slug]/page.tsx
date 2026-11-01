@@ -249,6 +249,7 @@ export default async function LocationPage({ params }: Props) {
       <FinalCta
         title={loc.slug === "oman" ? "Give your Oman project a clearer path from discovery to action." : `Reach more customers in ${loc.city} through search.`}
         body="Tell me about your market, your competitors and what you've tried. I'll share how I'd approach it."
+        variant="classic"
       />
       </div>
       {localSeo && <JsonLd data={serviceSchema(localSeo, path, loc.city)} />}
