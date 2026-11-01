@@ -5,7 +5,7 @@ import { serviceLandings, type IconName, type ServiceLandingCopy } from "@/lib/c
 import { serviceSearchFaqs } from "@/lib/content/service-search-faqs";
 import { getIndustries } from "@/lib/content/industries";
 import { getServices, services } from "@/lib/content/services";
-import { showcaseCaseStudies } from "@/lib/content/case-studies";
+import { caseStudyIndex, showcaseCaseStudies } from "@/lib/content/case-studies";
 import { postsFor } from "@/lib/content/blog";
 import { serviceSchema } from "@/lib/schema";
 import holistic from "@/content/holistic-seo.json";
@@ -198,7 +198,7 @@ export function ServiceLanding({ service }: { service: Service }) {
       <div className="local-markets">{industries.map(i => <Link key={i.slug} href={`/industries/${i.slug}`}>{i.name}<ArrowUpRight size={14} /></Link>)}</div>
     </Container></section>}
 
-    <section className="local-section"><Container><RelatedCaseStudies items={showcaseCaseStudies} title="Selected client work" /></Container></section>
+    <section className="local-section"><Container><RelatedCaseStudies items={service.slug === "seo-for-home-service-providers" ? caseStudyIndex.slice(0, 3) : showcaseCaseStudies} title="Selected client work" /></Container></section>
     {articles.length > 0 && <section className="local-section local-tint"><Container><RelatedArticles items={articles} title={copy.articlesTitle} /></Container></section>}
     <section id="service-faqs" className="local-section"><Container><FAQ faqs={faqs} title={copy.faqTitle} withSchema /></Container></section>
     {related.length > 0 && <section className="local-section local-tint"><Container>

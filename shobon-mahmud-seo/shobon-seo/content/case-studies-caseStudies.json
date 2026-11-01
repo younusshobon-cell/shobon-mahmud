@@ -1,5 +1,44 @@
 [
   {
+    "slug": "elite-septic-service-local-seo",
+    "client": "Elite Septic Service",
+    "kind": "client",
+    "industry": "local-services",
+    "filter": "local",
+    "title": "Elite Septic Service Case Study: 100 Calls & 232 Google Profile Interactions",
+    "outcome": "100 calls and 232 interactions from Google Business Profile, June–November 2026.",
+    "summary": "Website build, local SEO and Google Business Profile optimization for a septic company in Lufkin, Jasper and East Texas, with Google’s own Performance reports.",
+    "services": [
+      "seo-for-home-service-providers",
+      "local-seo"
+    ],
+    "timeline": "Website build, local SEO & Business Profile · Performance data June–November 2026",
+    "date": "2026-11-01",
+    "featured": true,
+    "situation": "Elite Septic Service needed a website and a local search presence that helped homeowners in Lufkin, Jasper and East Texas find and call them.",
+    "challenge": "Turn local septic searches into phone calls through a new website and a complete, accurate Google Business Profile.",
+    "research": [],
+    "strategy": [],
+    "execution": [],
+    "results": [
+      {
+        "label": "Calls from Google Business Profile (Jun–Nov 2026)",
+        "value": "100"
+      },
+      {
+        "label": "Business Profile interactions (Jun–Nov 2026)",
+        "value": "232"
+      },
+      {
+        "label": "Google rating",
+        "value": "4.8 from 25 reviews"
+      }
+    ],
+    "takeaway": "For an urgent local service, the best measure of search work is whether the right customers pick up the phone.",
+    "image": "/images/case-studies/elite-septic-gbp-profile.webp",
+    "draft": false
+  },
+  {
     "slug": "wolfpixel-seo-growth",
     "client": "Wolfpixel",
     "kind": "client",

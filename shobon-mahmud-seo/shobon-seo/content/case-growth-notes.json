@@ -175,5 +175,34 @@
         "a": "No. Assess distinct shopping purpose, inventory stability and useful content, then apply consistent crawl, canonical and linking rules."
       }
     ]
+  },
+  "elite-septic-service-local-seo": {
+    "title": "Make the profile and the website point to the same call.",
+    "intro": "Elite Septic Service’s customers usually call when something has gone wrong. The useful lesson is to build the website and the Google Business Profile as one journey, then judge the work by the calls it produces.",
+    "body": "A comparable home service engagement would start with the services and towns the business genuinely covers, a mobile-first website that answers urgent questions, and a profile that is accurate, complete and connected to that site. Progress is then reviewed month by month, with calls and lead quality kept separate from visibility.",
+    "link": {
+      "href": "/services/seo-for-home-service-providers",
+      "label": "Explore SEO for home service providers"
+    },
+    "faqs": [
+      {
+        "q": "Are the 100 calls the same as 100 booked jobs?",
+        "a": "No. The figure is the number of calls Google recorded from the Business Profile between June and November 2026. Some calls are quotes or questions, and job or revenue figures were not part of this case study."
+      },
+      {
+        "q": "Why does November show zero on the charts?",
+        "a": "The reports were captured at the very start of November 2026, so the month had barely begun. It is not a drop in demand."
+      },
+      {
+        "q": "Does the report include calls from the website?",
+        "a": "No. Google’s Business Profile report only counts calls started from the profile itself. Calls from the website or from customers dialling the number directly are not included in the 100."
+      },
+      {
+        "q": "What work did this engagement include?",
+        "a": "Shobon built Elite Septic Service’s website from scratch, then worked on local SEO and Google Business Profile optimization for Lufkin, Jasper and the wider East Texas area."
+      }
+    ],
+    "seoTitle": "Septic Company Local SEO Case Study: 100 GBP Calls",
+    "metaDescription": "How I built Elite Septic Service’s website and optimized its Google Business Profile in East Texas: 232 profile interactions and 100 calls, Jun–Nov 2026."
   }
 }
