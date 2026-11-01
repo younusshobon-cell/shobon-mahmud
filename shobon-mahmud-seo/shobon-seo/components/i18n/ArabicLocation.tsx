@@ -1,13 +1,15 @@
 import { showcaseCaseStudies } from "@/lib/content/case-studies";
 import { RelatedCaseStudies } from "@/components/related/Related";
-import { ExperienceHero } from "@/components/content/ExperienceHero";
 import content from "@/content/locations-ar.json";
+import images from "@/content/page-images.json";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/content/Section";
 import { PointGrid } from "@/components/content/PointGrid";
 import { FAQ } from "@/components/content/FAQ";
 import { GrowthPrompt } from "@/components/content/GrowthPrompt";
 import { ButtonLink } from "@/components/ui/Button";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { HeroImageLayout } from "@/components/content/EditableImage";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { nativeServices } from "./LocalizedFooter";
 import { locationPath } from "@/lib/i18n/routing";
@@ -17,10 +19,15 @@ const industryNames: Record<string,string> = { logistics: "اللوجستيات"
 export function ArabicLocation({ slug }: { slug: keyof typeof content }) {
   const loc = content[slug];
   const path = locationPath(slug, "ar");
+  const englishPath = locationPath(slug);
+  const image = images.find(image => image.page === englishPath && image.key === "hero");
+  const src = image?.src ?? (slug === "dubai" ? "/images/dubai-hero.webp" : "/images/oman-organic-growth.webp");
   const url = new URL(path, siteConfig.url).toString();
   return <div>
-    <ExperienceHero locale="ar" crumbs={[{name:loc.city,href:path}]} kicker={loc.eyebrow} title={loc.heroTitle} intro={loc.intro}/>
-
+    <section className={`hero-surface ${slug === "saudi-arabia" ? "on-night" : ""}`} data-hero-theme={slug}>
+      <Container className="pt-10 pb-16 sm:pt-14 lg:pb-24"><Breadcrumbs homeLabel="الرئيسية" label="مسار الصفحة" tone={slug === "saudi-arabia" ? "dark" : "light"} items={[{ name: "المناطق", href: "/locations" }, { name: loc.city, href: path }]} />
+      <HeroImageLayout alt={`خدمات السيو في ${loc.city}`} aside={<img src={src} alt={`خدمات السيو والنمو الرقمي في ${loc.city}`} width={1600} height={1200} fetchPriority="high" className="h-auto w-full rounded-[28px]" />}><div><p className="mb-5 text-sm font-semibold">{loc.eyebrow}</p><h1 className={`t-h1 ${slug === "saudi-arabia" ? "text-on-night" : "text-ink"}`}>{loc.heroTitle}</h1><p className={`t-lead mt-6 ${slug === "saudi-arabia" ? "text-on-night-muted" : "text-muted"}`}>{loc.intro}</p><div className="mt-8"><ButtonLink href="/contact" variant={slug === "saudi-arabia" ? "light" : "primary"}>ناقش خطة أعمالك في {loc.city}</ButtonLink></div></div></HeroImageLayout></Container>
+    </section>
     <div className="location-content" data-location={slug}>
       <div className="hero-grid-band border-y border-line"><Container className="grid gap-3 py-5 sm:grid-cols-3">{["الظهور في Google", "الاكتشاف بالذكاء الاصطناعي", "استفسارات مؤهلة"].map((label,i) => <p key={label} className="rounded-xl border border-line bg-white px-5 py-4 font-semibold text-ink"><span className="me-4 text-link">0{i+1}</span>{label} في {loc.city}</p>)}</Container></div>
       <nav aria-label="أقسام الصفحة" className="location-section-nav"><Container className="flex flex-wrap gap-2 py-5">{[["context", "السوق المحلي"], ["opps", "فرص النمو"], ["growth-path", "منهج العمل"], ["location-services", "خدمات السيو"], ["location-faqs", "الأسئلة الشائعة"]].map(([id,label]) => <a key={id} href={`#${id}`}>{label}</a>)}</Container></nav>

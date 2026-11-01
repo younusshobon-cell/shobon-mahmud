@@ -59,6 +59,7 @@ export default function LocationsPage() {
             line="Need local SEO where you are?"
             action="Explore local SEO"
             href={pageCopy.text_007}
+            variant="classic"
           />
         </div>
       </Section>
@@ -74,7 +75,7 @@ export default function LocationsPage() {
       <Section>
         <FAQ faqs={locationHubFaqs} />
       </Section>
-      <FinalCta />
+      <FinalCta variant="classic" />
     </>
   );
 }

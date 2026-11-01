@@ -28,7 +28,7 @@ export function PageHero({
   theme?: string;
 }) {
   const path = crumbs.at(-1)?.href ?? "/";
-  if (/^\/(services|industries|locations)(\/|$)/.test(path) || ["/about", "/case-studies", "/resources", "/free-tools"].includes(path)) {
+  if (/^\/(services|industries)(\/|$)/.test(path) || ["/about", "/case-studies", "/resources", "/free-tools"].includes(path)) {
     return <ExperienceHero crumbs={crumbs} kicker={kicker} title={title} intro={intro} />;
   }
   const dark = tone === "dark";
