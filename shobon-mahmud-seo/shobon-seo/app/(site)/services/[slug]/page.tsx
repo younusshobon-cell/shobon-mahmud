@@ -2,7 +2,8 @@ import { LocalSeoLanding } from "@/components/sections/LocalSeoLanding";
 import { GrowthServiceDepth } from "@/components/sections/GrowthServiceDepth";
 import { PageGrowthGuide } from "@/components/content/PageGrowthGuide";
 import { EngagementDetails } from "@/components/content/EngagementDetails";
-import { HolisticSeoLanding } from "@/components/sections/HolisticSeoLanding";
+import { ServiceLanding } from "@/components/sections/ServiceLanding";
+import { serviceLandings } from "@/lib/content/service-landings";
 import { PageContents } from "@/components/content/PageContents";
 import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-services-slug-page.json";
@@ -55,7 +56,7 @@ export default async function ServicePage({ params }: Props) {
   const service = getService((await params).slug);
   if (!service) notFound();
   if (service.slug === "local-seo") return <LocalSeoLanding service={service} />;
-  if (service.slug === "Holistic-SEO") return <HolisticSeoLanding service={service} />;
+  if (serviceLandings[service.slug]) return <ServiceLanding service={service} />;
   const path = `/services/${service.slug}`;
   const studies = showcaseCaseStudies;
   const articles = postsFor({ service: service.slug });

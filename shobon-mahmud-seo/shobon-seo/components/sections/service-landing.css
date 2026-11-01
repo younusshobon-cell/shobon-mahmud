@@ -1,0 +1,61 @@
+/* Service landings reuse the Local SEO page design (local-seo.css) and
+   tint it with each service's own palette: --exp (soft) and --exp-dark. */
+.svc-landing{background:#f4f5f1!important}
+.svc-landing .local-hero{background:radial-gradient(ellipse 60% 70% at 90% 10%,color-mix(in srgb,var(--exp) 40%,transparent),transparent 70%)}
+.svc-landing .local-dot{background:var(--exp-dark);box-shadow:0 0 0 4px color-mix(in srgb,var(--exp) 70%,transparent)}
+.svc-landing .local-eyebrow{color:var(--exp-dark)}
+.svc-landing .local-hero h1{color:#151b16}
+.svc-landing .local-hero h1>span{background:linear-gradient(transparent 64%,var(--exp) 64%,var(--exp) 92%,transparent 92%)}
+.svc-landing .local-number{color:var(--exp-dark);border-left-color:var(--exp)}
+.svc-landing .local-check{color:var(--exp-dark);display:inline-flex;padding-top:3px}
+.svc-landing .local-tint{background:color-mix(in srgb,var(--exp) 16%,#eceee8)}
+.svc-landing .local-search-art{background:var(--exp)}
+.svc-landing .local-search-row>svg{color:var(--exp-dark)}
+.svc-landing .local-markets a:hover{border-color:var(--exp-dark);color:var(--exp-dark)}
+.svc-landing .local-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.svc-landing .local-card:has(.local-text-link):hover{transform:translateY(-3px);box-shadow:0 16px 34px #1a2a1d14;border-color:color-mix(in srgb,var(--exp-dark) 25%,#e7ebe2)}
+.svc-landing .local-dark-cta{background:radial-gradient(ellipse at 95% 0%,color-mix(in srgb,var(--exp-dark) 85%,#fff) 0%,var(--exp-dark) 30%,color-mix(in srgb,var(--exp-dark) 55%,#0b0f0c) 75%)}
+.svc-landing .local-dark-cta .local-eyebrow{color:var(--exp)}
+.svc-landing .local-text-link:focus-visible,.svc-nav a:focus-visible{outline:3px solid var(--exp-dark);outline-offset:3px;border-radius:6px}
+
+/* Hero visual panel (replaces the portrait on the Local SEO page) */
+.svc-visual{position:relative;border-radius:26px;background:color-mix(in srgb,var(--exp) 28%,#fff);border:1px solid color-mix(in srgb,var(--exp-dark) 12%,transparent);padding:24px 20px;min-height:470px;display:grid;place-items:center;overflow:hidden}
+
+/* In-page navigation */
+.svc-nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,#f4f5f1 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid #e3e7df}
+.svc-nav .mx-auto,.svc-nav>div{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.svc-nav a{flex:none;font-size:12px;font-weight:500;border:1px solid #d9dfd3;background:#fff;border-radius:99px;padding:8px 14px;white-space:nowrap;transition:background .15s,color .15s}
+.svc-nav a:hover{background:var(--exp-dark);border-color:var(--exp-dark);color:#fff}
+
+.svc-inline-cta{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 20px;margin-top:22px;padding:22px 26px;border-radius:15px;background:#fff;border:1px dashed color-mix(in srgb,var(--exp-dark) 30%,#d9dfd3);font-size:15px;font-weight:550;letter-spacing:-.01em}
+.svc-inline-cta .local-text-link{margin-top:0}
+.svc-small-list{font-size:13px;gap:10px;margin-top:16px}
+.svc-small-list strong{font-weight:600}
+.svc-pillar h3{margin-top:14px}
+.svc-footnote{margin-top:20px;font-size:13px;line-height:1.7;color:#606b61;max-width:760px}
+.svc-top{align-items:start}
+.svc-gap{margin-top:16px}
+.svc-example{background:color-mix(in srgb,var(--exp) 22%,#fff)}
+.svc-example .local-eyebrow{margin-bottom:0}
+.svc-example h3{margin-top:10px}
+.svc-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--exp) 55%,#fff);color:var(--exp-dark)}
+.svc-landing .local-card h3+p+h3{margin-top:24px}
+
+/* Mid-page call to action */
+.svc-mid-wrap{padding-top:20px;padding-bottom:20px}
+.svc-mid{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;background:var(--exp-dark);color:#fff;border-radius:22px;padding:36px 40px}
+.svc-mid h2{color:#fff;font-size:clamp(24px,2.6vw,34px)!important;max-width:560px!important}
+.svc-mid p{color:color-mix(in srgb,#fff 78%,var(--exp));font-size:15px;line-height:1.7;margin-top:10px;max-width:560px}
+
+/* Decision guide table */
+.svc-guide-body{max-width:760px;margin:-8px 0 26px}
+.svc-table{overflow-x:auto;border:1px solid #e3e7df;border-radius:15px;background:#fff}
+.svc-table table{width:100%;min-width:640px;border-collapse:collapse;text-align:left;font-size:14px}
+.svc-table th,.svc-table td{padding:18px 22px;vertical-align:top;line-height:1.65}
+.svc-table thead th{background:color-mix(in srgb,var(--exp) 25%,#fff);font-weight:600;font-size:13px}
+.svc-table tbody tr{border-top:1px solid #edf0ea}
+.svc-table tbody th{font-weight:600;color:#1b231c}
+.svc-table td{color:#596357}
+
+@media(max-width:900px){.svc-visual{min-height:430px}}
+@media(max-width:640px){.svc-visual{min-height:0;padding:18px 10px;margin:0 2px}.svc-mid{padding:28px 24px}.svc-inline-cta{padding:18px 20px}.svc-landing .local-hero h1{font-size:42px}}
