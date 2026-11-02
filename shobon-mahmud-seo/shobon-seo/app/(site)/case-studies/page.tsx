@@ -2,7 +2,7 @@ import { PageSchema } from "@/components/seo/PageSchema";
 import pageCopy from "@/content/copy-app-portfolio-page.json";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { showcaseCaseStudies, portfolioFilters } from "@/lib/content/case-studies";
+import { caseStudyIndex, portfolioFilters } from "@/lib/content/case-studies";
 import { PageHero } from "@/components/content/PageHero";
 import { Section } from "@/components/content/Section";
 import { CaseStudyCard } from "@/components/cards/CaseStudyCard";
@@ -32,7 +32,7 @@ export default function PortfolioPage() {
         <h2 className="sr-only">{pageCopy.text_006}</h2>
         <PortfolioGrid
           filters={portfolioFilters}
-          items={showcaseCaseStudies.map((c) => ({
+          items={caseStudyIndex.map((c) => ({
             key: c.slug,
             filter: c.filter,
             node: <CaseStudyCard study={c} />,

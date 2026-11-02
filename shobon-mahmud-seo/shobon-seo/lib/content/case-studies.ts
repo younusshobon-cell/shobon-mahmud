@@ -23,6 +23,12 @@ export const showcaseCaseStudies = [
 ].flatMap(slug => publishedCaseStudies.filter(study => study.slug === slug));
 
 
+/** Case studies page order: the newest client story, then the curated showcase. */
+export const caseStudyIndex = [
+  ...publishedCaseStudies.filter(study => study.slug === "elite-septic-service-local-seo"),
+  ...showcaseCaseStudies,
+];
+
 export const getCaseStudy = (slug: string) =>
   caseStudies.find((c) => c.slug === slug);
 

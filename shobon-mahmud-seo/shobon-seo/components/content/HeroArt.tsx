@@ -1,7 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import { services } from "@/lib/content/services";
 import { industries } from "@/lib/content/industries";
-import { showcaseCaseStudies } from "@/lib/content/case-studies";
+import { caseStudyIndex } from "@/lib/content/case-studies";
 import "./hero-art.css";
 
 /**
@@ -439,7 +439,7 @@ function LocalCall() {
 
 function Cases() {
   const names = new Map(industries.map(i => [i.slug, i.name]));
-  const items = showcaseCaseStudies.slice(0, 3);
+  const items = caseStudyIndex.slice(0, 3);
   return (
     <Frame kind="cases">
       <div className="ha-folders">
