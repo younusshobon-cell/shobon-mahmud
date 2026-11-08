@@ -57,7 +57,7 @@ export function Footer() {
               </a>
               <a href={pageCopy.text_005} className="flex items-center gap-3 rounded-xl border border-night-line px-4 py-3 text-sm text-on-night transition-colors hover:border-on-night focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-night">
                 <Mail className="size-5 shrink-0" aria-hidden />
-                <span><span className="block font-medium">{pageCopy.text_006}</span><span className="block break-all text-on-night-muted">{pageCopy.text_007}</span></span>
+                <span><span className="block font-medium">{pageCopy.text_006}</span>{" "}<span className="block break-all text-on-night-muted">{pageCopy.text_007}</span></span>
               </a>
             </div>
             <SocialLinks tone="dark" iconOnly className="mt-5" />
