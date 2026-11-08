@@ -445,7 +445,7 @@ function Cases() {
       <div className="ha-folders">
         {items.map((c, i) => (
           <div key={c.slug} className="ha-folder" style={{ "--i": i } as CSSProperties}>
-            <span className="ha-folder-tab">{names.get(c.industry) ?? c.industry}</span>
+            <span className="ha-folder-tab">{c.label ?? names.get(c.industry) ?? c.industry}</span>
             <strong>{c.client}</strong>
             <p>The starting point · The work · The context</p>
           </div>

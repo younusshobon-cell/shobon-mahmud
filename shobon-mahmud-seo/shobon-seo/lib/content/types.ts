@@ -80,6 +80,8 @@ export type Location = {
 
 export type PortfolioFilter =
   | "financial-services"
+  | "retirement-planning"
+  | "medicare"
   | "saas"
   | "legal-tech"
   | "health-tech"
@@ -114,6 +116,8 @@ export type CaseStudy = {
   takeaway: string;
   /** Optional path in /public for a screenshot. */
   image?: string;
+  /** Display category for cards and hero art, when the industry slug does not describe the client. */
+  label?: string;
   /** True while the case study still contains placeholder data. */
   draft: boolean;
 };

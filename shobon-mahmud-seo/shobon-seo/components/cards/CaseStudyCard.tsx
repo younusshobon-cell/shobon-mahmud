@@ -37,7 +37,7 @@ export function CaseStudyCard({ study, variant = "default" }: { study: CaseStudy
       {study.kind === "client" && <div className={cn("relative overflow-hidden rounded-xl lg:col-span-2", study.slug === "wolfpixel-seo-growth" ? "aspect-[1381/753]" : study.slug === "elite-septic-service-local-seo" ? "aspect-[1143/545]" : study.slug === "americas-medicare-associates-seo-growth" ? "aspect-[1159/593]" : study.slug === "retirement-tax-partners-seo-growth" ? "aspect-[1124/591]" : "aspect-[16/5]")}><Image src={study.image ?? (study.slug === "americas-medicare-associates-seo-growth" ? "/images/case-studies/ama-hero.webp" : study.slug === "retirement-tax-partners-seo-growth" ? "/images/case-studies/rtp-hero.webp" : "/images/case-studies/arhq-hero.webp")} alt={`${study.client} website imagery`} fill sizes="(min-width: 1024px) 1100px, 100vw" className="object-cover" /></div>}
       <div className="flex flex-col">
         <div className="flex flex-wrap items-center gap-3 text-sm text-muted">
-          <span>{industry?.name ?? "Financial Services"}</span><span className="rounded-full bg-link-soft px-2.5 py-1 text-xs text-link">{study.kind === "client" ? "Client engagement" : "Strategy example"}</span>
+          <span>{study.label ?? industry?.name ?? "Financial Services"}</span><span className="rounded-full bg-link-soft px-2.5 py-1 text-xs text-link">{study.kind === "client" ? "Client engagement" : "Strategy example"}</span>
           {study.draft && <DraftBadge className="text-muted" />}
         </div>
         <h3 className="mt-3 text-xl font-semibold leading-snug tracking-tight text-ink sm:text-2xl">{study.title}</h3>

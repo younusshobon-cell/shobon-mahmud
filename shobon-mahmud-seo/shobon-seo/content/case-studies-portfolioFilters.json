@@ -8,6 +8,14 @@
     "label": "Financial Services"
   },
   {
+    "value": "retirement-planning",
+    "label": "Retirement Planning"
+  },
+  {
+    "value": "medicare",
+    "label": "Medicare"
+  },
+  {
     "value": "saas",
     "label": "SaaS"
   },
