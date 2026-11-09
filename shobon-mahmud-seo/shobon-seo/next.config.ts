@@ -17,15 +17,6 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 420, 640, 768, 1024, 1280, 1600, 1920],
   },
-  async redirects() {
-    return [
-      {
-        source: "/services/Holistic-SEO",
-        destination: "/services/holistic-seo",
-        permanent: true,
-      },
-    ];
-  },
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },
