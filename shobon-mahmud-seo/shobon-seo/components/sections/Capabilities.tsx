@@ -8,7 +8,7 @@ import { Arrow } from "@/components/ui/Arrow";
 
 
 
-const homepageServiceSlugs = ["digital-growth-strategy", "conversion-rate-optimization", "Holistic-SEO", "local-seo", "ecommerce-seo"];
+const homepageServiceSlugs = ["digital-growth-strategy", "conversion-rate-optimization", "holistic-seo", "local-seo", "ecommerce-seo"];
 
 export function Capabilities() {
   const homepageServices = homepageServiceSlugs.flatMap(slug => {

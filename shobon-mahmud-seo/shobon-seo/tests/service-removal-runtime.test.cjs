@@ -7,7 +7,7 @@ const services = require('../content/services-services.json');
 const current = new Set(services.map(service => service.slug));
 assert.equal(current.size, 5);
 [...removed, ...merged].forEach(slug => assert.ok(!current.has(slug)));
-assert.ok(current.has('Holistic-SEO')); 
+assert.ok(current.has('holistic-seo')); 
 const manifest = JSON.parse(fs.readFileSync('.next/prerender-manifest.json', 'utf8'));
 [...removed, ...merged].forEach(slug => assert.ok(!manifest.routes[`/services/${slug}`], 'deleted service is not generated'));
 for (const file of ['services-services', 'industries-industries', 'locations-locations', 'locations-ar', 'blog-rawPosts', 'case-studies-caseStudies']) {
@@ -40,9 +40,9 @@ server.stderr.on('data', data => logs += data);
   for (const slug of merged) {
     const response = await fetch(`${origin}/services/${slug}`, { redirect: 'manual' });
     assert.equal(response.status, 308);
-    assert.equal(new URL(response.headers.get('location'), origin).pathname, '/services/Holistic-SEO');
+    assert.equal(new URL(response.headers.get('location'), origin).pathname, '/services/holistic-seo');
   }
-  const master = await (await fetch(origin + '/services/Holistic-SEO')).text();
+  const master = await (await fetch(origin + '/services/holistic-seo')).text();
   for (const id of ['technical-seo', 'on-page-seo', 'off-page-seo', 'process', 'deliverables', 'measurement', 'service-faqs']) assert.ok(master.includes(`id="${id}"`));
   assert.ok(master.includes('Discuss my SEO growth plan'));
   assert.ok(master.includes('Talk through my SEO priorities'));

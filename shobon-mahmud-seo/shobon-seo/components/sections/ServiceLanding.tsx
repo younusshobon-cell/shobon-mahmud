@@ -41,7 +41,7 @@ const num = (i: number) => String(i + 1).padStart(2, "0");
 
 /** Service-specific long-form sections that already exist in the CMS. */
 function deepSections(slug: string): DeepSection[] {
-  if (slug === "Holistic-SEO") {
+  if (slug === "holistic-seo") {
     return [
       { id: "measurement", eyebrow: "DEFINE PROGRESS BEFORE THE WORK", title: "Measure what changed and why it matters.", intro: "A reporting baseline keeps delivery and business outcomes separate, so every increase isn’t treated as a success claim.", points: holistic.measurementCards },
       { id: "trust", eyebrow: "TRUST THROUGH THE WAY WE WORK", title: "Clear evidence. Clear responsibilities.", intro: "Before work starts, you should understand what is recommended, who will implement it and how completion will be checked.", points: holistic.trustPrinciples },
@@ -65,7 +65,7 @@ export function ServiceLanding({ service }: { service: Service }) {
   const industries = getIndustries(service.relatedIndustries);
   const related = getServices(service.relatedServices ?? services.filter(s => s.slug !== service.slug).map(s => s.slug)).filter(s => s.slug !== service.slug).slice(0, 5);
   const deep = deepSections(service.slug);
-  const pillars = service.slug === "Holistic-SEO" ? holistic.pillars : [];
+  const pillars = service.slug === "holistic-seo" ? holistic.pillars : [];
   const sectionNav = [
     { id: "covers", label: "What’s included" },
     ...(pillars.length ? [{ id: "foundations", label: "Three foundations" }] : []),

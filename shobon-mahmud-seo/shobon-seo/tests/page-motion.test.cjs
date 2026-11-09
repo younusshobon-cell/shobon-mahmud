@@ -51,7 +51,7 @@ function mount(pathname, reduced = false) {
   return { calls, observers, classes, cards, preference, listeners, cleanup: () => cleanup.forEach(callback => callback()) };
 }
 
-for (const path of ['/services', '/services/Holistic-SEO', '/industries', '/industries/saas', '/locations/seo-consultant-dhaka', '/ar/locations/seo-consultant-oman']) {
+for (const path of ['/services', '/services/holistic-seo', '/industries', '/industries/saas', '/locations/seo-consultant-dhaka', '/ar/locations/seo-consultant-oman']) {
   const normal = mount(path);
   assert.ok(normal.classes.has('page-motion'), path);
   assert.equal(normal.calls.length, 4, 'hero entries');

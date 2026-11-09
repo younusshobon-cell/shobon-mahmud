@@ -42,7 +42,7 @@ const PALETTES: Record<Kind, Palette> = {
 
 const SERVICE_KINDS: Record<string, Kind> = {
   "digital-growth-strategy": "roadmap",
-  "Holistic-SEO": "pillars",
+  "holistic-seo": "pillars",
   "content-seo": "outline",
   "conversion-rate-optimization": "funnel",
   "ecommerce-seo": "catalog",

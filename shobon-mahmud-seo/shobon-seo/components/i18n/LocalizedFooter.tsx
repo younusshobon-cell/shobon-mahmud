@@ -4,7 +4,7 @@ import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
 import { SocialLinks } from "@/components/layout/SocialLinks";
 export const nativeServices = {
-  "Holistic-SEO": { ar: "السيو الشامل", bn: "হলিস্টিক এসইও" },
+  "holistic-seo": { ar: "السيو الشامل", bn: "হলিস্টিক এসইও" },
   "local-seo": { ar: "السيو المحلي", bn: "লোকাল এসইও" },
   "content-seo": { ar: "المحتوى والسيو", bn: "কনটেন্ট এসইও" },
 } as const;

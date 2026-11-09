@@ -76,7 +76,7 @@ export const serviceLandings: Record<string, ServiceLandingCopy> = {
     articlesTitle: "Growth strategy, explained plainly.",
   },
 
-  "Holistic-SEO": {
+  "holistic-seo": {
     label: "Holistic SEO",
     eyebrow: "HOLISTIC SEO · TECHNICAL + ON-PAGE + OFF-PAGE",
     h1: ["Every part of", "your SEO,", "pulling one way."],
@@ -144,7 +144,7 @@ export const serviceLandings: Record<string, ServiceLandingCopy> = {
         { icon: "Stethoscope", name: "Health & expert brands", text: "Structure reviewed, cited content for topics where accuracy matters.", href: "/industries/health-tech" },
         { icon: "Scale", name: "Legal & compliance topics", text: "Explain complex subjects clearly, with jurisdiction and review in mind.", href: "/industries/legal-tech" },
         { icon: "Palette", name: "Agencies & studios", text: "Turn portfolio work into case studies with searchable context.", href: "/industries/design" },
-        { icon: "Archive", name: "Sites with an old blog", text: "Find posts worth refreshing, merging or redirecting.", href: "/services/Holistic-SEO" },
+        { icon: "Archive", name: "Sites with an old blog", text: "Find posts worth refreshing, merging or redirecting.", href: "/services/holistic-seo" },
       ],
     },
     fit: {
